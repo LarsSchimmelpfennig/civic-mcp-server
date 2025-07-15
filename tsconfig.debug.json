@@ -1,0 +1,10 @@
+// tsconfig.debug.json   (put it at project root)
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "moduleResolution": "node16",
+    "esModuleInterop": true,
+    "strict": false
+  }
+}

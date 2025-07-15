@@ -1,0 +1,5500 @@
+{
+    "BRAF": [
+        "B-RAF1",
+        "B-raf",
+        "BRAF",
+        "BRAF-1",
+        "BRAF1",
+        "NS7",
+        "RAFB1"
+    ],
+    "ERBB2": [
+        "CD340",
+        "ERBB2",
+        "HER-2",
+        "HER-2/neu",
+        "HER2",
+        "MLN 19",
+        "MLN-19",
+        "NEU",
+        "NGL",
+        "TKR1",
+        "VSCN2",
+        "c-ERB-2",
+        "c-ERB2",
+        "p185(erbB2)"
+    ],
+    "KRAS": [
+        "'C-K-RAS",
+        "C-K-RAS",
+        "CFC2",
+        "K-RAS2A",
+        "K-RAS2B",
+        "K-RAS4A",
+        "K-RAS4B",
+        "K-Ras",
+        "K-Ras 2",
+        "KI-RAS",
+        "KRAS",
+        "KRAS1",
+        "KRAS2",
+        "NS",
+        "NS3",
+        "OES",
+        "RALD",
+        "RASK2",
+        "c-Ki-ras",
+        "c-Ki-ras2"
+    ],
+    "DNMT3A": [
+        "DNMT3A",
+        "DNMT3A2",
+        "HESJAS",
+        "M.HsaIIIA",
+        "TBRS"
+    ],
+    "BRCA2": [
+        "BRCA2",
+        "BRCC2",
+        "BROVCA2",
+        "FACD",
+        "FAD",
+        "FAD1",
+        "FANCD",
+        "FANCD1",
+        "GLM3",
+        "PNCA2",
+        "XRCC11"
+    ],
+    "TP53": [
+        "BCC7",
+        "BMFS5",
+        "LFS1",
+        "P53",
+        "TP53",
+        "TRP53"
+    ],
+    "BRCA1": [
+        "BRCA1",
+        "BRCAI",
+        "BRCC1",
+        "BROVCA1",
+        "FANCS",
+        "IRIS",
+        "PNCA4",
+        "PPP1R53",
+        "PSCP",
+        "RNF53"
+    ],
+    "NPM1": [
+        "B23",
+        "NPM",
+        "NPM1"
+    ],
+    "FLT3": [
+        "CD135",
+        "FLK-2",
+        "FLK2",
+        "FLT3",
+        "STK1"
+    ],
+    "PIK3CA": [
+        "CCM4",
+        "CLAPO",
+        "CLOVE",
+        "CWS5",
+        "HMH",
+        "MCAP",
+        "MCM",
+        "MCMTC",
+        "PI3K",
+        "PI3K-alpha",
+        "PIK3CA",
+        "p110-alpha"
+    ],
+    "EGFR": [
+        "EGFR",
+        "ERBB",
+        "ERBB1",
+        "ERRP",
+        "HER1",
+        "NISBD2",
+        "PIG61",
+        "mENA"
+    ],
+    "CD274": [
+        "B7-H",
+        "B7H1",
+        "CD274",
+        "PD-L1",
+        "PDCD1L1",
+        "PDCD1LG1",
+        "PDL1",
+        "hPD-L1"
+    ],
+    "PTEN": [
+        "10q23del",
+        "BZS",
+        "CWS1",
+        "DEC",
+        "GLM2",
+        "MHAM",
+        "MMAC1",
+        "PTEN",
+        "PTEN1",
+        "PTENbeta",
+        "PTENgama",
+        "TEP1"
+    ],
+    "IKZF1": [
+        "CVID13",
+        "Hs.54452",
+        "IK1",
+        "IKAROS",
+        "IKZF1",
+        "LYF1",
+        "LyF-1",
+        "PPP1R92",
+        "PRO0758",
+        "ZNFN1A1"
+    ],
+    "NRAS": [
+        "ALPS4",
+        "CMNS",
+        "KRAS",
+        "N-ras",
+        "NCMS",
+        "NRAS",
+        "NRAS1",
+        "NS6"
+    ],
+    "IDH1": [
+        "HEL-216",
+        "HEL-S-26",
+        "IDCD",
+        "IDH",
+        "IDH1",
+        "IDP",
+        "IDPC",
+        "PICD"
+    ],
+    "KIT": [
+        "C-Kit",
+        "CD117",
+        "KIT",
+        "MASTC",
+        "PBT",
+        "SCFR"
+    ],
+    "FGFR1": [
+        "BFGFR",
+        "CD331",
+        "CEK",
+        "ECCL",
+        "FGFBR",
+        "FGFR-1",
+        "FGFR1",
+        "FLG",
+        "FLT-2",
+        "FLT2",
+        "HBGFR",
+        "HH2",
+        "HRTFDS",
+        "KAL2",
+        "N-SAM",
+        "OGD",
+        "bFGF-R-1"
+    ],
+    "CDKN2A": [
+        "ARF",
+        "CAI2",
+        "CDK4I",
+        "CDKN2",
+        "CDKN2A",
+        "CMM2",
+        "INK4",
+        "INK4A",
+        "MLM",
+        "MTS-1",
+        "MTS1",
+        "P14",
+        "P14ARF",
+        "P16",
+        "P16-INK4A",
+        "P16INK4",
+        "P16INK4A",
+        "P19",
+        "P19ARF",
+        "TP16"
+    ],
+    "ABL1": [
+        "ABL",
+        "ABL1",
+        "BCR-ABL",
+        "CHDSKM",
+        "JTK7",
+        "bcr/abl",
+        "c-ABL",
+        "c-ABL1",
+        "p150",
+        "v-abl"
+    ],
+    "GNAS": [
+        "AHO",
+        "C20orf45",
+        "GNAS",
+        "GNAS1",
+        "GPSA",
+        "GSA",
+        "GSP",
+        "NESP",
+        "PITA3",
+        "POH",
+        "SCG6",
+        "SgVI"
+    ],
+    "MYOD1": [
+        "CMYO17",
+        "CMYP17",
+        "MYF3",
+        "MYOD",
+        "MYOD1",
+        "MYODRIF",
+        "PUM",
+        "bHLHc1"
+    ],
+    "BCOR": [
+        "ANOP2",
+        "BCOR",
+        "MAA2",
+        "MCOPS2"
+    ],
+    "CEBPA": [
+        "C/EBP-alpha",
+        "CEBP",
+        "CEBPA"
+    ],
+    "MGMT": [
+        "MGMT"
+    ],
+    "ATM": [
+        "AT1",
+        "ATA",
+        "ATC",
+        "ATD",
+        "ATDC",
+        "ATE",
+        "ATM",
+        "TEL1",
+        "TELO1"
+    ],
+    "WT1": [
+        "AWT1",
+        "GUD",
+        "NPHS4",
+        "WAGR",
+        "WIT-2",
+        "WT-1",
+        "WT1",
+        "WT33"
+    ],
+    "SF3B1": [
+        "Hsh155",
+        "MDS",
+        "PRP10",
+        "PRPF10",
+        "SAP155",
+        "SF3B1",
+        "SF3b155"
+    ],
+    "TET2": [
+        "IMD75",
+        "KIAA1546",
+        "MDS",
+        "TET2"
+    ],
+    "VHL": [
+        "HRCA1",
+        "RCA1",
+        "VHL",
+        "VHL1",
+        "pVHL"
+    ],
+    "CCND1": [
+        "BCL1",
+        "CCND1",
+        "D11S287E",
+        "PRAD1",
+        "U21B31"
+    ],
+    "RUNX1": [
+        "AML1",
+        "AML1-EVI-1",
+        "AMLCR1",
+        "CBF2alpha",
+        "CBFA2",
+        "EVI-1",
+        "PEBP2aB",
+        "PEBP2alpha",
+        "RUNX1"
+    ],
+    "MET": [
+        "AUTS9",
+        "DA11",
+        "DFNB97",
+        "HGFR",
+        "MET",
+        "RCCP2",
+        "c-Met"
+    ],
+    "IDH2": [
+        "D2HGA2",
+        "ICD-M",
+        "IDH",
+        "IDH-2",
+        "IDH2",
+        "IDHM",
+        "IDP",
+        "IDPM",
+        "mNADP-IDH"
+    ],
+    "TERT": [
+        "CMM9",
+        "DKCA2",
+        "DKCB4",
+        "EST2",
+        "PFBMFT1",
+        "TCS1",
+        "TERT",
+        "TP2",
+        "TRT",
+        "hEST2",
+        "hTRT"
+    ],
+    "JAK2": [
+        "JAK2",
+        "JTK10"
+    ],
+    "PDGFRA": [
+        "CD140A",
+        "PDGFR-2",
+        "PDGFR2",
+        "PDGFRA"
+    ],
+    "ASXL1": [
+        "ASXL1",
+        "BOPS",
+        "MDS"
+    ],
+    "NOTCH1": [
+        "AOS5",
+        "AOVD1",
+        "NOTCH1",
+        "TAN1",
+        "hN1"
+    ],
+    "RRM1": [
+        "PEOB6",
+        "R1",
+        "RIR1",
+        "RR1",
+        "RRM1"
+    ],
+    "BAP1": [
+        "BAP1",
+        "HUCEP-13",
+        "KURIS",
+        "TPDS1",
+        "UBM2",
+        "UCHL2",
+        "UVM2",
+        "hucep-6"
+    ],
+    "RET": [
+        "CDHF12",
+        "CDHR16",
+        "HSCR1",
+        "MEN2A",
+        "MEN2B",
+        "MTC1",
+        "PTC",
+        "RET",
+        "RET-ELE1"
+    ],
+    "AR": [
+        "AIS",
+        "AR",
+        "AR8",
+        "DHTR",
+        "HUMARA",
+        "HYSP1",
+        "KD",
+        "NR3C4",
+        "SBMA",
+        "SMAX1",
+        "TFM"
+    ],
+    "CALR": [
+        "CALR",
+        "CALR1",
+        "CRT",
+        "HEL-S-99n",
+        "RO",
+        "SSA",
+        "cC1qR"
+    ],
+    "CTNNB1": [
+        "CTNNB",
+        "CTNNB1",
+        "EVR7",
+        "MRD19",
+        "NEDSDV",
+        "armadillo"
+    ],
+    "FOXL2": [
+        "BPES",
+        "BPES1",
+        "FOXL2",
+        "PFRK",
+        "PINTO",
+        "POF3"
+    ],
+    "FGFR3": [
+        "ACH",
+        "CD333",
+        "CEK2",
+        "FGFR3",
+        "HSFGFR3EX",
+        "JTK4"
+    ],
+    "H3-3A": [
+        "BRYLIB1",
+        "H3-3A",
+        "H3-3B",
+        "H3.3A",
+        "H3F3",
+        "H3F3A"
+    ],
+    "NF1": [
+        "NF1",
+        "NFNS",
+        "VRNF",
+        "WSS"
+    ],
+    "PGR": [
+        "NR3C3",
+        "PGR",
+        "PR"
+    ],
+    "AREG": [
+        "AR",
+        "AREG",
+        "AREGB",
+        "CRDGF",
+        "SDGF"
+    ],
+    "MTHFR": [
+        "MTHFR"
+    ],
+    "U2AF1": [
+        "FP793",
+        "RN",
+        "RNU2AF1",
+        "U2AF1",
+        "U2AF35",
+        "U2AFBP"
+    ],
+    "UGT1A1": [
+        "BILIQTL1",
+        "GNT1",
+        "HUG-BR1",
+        "UDPGT",
+        "UDPGT 1-1",
+        "UGT1",
+        "UGT1A",
+        "UGT1A1"
+    ],
+    "DPYD": [
+        "DHP",
+        "DHPDHASE",
+        "DPD",
+        "DPYD",
+        "DYPD"
+    ],
+    "PAX5": [
+        "ALL3",
+        "BSAP",
+        "PAX-5",
+        "PAX5"
+    ],
+    "SMARCB1": [
+        "BAF47",
+        "CSS3",
+        "INI-1",
+        "INI1",
+        "MRD15",
+        "PPP1R144",
+        "RDT",
+        "RTPS1",
+        "SMARCB1",
+        "SNF5",
+        "SNF5L1",
+        "SWNTS1",
+        "Sfh1p",
+        "Snr1",
+        "hSNFS"
+    ],
+    "MYCN": [
+        "FGLDS1",
+        "MODED",
+        "MPAPA",
+        "MYCN",
+        "MYCNsORF",
+        "MYCNsPEP",
+        "N-myc",
+        "NMYC",
+        "ODED",
+        "bHLHe37"
+    ],
+    "EZH2": [
+        "ENX-1",
+        "ENX1",
+        "EZH2",
+        "EZH2b",
+        "KMT6",
+        "KMT6A",
+        "WVS",
+        "WVS2"
+    ],
+    "SMO": [
+        "CRJS",
+        "FZD11",
+        "Gx",
+        "PHLS",
+        "SMO",
+        "SMOH"
+    ],
+    "ALK": [
+        "ALK",
+        "ALK1",
+        "CD246",
+        "NBLST3"
+    ],
+    "MYB": [
+        "Cmyb",
+        "MYB",
+        "c-myb",
+        "c-myb_CDS",
+        "efg"
+    ],
+    "CCNE1": [
+        "CCNE",
+        "CCNE1",
+        "pCCNE1"
+    ],
+    "BTK": [
+        "AGMX1",
+        "AT",
+        "ATK",
+        "BPK",
+        "BTK",
+        "IGHD3",
+        "IMD1",
+        "PSCTK1",
+        "XLA"
+    ],
+    "XRCC1": [
+        "RCC",
+        "SCAR26",
+        "XRCC1"
+    ],
+    "TYMS": [
+        "DKCD",
+        "HST422",
+        "TMS",
+        "TS",
+        "TYMS"
+    ],
+    "BCL2L11": [
+        "BAM",
+        "BCL2L11",
+        "BIM",
+        "BOD"
+    ],
+    "PAX8": [
+        "PAX-8",
+        "PAX8"
+    ],
+    "STK11": [
+        "LKB1",
+        "PJS",
+        "STK11",
+        "hLKB1"
+    ],
+    "HOXB13": [
+        "HOXB13",
+        "HPC9",
+        "PSGD"
+    ],
+    "PALB2": [
+        "BROVCA5",
+        "FANCN",
+        "PALB2",
+        "PNCA3"
+    ],
+    "CDK12": [
+        "CDK12",
+        "CRK7",
+        "CRKR",
+        "CRKRS"
+    ],
+    "FOXR2": [
+        "FOXN6",
+        "FOXR2"
+    ],
+    "MYBL1": [
+        "A-MYB",
+        "AMYB",
+        "MYBL1"
+    ],
+    "MN1": [
+        "CEBALID",
+        "MGCR",
+        "MGCR1",
+        "MGCR1-PEN",
+        "MN1",
+        "dJ353E16.2"
+    ],
+    "ATRX": [
+        "ATRX",
+        "JMS",
+        "MRX52",
+        "RAD54",
+        "RAD54L",
+        "XH2",
+        "XNP",
+        "ZNF-HX"
+    ],
+    "AURKA": [
+        "AIK",
+        "ARK1",
+        "AURA",
+        "AURKA",
+        "BTAK",
+        "PPP1R47",
+        "STK15",
+        "STK6",
+        "STK7"
+    ],
+    "DICER1": [
+        "DCR1",
+        "DICER1",
+        "Dicer",
+        "Dicer1e",
+        "GLOW",
+        "HERNA",
+        "K12H4.8-LIKE",
+        "MNG1",
+        "RMSE2",
+        "aviD"
+    ],
+    "ERBB3": [
+        "ERBB3",
+        "ErbB-3",
+        "FERLK",
+        "HER3",
+        "LCCS2",
+        "MDA-BF-1",
+        "VSCN1",
+        "c-erbB-3",
+        "c-erbB3",
+        "erbB3-S",
+        "p180-ErbB3",
+        "p45-sErbB3",
+        "p85-sErbB3"
+    ],
+    "NRG1": [
+        "ARIA",
+        "GGF",
+        "GGF2",
+        "HGL",
+        "HRG",
+        "HRG1",
+        "HRGA",
+        "MST131",
+        "MSTP131",
+        "NDF",
+        "NRG1",
+        "NRG1-IT2",
+        "SMDF"
+    ],
+    "EREG": [
+        "EPR",
+        "ER",
+        "EREG",
+        "Ep"
+    ],
+    "ERCC2": [
+        "COFS2",
+        "EM9",
+        "ERCC2",
+        "TFIIH",
+        "TTD",
+        "TTD1",
+        "XPD"
+    ],
+    "FCGR2A": [
+        "CD32",
+        "CD32A",
+        "CDw32",
+        "FCG2",
+        "FCGR2",
+        "FCGR2A",
+        "FCGR2A1",
+        "FcGR",
+        "FcgammaRIIa",
+        "IGFR2"
+    ],
+    "FCGR3A": [
+        "CD16",
+        "CD16-II",
+        "CD16A",
+        "FCG3",
+        "FCGR3",
+        "FCGR3A",
+        "FCGRIII",
+        "FCR-10",
+        "FCRIII",
+        "FCRIIIA",
+        "FcGRIIIA",
+        "IGFR3",
+        "IMD20"
+    ],
+    "MKI67": [
+        "KIA",
+        "MIB-",
+        "MIB-1",
+        "MKI67",
+        "PPP1R105"
+    ],
+    "ACVR1": [
+        "ACTRI",
+        "ACVR1",
+        "ACVR1A",
+        "ACVRLK2",
+        "ALK2",
+        "FOP",
+        "SKR1",
+        "TSRI"
+    ],
+    "ARID1A": [
+        "ARID1A",
+        "B120",
+        "BAF250",
+        "BAF250a",
+        "BM029",
+        "C1orf4",
+        "CSS2",
+        "ELD",
+        "MRD14",
+        "OSA1",
+        "P270",
+        "SMARCF1",
+        "hELD",
+        "hOSA1"
+    ],
+    "AKT1": [
+        "AKT",
+        "AKT1",
+        "PKB",
+        "PKB-ALPHA",
+        "PRKBA",
+        "RAC",
+        "RAC-ALPHA"
+    ],
+    "MYD88": [
+        "IMD68",
+        "MYD88",
+        "MYD88D",
+        "WM1"
+    ],
+    "PBRM1": [
+        "BAF180",
+        "PB1",
+        "PBRM1",
+        "RCC",
+        "SMARCH1"
+    ],
+    "ERCC1": [
+        "COFS4",
+        "ERCC1",
+        "RAD10",
+        "UV20"
+    ],
+    "SMARCA4": [
+        "BAF190",
+        "BAF190A",
+        "BRG1",
+        "CSS4",
+        "MRD16",
+        "OTSC12",
+        "RTPS2",
+        "SMARCA4",
+        "SNF2",
+        "SNF2-beta",
+        "SNF2L4",
+        "SNF2LB",
+        "SWI2",
+        "hSNF2b"
+    ],
+    "PML": [
+        "MYL",
+        "PML",
+        "PP8675",
+        "RNF71",
+        "TRIM19"
+    ],
+    "ALDH1A2": [
+        "ALDH1A2",
+        "DIH4",
+        "RALDH(II)",
+        "RALDH2",
+        "RALDH2-T"
+    ],
+    "MIR218-1": [
+        "MIR218-1",
+        "MIRN218-1",
+        "mir-218-1"
+    ],
+    "CDK4": [
+        "CDK4",
+        "CMM3",
+        "PSK-J3"
+    ],
+    "CSF3R": [
+        "CD114",
+        "CSF3R",
+        "GCSFR",
+        "SCN7"
+    ],
+    "STAG2": [
+        "HPE13",
+        "MKMS",
+        "NEDXCF",
+        "SA-2",
+        "SA2",
+        "SCC3B",
+        "STAG2",
+        "bA517O1.1"
+    ],
+    "KLLN": [
+        "CWS4",
+        "KILLIN",
+        "KLLN"
+    ],
+    "MECOM": [
+        "AML1-EVI-1",
+        "EVI1",
+        "KMT8E",
+        "MDS1",
+        "MDS1-EVI1",
+        "MECOM",
+        "PRDM3",
+        "RUSAT2"
+    ],
+    "ESR1": [
+        "ER",
+        "ESR",
+        "ESR1",
+        "ESRA",
+        "ESTRR",
+        "Era",
+        "NR3A1"
+    ],
+    "CHEK2": [
+        "CDS1",
+        "CHEK2",
+        "CHK2",
+        "HuCds1",
+        "LFS2",
+        "PP1425",
+        "RAD53",
+        "TPDS4",
+        "hCds1"
+    ],
+    "RAD54L": [
+        "HR54",
+        "RAD54A",
+        "RAD54L",
+        "hHR54",
+        "hRAD54"
+    ],
+    "NT5C2": [
+        "GMP",
+        "NT5B",
+        "NT5C2",
+        "PNT5",
+        "SPG45",
+        "SPG65",
+        "cN-II"
+    ],
+    "FGFR2": [
+        "BBDS",
+        "BEK",
+        "BFR-1",
+        "CD332",
+        "CEK3",
+        "CFD1",
+        "ECT1",
+        "FGFR2",
+        "JWS",
+        "K-SAM",
+        "KGFR",
+        "TK14",
+        "TK25"
+    ],
+    "GNAQ": [
+        "CMAL",
+        "CMC1",
+        "G-ALPHA-q",
+        "GAQ",
+        "GNAQ",
+        "SWS"
+    ],
+    "PRPS1": [
+        "ARTS",
+        "CMTX5",
+        "DFN2",
+        "DFNX1",
+        "PPRibP",
+        "PRPS1",
+        "PRS-I",
+        "PRSI"
+    ],
+    "SMAD4": [
+        "DPC4",
+        "JIP",
+        "MADH4",
+        "MYHRS",
+        "SMAD4"
+    ],
+    "ABCB1": [
+        "ABC20",
+        "ABCB1",
+        "CD243",
+        "CLCS",
+        "GP170",
+        "MDR1",
+        "P-GP",
+        "PGY1",
+        "p-170"
+    ],
+    "PTCH1": [
+        "BCNS",
+        "BCNS1",
+        "NBCCS",
+        "PTC",
+        "PTC1",
+        "PTCH",
+        "PTCH1"
+    ],
+    "TOP1": [
+        "TOP1",
+        "TOPI"
+    ],
+    "HIF1A": [
+        "HIF-1-alpha",
+        "HIF-1A",
+        "HIF-1alpha",
+        "HIF1",
+        "HIF1-ALPHA",
+        "HIF1A",
+        "MOP1",
+        "PASD8",
+        "bHLHe78"
+    ],
+    "EPAS1": [
+        "ECYT4",
+        "EPAS1",
+        "HIF2A",
+        "HLF",
+        "MOP2",
+        "PASD2",
+        "bHLHe73"
+    ],
+    "MMP2": [
+        "CLG4",
+        "CLG4A",
+        "MMP-2",
+        "MMP-II",
+        "MMP2",
+        "MONA",
+        "TBE-1"
+    ],
+    "MAP2K7": [
+        "JNKK2",
+        "MAP2K7",
+        "MAPKK7",
+        "MEK",
+        "MEK 7",
+        "MKK7",
+        "PRKMK7",
+        "SAPKK-4",
+        "SAPKK4"
+    ],
+    "SRSF2": [
+        "PR264",
+        "SC-35",
+        "SC35",
+        "SFRS2",
+        "SFRS2A",
+        "SRSF2",
+        "SRp30b"
+    ],
+    "PLCG2": [
+        "APLAID",
+        "FCAS3",
+        "PLC-IV",
+        "PLC-gamma-2",
+        "PLCG2"
+    ],
+    "GNA11": [
+        "FBH",
+        "FBH2",
+        "FHH2",
+        "GNA-11",
+        "GNA11",
+        "HG1K",
+        "HHC2",
+        "HYPOC2"
+    ],
+    "CDK6": [
+        "CDK6",
+        "MCPH12",
+        "PLSTIRE"
+    ],
+    "SGK1": [
+        "SGK",
+        "SGK1"
+    ],
+    "HRAS": [
+        "C-BAS/HAS",
+        "C-H-RAS",
+        "C-HA-RAS1",
+        "CTLO",
+        "H-RASIDX",
+        "HAMSV",
+        "HRAS",
+        "HRAS1",
+        "RASH1",
+        "p21ras"
+    ],
+    "GAS6": [
+        "AXLLG",
+        "AXSF",
+        "GAS6"
+    ],
+    "MTOR": [
+        "FRAP",
+        "FRAP1",
+        "FRAP2",
+        "MTOR",
+        "RAFT1",
+        "RAPT1",
+        "SKS"
+    ],
+    "BCL2": [
+        "BCL2",
+        "Bcl-2",
+        "PPP1R50"
+    ],
+    "REL": [
+        "C-Rel",
+        "HIVEN86A",
+        "IMD92",
+        "REL"
+    ],
+    "GSTP1": [
+        "DFN7",
+        "FAEES3",
+        "GST3",
+        "GSTP",
+        "GSTP1",
+        "HEL-S-22",
+        "PI"
+    ],
+    "ATR": [
+        "ATR",
+        "FCTCS",
+        "FRP1",
+        "MEC1",
+        "SCKL",
+        "SCKL1"
+    ],
+    "FBXW7": [
+        "AGO",
+        "CDC4",
+        "DEDHIL",
+        "FBW6",
+        "FBW7",
+        "FBX30",
+        "FBXO30",
+        "FBXW6",
+        "FBXW7",
+        "SEL-10",
+        "SEL10",
+        "hAgo",
+        "hCdc4"
+    ],
+    "PDCD4": [
+        "H731",
+        "PDCD4"
+    ],
+    "MDM2": [
+        "ACTFS",
+        "HDMX",
+        "LSKB",
+        "MDM2",
+        "hdm2"
+    ],
+    "HSPA5": [
+        "BIP",
+        "GRP78",
+        "HEL-S-89n",
+        "HSPA5"
+    ],
+    "FOXP3": [
+        "AIID",
+        "DIETER",
+        "FOXP3",
+        "IPEX",
+        "JM2",
+        "PIDX",
+        "XPID"
+    ],
+    "CDX2": [
+        "CDX-3",
+        "CDX2",
+        "CDX2/AS",
+        "CDX3"
+    ],
+    "STAT3": [
+        "ADMIO",
+        "ADMIO1",
+        "APRF",
+        "HIES",
+        "STAT3"
+    ],
+    "FCGR2B": [
+        "CD32",
+        "CD32B",
+        "FCG2",
+        "FCGR2",
+        "FCGR2B",
+        "FCGR2C",
+        "FcGRIIB",
+        "FcRII-c",
+        "FcgammaRIIb",
+        "IGFR2"
+    ],
+    "BIRC5": [
+        "API4",
+        "BIRC5",
+        "EPR-1"
+    ],
+    "PRDM1": [
+        "BLIMP-1",
+        "BLIMP1",
+        "PRDI-BF1",
+        "PRDM1"
+    ],
+    "LRP1B": [
+        "LRP-1B",
+        "LRP-DIT",
+        "LRP1B",
+        "LRPDIT"
+    ],
+    "AXL": [
+        "ARK",
+        "AXL",
+        "AXL3",
+        "JTK11",
+        "Tyro7",
+        "UFO"
+    ],
+    "CYP2D6": [
+        "CPD6",
+        "CYP2D",
+        "CYP2D6",
+        "CYP2D7AP",
+        "CYP2D7BP",
+        "CYP2D7P2",
+        "CYP2D8P2",
+        "CYP2DL1",
+        "CYPIID6",
+        "P450-DB1",
+        "P450C2D",
+        "P450DB1"
+    ],
+    "CDKN2B": [
+        "CDK4I",
+        "CDKN2B",
+        "INK4B",
+        "MTS2",
+        "P15",
+        "TP15",
+        "p15INK4b"
+    ],
+    "EPCAM": [
+        "Ber-Ep4",
+        "BerEp4",
+        "DIAR5",
+        "EGP-2",
+        "EGP314",
+        "EGP40",
+        "EPCAM",
+        "ESA",
+        "HNPCC8",
+        "KS1/4",
+        "KSA",
+        "LYNCH8",
+        "M4S1",
+        "MIC18",
+        "MK-1",
+        "MOC-31",
+        "TACSTD1",
+        "TROP1"
+    ],
+    "NTRK1": [
+        "MTC",
+        "NTRK1",
+        "TRK",
+        "TRK1",
+        "TRKA",
+        "Trk-A",
+        "p140-TrkA"
+    ],
+    "H3-3B": [
+        "BRYLIB2",
+        "H3-3A",
+        "H3-3B",
+        "H3.3B",
+        "H3F3B"
+    ],
+    "FGF19": [
+        "FGF19"
+    ],
+    "H3C2": [
+        "H3/l",
+        "H3C1",
+        "H3C10",
+        "H3C11",
+        "H3C12",
+        "H3C2",
+        "H3C3",
+        "H3C4",
+        "H3C6",
+        "H3C7",
+        "H3C8",
+        "H3FL",
+        "HIST1H3B"
+    ],
+    "IGF1R": [
+        "CD221",
+        "IGF1R",
+        "IGFIR",
+        "IGFR",
+        "JTK13"
+    ],
+    "CD44": [
+        "CD44",
+        "CDW44",
+        "CSPG8",
+        "ECM-III",
+        "ECMR-III",
+        "H-CAM",
+        "HCELL",
+        "HUTCH-1",
+        "HUTCH-I",
+        "Hermes-1",
+        "IN",
+        "LHR",
+        "MC56",
+        "MDU2",
+        "MDU3",
+        "MIC4",
+        "Pgp1"
+    ],
+    "SLC29A1": [
+        "AUG",
+        "ENT1",
+        "SLC29A1",
+        "hENT1"
+    ],
+    "BRIP1": [
+        "BACH1",
+        "BRIP1",
+        "FANCJ",
+        "OF"
+    ],
+    "BARD1": [
+        "BARD1"
+    ],
+    "CHEK1": [
+        "CHEK1",
+        "CHK1",
+        "OZEMA21"
+    ],
+    "RAD51B": [
+        "R51H2",
+        "RAD51B",
+        "RAD51L1",
+        "REC2"
+    ],
+    "RAD51D": [
+        "BROVCA4",
+        "R51H3",
+        "RAD51D",
+        "RAD51L3",
+        "TRAD"
+    ],
+    "TSC1": [
+        "LAM",
+        "TSC",
+        "TSC1"
+    ],
+    "DNMT1": [
+        "ADCADN",
+        "AIM",
+        "CXXC9",
+        "DNMT",
+        "DNMT1",
+        "HSN1E",
+        "MCMT",
+        "m.HsaI"
+    ],
+    "PTPRB": [
+        "HPTP-BETA",
+        "HPTPB",
+        "PTPB",
+        "PTPRB",
+        "R-PTP-BETA",
+        "VEPTP"
+    ],
+    "MAP2K1": [
+        "CFC3",
+        "MAP2K1",
+        "MAPKK1",
+        "MEK1",
+        "MEL",
+        "MKK1",
+        "PRKMK1"
+    ],
+    "CCND2": [
+        "CCND2",
+        "KIAK0002",
+        "MPPH3"
+    ],
+    "SIRT1": [
+        "SIR2",
+        "SIR2L1",
+        "SIR2alpha",
+        "SIRT1"
+    ],
+    "FOXP1": [
+        "12CC4",
+        "FOXP1",
+        "HSPC215",
+        "MFH",
+        "QRF1",
+        "hFKH1B"
+    ],
+    "KMT2D": [
+        "AAD10",
+        "ALR",
+        "BCAHH",
+        "CAGL114",
+        "KABUK1",
+        "KMS",
+        "KMT2D",
+        "MLL2",
+        "MLL4",
+        "TNRC21"
+    ],
+    "NCOA3": [
+        "ACTR",
+        "AIB-1",
+        "AIB1",
+        "CAGH16",
+        "CTG26",
+        "KAT13B",
+        "NCOA3",
+        "RAC3",
+        "SRC-3",
+        "SRC3",
+        "TNRC14",
+        "TNRC16",
+        "TRAM-1",
+        "bHLHe42",
+        "pCIP"
+    ],
+    "TTF1": [
+        "TTF-1",
+        "TTF-I",
+        "TTF1"
+    ],
+    "ERCC5": [
+        "COFS3",
+        "ERCC5",
+        "ERCC5-201",
+        "ERCM2",
+        "UVDR",
+        "XPG",
+        "XPGC"
+    ],
+    "ABCG2": [
+        "ABC15",
+        "ABCG2",
+        "ABCP",
+        "BCRP",
+        "BCRP1",
+        "BMDP",
+        "CD338",
+        "CDw338",
+        "CDw388",
+        "EST157481",
+        "GOUT1",
+        "MRX",
+        "MXR",
+        "MXR-1",
+        "MXR1",
+        "UAQTL1"
+    ],
+    "AKT2": [
+        "AKT2",
+        "HIHGHH",
+        "PKBB",
+        "PKBBETA",
+        "PRKBB",
+        "RAC-BETA"
+    ],
+    "NT5E": [
+        "CALJA",
+        "CD73",
+        "E5NT",
+        "NT",
+        "NT5",
+        "NT5E",
+        "NTE",
+        "eN",
+        "eNT"
+    ],
+    "RIT1": [
+        "NS8",
+        "RIBB",
+        "RIT",
+        "RIT1",
+        "ROC1"
+    ],
+    "TGFA": [
+        "TFGA",
+        "TGFA"
+    ],
+    "WEE1": [
+        "WEE1",
+        "WEE1A",
+        "WEE1hu"
+    ],
+    "TFF3": [
+        "ITF",
+        "P1B",
+        "TFF3",
+        "TFI"
+    ],
+    "DKK1": [
+        "DKK-1",
+        "DKK1",
+        "SK"
+    ],
+    "HMOX1": [
+        "HMOX1",
+        "HMOX1D",
+        "HO-1",
+        "HSP32",
+        "bK286B10"
+    ],
+    "SETBP1": [
+        "MRD29",
+        "SEB",
+        "SETBP1"
+    ],
+    "CDKN1A": [
+        "CAP20",
+        "CDKN1",
+        "CDKN1A",
+        "CIP1",
+        "MDA-6",
+        "P21",
+        "SDI1",
+        "WAF1",
+        "p21CIP1"
+    ],
+    "ALCAM": [
+        "ALCAM",
+        "CD166",
+        "MEMD"
+    ],
+    "STMN1": [
+        "C1orf215",
+        "LAP18",
+        "Lag",
+        "OP18",
+        "PP17",
+        "PP19",
+        "PR22",
+        "SMN",
+        "STMN1"
+    ],
+    "THBS2": [
+        "EDSCLL3",
+        "THBS2",
+        "TSP2"
+    ],
+    "HLA-DRA": [
+        "HLA-DRA",
+        "HLA-DRA1"
+    ],
+    "NEDD9": [
+        "CAS-L",
+        "CAS2",
+        "CASL",
+        "CASS2",
+        "HEF1",
+        "NEDD9"
+    ],
+    "FGF13": [
+        "DEE90",
+        "FGF-13",
+        "FGF13",
+        "FGF2",
+        "FHF-2",
+        "FHF2",
+        "LINC00889",
+        "XLID110"
+    ],
+    "CIP2A": [
+        "CIP2A",
+        "KIAA1524",
+        "NOCIVA",
+        "p90"
+    ],
+    "MMP9": [
+        "CLG4B",
+        "GELB",
+        "MANDP2",
+        "MMP-9",
+        "MMP9"
+    ],
+    "B4GALT1": [
+        "B4GAL-T1",
+        "B4GALT1",
+        "CDG2D",
+        "CLDLFIB",
+        "GGTB2",
+        "GT1",
+        "GTB",
+        "beta4Gal-T1"
+    ],
+    "POT1": [
+        "CMM10",
+        "CRMCC3",
+        "GLM9",
+        "HPOT1",
+        "PFBMFT8",
+        "POT1",
+        "TPDS3"
+    ],
+    "RB1": [
+        "OSRC",
+        "PPP1R130",
+        "RB",
+        "RB1",
+        "p105-Rb",
+        "p110-RB1",
+        "pRb",
+        "pp110"
+    ],
+    "CASP8": [
+        "ALPS2B",
+        "CAP4",
+        "CASP8",
+        "Casp-8",
+        "FLICE",
+        "MACH",
+        "MCH5"
+    ],
+    "ETV4": [
+        "E1A-F",
+        "E1AF",
+        "ETV4",
+        "PEA3",
+        "PEAS3"
+    ],
+    "MLH1": [
+        "COCA2",
+        "FCC2",
+        "HNPCC",
+        "HNPCC2",
+        "LYNCH2",
+        "MLH-1",
+        "MLH1",
+        "MMRCS1",
+        "hMLH1"
+    ],
+    "KMT2C": [
+        "HALR",
+        "KLEFS2",
+        "KMT2C",
+        "MLL3"
+    ],
+    "KIF23": [
+        "CDA3",
+        "CDAIII",
+        "CDAN3",
+        "CDAN3A",
+        "CHO1",
+        "KIF23",
+        "KNSL5",
+        "MKLP-1",
+        "MKLP1"
+    ],
+    "GADD45A": [
+        "DDIT1",
+        "GADD45",
+        "GADD45A"
+    ],
+    "SLCO1B1": [
+        "HBLRR",
+        "LST-1",
+        "LST1",
+        "OATP-C",
+        "OATP1B1",
+        "OATP2",
+        "OATPC",
+        "SLC21A6",
+        "SLCO1B1"
+    ],
+    "POLE": [
+        "CRCS12",
+        "FILS",
+        "IMAGEI",
+        "POLE",
+        "POLE1"
+    ],
+    "CTAG1B": [
+        "CT6.1",
+        "CTAG",
+        "CTAG1",
+        "CTAG1B",
+        "ESO1",
+        "LAGE-2",
+        "LAGE2B",
+        "NY-ESO-1"
+    ],
+    "CTAG2": [
+        "CAMEL",
+        "CT2",
+        "CT6.2",
+        "CT6.2a",
+        "CT6.2b",
+        "CTAG2",
+        "ESO2",
+        "LAGE-1",
+        "LAGE2B"
+    ],
+    "DCC": [
+        "CRC18",
+        "CRCR1",
+        "DCC",
+        "HGPPS2",
+        "IGDCC1",
+        "MRMV1",
+        "NTN1R1"
+    ],
+    "NFE2L2": [
+        "HEBP1",
+        "IMDDHH",
+        "NFE2L2",
+        "NRF2",
+        "Nrf-2"
+    ],
+    "SSTR5": [
+        "SS-5-R",
+        "SST5",
+        "SSTR5"
+    ],
+    "MS4A1": [
+        "B1",
+        "Bp35",
+        "CD20",
+        "CVID5",
+        "FMC7",
+        "LEU-16",
+        "MS4A1",
+        "S7"
+    ],
+    "ARAF": [
+        "A-RAF",
+        "ARAF",
+        "ARAF1",
+        "PKS2",
+        "RAFA1"
+    ],
+    "TSC2": [
+        "LAM",
+        "PPP1R160",
+        "TSC2",
+        "TSC4"
+    ],
+    "RICTOR": [
+        "AVO3",
+        "PIA",
+        "RICTOR",
+        "hAVO3"
+    ],
+    "TIMP1": [
+        "CLGI",
+        "EPA",
+        "EPO",
+        "HCI",
+        "TIMP",
+        "TIMP-1",
+        "TIMP1"
+    ],
+    "TUBB3": [
+        "CDCBM",
+        "CDCBM1",
+        "CFEOM3",
+        "CFEOM3A",
+        "FEOM3",
+        "TUBB3",
+        "TUBB4",
+        "beta-4"
+    ],
+    "JAK1": [
+        "AIIDE",
+        "JAK1",
+        "JAK1A",
+        "JAK1B",
+        "JTK3"
+    ],
+    "HSPH1": [
+        "HSP105",
+        "HSP105A",
+        "HSP105B",
+        "HSPH1",
+        "NY-CO-25"
+    ],
+    "HAVCR2": [
+        "CD366",
+        "HAVCR2",
+        "HAVcr-2",
+        "KIM-3",
+        "SPTCL",
+        "TIM3",
+        "TIMD-3",
+        "TIMD3",
+        "Tim-3"
+    ],
+    "MAPK1": [
+        "ERK",
+        "ERK-2",
+        "ERK2",
+        "ERT1",
+        "MAPK1",
+        "MAPK2",
+        "NS13",
+        "P42MAPK",
+        "PRKM1",
+        "PRKM2",
+        "p38",
+        "p40",
+        "p41",
+        "p41mapk",
+        "p42-MAPK"
+    ],
+    "DEFA1": [
+        "DEF1",
+        "DEFA1",
+        "DEFA2",
+        "HNP-1",
+        "HP-1",
+        "HP1",
+        "MRS"
+    ],
+    "FNTB": [
+        "FNTB",
+        "FPTB"
+    ],
+    "VEGFA": [
+        "L-VEGF",
+        "MVCD1",
+        "VEGF",
+        "VEGFA",
+        "VPF"
+    ],
+    "SPHK1": [
+        "SPHK",
+        "SPHK1"
+    ],
+    "RSF1": [
+        "HBXAP",
+        "RSF-1",
+        "RSF1",
+        "XAP8",
+        "p325"
+    ],
+    "CDKN1B": [
+        "CDKN1B",
+        "CDKN4",
+        "KIP1",
+        "MEN1B",
+        "MEN4",
+        "P27KIP1"
+    ],
+    "EPHB4": [
+        "CMAVM2",
+        "EPHB4",
+        "HFASD",
+        "HTK",
+        "LMPHM7",
+        "MYK1",
+        "TYRO11"
+    ],
+    "TOP2A": [
+        "TOP2",
+        "TOP2A",
+        "TOP2alpha",
+        "TOPIIA",
+        "TP2A"
+    ],
+    "PROM1": [
+        "AC133",
+        "CD133",
+        "CORD12",
+        "MCDR2",
+        "MSTP061",
+        "PROM1",
+        "PROML1",
+        "RP41",
+        "STGD4"
+    ],
+    "CXCR4": [
+        "CD184",
+        "CXCR4",
+        "D2S201E",
+        "FB22",
+        "HM89",
+        "HSY3RR",
+        "LAP-3",
+        "LAP3",
+        "LCR1",
+        "LESTR",
+        "NPY3R",
+        "NPYR",
+        "NPYRL",
+        "NPYY3R",
+        "WHIM",
+        "WHIMS",
+        "WHIMS1"
+    ],
+    "MRE11": [
+        "ATLD",
+        "HNGS1",
+        "MRE11",
+        "MRE11A",
+        "MRE11B"
+    ],
+    "PSMB8": [
+        "ALDD",
+        "D6S216",
+        "D6S216E",
+        "JMP",
+        "LMP7",
+        "NKJO",
+        "PRAAS1",
+        "PSMB5i",
+        "PSMB8",
+        "RING10"
+    ],
+    "PBK": [
+        "CT84",
+        "HEL164",
+        "Nori-3",
+        "PBK",
+        "SPK",
+        "TOPK"
+    ],
+    "PTTG1": [
+        "EAP1",
+        "ECRAR",
+        "HPTTG",
+        "PTTG",
+        "PTTG1",
+        "TUTR1"
+    ],
+    "LEPR": [
+        "CD295",
+        "LEP-R",
+        "LEPR",
+        "LEPRD",
+        "OB-R",
+        "OBR"
+    ],
+    "ETS2": [
+        "ETS2",
+        "ETS2IT1"
+    ],
+    "PIM1": [
+        "PIM",
+        "PIM1"
+    ],
+    "PMS2": [
+        "HNPCC4",
+        "LYNCH4",
+        "MLH4",
+        "MMRCS4",
+        "PMS-2",
+        "PMS2",
+        "PMS2CL",
+        "PMSL2"
+    ],
+    "PTPN11": [
+        "BPTP3",
+        "CFC",
+        "JMML",
+        "METCDS",
+        "NS1",
+        "PTP-1D",
+        "PTP2C",
+        "PTPN11",
+        "SH-PTP2",
+        "SH-PTP3",
+        "SHP2"
+    ],
+    "ACTA1": [
+        "ACTA",
+        "ACTA1",
+        "ASMA",
+        "CFTD",
+        "CFTD1",
+        "CFTDM",
+        "CMYO2A",
+        "CMYO2B",
+        "CMYO2C",
+        "CMYP2A",
+        "CMYP2B",
+        "CMYP2C",
+        "MPFD",
+        "NEM1",
+        "NEM2",
+        "NEM3",
+        "SHPM"
+    ],
+    "BIRC3": [
+        "AIP1",
+        "API2",
+        "BIRC3",
+        "CIAP2",
+        "HAIP1",
+        "HIAP1",
+        "IAP-1",
+        "MALT2",
+        "MIHC",
+        "RNF49",
+        "c-IAP2"
+    ],
+    "RAF1": [
+        "CMD1NN",
+        "CRAF",
+        "NS5",
+        "RAF1",
+        "Raf-1",
+        "c-Raf"
+    ],
+    "FGF3": [
+        "FGF3",
+        "HBGF-3",
+        "INT2"
+    ],
+    "CBLB": [
+        "ADMIO3",
+        "CBLB",
+        "Cbl-b",
+        "Nbla00127",
+        "RNF56"
+    ],
+    "EIF1AX": [
+        "EIF1A",
+        "EIF1AP1",
+        "EIF1AX",
+        "EIF4C",
+        "eIF-1A",
+        "eIF-4C"
+    ],
+    "SH2B3": [
+        "IDDM20",
+        "LNK",
+        "SH2B3"
+    ],
+    "PTPRD": [
+        "HPTP",
+        "HPTPD",
+        "HPTPDELTA",
+        "PTPD",
+        "PTPRD",
+        "R-PTP-delta",
+        "RPTPDELTA"
+    ],
+    "RAD50": [
+        "NBSLD",
+        "RAD50",
+        "RAD502",
+        "hRad50"
+    ],
+    "PREX2": [
+        "DEP.2",
+        "DEPDC2",
+        "P-REX2",
+        "PPP1R129",
+        "PREX2"
+    ],
+    "PPP2R2A": [
+        "B55A",
+        "B55ALPHA",
+        "PPP2R2A",
+        "PR52A",
+        "PR55A",
+        "PR55alpha"
+    ],
+    "NTRK3": [
+        "GP145-TrkC",
+        "NTRK3",
+        "TRKC",
+        "gp145(trkC)"
+    ],
+    "ROS1": [
+        "MCF3",
+        "ROS",
+        "ROS1",
+        "c-ros-1"
+    ],
+    "MYC": [
+        "MRTL",
+        "MYC",
+        "MYCC",
+        "bHLHe39",
+        "c-Myc"
+    ],
+    "DDR2": [
+        "DDR2",
+        "MIG20a",
+        "NTRKR3",
+        "TKT",
+        "TYRO10",
+        "WRCN"
+    ],
+    "NF2": [
+        "ACN",
+        "BANF",
+        "NF2",
+        "SCH",
+        "SWNV",
+        "merlin-1"
+    ],
+    "B2M": [
+        "AMYLD6",
+        "B2M",
+        "IMD43",
+        "MHC1D4"
+    ],
+    "CRBN": [
+        "CRBN",
+        "MRT2",
+        "MRT2A"
+    ],
+    "MSH2": [
+        "COCA1",
+        "FCC1",
+        "HNPCC",
+        "HNPCC1",
+        "LCFS2",
+        "LYNCH1",
+        "MMRCS2",
+        "MSH-2",
+        "MSH2",
+        "hMSH2"
+    ],
+    "MSH6": [
+        "GTBP",
+        "GTMBP",
+        "HNPCC5",
+        "HSAP",
+        "LYNCH5",
+        "MMRCS3",
+        "MSH-6",
+        "MSH6",
+        "p160"
+    ],
+    "DDX41": [
+        "ABS",
+        "DDX41",
+        "MPLPF"
+    ],
+    "HLA-C": [
+        "D6S204",
+        "HLA-C",
+        "HLA-JY3",
+        "HLAC",
+        "HLC-C",
+        "MHC",
+        "PSORS1"
+    ],
+    "CBL": [
+        "C-CBL",
+        "CBL",
+        "CBL2",
+        "FRA11B",
+        "NSLL",
+        "RNF55"
+    ],
+    "PDGFRB": [
+        "CD140B",
+        "IBGC4",
+        "IMF1",
+        "JTK12",
+        "KOGS",
+        "PDGFR",
+        "PDGFR-1",
+        "PDGFR1",
+        "PDGFRB",
+        "PENTT"
+    ],
+    "APC": [
+        "APC",
+        "BTPS2",
+        "DESMD",
+        "DP2",
+        "DP2.5",
+        "DP3",
+        "GS",
+        "PPP1R46"
+    ],
+    "AKT3": [
+        "AKT3",
+        "MPPH",
+        "MPPH2",
+        "PKB-GAMMA",
+        "PKBG",
+        "PRKBG",
+        "RAC-PK-gamma",
+        "RAC-gamma",
+        "STK-2"
+    ],
+    "IGF2": [
+        "C11orf43",
+        "GRDF",
+        "IGF-II",
+        "IGF2",
+        "PP9974",
+        "SRS3"
+    ],
+    "ASS1": [
+        "ASS",
+        "ASS1",
+        "CTLN1"
+    ],
+    "ERBB4": [
+        "ALS19",
+        "ERBB4",
+        "HER4",
+        "p180erbB4"
+    ],
+    "AGR2": [
+        "AG-2",
+        "AG2",
+        "AGR2",
+        "GOB-4",
+        "HAG-2",
+        "HEL-S-116",
+        "HPC8",
+        "PDIA17",
+        "RIFTD",
+        "XAG-2"
+    ],
+    "ZEB1": [
+        "AREB6",
+        "BZP",
+        "DELTAEF1",
+        "FECD6",
+        "NIL2A",
+        "PPCD3",
+        "TCF8",
+        "ZEB1",
+        "ZFHEP",
+        "ZFHX1A"
+    ],
+    "ECSCR": [
+        "ARIA",
+        "ECSCR",
+        "ECSM2"
+    ],
+    "ROBO4": [
+        "AOVD3",
+        "ECSM4",
+        "MRB",
+        "ROBO4"
+    ],
+    "PPP1R15A": [
+        "GADD34",
+        "PPP1R15A"
+    ],
+    "JUN": [
+        "AP-1",
+        "AP1",
+        "JUN",
+        "c-Jun",
+        "cJUN",
+        "p39"
+    ],
+    "FOS": [
+        "AP-1",
+        "C-FOS",
+        "FOS",
+        "p55"
+    ],
+    "MEN1": [
+        "MEAI",
+        "MEN1",
+        "SCG2"
+    ],
+    "ERRFI1": [
+        "ERRFI1",
+        "GENE-33",
+        "MIG-6",
+        "MIG6",
+        "RALT"
+    ],
+    "SDHB": [
+        "CWS2",
+        "IP",
+        "MC2DN4",
+        "PGL4",
+        "PPGL4",
+        "SDH",
+        "SDH1",
+        "SDH2",
+        "SDHB",
+        "SDHIP"
+    ],
+    "GATA2": [
+        "DCML",
+        "GATA2",
+        "IMD21",
+        "MONOMAC",
+        "NFE1B"
+    ],
+    "BIRC7": [
+        "BIRC7",
+        "KIAP",
+        "LIVIN",
+        "ML-IAP",
+        "MLIAP",
+        "RNF50"
+    ],
+    "RAC1": [
+        "MIG5",
+        "MRD48",
+        "RAC1",
+        "Rac-1",
+        "TC-25",
+        "p21-Rac1"
+    ],
+    "EIF4EBP1": [
+        "4E-BP1",
+        "4EBP1",
+        "BP-1",
+        "EIF4EBP1",
+        "PHAS-I"
+    ],
+    "DDX43": [
+        "CT13",
+        "DDX43",
+        "HAGE"
+    ],
+    "STAG3": [
+        "SA3",
+        "SPGF61",
+        "STAG3"
+    ],
+    "SOX10": [
+        "DOM",
+        "PCWH",
+        "SOX-10",
+        "SOX10",
+        "WS2E",
+        "WS4",
+        "WS4C"
+    ],
+    "FGF2": [
+        "BFGF",
+        "FGF-2",
+        "FGF2",
+        "FGFB",
+        "HBGF-2"
+    ],
+    "LYN": [
+        "JTK8",
+        "LYN",
+        "SAIDV",
+        "p53Lyn",
+        "p56Lyn"
+    ],
+    "PPP2R1A": [
+        "HJS2",
+        "MRD36",
+        "PP2A-Aalpha",
+        "PP2AA",
+        "PP2AAALPHA",
+        "PPP2R1A",
+        "PR65A"
+    ],
+    "CCND3": [
+        "CCND3"
+    ],
+    "SYK": [
+        "IMD82",
+        "SYK",
+        "p72-Syk"
+    ],
+    "EGF": [
+        "EGF",
+        "HOMG4",
+        "URG"
+    ],
+    "UGT1A": [
+        "GNT1",
+        "UGT",
+        "UGT1",
+        "UGT1A",
+        "UGT1A@"
+    ],
+    "NAPRT": [
+        "NAPRT",
+        "NAPRT1",
+        "PP3856"
+    ],
+    "PTP4A3": [
+        "PRL-3",
+        "PRL-R",
+        "PRL3",
+        "PTP4A3"
+    ],
+    "CFLAR": [
+        "CASH",
+        "CASP8AP1",
+        "CFLAR",
+        "CLARP",
+        "Casper",
+        "FLAME",
+        "FLAME-1",
+        "FLAME1",
+        "FLIP",
+        "I-FLICE",
+        "MRIT",
+        "c-FLIP",
+        "c-FLIPL",
+        "c-FLIPR",
+        "c-FLIPS",
+        "cFLIP"
+    ],
+    "DUSP6": [
+        "DUSP6",
+        "HH19",
+        "MKP3",
+        "PYST1"
+    ],
+    "ABCC3": [
+        "ABC31",
+        "ABCC3",
+        "EST90757",
+        "MLP2",
+        "MOAT-D",
+        "MRP3",
+        "cMOAT2"
+    ],
+    "ABCC10": [
+        "ABCC10",
+        "EST182763",
+        "MRP7",
+        "SIMRP7"
+    ],
+    "KDR": [
+        "CD309",
+        "FLK1",
+        "KDR",
+        "VEGFR",
+        "VEGFR2"
+    ],
+    "FANCC": [
+        "FA3",
+        "FAC",
+        "FACC",
+        "FANCC"
+    ],
+    "VPS37A": [
+        "HCRP1",
+        "PQBP2",
+        "SPG53",
+        "VPS37A"
+    ],
+    "MERTK": [
+        "MER",
+        "MERTK",
+        "RP38",
+        "Tyro12",
+        "c-Eyk",
+        "c-mer"
+    ],
+    "PIK3R2": [
+        "MPPH",
+        "MPPH1",
+        "P85B",
+        "PIK3R2",
+        "p85",
+        "p85-BETA",
+        "p85beta"
+    ],
+    "RASA1": [
+        "CM-AVM",
+        "CMAVM",
+        "CMAVM1",
+        "GAP",
+        "PKWS",
+        "RASA",
+        "RASA1",
+        "RASGAP",
+        "p120",
+        "p120GAP",
+        "p120RASGAP"
+    ],
+    "TLK2": [
+        "HsHPK",
+        "MRD57",
+        "PKU-ALPHA",
+        "TLK2"
+    ],
+    "PRKCB": [
+        "PKC-beta",
+        "PKCB",
+        "PKCI(2)",
+        "PKCbeta",
+        "PRKCB",
+        "PRKCB1",
+        "PRKCB2"
+    ],
+    "PARP1": [
+        "ADPRT",
+        "ADPRT 1",
+        "ADPRT1",
+        "ARTD1",
+        "PARP",
+        "PARP-1",
+        "PARP1",
+        "PARS",
+        "PPOL",
+        "Poly-PARP",
+        "pADPRT-1"
+    ],
+    "CTCF": [
+        "CFAP108",
+        "CTCF",
+        "FAP108",
+        "MRD21"
+    ],
+    "SMARCA2": [
+        "BAF190",
+        "BIS",
+        "BRM",
+        "NCBRS",
+        "SMARCA2",
+        "SNF2",
+        "SNF2L2",
+        "SNF2LA",
+        "SWI2",
+        "Sth1p",
+        "hBRM",
+        "hSNF2a"
+    ],
+    "FLCN": [
+        "BHD",
+        "DENND8B",
+        "FLCL",
+        "FLCN"
+    ],
+    "CBLC": [
+        "CBL-3",
+        "CBL-SL",
+        "CBLC",
+        "RNF57"
+    ],
+    "PTPRT": [
+        "PTPRT",
+        "R-PTP-T",
+        "RPTP-rho",
+        "RPTPrho"
+    ],
+    "SLFN11": [
+        "SLFN11",
+        "SLFN8/9"
+    ],
+    "RPS6": [
+        "RPS6",
+        "S6",
+        "eS6"
+    ],
+    "HSPB1": [
+        "CMT2F",
+        "HEL-S-102",
+        "HMN2B",
+        "HMND3",
+        "HS.76067",
+        "HSP27",
+        "HSP28",
+        "HSPB1",
+        "Hsp25",
+        "SRP27"
+    ],
+    "NQO1": [
+        "DHQU",
+        "DIA4",
+        "DTD",
+        "NMOR1",
+        "NMORI",
+        "NQO1",
+        "QR1"
+    ],
+    "MAGEH1": [
+        "APR-1",
+        "APR1",
+        "MAGEH",
+        "MAGEH1"
+    ],
+    "ASNS": [
+        "ASNS",
+        "ASNSD",
+        "TS11"
+    ],
+    "POU5F1": [
+        "OCT3",
+        "OCT4",
+        "OTF-3",
+        "OTF3",
+        "OTF4",
+        "Oct-3",
+        "Oct-4",
+        "Oct3/4",
+        "POU5F1"
+    ],
+    "KRT18": [
+        "CK-18",
+        "CYK18",
+        "K18",
+        "KRT18"
+    ],
+    "TBK1": [
+        "AIARV",
+        "FTDALS4",
+        "IIAE8",
+        "NAK",
+        "T2K",
+        "TBK1"
+    ],
+    "RAD23B": [
+        "HHR23B",
+        "HR23B",
+        "P58",
+        "RAD23B"
+    ],
+    "PIK3R1": [
+        "AGM7",
+        "GRB1",
+        "IMD36",
+        "PIK3R1",
+        "p85",
+        "p85-ALPHA",
+        "p85alpha"
+    ],
+    "HGF": [
+        "DFNB39",
+        "F-TCF",
+        "HGF",
+        "HGFB",
+        "HPTA",
+        "SF"
+    ],
+    "RRM2": [
+        "C2orf48",
+        "R2",
+        "RR2",
+        "RR2M",
+        "RRM2"
+    ],
+    "IL6": [
+        "BSF-2",
+        "BSF2",
+        "CDF",
+        "HGF",
+        "HSF",
+        "IFN-beta-2",
+        "IFNB2",
+        "IL-6",
+        "IL6"
+    ],
+    "KLF5": [
+        "BTEB2",
+        "CKLF",
+        "IKLF",
+        "KLF5"
+    ],
+    "MYCL": [
+        "L-Myc",
+        "LMYC",
+        "MYCL",
+        "MYCL1",
+        "bHLHe38"
+    ],
+    "MTAP": [
+        "BDMF",
+        "DMSFH",
+        "DMSMFH",
+        "HEL-249",
+        "LGMBF",
+        "MSAP",
+        "MTAP",
+        "c86fus"
+    ],
+    "SMAD2": [
+        "CHTD8",
+        "JV18",
+        "JV18-1",
+        "LDS6",
+        "MADH2",
+        "MADR2",
+        "SMAD2",
+        "hMAD-2",
+        "hSMAD2"
+    ],
+    "PRKAA2": [
+        "AMPK",
+        "AMPK2",
+        "AMPKa2",
+        "PRKAA",
+        "PRKAA2"
+    ],
+    "CDH1": [
+        "Arc-1",
+        "BCDS1",
+        "CD324",
+        "CDH1",
+        "CDHE",
+        "ECAD",
+        "LCAM",
+        "UVO"
+    ],
+    "RHOA": [
+        "ARH12",
+        "ARHA",
+        "EDFAOB",
+        "RHO12",
+        "RHOA",
+        "RHOH12"
+    ],
+    "EFNA2": [
+        "EFNA2",
+        "ELF-1",
+        "EPLG6",
+        "HEK7-L",
+        "LERK-6",
+        "LERK6"
+    ],
+    "FST": [
+        "FS",
+        "FST"
+    ],
+    "SULT1E1": [
+        "EST",
+        "EST-1",
+        "ST1E1",
+        "STE",
+        "SULT1E1"
+    ],
+    "PTGS2": [
+        "COX-2",
+        "COX2",
+        "GRIPGHS",
+        "PGG/HS",
+        "PGHS-2",
+        "PHS-2",
+        "PTGS2",
+        "hCox-2"
+    ],
+    "HOXB1": [
+        "HCFP3",
+        "HOX2",
+        "HOX2I",
+        "HOXB1",
+        "Hox-2.9"
+    ],
+    "ETV6": [
+        "ETV6",
+        "TEL",
+        "TEL/ABL",
+        "THC5"
+    ],
+    "NBN": [
+        "AT-V1",
+        "AT-V2",
+        "ATV",
+        "NBN",
+        "NBS",
+        "NBS1",
+        "P95",
+        "hNbs1"
+    ],
+    "CREBBP": [
+        "CBP",
+        "CREBBP",
+        "KAT3A",
+        "MKHK1",
+        "RSTS",
+        "RSTS1"
+    ],
+    "CSF1": [
+        "CSF-1",
+        "CSF1",
+        "MCSF",
+        "PG-M-CSF"
+    ],
+    "MITF": [
+        "CMM8",
+        "COMMAD",
+        "MI",
+        "MITF",
+        "MITF-A",
+        "WS2",
+        "WS2A",
+        "bHLHe32"
+    ],
+    "YAP1": [
+        "COB1",
+        "YAP",
+        "YAP-1",
+        "YAP1",
+        "YAP2",
+        "YAP65",
+        "YKI"
+    ],
+    "CSF1R": [
+        "BANDDOS",
+        "C-FMS",
+        "CD115",
+        "CSF-1R",
+        "CSF1R",
+        "CSFR",
+        "FIM2",
+        "FMS",
+        "GPSC",
+        "HDLS",
+        "HDLS1",
+        "M-CSF-R"
+    ],
+    "JAK3": [
+        "JAK-3",
+        "JAK3",
+        "JAK3_HUMAN",
+        "JAKL",
+        "L-JAK",
+        "LJAK"
+    ],
+    "PTPRF": [
+        "BNAH2",
+        "LAR",
+        "PTPRF"
+    ],
+    "AEBP1": [
+        "ACLP",
+        "AEBP1"
+    ],
+    "MDM4": [
+        "BMFS6",
+        "HDMX",
+        "MDM4",
+        "MDMX",
+        "MRP1"
+    ],
+    "BRD4": [
+        "BRD4",
+        "CAP",
+        "CDLS6",
+        "FSHRG4",
+        "HUNK1",
+        "HUNKI",
+        "MCAP"
+    ],
+    "CDK2": [
+        "CDK2",
+        "CDKN2",
+        "p33(CDK2)"
+    ],
+    "MAP2K2": [
+        "CFC4",
+        "MAP2K2",
+        "MAPKK2",
+        "MEK2",
+        "MKK2",
+        "PRKMK2"
+    ],
+    "POLD1": [
+        "CDC2",
+        "CRCS10",
+        "IMD120",
+        "MDPL",
+        "POLD",
+        "POLD1"
+    ],
+    "SCN8A": [
+        "BFIS5",
+        "CERIII",
+        "CIAT",
+        "DEE13",
+        "EIEE13",
+        "MED",
+        "MYOCL2",
+        "NaCh6",
+        "Nav1.6",
+        "PN4",
+        "SCN8A"
+    ],
+    "PXDNL": [
+        "PMR1",
+        "PRM1",
+        "PXDNL",
+        "VPO2"
+    ],
+    "PAPPA2": [
+        "PAPP-A2",
+        "PAPP-E",
+        "PAPPA2",
+        "PAPPE",
+        "PLAC3",
+        "SSDA"
+    ],
+    "POLE4": [
+        "POLE4",
+        "YHHQ1",
+        "p12"
+    ],
+    "PSMD4": [
+        "AF",
+        "AF-1",
+        "ASF",
+        "MCB1",
+        "PSMD4",
+        "Rpn10",
+        "S5A",
+        "pUB-R5"
+    ],
+    "CIC": [
+        "CIC",
+        "MRD45"
+    ],
+    "ETV1": [
+        "ER81",
+        "ETV1"
+    ],
+    "ETV5": [
+        "ERM",
+        "ETV5"
+    ],
+    "ATXN1L": [
+        "ATXN1L",
+        "BOAT",
+        "BOAT1"
+    ],
+    "SUFU": [
+        "BCNS2",
+        "JBTS32",
+        "PRO1280",
+        "SUFU",
+        "SUFUH",
+        "SUFUXL"
+    ],
+    "CTLA4": [
+        "ALPS5",
+        "CD",
+        "CD152",
+        "CELIAC3",
+        "CTLA-4",
+        "CTLA4",
+        "GRD4",
+        "GSE",
+        "IDDM12"
+    ],
+    "CX3CL1": [
+        "ABCD-3",
+        "C3Xkine",
+        "CX3CL1",
+        "CXC3",
+        "CXC3C",
+        "NTN",
+        "NTT",
+        "SCYD1",
+        "fractalkine",
+        "neurotactin"
+    ],
+    "FANCA": [
+        "FA",
+        "FA-H",
+        "FA1",
+        "FAA",
+        "FACA",
+        "FAH",
+        "FANCA",
+        "FANCH"
+    ],
+    "FGFR4": [
+        "CD334",
+        "FGFR4",
+        "JTK2",
+        "TKF"
+    ],
+    "TSPYL1": [
+        "TSPYL",
+        "TSPYL1"
+    ],
+    "FLT4": [
+        "CHTD7",
+        "FLT-4",
+        "FLT4",
+        "FLT41",
+        "LMPH1A",
+        "LMPHM1",
+        "PCL",
+        "VEGFR-3",
+        "VEGFR3"
+    ],
+    "PDCD1LG2": [
+        "B7DC",
+        "Btdc",
+        "CD273",
+        "PD-L2",
+        "PDCD1L2",
+        "PDCD1LG2",
+        "PDL2",
+        "bA574F11.2"
+    ],
+    "LAG3": [
+        "CD223",
+        "LAG3"
+    ],
+    "DLL3": [
+        "DLL3",
+        "SCDO1"
+    ],
+    "KDM5C": [
+        "DXS1272E",
+        "JARID1C",
+        "KDM5C",
+        "MRX13",
+        "MRXJ",
+        "MRXSCJ",
+        "MRXSJ",
+        "SMCX",
+        "XE169"
+    ],
+    "TPT1": [
+        "HRF",
+        "TCTP",
+        "TPT1",
+        "p02",
+        "p23"
+    ],
+    "DBI": [
+        "ACBD1",
+        "ACBP",
+        "CCK-RP",
+        "DBI",
+        "EP"
+    ],
+    "AMER1": [
+        "AMER1",
+        "FAM123B",
+        "OSCS",
+        "WTX"
+    ],
+    "CRLF2": [
+        "CRL2",
+        "CRLF2",
+        "CRLF2Y",
+        "TSLPR"
+    ],
+    "DROSHA": [
+        "DROSHA",
+        "ETOHI2",
+        "HSA242976",
+        "RANSE3L",
+        "RN3",
+        "RNASE3L",
+        "RNASEN"
+    ],
+    "IL7R": [
+        "CD127",
+        "CDW127",
+        "IL-7R-alpha",
+        "IL-7Ralpha",
+        "IL7R",
+        "IL7RA",
+        "IL7Ralpha",
+        "ILRA",
+        "IMD104",
+        "lnc-IL7R",
+        "sIL-7R"
+    ],
+    "TF": [
+        "HEL-S-71p",
+        "PRO1557",
+        "PRO2086",
+        "TF",
+        "TFQTL1"
+    ],
+    "RHEB": [
+        "RHEB",
+        "RHEB2"
+    ],
+    "PBLD": [
+        "HEL-S-306",
+        "MAWBP",
+        "MAWDBP",
+        "PBLD"
+    ],
+    "PTPN6": [
+        "HCP",
+        "HCPH",
+        "HPTP1C",
+        "PTP-1C",
+        "PTPN6",
+        "SH-PTP1",
+        "SHP-1",
+        "SHP-1L",
+        "SHP1"
+    ],
+    "CRKL": [
+        "CRKL"
+    ],
+    "SPRY2": [
+        "IGAN3",
+        "SPRY2",
+        "hSPRY2"
+    ],
+    "NR2F2": [
+        "ARP-1",
+        "ARP1",
+        "CHTD4",
+        "COUPTF2",
+        "COUPTFB",
+        "COUPTFII",
+        "NF-E3",
+        "NR2F2",
+        "SRXX5",
+        "SVP40",
+        "TFCOUP2"
+    ],
+    "PTPN12": [
+        "PTP-PEST",
+        "PTPG1",
+        "PTPN12"
+    ],
+    "NOTCH3": [
+        "CADASIL",
+        "CADASIL1",
+        "CASIL",
+        "IMF2",
+        "LMNS",
+        "NOTCH3"
+    ],
+    "CDK9": [
+        "C-2k",
+        "CDC2L4",
+        "CDK9",
+        "CTK1",
+        "PITALRE",
+        "TAK"
+    ],
+    "EPOR": [
+        "EPO-R",
+        "EPOR"
+    ],
+    "ASCL1": [
+        "ASCL1",
+        "ASH1",
+        "HASH1",
+        "MASH1",
+        "bHLHa46"
+    ],
+    "HDAC2": [
+        "HD2",
+        "HDAC2",
+        "KDAC2",
+        "RPD3",
+        "YAF1"
+    ],
+    "LZTR1": [
+        "BTBD29",
+        "LZTR-1",
+        "LZTR1",
+        "NS10",
+        "NS2",
+        "SWNTS2"
+    ],
+    "IRS2": [
+        "IRS-2",
+        "IRS2"
+    ],
+    "KDM6A": [
+        "KABUK2",
+        "KDM6A",
+        "UTX",
+        "bA386N14.2"
+    ],
+    "MPL": [
+        "C-MPL",
+        "CD110",
+        "MPL",
+        "MPLV",
+        "THCYT2",
+        "THPOR",
+        "TPOR"
+    ],
+    "FOXO3": [
+        "AF6q21",
+        "FKHRL1",
+        "FKHRL1P2",
+        "FOXO2",
+        "FOXO3",
+        "FOXO3A"
+    ],
+    "TGFBR3": [
+        "BGCAN",
+        "TGFBR3",
+        "betaglycan"
+    ],
+    "EPHB2": [
+        "BDPLT22",
+        "CAPB",
+        "DRT",
+        "EK5",
+        "EPHB2",
+        "EPHT3",
+        "ERK",
+        "Hek5",
+        "PCBC",
+        "Tyro5"
+    ],
+    "EP300": [
+        "EP300",
+        "KAT3B",
+        "MKHK2",
+        "RSTS2",
+        "p300"
+    ],
+    "ZNF217": [
+        "ZABC1",
+        "ZNF217"
+    ],
+    "PRKN": [
+        "AR-JP",
+        "LPRS2",
+        "PARK2",
+        "PDJ",
+        "PRKN"
+    ],
+    "FUBP1": [
+        "FBP",
+        "FUBP",
+        "FUBP1",
+        "hDH V"
+    ],
+    "ZRSR2": [
+        "U2AF1-RS2",
+        "U2AF1L2",
+        "U2AF1RS2",
+        "URP",
+        "ZC3H22",
+        "ZRSR2"
+    ],
+    "RABL3": [
+        "PNCA5",
+        "RABL3"
+    ],
+    "TEK": [
+        "CD202B",
+        "GLC3E",
+        "TEK",
+        "TIE-2",
+        "TIE2",
+        "VMCM",
+        "VMCM1"
+    ],
+    "PRNCR1": [
+        "CARLo-3",
+        "PCAT8",
+        "PRNCR1"
+    ],
+    "WNT11": [
+        "HWNT11",
+        "WNT11"
+    ],
+    "MBD4": [
+        "MBD4",
+        "MED1",
+        "TPDS2",
+        "UVM1"
+    ],
+    "DRD5": [
+        "DBDR",
+        "DRD1B",
+        "DRD1L2",
+        "DRD5"
+    ],
+    "NECTIN4": [
+        "EDSS1",
+        "LNIR",
+        "NECTIN4",
+        "PRR4",
+        "PVRL4",
+        "nectin-4"
+    ],
+    "HOXD8": [
+        "HOX4",
+        "HOX4E",
+        "HOX5.4",
+        "HOXD8"
+    ],
+    "NUDT15": [
+        "MTH2",
+        "NUDT15",
+        "NUDT15D"
+    ],
+    "KMT2A": [
+        "ALL-1",
+        "ALL1",
+        "CXXC7",
+        "GAS7",
+        "HRX",
+        "HTRX",
+        "HTRX1",
+        "KMT2A",
+        "MLL",
+        "MLL1",
+        "MLL1A",
+        "TRX1",
+        "WDSTS"
+    ],
+    "TACSTD2": [
+        "EGP-1",
+        "EGP1",
+        "GA733-1",
+        "GA7331",
+        "GP50",
+        "M1S1",
+        "TACSTD2",
+        "TROP2"
+    ],
+    "STAT1": [
+        "CANDF7",
+        "IMD31A",
+        "IMD31B",
+        "IMD31C",
+        "ISGF-3",
+        "STAT1",
+        "STAT91"
+    ],
+    "VEGFC": [
+        "Flt4-L",
+        "LMPH1D",
+        "LMPHM4",
+        "VEGFC",
+        "VRP"
+    ],
+    "MIR21": [
+        "MIR21",
+        "MIRN21",
+        "hsa-mir-21",
+        "miR-21",
+        "miRNA21"
+    ],
+    "IL33": [
+        "C9orf26",
+        "DVS27",
+        "IL1F11",
+        "IL33",
+        "NF-HEV",
+        "NFEHEV"
+    ],
+    "WDR12": [
+        "WDR12",
+        "YTM1"
+    ],
+    "PLK1": [
+        "PLK",
+        "PLK1",
+        "STPK13"
+    ],
+    "CXCL10": [
+        "C7",
+        "CXCL10",
+        "IFI10",
+        "INP10",
+        "IP-10",
+        "SCYB10",
+        "crg-2",
+        "gIP-10",
+        "mob-1"
+    ],
+    "CCN2": [
+        "CCN2",
+        "CTGF",
+        "HCS24",
+        "IBP-8",
+        "IGFBP8",
+        "NOV2"
+    ],
+    "STAT5B": [
+        "GHISID2",
+        "STAT5",
+        "STAT5B"
+    ],
+    "PCNA": [
+        "ATLD2",
+        "PCNA"
+    ],
+    "CDK5": [
+        "CDK5",
+        "LIS7",
+        "PSSALRE"
+    ],
+    "MAEA": [
+        "EMLP",
+        "EMP",
+        "GID9",
+        "HLC-10",
+        "MAEA",
+        "P44EMLP",
+        "PIG5"
+    ],
+    "TP53BP1": [
+        "53BP1",
+        "TDRD30",
+        "TP53BP1",
+        "p202",
+        "p53BP1"
+    ],
+    "ARID2": [
+        "ARID2",
+        "BAF200",
+        "CSS6",
+        "SMARCF3",
+        "ZIPZAP",
+        "p200"
+    ],
+    "FOXC2": [
+        "FKHL14",
+        "FOXC2",
+        "LD",
+        "MFH-1",
+        "MFH1"
+    ],
+    "CUL7": [
+        "3M1",
+        "CUL-7",
+        "CUL7",
+        "KIAA0076",
+        "dJ20C7.5"
+    ],
+    "CD79B": [
+        "AGM6",
+        "B29",
+        "CD79B",
+        "IGB",
+        "Igbeta"
+    ],
+    "GATA1": [
+        "ERYF1",
+        "GATA-1",
+        "GATA1",
+        "GF-1",
+        "GF1",
+        "HAEADA",
+        "NF-E1",
+        "NFE1",
+        "XLANP",
+        "XLTDA",
+        "XLTT"
+    ],
+    "CARD11": [
+        "BENTA",
+        "BIMP3",
+        "CARD11",
+        "CARMA1",
+        "IMD11",
+        "IMD11A",
+        "PPBL"
+    ],
+    "SDHA": [
+        "CMD1GG",
+        "FP",
+        "MC2DN1",
+        "NDAXOA",
+        "PGL5",
+        "PPGL5",
+        "SDH1",
+        "SDH2",
+        "SDHA",
+        "SDHF"
+    ],
+    "NTRK2": [
+        "DEE58",
+        "EIEE58",
+        "GP145-TrkB",
+        "NTRK2",
+        "OBHD",
+        "TRKB",
+        "trk-B"
+    ],
+    "MEF2D": [
+        "MEF2D"
+    ],
+    "PRKAR1A": [
+        "ACRDYS1",
+        "ADOHR",
+        "CAR",
+        "CNC",
+        "CNC1",
+        "PKR1",
+        "PPNAD1",
+        "PRKAR1",
+        "PRKAR1A",
+        "Prkar1alpha",
+        "TSE1"
+    ],
+    "ACTL6A": [
+        "ACTL6",
+        "ACTL6A",
+        "ARPN-BETA",
+        "Arp4",
+        "BAF53A",
+        "INO80K",
+        "SMARCN1"
+    ],
+    "MSH3": [
+        "DUP",
+        "FAP4",
+        "MRP1",
+        "MSH3"
+    ],
+    "ZHX2": [
+        "AFR1",
+        "RAF",
+        "ZHX2"
+    ],
+    "SPOP": [
+        "BTBD32",
+        "NEDMACE",
+        "NEDMIDF",
+        "NSDVS1",
+        "NSDVS2",
+        "SPOP",
+        "TEF2"
+    ],
+    "PIK3CB": [
+        "P110BETA",
+        "PI3K",
+        "PI3KBETA",
+        "PIK3C1",
+        "PIK3CB"
+    ],
+    "TYK2": [
+        "IMD35",
+        "JTK1",
+        "TYK2"
+    ],
+    "TNFRSF17": [
+        "BCM",
+        "BCMA",
+        "CD269",
+        "TNFRSF13A",
+        "TNFRSF17"
+    ],
+    "HDAC9": [
+        "ARCND4",
+        "HD7",
+        "HD7b",
+        "HD9",
+        "HDAC",
+        "HDAC7",
+        "HDAC7B",
+        "HDAC9",
+        "HDAC9B",
+        "HDAC9FL",
+        "HDRP",
+        "MITR"
+    ],
+    "FOXF1": [
+        "ACDMPV",
+        "FKHL5",
+        "FOXF1",
+        "FREAC1"
+    ],
+    "BLK": [
+        "BLK",
+        "MODY11"
+    ],
+    "TCF19": [
+        "SC1",
+        "TCF-19",
+        "TCF19"
+    ],
+    "ARHGAP35": [
+        "ARHGAP35",
+        "GRF-1",
+        "GRLF1",
+        "P190-A",
+        "P190A",
+        "p190ARhoGAP",
+        "p190RhoGAP"
+    ],
+    "RRAS2": [
+        "NS12",
+        "RRAS2",
+        "TC21"
+    ],
+    "KLF4": [
+        "EZF",
+        "GKLF",
+        "KLF4"
+    ],
+    "TNC": [
+        "150-225",
+        "DFNA56",
+        "GMEM",
+        "GP",
+        "HXB",
+        "JI",
+        "TN",
+        "TN-C",
+        "TNC"
+    ],
+    "CEACAM1": [
+        "BGP",
+        "BGP1",
+        "BGPI",
+        "CEACAM1"
+    ],
+    "ESR2": [
+        "ER-BETA",
+        "ESR-BETA",
+        "ESR2",
+        "ESRB",
+        "ESTRB",
+        "Erb",
+        "NR3A2",
+        "ODG8"
+    ],
+    "LGR5": [
+        "FEX",
+        "GPR49",
+        "GPR67",
+        "GRP49",
+        "HG38",
+        "LGR5"
+    ],
+    "FN1": [
+        "CIG",
+        "ED-B",
+        "FINC",
+        "FN",
+        "FN1",
+        "FNZ",
+        "GFND",
+        "GFND2",
+        "LETS",
+        "MSF",
+        "SMDCF"
+    ],
+    "AIMP2": [
+        "AIMP2",
+        "HLD17",
+        "JTV-1",
+        "JTV1",
+        "P38"
+    ],
+    "CD19": [
+        "B4",
+        "CD19",
+        "CVID3"
+    ],
+    "HDAC6": [
+        "CPBHM",
+        "HD6",
+        "HDAC6",
+        "JM21",
+        "KDAC6",
+        "PPP1R90"
+    ],
+    "ATXN7": [
+        "ADCAII",
+        "ATXN7",
+        "OPCA3",
+        "SCA7",
+        "SGF73"
+    ],
+    "HOXC10": [
+        "HOX3I",
+        "HOXC10"
+    ],
+    "CYSLTR2": [
+        "CYSLT2",
+        "CYSLT2R",
+        "CYSLTR2",
+        "GPCR21",
+        "HG57",
+        "HPN321",
+        "KPG_011",
+        "PSEC0146",
+        "hGPCR21"
+    ],
+    "ABL2": [
+        "ABL2",
+        "ABLL",
+        "ARG"
+    ],
+    "GALNT14": [
+        "GALNT14",
+        "GALNT15",
+        "GalNac-T10",
+        "GalNac-T14"
+    ],
+    "HSP90B1": [
+        "ECGP",
+        "GP96",
+        "GRP94",
+        "HEL-S-125m",
+        "HEL35",
+        "HSP90B1",
+        "TRA1"
+    ],
+    "COX2": [
+        "COII",
+        "MTCO2"
+    ],
+    "CCNE2": [
+        "CCNE2",
+        "CYCE2"
+    ],
+    "BACH2": [
+        "BACH2",
+        "BTBD25",
+        "IMD60"
+    ],
+    "SMAD3": [
+        "HSPC193",
+        "HsT17436",
+        "JV15-2",
+        "LDS1C",
+        "LDS3",
+        "MADH3",
+        "SMAD3",
+        "hMAD-3",
+        "hSMAD3",
+        "mad3"
+    ],
+    "POLB": [
+        "POLB"
+    ],
+    "CDKN2B-AS1": [
+        "ANRIL",
+        "CDKN2B-AS",
+        "CDKN2B-AS1",
+        "CDKN2BAS",
+        "NCRNA00089",
+        "PCAT12",
+        "p15AS"
+    ],
+    "KIF3C": [
+        "KIF3C"
+    ],
+    "NOS2": [
+        "HEP-NOS",
+        "INOS",
+        "NOS",
+        "NOS2",
+        "NOS2A"
+    ],
+    "TUBA1C": [
+        "TUBA1C",
+        "TUBA6",
+        "bcm948"
+    ],
+    "SPATS2": [
+        "Nbla00526",
+        "P59SCR",
+        "SCR59",
+        "SPATA10",
+        "SPATS2"
+    ],
+    "MAGI2": [
+        "ACVRIP1",
+        "AIP-1",
+        "AIP1",
+        "ARIP1",
+        "MAGI-2",
+        "MAGI2",
+        "NPHS15",
+        "SSCAM"
+    ],
+    "PIK3CD-AS2": [
+        "PIK3CD-AS2"
+    ],
+    "CARD9": [
+        "CANDF2",
+        "CARD9",
+        "IMD103",
+        "hCARD9"
+    ],
+    "WTAP": [
+        "Mum2",
+        "WTAP"
+    ],
+    "TFB2M": [
+        "Hkp1",
+        "TFB2M",
+        "h-mtTFB",
+        "h-mtTFB2",
+        "hTFB2M",
+        "mtTFB2"
+    ],
+    "WNT2B": [
+        "WNT13",
+        "WNT2B"
+    ],
+    "GPD1": [
+        "GPD-C",
+        "GPD1",
+        "GPDH-C",
+        "HTGTI"
+    ],
+    "OTUD4": [
+        "DUBA6",
+        "HIN1",
+        "HSHIN1",
+        "OTUD4"
+    ],
+    "GPX2": [
+        "GI-GPx",
+        "GPRP",
+        "GPRP-2",
+        "GPX2",
+        "GPx-2",
+        "GPx-GI",
+        "GSHPX-GI",
+        "GSHPx-2"
+    ],
+    "SLC12A2": [
+        "BSC",
+        "BSC-2",
+        "BSC2",
+        "CCC1",
+        "KILQS",
+        "NKCC1",
+        "PPP1R141",
+        "SLC12A2"
+    ],
+    "MALAT1": [
+        "HCN",
+        "LINC00047",
+        "MALAT1",
+        "NCRNA00047",
+        "NEAT2",
+        "PRO2853"
+    ],
+    "CHD1": [
+        "CHD-1",
+        "CHD1",
+        "PILBOS"
+    ],
+    "SLC6A14": [
+        "BMIQ11",
+        "SLC6A14"
+    ],
+    "BCL11A": [
+        "BCL11A",
+        "CTIP1",
+        "DILOS",
+        "EVI9",
+        "HBFQTL5",
+        "SMARCM1",
+        "ZNF856"
+    ],
+    "MYBL2": [
+        "B-MYB",
+        "BMYB",
+        "MYBL2"
+    ],
+    "MIR31": [
+        "MIR31",
+        "MIRN31",
+        "hsa-mir-31",
+        "miR-31"
+    ],
+    "FAM83A": [
+        "BJ-TSA-9",
+        "FAM83A"
+    ],
+    "SQLE": [
+        "SQLE"
+    ],
+    "NUSAP1": [
+        "ANKT",
+        "BM037",
+        "LNP",
+        "NUSAP",
+        "NUSAP1",
+        "PRO0310p1",
+        "Q0310",
+        "SAPL"
+    ],
+    "LGALS1": [
+        "GAL1",
+        "GBP",
+        "LGALS1"
+    ],
+    "USP10": [
+        "UBPO",
+        "USP10"
+    ],
+    "ABCC11": [
+        "ABCC11",
+        "EWWD",
+        "MRP8",
+        "WW"
+    ],
+    "ELFN1-AS1": [
+        "ELFN1-AS1",
+        "MYCLo-2"
+    ],
+    "USP19": [
+        "USP19",
+        "ZMYND9"
+    ],
+    "MAFB": [
+        "DURS3",
+        "KRML",
+        "MAFB",
+        "MCTO"
+    ],
+    "LTF": [
+        "GIG12",
+        "HEL110",
+        "HLF2",
+        "LF",
+        "LTF"
+    ],
+    "GFOD3P": [
+        "GFOD3P",
+        "KIAA0495",
+        "PDAM",
+        "TP73-AS1"
+    ],
+    "CD96": [
+        "CD96",
+        "TACTILE"
+    ],
+    "SST": [
+        "SMST",
+        "SST",
+        "SST1"
+    ],
+    "ANXA2": [
+        "ANX2",
+        "ANX2L4",
+        "ANXA2",
+        "CAL1H",
+        "HEL-S-270",
+        "LIP2",
+        "LPC2",
+        "LPC2D",
+        "P36",
+        "PAP-IV"
+    ],
+    "RGL4": [
+        "RGL4",
+        "Rgr"
+    ],
+    "SULT1B1": [
+        "ST1B1",
+        "ST1B2",
+        "SULT1B1",
+        "SULT1B2"
+    ],
+    "GOT1": [
+        "AST",
+        "AST1",
+        "ASTQTL1",
+        "GIG18",
+        "GOT1",
+        "SGOT",
+        "cAspAT",
+        "cCAT"
+    ],
+    "GJB7": [
+        "CX25",
+        "GJB7",
+        "bA136M9.1",
+        "connexin25"
+    ],
+    "HSD17B4": [
+        "DBP",
+        "HSD17B4",
+        "MFE-2",
+        "MFP-2",
+        "MPF-2",
+        "PRLTS1",
+        "SDR8C1"
+    ],
+    "STEAP1": [
+        "PRSS24",
+        "STEAP",
+        "STEAP1"
+    ],
+    "KNL1": [
+        "AF15Q14",
+        "CASC5",
+        "CT29",
+        "D40",
+        "KNL1",
+        "MCPH4",
+        "PPP1R55",
+        "Spc7",
+        "hKNL-1",
+        "hSpc105"
+    ],
+    "MIR3174": [
+        "MIR3174"
+    ],
+    "CAVIN1": [
+        "CAVIN",
+        "CAVIN1",
+        "CGL4",
+        "FKSG13",
+        "PTRF",
+        "cavin-1"
+    ],
+    "TLR10": [
+        "CD290",
+        "TLR10"
+    ],
+    "ANXA8": [
+        "ANX8",
+        "ANXA8",
+        "CH17-360D5.2"
+    ],
+    "B4GALNT2": [
+        "B4GALNT2",
+        "B4GALT",
+        "GALGT2"
+    ],
+    "INHBA": [
+        "EDF",
+        "FRP",
+        "INHBA"
+    ],
+    "SPATA2": [
+        "PD1",
+        "PPP1R145",
+        "SPATA2",
+        "tamo"
+    ],
+    "MIR185": [
+        "MIR185",
+        "MIRN185",
+        "miR-185"
+    ],
+    "TNFSF14": [
+        "CD258",
+        "HVEML",
+        "LIGHT",
+        "LTg",
+        "TNFSF14"
+    ],
+    "FUCA1": [
+        "FUCA",
+        "FUCA1"
+    ],
+    "PORCN": [
+        "DHOF",
+        "FODH",
+        "MG61",
+        "PORC",
+        "PORCN",
+        "PPN"
+    ],
+    "RGS16": [
+        "A28-RGS14",
+        "A28-RGS14P",
+        "RGS-R",
+        "RGS16"
+    ],
+    "MIR484": [
+        "MIR484",
+        "MIRN484",
+        "hsa-mir-484",
+        "mir-484"
+    ],
+    "CEP55": [
+        "C10orf3",
+        "CEP55",
+        "CT111",
+        "MARCH",
+        "URCC6"
+    ],
+    "CENPA": [
+        "CENP-A",
+        "CENPA",
+        "CenH3"
+    ],
+    "LRG1": [
+        "HMFT1766",
+        "LRG",
+        "LRG1"
+    ],
+    "DGKA": [
+        "DAGK",
+        "DAGK1",
+        "DGK-alpha",
+        "DGKA"
+    ],
+    "AOC3": [
+        "AOC3",
+        "HPAO",
+        "SSAO",
+        "VAP-1",
+        "VAP1"
+    ],
+    "HDAC5": [
+        "HD5",
+        "HDAC5",
+        "NY-CO-9"
+    ],
+    "YTHDF2": [
+        "CAHL",
+        "DF2",
+        "HGRG8",
+        "NY-REN-2",
+        "YTHDF2"
+    ],
+    "TESC": [
+        "CHP3",
+        "TESC",
+        "TSC"
+    ],
+    "MIR143": [
+        "MIR143",
+        "MIRN143",
+        "mir-143"
+    ],
+    "MACF1": [
+        "ABP620",
+        "ACF7",
+        "KIAA0754",
+        "LIS9",
+        "Lnc-PMIF",
+        "MACF",
+        "MACF1",
+        "OFC4"
+    ],
+    "OTUD3": [
+        "DUBA4",
+        "OTUD3"
+    ],
+    "FLI1": [
+        "BDPLT21",
+        "EWSR2",
+        "FLI-1",
+        "FLI1",
+        "SIC-1"
+    ],
+    "ACKR3": [
+        "ACKR3",
+        "CMKOR1",
+        "CXC-R7",
+        "CXCR-7",
+        "CXCR7",
+        "GPR159",
+        "RDC-1",
+        "RDC1"
+    ],
+    "NEK1": [
+        "ALS24",
+        "NEK1",
+        "NY-REN-55",
+        "OFD2",
+        "SRPS2",
+        "SRPS2A",
+        "SRTD6"
+    ],
+    "SNHG4": [
+        "NCRNA00059",
+        "SNHG4",
+        "U19H"
+    ],
+    "HOXA13": [
+        "HOX1",
+        "HOX1J",
+        "HOXA13"
+    ],
+    "UCP2": [
+        "BMIQ4",
+        "SLC25A8",
+        "UCP2",
+        "UCPH"
+    ],
+    "LINC00520": [
+        "C14orf34",
+        "LASSIE",
+        "LEENE",
+        "LINC00520",
+        "LncRNA00520"
+    ],
+    "MPC1": [
+        "BRP44L",
+        "CGI-129",
+        "MPC1",
+        "MPYCD",
+        "SLC54A1"
+    ],
+    "RBM17": [
+        "RBM17",
+        "SPF45"
+    ],
+    "RAB18": [
+        "RAB18",
+        "RAB18LI1",
+        "WARBM3"
+    ],
+    "HHLA2": [
+        "B7-H5",
+        "B7-H7",
+        "B7H7",
+        "B7y",
+        "HHLA2"
+    ],
+    "CDCA2": [
+        "CDCA2",
+        "PPP1R81",
+        "Repo-Man"
+    ],
+    "EPS8L3": [
+        "EPS8L3",
+        "EPS8R3",
+        "HYPT5"
+    ],
+    "EID3": [
+        "EID3",
+        "NS4EB",
+        "NSE4B",
+        "NSMCE4B"
+    ],
+    "TGFB2": [
+        "G-TSF",
+        "LDS4",
+        "TGF-beta2",
+        "TGFB2"
+    ],
+    "HOTTIP": [
+        "HOTTIP",
+        "HOXA-AS6",
+        "HOXA13-AS1",
+        "NCRNA00213"
+    ],
+    "MIR28": [
+        "MIR28",
+        "MIRN28",
+        "hsa-mir-28",
+        "miR-28"
+    ],
+    "GNA14": [
+        "GNA14",
+        "HG1I"
+    ],
+    "UPP1": [
+        "UDRPASE",
+        "UP",
+        "UPASE",
+        "UPP",
+        "UPP1"
+    ],
+    "SERPINH1": [
+        "AsTP3",
+        "CBP1",
+        "CBP2",
+        "HSP47",
+        "OI10",
+        "PIG14",
+        "PPROM",
+        "RA-A47",
+        "SERPINH1",
+        "SERPINH2",
+        "gp46"
+    ],
+    "PDCD1": [
+        "CD279",
+        "PD-1",
+        "PD1",
+        "PDCD1",
+        "SLEB2",
+        "hPD-1",
+        "hPD-l",
+        "hSLE1"
+    ],
+    "TNNT2": [
+        "CMD1D",
+        "CMH2",
+        "CMPD2",
+        "LVNC6",
+        "RCM3",
+        "TNNT2",
+        "TnTC",
+        "cTnT"
+    ],
+    "LINC00460": [
+        "LINC00460"
+    ],
+    "MMP14": [
+        "MMP-14",
+        "MMP-X1",
+        "MMP14",
+        "MT-MMP",
+        "MT-MMP 1",
+        "MT1-MMP",
+        "MT1MMP",
+        "MTMMP1",
+        "WNCHRS"
+    ],
+    "LPAR1": [
+        "EDG2",
+        "Gpcr26",
+        "LPA1",
+        "LPAR1",
+        "Mrec1.3",
+        "VZG1",
+        "edg-2",
+        "rec.1.3",
+        "vzg-1"
+    ],
+    "SNHG6": [
+        "HBII-276HG",
+        "NCRNA00058",
+        "SNHG6",
+        "U87HG"
+    ],
+    "PDXDC1": [
+        "LP8165",
+        "PDXDC1"
+    ],
+    "SERINC2": [
+        "FKSG84",
+        "PRO0899",
+        "SERINC2",
+        "TDE2",
+        "TDE2L"
+    ],
+    "CEACAM6": [
+        "CD66c",
+        "CEACAM6",
+        "CEAL",
+        "NCA",
+        "NCA-50/90"
+    ],
+    "LUZP2": [
+        "KFSP2566",
+        "LUZP2",
+        "PRO6246"
+    ],
+    "MAN2A1": [
+        "AMan II",
+        "GOLIM7",
+        "MAN2A1",
+        "MANA2",
+        "MANII"
+    ],
+    "TET1": [
+        "CXXC6",
+        "LCX",
+        "TET1",
+        "bA119F7.1"
+    ],
+    "SPC25": [
+        "AD024",
+        "SPBC25",
+        "SPC25",
+        "hSpc25"
+    ],
+    "MIR320A": [
+        "MIR320A",
+        "MIRN320",
+        "MIRN320A",
+        "hsa-mir-320a",
+        "mir-320a"
+    ],
+    "SERPINE1": [
+        "PAI",
+        "PAI-1",
+        "PAI1",
+        "PLANH1",
+        "SERPINE1"
+    ],
+    "DRD1": [
+        "D1R",
+        "DADR",
+        "DRD1",
+        "DRD1A"
+    ],
+    "ZNF554": [
+        "ZNF554"
+    ],
+    "CTBP2": [
+        "CTBP2"
+    ],
+    "H3C7": [
+        "H3/i",
+        "H3C1",
+        "H3C10",
+        "H3C11",
+        "H3C12",
+        "H3C2",
+        "H3C3",
+        "H3C4",
+        "H3C6",
+        "H3C7",
+        "H3C8",
+        "H3FI",
+        "HIST1H3F"
+    ],
+    "H3C3": [
+        "H3.1",
+        "H3/c",
+        "H3C1",
+        "H3C10",
+        "H3C11",
+        "H3C12",
+        "H3C2",
+        "H3C3",
+        "H3C4",
+        "H3C6",
+        "H3C7",
+        "H3C8",
+        "H3FC",
+        "HIST1H3C"
+    ],
+    "H3C14": [
+        "H3",
+        "H3.2",
+        "H3/M",
+        "H3C13",
+        "H3C14",
+        "H3C15",
+        "H3F2",
+        "H3FM",
+        "H3FN",
+        "HIST2H3C"
+    ],
+    "XPO1": [
+        "CRM-1",
+        "CRM1",
+        "XPO1",
+        "emb",
+        "exp1"
+    ],
+    "PDGFB": [
+        "IBGC5",
+        "PDGF-2",
+        "PDGF2",
+        "PDGFB",
+        "SIS",
+        "SSV",
+        "c-sis"
+    ],
+    "TFEB": [
+        "ALPHATFEB",
+        "BHLHE35",
+        "TCFEB",
+        "TFEB"
+    ],
+    "EML6": [
+        "EML6"
+    ],
+    "SOS1": [
+        "GF1",
+        "GGF1",
+        "GINGF",
+        "HGF",
+        "NS4",
+        "SOS-1",
+        "SOS1"
+    ],
+    "YES1": [
+        "HsT441",
+        "P61-YES",
+        "YES1",
+        "Yes",
+        "c-yes"
+    ],
+    "MS": [
+        "MS",
+        "MS1"
+    ],
+    "F9": [
+        "F9",
+        "F9 p22",
+        "FIX",
+        "HEMB",
+        "P19",
+        "PTC",
+        "THPH8"
+    ],
+    "AURKB": [
+        "AIK2",
+        "AIM-1",
+        "AIM1",
+        "ARK-2",
+        "ARK2",
+        "AURKB",
+        "AurB",
+        "IPL1",
+        "PPP1R48",
+        "STK-1",
+        "STK12",
+        "STK5",
+        "aurkb-sv1",
+        "aurkb-sv2"
+    ],
+    "TYR": [
+        "ATN",
+        "CMM8",
+        "OCA1",
+        "OCA1A",
+        "OCAIA",
+        "SHEP3",
+        "TYR"
+    ],
+    "KAT6B": [
+        "GTPTS",
+        "KAT6B",
+        "MORF",
+        "MOZ2",
+        "MYST4",
+        "ZC2HC6B",
+        "qkf",
+        "querkopf"
+    ],
+    "EZHIP": [
+        "CATACOMB",
+        "CXorf67",
+        "EZHIP",
+        "KIP75"
+    ],
+    "ERG": [
+        "ERG",
+        "LMPHM14",
+        "erg-3",
+        "p55"
+    ],
+    "FLT3LG": [
+        "FL",
+        "FLG3L",
+        "FLT3L",
+        "FLT3LG"
+    ],
+    "HBB": [
+        "CD113t-C",
+        "ECYT6",
+        "HBB",
+        "beta-globin"
+    ],
+    "TBX2": [
+        "TBX2",
+        "VETD"
+    ],
+    "TBXT": [
+        "SAVA",
+        "T",
+        "TBXT",
+        "TFT"
+    ],
+    "BCL6": [
+        "BCL5",
+        "BCL6",
+        "BCL6A",
+        "LAZ3",
+        "ZBTB27",
+        "ZNF51"
+    ],
+    "SNCAIP": [
+        "SNCAIP",
+        "SYPH1",
+        "Sph1"
+    ],
+    "FANCL": [
+        "FAAP43",
+        "FANCL",
+        "PHF9",
+        "POG"
+    ],
+    "RAD51C": [
+        "BROVCA3",
+        "FANCO",
+        "R51H3",
+        "RAD51C",
+        "RAD51L2"
+    ],
+    "NEAT1": [
+        "LINC00084",
+        "NCRNA00084",
+        "NEAT1",
+        "TP53LC15",
+        "TncRNA",
+        "VINC"
+    ],
+    "MECP2": [
+        "AUTSX3",
+        "MECP2",
+        "MRX16",
+        "MRX79",
+        "MRXS13",
+        "MRXSL",
+        "PPMX",
+        "RS",
+        "RTS",
+        "RTT"
+    ],
+    "BAX": [
+        "BAX",
+        "BCL2L4"
+    ],
+    "AXIN2": [
+        "AXIL",
+        "AXIN2",
+        "ODCRCS"
+    ],
+    "GATA3": [
+        "GATA3",
+        "HDR",
+        "HDRS"
+    ],
+    "SETD2": [
+        "HBP231",
+        "HIF-1",
+        "HIP-1",
+        "HSPC069",
+        "HYPB",
+        "KMT3A",
+        "LLS",
+        "MRD70",
+        "RAPAS",
+        "SET2",
+        "SETD2",
+        "p231HBP"
+    ],
+    "NM": [
+        "GP130",
+        "NCR",
+        "NM"
+    ],
+    "ND1": [
+        "MTND1"
+    ],
+    "GK": [
+        "GK",
+        "GK1",
+        "GKD"
+    ],
+    "FOSB": [
+        "AP-1",
+        "FOSB",
+        "G0S3",
+        "GOS3",
+        "GOSB"
+    ],
+    "ARHGAP26": [
+        "ARHGAP26",
+        "GRAF",
+        "GRAF1",
+        "OPHN1L",
+        "OPHN1L1"
+    ],
+    "MAP2K4": [
+        "JNKK",
+        "JNKK1",
+        "MAP2K4",
+        "MAPKK4",
+        "MEK4",
+        "MKK4",
+        "PRKMK4",
+        "SAPKK-1",
+        "SAPKK1",
+        "SEK1",
+        "SERK1",
+        "SKK1"
+    ],
+    "XRCC3": [
+        "CMM6",
+        "XRCC3"
+    ],
+    "ORC1": [
+        "HSORC1",
+        "ORC1",
+        "ORC1L",
+        "PARC1"
+    ],
+    "MUS81": [
+        "MUS81",
+        "SLX3"
+    ],
+    "MCL1": [
+        "BCL2L3",
+        "EAT",
+        "MCL1",
+        "MCL1-ES",
+        "MCL1L",
+        "MCL1S",
+        "Mcl-1",
+        "TM",
+        "bcl2-L-3",
+        "mcl1/EAT"
+    ],
+    "PLCG1": [
+        "IDAA",
+        "NCKAP3",
+        "PLC-II",
+        "PLC1",
+        "PLC148",
+        "PLCG1",
+        "PLCgamma1"
+    ],
+    "DDX3X": [
+        "CAP-Rf",
+        "DBX",
+        "DDX14",
+        "DDX3",
+        "DDX3X",
+        "HLP2",
+        "MRX102",
+        "MRXSSB"
+    ],
+    "BCL7A": [
+        "BCL7",
+        "BCL7A",
+        "SMARCJ1"
+    ],
+    "CHD8": [
+        "AUTS18",
+        "CHD8",
+        "HELSNF1",
+        "IDDAM"
+    ],
+    "FBXO11": [
+        "FBX11",
+        "FBXO11",
+        "IDDFBA",
+        "PRMT9",
+        "UBR6",
+        "UG063H01",
+        "VIT1"
+    ],
+    "FOXO1": [
+        "FKH1",
+        "FKHR",
+        "FOXO1",
+        "FOXO1A"
+    ],
+    "GNA13": [
+        "G13",
+        "GNA13",
+        "HG1N"
+    ],
+    "WNK1": [
+        "HSAN2",
+        "HSN2",
+        "KDP",
+        "PPP1R167",
+        "PRKWNK1",
+        "PSK",
+        "WNK1",
+        "p65"
+    ],
+    "USP7": [
+        "C16DELp13.2",
+        "DEL16P13.2",
+        "HAFOUS",
+        "HAUSP",
+        "TEF1",
+        "USP7"
+    ],
+    "TFAP4": [
+        "AP-4",
+        "TFAP4",
+        "bHLHc41"
+    ],
+    "TCF3": [
+        "AGM8",
+        "AGM8A",
+        "AGM8B",
+        "E2A",
+        "E47",
+        "ITF1",
+        "TCF-3",
+        "TCF3",
+        "VDIR",
+        "bHLHb21",
+        "p75"
+    ],
+    "SIN3A": [
+        "CHR15DELq24",
+        "DEL15Q24",
+        "SIN3A",
+        "WITKOS"
+    ],
+    "RFX7": [
+        "MRD71",
+        "RFX7",
+        "RFXDC2"
+    ],
+    "PCBP1": [
+        "HEL-S-85",
+        "HNRPE1",
+        "HNRPX",
+        "PCBP1",
+        "hnRNP-E1",
+        "hnRNP-X"
+    ],
+    "P2RY8": [
+        "P2RY8",
+        "P2Y8"
+    ],
+    "BMP7": [
+        "BMP7",
+        "OP-1"
+    ],
+    "EIF4A1": [
+        "DDX2A",
+        "EIF-4A",
+        "EIF4A",
+        "EIF4A1",
+        "eIF-4A-I",
+        "eIF4A-I"
+    ],
+    "GNAI2": [
+        "GIP",
+        "GNAI2",
+        "GNAI2B",
+        "HG1C",
+        "H_LUCA15.1",
+        "H_LUCA16.1"
+    ],
+    "HNRNPU": [
+        "DEE54",
+        "EIEE54",
+        "GRIP120",
+        "HNRNPU",
+        "HNRNPU-AS1",
+        "HNRPU",
+        "SAF-A",
+        "SAFA",
+        "U21.1",
+        "hnRNP U",
+        "pp120"
+    ],
+    "ID3": [
+        "HEIR-1",
+        "ID3",
+        "bHLHb25"
+    ],
+    "DAZAP1": [
+        "DAZAP1"
+    ],
+    "EWSR1": [
+        "EWS",
+        "EWS-FLI1",
+        "EWSR1",
+        "bK984G1.4"
+    ],
+    "HNRNPH1": [
+        "HNRNPH1",
+        "HNRPH",
+        "HNRPH1",
+        "NEDCDS",
+        "hnRNPH"
+    ],
+    "MEF2B": [
+        "MEF2B",
+        "RSRFR2"
+    ],
+    "UBR5": [
+        "DD5",
+        "EDD",
+        "EDD1",
+        "HYD",
+        "UBR5"
+    ],
+    "NSD2": [
+        "KMT3F",
+        "KMT3G",
+        "MMSET",
+        "NSD2",
+        "RAUST",
+        "REIIBP",
+        "TRX5",
+        "WHS",
+        "WHSC1"
+    ],
+    "SP140": [
+        "LYSP100",
+        "LYSP100-A",
+        "LYSP100-B",
+        "SP140"
+    ],
+    "NOTCH2": [
+        "AGS2",
+        "HJCYS",
+        "NOTCH2",
+        "hN2"
+    ],
+    "S1PR1": [
+        "CD363",
+        "CHEDG1",
+        "D1S3362",
+        "ECGF1",
+        "EDG-1",
+        "EDG1",
+        "S1P1",
+        "S1PR1"
+    ],
+    "NFKBIE": [
+        "IKBE",
+        "NFKBIE"
+    ],
+    "ACTB": [
+        "ACTB",
+        "BKRNS",
+        "BNS",
+        "BRWS1",
+        "CSMH",
+        "DDS1",
+        "PS1TP5BP1",
+        "THC8"
+    ],
+    "TNFRSF14": [
+        "ATAR",
+        "CD270",
+        "HVEA",
+        "HVEM",
+        "LIGHTR",
+        "TNFRSF14",
+        "TR2"
+    ],
+    "BCL10": [
+        "BCL10",
+        "CARMEN",
+        "CIPER",
+        "CLAP",
+        "IMD37",
+        "c-E10",
+        "mE10"
+    ],
+    "BTG2": [
+        "APRO1",
+        "BTG2",
+        "PC3",
+        "TIS21"
+    ],
+    "CIITA": [
+        "C2TA",
+        "CIITA",
+        "CIITAIV",
+        "MHC2D1",
+        "MHC2TA",
+        "NLRA"
+    ],
+    "FAS": [
+        "ALPS1A",
+        "APO-1",
+        "APT1",
+        "CD95",
+        "FAS",
+        "FAS1",
+        "FASTM",
+        "TNFRSF6"
+    ],
+    "BTG1": [
+        "APRO2",
+        "BTG1"
+    ],
+    "IRF8": [
+        "H-ICSBP",
+        "ICSBP",
+        "ICSBP1",
+        "IMD32A",
+        "IMD32B",
+        "IRF-8",
+        "IRF8"
+    ],
+    "TMEM30A": [
+        "C6orf67",
+        "CDC50A",
+        "TMEM30A"
+    ],
+    "CD58": [
+        "CD58",
+        "LFA-3",
+        "LFA3",
+        "ag3"
+    ],
+    "KLHL6": [
+        "KLHL6"
+    ],
+    "CD70": [
+        "CD27-L",
+        "CD27L",
+        "CD27LG",
+        "CD70",
+        "LPFS3",
+        "TNFSF7",
+        "TNLG8A"
+    ],
+    "H1-2": [
+        "H1-2",
+        "H1.2",
+        "H1C",
+        "H1F2",
+        "H1s-1",
+        "HIST1H1C"
+    ],
+    "ETS1": [
+        "ETS-1",
+        "ETS1",
+        "EWSR2",
+        "c-ets-1",
+        "p54"
+    ],
+    "IRF4": [
+        "IRF4",
+        "LSIRF",
+        "MUM1",
+        "NF-EM5",
+        "SHEP8"
+    ],
+    "DTX1": [
+        "DTX1",
+        "RNF140",
+        "hDx-1"
+    ],
+    "DUSP2": [
+        "DUSP2",
+        "PAC-1",
+        "PAC1"
+    ],
+    "EBF1": [
+        "COE1",
+        "EBF",
+        "EBF1",
+        "O/E-1",
+        "OLF1"
+    ],
+    "GRHPR": [
+        "GLXR",
+        "GLYD",
+        "GRHPR",
+        "PH2"
+    ],
+    "H1-5": [
+        "H1",
+        "H1-5",
+        "H1.5",
+        "H1B",
+        "H1F5",
+        "H1s-3",
+        "HIST1H1B"
+    ],
+    "H1-3": [
+        "H1-3",
+        "H1.3",
+        "H1D",
+        "H1F3",
+        "H1s-2",
+        "HIST1H1D"
+    ],
+    "H2AC6": [
+        "H2A/l",
+        "H2AC6",
+        "H2AFL",
+        "HIST1H2AC",
+        "dJ221C16.4"
+    ],
+    "H2AC17": [
+        "H2A.1",
+        "H2A/n",
+        "H2AC11",
+        "H2AC13",
+        "H2AC15",
+        "H2AC16",
+        "H2AC17",
+        "H2AFN",
+        "HIST1H2AM",
+        "dJ193B12.1"
+    ],
+    "H2BC5": [
+        "H2B.1B",
+        "H2B/a",
+        "H2B/b",
+        "H2B/g",
+        "H2B/h",
+        "H2B/k",
+        "H2B/l",
+        "H2BC5",
+        "H2BFA",
+        "H2BFB",
+        "H2BFG",
+        "H2BFH",
+        "H2BFK",
+        "H2BFL",
+        "HIRIP2",
+        "HIST1H2BC",
+        "HIST1H2BD",
+        "HIST1H2BE",
+        "HIST1H2BF",
+        "HIST1H2BG",
+        "HIST1H2BI",
+        "dJ221C16.6"
+    ],
+    "H2BC12": [
+        "H2B/S",
+        "H2BC12",
+        "H2BFAiii",
+        "H2BFT",
+        "H2BK",
+        "HIST1H2BK"
+    ],
+    "HLA-A": [
+        "HLA-A",
+        "HLAA"
+    ],
+    "HLA-B": [
+        "AS",
+        "B-4901",
+        "HLA-B",
+        "HLAB"
+    ],
+    "HVCN1": [
+        "HV1",
+        "HVCN1",
+        "VSOP"
+    ],
+    "IL4R": [
+        "CD124",
+        "IL-4RA",
+        "IL4R",
+        "IL4RA"
+    ],
+    "ITPKB": [
+        "IP3-3KB",
+        "IP3K",
+        "IP3K-B",
+        "IP3KB",
+        "ITPKB",
+        "PIG37"
+    ],
+    "KLF2": [
+        "KLF2",
+        "LKLF"
+    ],
+    "KLHL14": [
+        "KLHL14"
+    ],
+    "LTB": [
+        "LTB",
+        "TNFC",
+        "TNFSF3",
+        "TNLG1C",
+        "p33"
+    ],
+    "MEF2C": [
+        "C5DELq14.3",
+        "DEL5q14.3",
+        "MEF2C",
+        "NEDHSIL"
+    ],
+    "MGA": [
+        "MAD5",
+        "MGA",
+        "MXD5"
+    ],
+    "MPEG1": [
+        "IMD77",
+        "MPEG1",
+        "MPG1",
+        "MPS1",
+        "Mpg-1",
+        "P-2"
+    ],
+    "NFKBIA": [
+        "EDAID2",
+        "IKBA",
+        "MAD-3",
+        "NFKBI",
+        "NFKBIA"
+    ],
+    "NFKBIZ": [
+        "I-kappa-B-zeta",
+        "IKBZ",
+        "INAP",
+        "IkappaB-zeta",
+        "MAIL",
+        "NFKBIZ",
+        "ikB-zeta",
+        "ikappaBzeta"
+    ],
+    "NOL9": [
+        "Grc3",
+        "NET6",
+        "NOL9"
+    ],
+    "OSBPL10": [
+        "ORP10",
+        "OSBP9",
+        "OSBPL10"
+    ],
+    "PIM2": [
+        "PIM2"
+    ],
+    "POU2AF1": [
+        "BOB1",
+        "OBF-1",
+        "OBF1",
+        "OCAB",
+        "POU2AF1"
+    ],
+    "POU2F2": [
+        "OCT2",
+        "OTF2",
+        "Oct-2",
+        "POU2F2"
+    ],
+    "PRKDC": [
+        "DNA-PKC",
+        "DNA-PKcs",
+        "DNAPK",
+        "DNAPKc",
+        "DNPK1",
+        "HYRC",
+        "HYRC1",
+        "IMD26",
+        "PRKDC",
+        "XRCC7",
+        "p350"
+    ],
+    "S1PR2": [
+        "AGR16",
+        "DFNB68",
+        "EDG-5",
+        "EDG5",
+        "Gpcr13",
+        "H218",
+        "LPB2",
+        "S1P2",
+        "S1PR2"
+    ],
+    "SETD1B": [
+        "IDDSELD",
+        "KMT2G",
+        "SETD1B",
+        "Set1B"
+    ],
+    "SOCS1": [
+        "AISIMD",
+        "CIS1",
+        "CISH1",
+        "JAB",
+        "SOCS-1",
+        "SOCS1",
+        "SSI-1",
+        "SSI1",
+        "TIP-3",
+        "TIP3"
+    ],
+    "SPEN": [
+        "HIAA0929",
+        "MINT",
+        "RATARS",
+        "RBM15C",
+        "SHARP",
+        "SPEN"
+    ],
+    "STAT6": [
+        "D12S1644",
+        "HIES6",
+        "IL-4-STAT",
+        "STAT6",
+        "STAT6B",
+        "STAT6C"
+    ],
+    "TBL1XR1": [
+        "C21",
+        "DC42",
+        "IRA1",
+        "MRD41",
+        "TBL1XR1",
+        "TBLR1"
+    ],
+    "TNFAIP3": [
+        "A20",
+        "AIFBL1",
+        "AISBL",
+        "OTUD7C",
+        "TNFA1P2",
+        "TNFAIP3"
+    ],
+    "TOX": [
+        "TOX",
+        "TOX1"
+    ],
+    "UBE2A": [
+        "HHR6A",
+        "MRXS30",
+        "MRXSN",
+        "RAD6A",
+        "UBC2",
+        "UBE2A"
+    ],
+    "ZFP36L1": [
+        "BRF1",
+        "Berg36",
+        "ERF-1",
+        "ERF1",
+        "RNF162B",
+        "TIS11B",
+        "ZFP36L1",
+        "cMG1"
+    ],
+    "TMSB4X": [
+        "FX",
+        "PTMB4",
+        "TB4X",
+        "TMSB4",
+        "TMSB4X"
+    ],
+    "BIRC6": [
+        "APOLLON",
+        "BIRC6",
+        "BRUCE"
+    ],
+    "CD83": [
+        "BL11",
+        "CD83",
+        "HB15"
+    ],
+    "ZNF292": [
+        "MRD63",
+        "MRD64",
+        "Nbla00365",
+        "ZFP292",
+        "ZN-16",
+        "ZNF292",
+        "Zn-15",
+        "bA393I2.3"
+    ],
+    "S100B": [
+        "NEF",
+        "S100",
+        "S100-B",
+        "S100B",
+        "S100beta"
+    ],
+    "NR4A3": [
+        "CHN",
+        "CSMF",
+        "MINOR",
+        "NOR1",
+        "NR4A3"
+    ],
+    "TMB": [
+        "Tumor Mutation Burden"
+    ],
+    "MSI": [
+        " Microsatellite Instability",
+        "dMMR"
+    ],
+    "Kataegis": [
+        "clustered mutagenesis",
+        "mutation storms"
+    ],
+    "CK": [
+        "Complex Karyotype"
+    ],
+    "Chromothripsis": [
+        "Chromosome Shattering",
+        "Chromothrypsis"
+    ],
+    "OVOL2": [
+        "CHED",
+        "CHED1",
+        "CHED2",
+        "EUROIMAGE566589",
+        "OVOL2",
+        "PPCD1",
+        "ZNF339"
+    ],
+    "Aneuploidy": [
+        "Aneuploid"
+    ],
+    "Methylation signature": [
+        "DNA methylation",
+        "DNA methylation signature"
+    ],
+    "HPV": [
+        "Human Papillomavirus"
+    ],
+    "MAGEA4": [
+        "CT1.4",
+        "MAGE-41",
+        "MAGE-X2",
+        "MAGE4",
+        "MAGE4A",
+        "MAGE4B",
+        "MAGEA4"
+    ],
+    "MAP3K1": [
+        "MAP3K1",
+        "MAPKKK1",
+        "MEKK",
+        "MEKK 1",
+        "MEKK1",
+        "SRXY6"
+    ],
+    "IFNGR1": [
+        "CD119",
+        "IFNGR",
+        "IFNGR1",
+        "IMD27A",
+        "IMD27B"
+    ],
+    "EMSY": [
+        "C11orf30",
+        "EMSY",
+        "GL002"
+    ],
+    "UBTF": [
+        "CONDBA",
+        "NOR-90",
+        "UBF",
+        "UBF-1",
+        "UBF1",
+        "UBF2",
+        "UBTF"
+    ],
+    "SDHC": [
+        "CYB560",
+        "CYBL",
+        "PGL3",
+        "PPGL3",
+        "QPS1",
+        "SDH3",
+        "SDHC"
+    ],
+    "SDHD": [
+        "CBT1",
+        "CII-4",
+        "CWS3",
+        "MC2DN3",
+        "PGL",
+        "PGL1",
+        "PPGL1",
+        "QPs3",
+        "SDH4",
+        "SDHD",
+        "cybS"
+    ],
+    "FAAP20": [
+        "C1orf86",
+        "FAAP20",
+        "FP7162"
+    ],
+    "CLDN18": [
+        "CLDN18",
+        "SFTA5",
+        "SFTPJ"
+    ],
+    "FAT1": [
+        "CDHF7",
+        "CDHR8",
+        "FAT",
+        "FAT1",
+        "ME5",
+        "hFat1"
+    ],
+    "ATP7B": [
+        "ATP7B",
+        "PWD",
+        "WC1",
+        "WD",
+        "WND"
+    ],
+    "TFCP2": [
+        "LBP1C",
+        "LSF",
+        "LSF1D",
+        "SEF",
+        "TFCP2",
+        "TFCP2C"
+    ],
+    "KEAP1": [
+        "INrf2",
+        "KEAP1",
+        "KLHL19"
+    ],
+    "ERCC6": [
+        "ARMD5",
+        "CKN2",
+        "COFS",
+        "COFS1",
+        "CSB",
+        "CSB-PGBD3",
+        "ERCC6",
+        "POF11",
+        "RAD26",
+        "UVSS1"
+    ],
+    "C19MC": [
+        "C19MC MicroRNA Cluster"
+    ]
+}
