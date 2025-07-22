@@ -4,13 +4,17 @@ import { McpAgent } from "agents/mcp";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
+import { TfIdf, NGrams } from "natural";
+
 import rawTherapyMap  from "./data/therapy_name_map.json";
 import rawDiseaseMap  from "./data/disease_name_map.json";
-import rawGeneMap     from "./data/gene_name_map.json";
+//import rawGeneMap     from "./data/gene_name_map.json";
+import rawMPMap from "./data/molecular_profile_map.json";
 
 export const dTherapyMap: Record<string, string[]>  = rawTherapyMap  as Record<string, string[]>;
 export const dDiseaseMap: Record<string, string[]>  = rawDiseaseMap  as Record<string, string[]>;
-export const dGeneMap:    Record<string, string[]>  = rawGeneMap     as Record<string, string[]>;
+//export const dGeneMap:    Record<string, string[]>  = rawGeneMap     as Record<string, string[]>;
+export const dMPMap:    Record<string, string[]>  = rawMPMap     as Record<string, string[]>;
 
 
 export function normalizeEntity(
@@ -45,7 +49,6 @@ function compact<T extends Record<string, unknown>>(obj: T): Partial<T> {
     Object.entries(obj).filter(([, v]) => v != null),
   ) as Partial<T>;          // ← assert the narrowed shape
 }
-
 
 // ========================================
 // API CONFIGURATION - Customize for your GraphQL API
@@ -82,7 +85,7 @@ export const tools = {
     name: "get_variant_evidence",
     description:
       "Return up to 10 evidence items for a CIViC molecular profile, " +
-      "optionally filtered by disease and/or therapy.",
+      "optionally filtered by disease and/or therapy. Cite URLs used for specific information.",
     inputSchema: {
       molecularProfileName: z.string(),
       diseaseName:          z.string().optional(),
@@ -97,8 +100,9 @@ export const tools = {
       resource_usage: "network_io_heavy",
     },
     async handler({ molecularProfileName, diseaseName, therapyName }: EvidenceInput) {
+
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dGeneMap,   0.7, true),
+        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
         diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
         therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
       });
@@ -125,27 +129,46 @@ export const tools = {
               description
               evidenceLevel
               evidenceRating
+              id
             }
           }
         }`;
 
-        const res = await fetch("https://civicdb.org/api/graphql", { method: "POST",
-        headers: API_CONFIG.headers,
-        body:   JSON.stringify({ query, variables }), }).then(r => r.json()) as {
-                data?: { evidenceItems?: { nodes: unknown[] } };
-                errors?: unknown[];
+        const res = await fetch("https://civicdb.org/api/graphql", {
+          method: "POST",
+          headers: API_CONFIG.headers,
+          body: JSON.stringify({ query, variables }),
+        }).then((r) => r.json()) as {
+          data?: { evidenceItems?: { nodes: Record<string, unknown>[] } };
+          errors?: unknown[];
         };
-        
-        const payload = res.data?.evidenceItems?.nodes ?? res;   // whatever you want to surface
+
+        // Default fallback if query failed
+        const rawItems = res.data?.evidenceItems?.nodes ?? res;
+
+        // Only transform if it's an array of evidence items
+        const evidenceItems = Array.isArray(rawItems)
+          ? rawItems.map((item) => {
+              const copy = { ...item } as Record<string, unknown>;
+              const id = copy["id"];
+              if (typeof id === "string" || typeof id === "number") {
+                copy["url"] = `https://identifiers.org/civic.eid:${id}`;
+              }
+              delete copy["id"];
+              return copy;
+            })
+          : rawItems;
 
         return {
-                content: [
-                        {type: "text" as const, text: JSON.stringify(payload, null, 2),},
-                ],
-                _meta: {
-                row_count: Array.isArray(payload) ? payload.length : undefined,
-                // add any extra metadata you like
-                },
+          content: [
+            {
+              type: "text" as const,
+              text: JSON.stringify(evidenceItems, null, 2),
+            },
+          ],
+          _meta: {
+            row_count: Array.isArray(evidenceItems) ? evidenceItems.length : undefined,
+          },
         };
     },
   },
@@ -154,7 +177,7 @@ export const tools = {
   getVariantAssertions: {
     name: "get_variant_assertions",
     description:
-      "Return CIViC assertions for a molecular profile; optionally filter by disease.",
+      "Return CIViC assertions for a molecular profile; optionally filter by disease. Cite URLs used for specific information.",
     inputSchema: {
       molecularProfileName: z.string(),
       diseaseName:          z.string().optional(),
@@ -168,48 +191,62 @@ export const tools = {
       resource_usage: "network_io_heavy",
     },
     async handler({ molecularProfileName, diseaseName }: AssertionsInput) {
+
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dGeneMap,   0.7, true),
-        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
+        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
+        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7)
       });
 
       const query = /* GraphQL */ `
-        query Assertions(
-          $molecularProfileName: String!
-          $diseaseName: String
-        ) {
-          assertions(
-            molecularProfileName: $molecularProfileName
-            diseaseName:          $diseaseName
-          ) {
+        query Assertions($molecularProfileName: String!, $diseaseName: String) {
+          assertions(molecularProfileName: $molecularProfileName, diseaseName: $diseaseName) {
             nodes {
               status
               assertionDirection
               significance
               summary
+              id
             }
           }
         }`;
-        const res = await fetch("https://civicdb.org/api/graphql", { method: "POST",
-        headers: API_CONFIG.headers,
-        body:   JSON.stringify({ query, variables }), 
-        }).then(r => r.json()) as {
-                data?: { assertions?: { nodes: unknown[] } };
-                errors?: unknown[];
+
+        const res = await fetch("https://civicdb.org/api/graphql", {
+          method: "POST",
+          headers: API_CONFIG.headers,
+          body: JSON.stringify({ query, variables }),
+        }).then((r) => r.json()) as {
+          data?: { assertions?: { nodes: Record<string, unknown>[] } };
+          errors?: unknown[];
         };
-        const payload = res.data?.assertions?.nodes ?? res;
+
+        const rawItems = res.data?.assertions?.nodes ?? res;
+
+        // Only transform if it's an array of assertions
+        const assertions = Array.isArray(rawItems)
+          ? rawItems.map((item) => {
+              const copy = { ...item } as Record<string, unknown>;
+              const id = copy["id"];
+              if (typeof id === "string" || typeof id === "number") {
+                copy["url"] = `https://identifiers.org/civic.aid:${id}`;
+              }
+              delete copy["id"];
+              return copy;
+            })
+          : rawItems;
 
         return {
-                content: [
-        {
-                type: "text" as const,
-                text: JSON.stringify(payload, null, 2),
-        },],
-        _meta: {
-                row_count: Array.isArray(payload) ? payload.length : undefined,},
+          content: [
+            {
+              type: "text" as const,
+              text: JSON.stringify(assertions, null, 2),
+            },
+          ],
+          _meta: {
+            row_count: Array.isArray(assertions) ? assertions.length : undefined,
+          },
         };
-},
-},
+    },
+  },
 } as const;
 
 
@@ -236,8 +273,8 @@ Use the tools to answer oncology variant questions for the Clinical Interpretati
 • Functional – Evidence pertains to a variant that alters biological function from the reference state.
 
 Always call **get_variant_evidence** and **get_variant_assertions** to determine clinical significance.
-
 Gene names are normalized to how they appear in CIViC. If the gene name in CIViC descriptions/summaries does not match the input name assume it is an alias. 
+IMPORTANT: When using information from a specific evidence item or assertion, cite it with the associated url.
     `,
   });
 
@@ -268,7 +305,6 @@ interface ExecutionContext {
   waitUntil(promise: Promise<unknown>): void;
   passThroughOnException(): void;
 }
-
 
 
 export default {
