@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 """
-query_evidence.py
 
 Call the `get_variant_evidence` tool on the CIViC MCP server from the command line.
 
 Examples
 --------
-python query_evidence.py --mp "EGFR" \
+python MCP_query_evidence.py --mp "EGFR" \
                          --disease "Lung Non-small Cell Carcinoma" \
                          --therapy "Erlotinib"
 """
