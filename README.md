@@ -22,6 +22,14 @@ annotations: {
 }
 ```
 
+## Directly Querying the MCP Server
+
+The MCP Server can be called directly from the command line with optional arguments disease and therapy to get CIViC evidence items:
+
+```bash
+MCP_query_evidence.py --mp "molecularProfileNmae" --disease "diseaseName" --therapy "therapyName"
+```
+
 ## Installation & Configuration
 
 ### Prerequisites
