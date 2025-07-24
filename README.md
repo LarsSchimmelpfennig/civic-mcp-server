@@ -9,6 +9,10 @@ The CIViC database is a crowd-sourced repository of clinical interpretations of 
 The MCP Server can be called directly from the command line with optional arguments disease and therapy to get CIViC evidence items:
 
 ```bash
+pip install "mcp[cli]"
+```
+
+```bash
 python MCP_query_evidence.py --mp "molecularProfileNmae" --disease "diseaseName" --therapy "therapyName"
 ```
 
