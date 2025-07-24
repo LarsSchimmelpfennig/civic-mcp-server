@@ -20,14 +20,6 @@ annotations: {
   idempotentHint: false,    // Different queries produce different results
   openWorldHint: true       // Interacts with external CIViC API
 }
-
-// SQL Query Tool  
-annotations: {
-  readOnlyHint: true,       // Only reads data
-  destructiveHint: false,   // Cannot modify data (read-only SQL)
-  idempotentHint: true,     // Same query produces same results
-  openWorldHint: false      // Operates on closed SQLite database
-}
 ```
 
 ## Installation & Configuration
