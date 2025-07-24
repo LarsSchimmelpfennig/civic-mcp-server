@@ -4,10 +4,6 @@ This is a Cloudflare Workers-based Model Context Protocol (MCP) server that prov
 
 The CIViC database is a crowd-sourced repository of clinical interpretations of cancer variants. This MCP server enables structured queries and data analysis of cancer genomics information through natural language interactions with AI assistants.
 
-## MCP Specification Compliance
-
-This server implements **MCP 2025-06-18** specification with the following compliance status:
-
 ## Tool Annotations Reference
 
 The server defines comprehensive tool annotations for MCP clients:
