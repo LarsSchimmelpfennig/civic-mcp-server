@@ -12,7 +12,7 @@ The MCP Server can be called directly from the command line with optional argume
 python MCP_query_evidence.py --mp "molecularProfileNmae" --disease "diseaseName" --therapy "therapyName"
 ```
 
-## Installation & Configuration
+## To Host Your Own Version: Installation & Configuration
 
 ### Prerequisites
 - A Cloudflare account
