@@ -17,6 +17,14 @@
   "compatibility_date": "2025-03-10",
   "compatibility_flags": ["nodejs_compat"],
 
+  // 1) Declare your KV namespace binding here:
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "RESOLVER_KV",   // the variable name in your Worker
+  //     "id": "33f967e8ca794875ab58adfca1aa83e0" // the namespace ID from Cloudflare
+  //   }
+  // ],
+
   /* --------------------------------------------------
      Durable Objects
   -------------------------------------------------- */

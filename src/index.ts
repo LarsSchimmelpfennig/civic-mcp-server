@@ -4,7 +4,7 @@ import { McpAgent } from "agents/mcp";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
-import { TfIdf, NGrams } from "natural";
+// import { TfIdf, NGrams } from "natural";
 
 import rawTherapyMap  from "./data/therapy_name_map.json";
 import rawDiseaseMap  from "./data/disease_name_map.json";
@@ -15,6 +15,105 @@ export const dTherapyMap: Record<string, string[]>  = rawTherapyMap  as Record<s
 export const dDiseaseMap: Record<string, string[]>  = rawDiseaseMap  as Record<string, string[]>;
 //export const dGeneMap:    Record<string, string[]>  = rawGeneMap     as Record<string, string[]>;
 export const dMPMap:    Record<string, string[]>  = rawMPMap     as Record<string, string[]>;
+
+// import diseaseData from "./data/inverted_resolver_disease_500.json";
+// import therapyData from "./data/inverted_resolver_therapy_500.json";
+// import molecularData from "./data/inverted_resolver_molecular_500.json";
+
+export interface ResolverData {
+  vocabulary: Record<string, number>;
+  idf: number[];
+  alias_list: string[];
+  alias_to_key: Record<string, string>;
+  index: Record<string, number[][]>;
+  threshold: number;
+}
+
+// helper to extract 3‑grams
+function charNgrams(s: string, n = 3): string[] {
+  const out: string[] = [];
+  s = s.toLowerCase();
+  for (let i = 0; i + n <= s.length; i++) out.push(s.slice(i, i + n));
+  return out;
+}
+
+/**
+ * Generic cosine‑TFIDF resolver.
+ * Pass in the mention and whichever resolverData you want.
+ */
+export function resolve(
+  mention: string | null | undefined,
+  {
+    vocabulary,
+    idf,
+    alias_list,
+    alias_to_key,
+    index,
+    threshold,
+  }: ResolverData
+): string | null {
+  if (!mention) return null;
+
+  // 1) build term‑counts per feature index
+  const counts: Record<number, number> = {};
+  for (const gram of charNgrams(mention)) {
+    const idx = vocabulary[gram];
+    if (idx != null) counts[idx] = (counts[idx] || 0) + 1;
+  }
+
+  // 2) TF*IDF + L2‑normalize
+  const vec: Record<number, number> = {};
+  let norm2 = 0;
+  for (const [idxStr, tf] of Object.entries(counts)) {
+    const idx = +idxStr;
+    const w = tf * idf[idx];
+    vec[idx] = w;
+    norm2 += w * w;
+  }
+  const norm = Math.sqrt(norm2);
+  if (norm === 0) return null;
+  for (const k of Object.keys(vec)) {
+    vec[+k] /= norm;
+  }
+
+  // 3) accumulate scores via inverted index
+  const scores = new Float32Array(alias_list.length);
+  for (const [featIdxStr, w] of Object.entries(vec)) {
+    const featIdx = +featIdxStr;
+    // find the 3‑gram that maps to this feature index
+    const gram = Object.keys(vocabulary).find(
+      (g) => vocabulary[g] === featIdx
+    )!;
+    const postings = index[gram] || [];
+    for (const [aliasIdx, weight] of postings) {
+      scores[aliasIdx] += weight * w;
+    }
+  }
+
+  // 4) pick best
+  let bestScore = -Infinity;
+  let bestIdx = -1;
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] > bestScore) {
+      bestScore = scores[i];
+      bestIdx = i;
+    }
+  }
+  if (bestScore < threshold) return null;
+
+  const bestAlias = alias_list[bestIdx];
+  return alias_to_key[bestAlias] || null;
+}
+
+// convenience wrappers
+// export const resolveDisease = (mention: string | null | undefined) =>
+//   resolve(mention, diseaseData as ResolverData);
+
+// export const resolveTherapy = (mention: string | null | undefined) =>
+//   resolve(mention, therapyData as ResolverData);
+
+// export const resolveMolecularProfile = (mention: string | null | undefined) =>
+//   resolve(mention, molecularData as ResolverData);
 
 
 export function normalizeEntity(
@@ -101,6 +200,12 @@ export const tools = {
     },
     async handler({ molecularProfileName, diseaseName, therapyName }: EvidenceInput) {
 
+      // const variables = compact({
+      //   molecularProfileName: resolveMolecularProfile(molecularProfileName),
+      //   diseaseName:          resolveDisease(diseaseName),
+      //   therapyName:          resolveTherapy(therapyName),
+      // });
+
       const variables = compact({
         molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
         diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
@@ -108,31 +213,38 @@ export const tools = {
       });
 
       const query = /* GraphQL */ `
-        query EvidenceItems(
-          $molecularProfileName: String!
-          $diseaseName: String
-          $therapyName: String
-        ) {
-          evidenceItems(
-            molecularProfileName: $molecularProfileName
-            diseaseName:          $diseaseName
-            therapyName:          $therapyName
-            first: 10
-          ) {
-            nodes {
-              status
-              evidenceDirection
-              significance
-              disease   { displayName }
-              therapies { name }
-              variantOrigin
-              description
-              evidenceLevel
-              evidenceRating
-              id
+        query evidenceItems($molecularProfileName: String!, $diseaseName: String, $therapyName: String) {
+        evidenceItems( molecularProfileName: $molecularProfileName, diseaseName: $diseaseName, therapyName: $therapyName, first: 10) {
+            nodes { 
+                status 
+                evidenceType
+                evidenceDirection 
+                significance
+                molecularProfile{
+                    variants{
+                        name
+                        feature{
+                            name
+                        }
+                    }
+                }
+                disease{
+                    displayName
+                }
+                therapies{
+                    name
+                }
+                variantOrigin 
+                description
+                evidenceLevel
+                evidenceRating
+                source {
+                  sourceUrl
+                }
+                id 
             }
-          }
-        }`;
+        }
+      }`;
 
         const res = await fetch("https://civicdb.org/api/graphql", {
           method: "POST",
@@ -192,23 +304,43 @@ export const tools = {
     },
     async handler({ molecularProfileName, diseaseName }: AssertionsInput) {
 
+      // const variables = compact({
+      //   molecularProfileName: resolveMolecularProfile(molecularProfileName),
+      //   diseaseName:          resolveDisease(diseaseName),
+      // });
+
       const variables = compact({
         molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
         diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7)
       });
 
       const query = /* GraphQL */ `
-        query Assertions($molecularProfileName: String!, $diseaseName: String) {
-          assertions(molecularProfileName: $molecularProfileName, diseaseName: $diseaseName) {
-            nodes {
-              status
-              assertionDirection
-              significance
-              summary
-              id
+        query assertions($molecularProfileName: String!, $diseaseName: String, $therapyName: String) {
+        assertions(molecularProfileName: $molecularProfileName, diseaseName: $diseaseName, therapyName: $therapyName) {
+            nodes { 
+                status 
+                assertionType
+                assertionDirection 
+                significance
+                molecularProfile{
+                variants{
+                        name
+                        feature{
+                            name
+                        }
+                    }
+                }
+                disease{
+                    displayName
+                }
+                therapies{
+                    name
+                } 
+                summary
+                id 
             }
-          }
-        }`;
+        }
+      }`;
 
         const res = await fetch("https://civicdb.org/api/graphql", {
           method: "POST",
