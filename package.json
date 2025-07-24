@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.7",
+    "@types/string-similarity": "^4.0.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
@@ -24,6 +25,7 @@
     "difflib": "^0.2.4",
     "gestalt-pattern-matcher": "^0.0.12",
     "natural": "^8.1.0",
+    "string-similarity": "^4.0.4",
     "zod": "^3.24.2"
   }
 }

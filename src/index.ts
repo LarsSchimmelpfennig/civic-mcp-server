@@ -8,102 +8,155 @@ import { z } from "zod";
 
 import rawTherapyMap  from "./data/therapy_name_map.json";
 import rawDiseaseMap  from "./data/disease_name_map.json";
-//import rawGeneMap     from "./data/gene_name_map.json";
 import rawMPMap from "./data/molecular_profile_map.json";
+
+//import rawGeneMap     from "./data/gene_name_map.json";
 
 export const dTherapyMap: Record<string, string[]>  = rawTherapyMap  as Record<string, string[]>;
 export const dDiseaseMap: Record<string, string[]>  = rawDiseaseMap  as Record<string, string[]>;
-//export const dGeneMap:    Record<string, string[]>  = rawGeneMap     as Record<string, string[]>;
 export const dMPMap:    Record<string, string[]>  = rawMPMap     as Record<string, string[]>;
+
+//export const dGeneMap:    Record<string, string[]>  = rawGeneMap     as Record<string, string[]>;
 
 // import diseaseData from "./data/inverted_resolver_disease_500.json";
 // import therapyData from "./data/inverted_resolver_therapy_500.json";
 // import molecularData from "./data/inverted_resolver_molecular_500.json";
 
-export interface ResolverData {
-  vocabulary: Record<string, number>;
-  idf: number[];
-  alias_list: string[];
-  alias_to_key: Record<string, string>;
-  index: Record<string, number[][]>;
-  threshold: number;
+import { findBestMatch } from 'string-similarity'
+
+function normalizeStr(s: string): string {
+  return s
+    .normalize('NFKD')                   // decompose accents
+    .replace(/[\u0300-\u036f]/g, '')     // strip diacritics
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')        // keep only letters, digits, spaces
+    .replace(/\s+/g, ' ')                // collapse runs of spaces
+    .trim()
 }
 
-// helper to extract 3‑grams
-function charNgrams(s: string, n = 3): string[] {
-  const out: string[] = [];
-  s = s.toLowerCase();
-  for (let i = 0; i + n <= s.length; i++) out.push(s.slice(i, i + n));
-  return out;
+/**
+ * Map a free‑form name to its primary alias via fuzzy matching.
+ *
+ * @param name      Input string (may be undefined or null)
+ * @param lookup    Record<primary, aliases[]>
+ * @param threshold Minimum similarity (0–1) to accept a match
+ * @returns         The matched primary string, or undefined if below threshold or name missing
+ */
+export function normalizeEntity(
+  name: string | undefined | null,
+  lookup: Record<string, string[]>,
+  threshold: number = 0.7
+): string | undefined {
+  if (!name) {
+    return undefined
+  }
+
+  const qNorm = normalizeStr(name)
+
+  // Build a map from normalized‑alias → primary
+  const aliasToPrimary: Record<string, string> = {}
+  for (const [primary, aliases] of Object.entries(lookup)) {
+    aliasToPrimary[normalizeStr(primary)] = primary
+    for (const alias of aliases) {
+      aliasToPrimary[normalizeStr(alias)] = primary
+    }
+  }
+
+  const candidates = Object.keys(aliasToPrimary)
+  const { bestMatch } = findBestMatch(qNorm, candidates)
+
+  return bestMatch.rating >= threshold
+    ? aliasToPrimary[bestMatch.target]
+    : undefined
 }
+
+
+
+
+// export interface ResolverData {
+//   vocabulary: Record<string, number>;
+//   idf: number[];
+//   alias_list: string[];
+//   alias_to_key: Record<string, string>;
+//   index: Record<string, number[][]>;
+//   threshold: number;
+// }
+
+// helper to extract 3‑grams
+// function charNgrams(s: string, n = 3): string[] {
+//   const out: string[] = [];
+//   s = s.toLowerCase();
+//   for (let i = 0; i + n <= s.length; i++) out.push(s.slice(i, i + n));
+//   return out;
+// }
 
 /**
  * Generic cosine‑TFIDF resolver.
  * Pass in the mention and whichever resolverData you want.
  */
-export function resolve(
-  mention: string | null | undefined,
-  {
-    vocabulary,
-    idf,
-    alias_list,
-    alias_to_key,
-    index,
-    threshold,
-  }: ResolverData
-): string | null {
-  if (!mention) return null;
+// export function resolve(
+//   mention: string | null | undefined,
+//   {
+//     vocabulary,
+//     idf,
+//     alias_list,
+//     alias_to_key,
+//     index,
+//     threshold,
+//   }: ResolverData
+// ): string | null {
+//   if (!mention) return null;
 
-  // 1) build term‑counts per feature index
-  const counts: Record<number, number> = {};
-  for (const gram of charNgrams(mention)) {
-    const idx = vocabulary[gram];
-    if (idx != null) counts[idx] = (counts[idx] || 0) + 1;
-  }
+//   // 1) build term‑counts per feature index
+//   const counts: Record<number, number> = {};
+//   for (const gram of charNgrams(mention)) {
+//     const idx = vocabulary[gram];
+//     if (idx != null) counts[idx] = (counts[idx] || 0) + 1;
+//   }
 
-  // 2) TF*IDF + L2‑normalize
-  const vec: Record<number, number> = {};
-  let norm2 = 0;
-  for (const [idxStr, tf] of Object.entries(counts)) {
-    const idx = +idxStr;
-    const w = tf * idf[idx];
-    vec[idx] = w;
-    norm2 += w * w;
-  }
-  const norm = Math.sqrt(norm2);
-  if (norm === 0) return null;
-  for (const k of Object.keys(vec)) {
-    vec[+k] /= norm;
-  }
+//   // 2) TF*IDF + L2‑normalize
+//   const vec: Record<number, number> = {};
+//   let norm2 = 0;
+//   for (const [idxStr, tf] of Object.entries(counts)) {
+//     const idx = +idxStr;
+//     const w = tf * idf[idx];
+//     vec[idx] = w;
+//     norm2 += w * w;
+//   }
+//   const norm = Math.sqrt(norm2);
+//   if (norm === 0) return null;
+//   for (const k of Object.keys(vec)) {
+//     vec[+k] /= norm;
+//   }
 
-  // 3) accumulate scores via inverted index
-  const scores = new Float32Array(alias_list.length);
-  for (const [featIdxStr, w] of Object.entries(vec)) {
-    const featIdx = +featIdxStr;
-    // find the 3‑gram that maps to this feature index
-    const gram = Object.keys(vocabulary).find(
-      (g) => vocabulary[g] === featIdx
-    )!;
-    const postings = index[gram] || [];
-    for (const [aliasIdx, weight] of postings) {
-      scores[aliasIdx] += weight * w;
-    }
-  }
+//   // 3) accumulate scores via inverted index
+//   const scores = new Float32Array(alias_list.length);
+//   for (const [featIdxStr, w] of Object.entries(vec)) {
+//     const featIdx = +featIdxStr;
+//     // find the 3‑gram that maps to this feature index
+//     const gram = Object.keys(vocabulary).find(
+//       (g) => vocabulary[g] === featIdx
+//     )!;
+//     const postings = index[gram] || [];
+//     for (const [aliasIdx, weight] of postings) {
+//       scores[aliasIdx] += weight * w;
+//     }
+//   }
 
-  // 4) pick best
-  let bestScore = -Infinity;
-  let bestIdx = -1;
-  for (let i = 0; i < scores.length; i++) {
-    if (scores[i] > bestScore) {
-      bestScore = scores[i];
-      bestIdx = i;
-    }
-  }
-  if (bestScore < threshold) return null;
+//   // 4) pick best
+//   let bestScore = -Infinity;
+//   let bestIdx = -1;
+//   for (let i = 0; i < scores.length; i++) {
+//     if (scores[i] > bestScore) {
+//       bestScore = scores[i];
+//       bestIdx = i;
+//     }
+//   }
+//   if (bestScore < threshold) return null;
 
-  const bestAlias = alias_list[bestIdx];
-  return alias_to_key[bestAlias] || null;
-}
+//   const bestAlias = alias_list[bestIdx];
+//   return alias_to_key[bestAlias] || null;
+// }
 
 // convenience wrappers
 // export const resolveDisease = (mention: string | null | undefined) =>
@@ -116,29 +169,29 @@ export function resolve(
 //   resolve(mention, molecularData as ResolverData);
 
 
-export function normalizeEntity(
-  name: string | undefined | null,
-  lookup: Record<string, string[]>,
-  threshold = 0.7,
-  returnInput = false,
-): string | null {
-  if (!name) return null;
+// export function normalizeEntity(
+//   name: string | undefined | null,
+//   lookup: Record<string, string[]>,
+//   threshold = 0.7,
+//   returnInput = false,
+// ): string | null {
+//   if (!name) return null;
 
-  const nameLower = name.toLowerCase();
-  let best: string | null = null;
-  let bestScore = 0;
+//   const nameLower = name.toLowerCase();
+//   let best: string | null = null;
+//   let bestScore = 0;
 
-  for (const [primary, synonyms] of Object.entries(lookup)) {
-    for (const cand of [primary, ...synonyms]) {
-      const ratio = gestaltSimilarity(nameLower, cand.toLowerCase());
-      if (ratio > bestScore) {
-        bestScore = ratio;
-        best = primary;
-      }
-    }
-  }
-  return bestScore >= threshold ? best : returnInput ? name : null;
-}
+//   for (const [primary, synonyms] of Object.entries(lookup)) {
+//     for (const cand of [primary, ...synonyms]) {
+//       const ratio = gestaltSimilarity(nameLower, cand.toLowerCase());
+//       if (ratio > bestScore) {
+//         bestScore = ratio;
+//         best = primary;
+//       }
+//     }
+//   }
+//   return bestScore >= threshold ? best : returnInput ? name : null;
+// }
 
 /** -----------------------------------------------------------
  *  Helper: remove null / undefined properties from an object
@@ -207,7 +260,7 @@ export const tools = {
       // });
 
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
+        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
         diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
         therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
       });
@@ -310,7 +363,7 @@ export const tools = {
       // });
 
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7, true),
+        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
         diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7)
       });
 
