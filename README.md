@@ -4,7 +4,7 @@ This is a Cloudflare Workers-based Model Context Protocol (MCP) server that prov
 
 The CIViC database is a crowd-sourced repository of clinical interpretations of cancer variants. This MCP server enables structured queries and data analysis of cancer genomics information through natural language interactions with AI assistants.
 
-## Directly Querying the MCP Server
+### Directly Querying the MCP Server
 
 The MCP Server can be called directly from the command line with the optional arguments disease and therapy to get CIViC evidence items:
 
@@ -16,34 +16,29 @@ pip install "mcp[cli]"
 python MCP_query_evidence.py --mp "EGFR" --disease "Lung Non-small Cell Carcinoma" --therapy "Erlotinib"
 ```
 
-## To Host Your Own Version: Installation & Configuration
+### Locally Hosting The CIViC MCP Server
 
-### Prerequisites
-- A Cloudflare account
-- Wrangler CLI installed
-- Claude Desktop app
+We provide an example of doing this with GPT4o. A personal API key is required.
 
-### Deploy to Cloudflare Workers
 
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   cd civic-mcp-server
-   ```
+### Using With Claude Desktop
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+Install Node.js (https://nodejs.org/)
 
-3. Deploy to Cloudflare Workers:
-   ```bash
-   npm run deploy
-   ```
+Click "LTS" (Recommended for Most Users) — this gives you Node.js and npx
+Download and install it like any normal app
 
-4. After deployment, you'll get a URL like: `https://civic-mcp-server.YOUR_SUBDOMAIN.workers.dev`
+Once installed:
+On Windows: Open “Command Prompt” or “PowerShell”
+On macOS: Open “Terminal”
 
-### Configure Claude Desktop
+Then run:
+```bash
+node -v
+npx -v
+```
+
+Confirm that both give versions.
 
 Add this configuration to your `claude_desktop_config.json` file:
 
@@ -61,7 +56,6 @@ Add this configuration to your `claude_desktop_config.json` file:
 }
 ```
 
-Replace `larscivic` with your actual Cloudflare Workers subdomain.
 
 ## Usage
 
