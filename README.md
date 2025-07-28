@@ -4,13 +4,13 @@ This is a Cloudflare Workers-based Model Context Protocol (MCP) server that prov
 
 The CIViC database is a crowd-sourced repository of clinical interpretations of cancer variants. This MCP server enables structured queries and data analysis of cancer genomics information through natural language interactions with AI assistants.
 
-### Directly Querying the MCP Server
-
-The MCP Server can be called directly from the command line with the optional arguments disease and therapy to get CIViC evidence items:
-
 ```bash
 pip install "mcp[cli]"
 ```
+
+### Directly Querying the MCP Server
+
+The MCP Server can be called directly from the command line with the optional arguments disease and therapy to get CIViC evidence items:
 
 ```bash
 python MCP_query_evidence.py --mp "EGFR" --disease "Lung Non-small Cell Carcinoma" --therapy "Erlotinib"
@@ -18,7 +18,11 @@ python MCP_query_evidence.py --mp "EGFR" --disease "Lung Non-small Cell Carcinom
 
 ### Locally Hosting The CIViC MCP Server
 
-We provide an example of doing this with GPT4o. A personal API key is required.
+We provide an example of doing this with GPT4o-mini. A personal API key is required, update the variable OPENAI_API_KEY in local_hosting/message_MCP_CIViC.py
+
+```bash
+python local_hosting/message_MCP_CIViC.py --msg "What is the clinical significance of EGFR variants in CIViC?" 
+```
 
 
 ### Using With Claude Desktop
