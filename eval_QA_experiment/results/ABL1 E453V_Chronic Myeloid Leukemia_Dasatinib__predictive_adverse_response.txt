@@ -1,0 +1,44 @@
+Invoking MCP tool get_variant_evidence with input {"molecularProfileName":"ABL1 E453V","cancerType":"Chronic Myeloid Leukemia","therapyName":"Dasatinib"}
+MCP tool get_variant_evidence returned meta=None content=[TextContent(type='text', text='{
+  "Field Descriptions": "evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information.",
+  "API Results": [
+    {
+      "status": "SUBMITTED",
+      "evidenceType": "PREDICTIVE",
+      "evidenceDirection": "SUPPORTS",
+      "significance": "SENSITIVITYRESPONSE",
+      "molecularProfile": {
+        "variants": [
+          {
+            "name": "E453V",
+            "feature": {
+              "name": "ABL1"
+            }
+          }
+        ]
+      },
+      "disease": {
+        "displayName": "Chronic Myeloid Leukemia"
+      },
+      "therapies": [
+        {
+          "name": "Dasatinib"
+        }
+      ],
+      "variantOrigin": "SOMATIC",
+      "description": "In a retrospective study of 1084 imatinib-resistant or -intolerant, chronic myeloid leukemia (chronic-phase) patients, patients with a mutation in the ABL1 portion of the BCR-ABL gene fusion were associated with a favorable complete hematologic response (CHR), major cytogenetic response (MCyR), complete cytogenetic response (CCyR), and major molecular response (MMR) to dasatinib monotherapy (CHR= 92% (362/402) vs. CHR= 90% (593/641), MCyR= 56% (225/402) vs. MCyR= 65% (414/614), CCyR= 44% (175/402) vs. CCyR= 56% (358/641), MMR= 33% (125/383) vs. MMR= 45% (274/609), comparable to patients without mutation in the ABL1 portion.",
+      "evidenceLevel": "C",
+      "evidenceRating": null,
+      "url": "https://identifiers.org/civic.eid:4720"
+    }
+  ]
+}', annotations=None, meta=None)] structuredContent=None isError=False
+### LLM OUTPUT ###
+C
