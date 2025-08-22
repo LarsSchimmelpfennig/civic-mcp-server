@@ -4,30 +4,45 @@ from agents import Agent, Runner, OpenAIChatCompletionsModel, ModelSettings
 from agents.mcp import MCPServerStdio, MCPServerStdioParams
 import argparse
 import logging
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
-class ToolInvocationFilter(logging.Filter):
-    def filter(self, record):
-        return (
-            record.levelname == "DEBUG"
-            and record.name == "openai.agents"
-            and record.getMessage().startswith("Invoking MCP tool")
-       )
+# class ToolInvocationFilter(logging.Filter):
+#     def filter(self, record):
+#         return (
+#             record.levelname == "DEBUG"
+#             and record.name == "openai.agents"
+#             and record.getMessage().startswith("Invoking MCP tool")
+#        )
 
-# Add the filter to the root logger or your desired handler
-handler = logging.StreamHandler()
-handler.setLevel(logging.DEBUG)
-handler.addFilter(ToolInvocationFilter())
+# # Add the filter to the root logger or your desired handler
+# handler = logging.StreamHandler()
+# handler.setLevel(logging.DEBUG)
+# handler.addFilter(ToolInvocationFilter())
 
-##Replace the root logger's handlers with your filtered handler
-logging.getLogger().handlers = [handler]
-logging.getLogger().setLevel(logging.DEBUG)
+# ##Replace the root logger's handlers with your filtered handler
+# logging.getLogger().handlers = [handler]
+# logging.getLogger().setLevel(logging.DEBUG)
+
+root = logging.getLogger()
+root.handlers = []
+root.setLevel(logging.DEBUG)
+
+stream = logging.StreamHandler()
+stream.setLevel(logging.DEBUG)
+root.addHandler(stream)
+
+# Often useful granular loggers:
+logging.getLogger("openai.agents").setLevel(logging.DEBUG)
+logging.getLogger("openai.agents.mcp").setLevel(logging.DEBUG)
+logging.getLogger("openai").setLevel(logging.DEBUG)
 
 import functools, sys
 print = functools.partial(print, file=sys.stderr, flush=True) 
 
 
-OPENAI_API_KEY = 'INSERT API KEY'
+#OPENAI_API_KEY = 'INSERT API KEY'
+
+OPENAI_API_KEY = os.getenv("openai_api_key")
 
 server_params = {
     "command": "fastmcp",

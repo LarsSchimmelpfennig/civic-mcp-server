@@ -71,128 +71,6 @@ export function normalizeEntity(
 }
 
 
-
-
-// export interface ResolverData {
-//   vocabulary: Record<string, number>;
-//   idf: number[];
-//   alias_list: string[];
-//   alias_to_key: Record<string, string>;
-//   index: Record<string, number[][]>;
-//   threshold: number;
-// }
-
-// helper to extract 3‑grams
-// function charNgrams(s: string, n = 3): string[] {
-//   const out: string[] = [];
-//   s = s.toLowerCase();
-//   for (let i = 0; i + n <= s.length; i++) out.push(s.slice(i, i + n));
-//   return out;
-// }
-
-/**
- * Generic cosine‑TFIDF resolver.
- * Pass in the mention and whichever resolverData you want.
- */
-// export function resolve(
-//   mention: string | null | undefined,
-//   {
-//     vocabulary,
-//     idf,
-//     alias_list,
-//     alias_to_key,
-//     index,
-//     threshold,
-//   }: ResolverData
-// ): string | null {
-//   if (!mention) return null;
-
-//   // 1) build term‑counts per feature index
-//   const counts: Record<number, number> = {};
-//   for (const gram of charNgrams(mention)) {
-//     const idx = vocabulary[gram];
-//     if (idx != null) counts[idx] = (counts[idx] || 0) + 1;
-//   }
-
-//   // 2) TF*IDF + L2‑normalize
-//   const vec: Record<number, number> = {};
-//   let norm2 = 0;
-//   for (const [idxStr, tf] of Object.entries(counts)) {
-//     const idx = +idxStr;
-//     const w = tf * idf[idx];
-//     vec[idx] = w;
-//     norm2 += w * w;
-//   }
-//   const norm = Math.sqrt(norm2);
-//   if (norm === 0) return null;
-//   for (const k of Object.keys(vec)) {
-//     vec[+k] /= norm;
-//   }
-
-//   // 3) accumulate scores via inverted index
-//   const scores = new Float32Array(alias_list.length);
-//   for (const [featIdxStr, w] of Object.entries(vec)) {
-//     const featIdx = +featIdxStr;
-//     // find the 3‑gram that maps to this feature index
-//     const gram = Object.keys(vocabulary).find(
-//       (g) => vocabulary[g] === featIdx
-//     )!;
-//     const postings = index[gram] || [];
-//     for (const [aliasIdx, weight] of postings) {
-//       scores[aliasIdx] += weight * w;
-//     }
-//   }
-
-//   // 4) pick best
-//   let bestScore = -Infinity;
-//   let bestIdx = -1;
-//   for (let i = 0; i < scores.length; i++) {
-//     if (scores[i] > bestScore) {
-//       bestScore = scores[i];
-//       bestIdx = i;
-//     }
-//   }
-//   if (bestScore < threshold) return null;
-
-//   const bestAlias = alias_list[bestIdx];
-//   return alias_to_key[bestAlias] || null;
-// }
-
-// convenience wrappers
-// export const resolveDisease = (mention: string | null | undefined) =>
-//   resolve(mention, diseaseData as ResolverData);
-
-// export const resolveTherapy = (mention: string | null | undefined) =>
-//   resolve(mention, therapyData as ResolverData);
-
-// export const resolveMolecularProfile = (mention: string | null | undefined) =>
-//   resolve(mention, molecularData as ResolverData);
-
-
-// export function normalizeEntity(
-//   name: string | undefined | null,
-//   lookup: Record<string, string[]>,
-//   threshold = 0.7,
-//   returnInput = false,
-// ): string | null {
-//   if (!name) return null;
-
-//   const nameLower = name.toLowerCase();
-//   let best: string | null = null;
-//   let bestScore = 0;
-
-//   for (const [primary, synonyms] of Object.entries(lookup)) {
-//     for (const cand of [primary, ...synonyms]) {
-//       const ratio = gestaltSimilarity(nameLower, cand.toLowerCase());
-//       if (ratio > bestScore) {
-//         bestScore = ratio;
-//         best = primary;
-//       }
-//     }
-//   }
-//   return bestScore >= threshold ? best : returnInput ? name : null;
-// }
-
 /** -----------------------------------------------------------
  *  Helper: remove null / undefined properties from an object
  *  --------------------------------------------------------- */
@@ -236,7 +114,7 @@ export const tools = {
   getVariantEvidence: {
     name: "get_variant_evidence",
     description:
-      "Return up to 10 evidence items for a CIViC molecular profile, " +
+      "Retrieves evidence items for a CIViC molecular profile, " +
       "optionally filtered by disease and/or therapy. Cite URLs used for specific information.",
     inputSchema: {
       molecularProfileName: z.string(),
@@ -324,11 +202,26 @@ export const tools = {
             })
           : rawItems;
 
+        const instructions =
+          "evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\n" +
+          "evidenceDirection: Indicates whether the evidence supports or refutes the association.\n" +
+          "significance: The clinical relevance of the evidence.\n" +
+          "description: Detailed summary of the evidence from CIViC curators.\n" +
+          "evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\n" +
+          "evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\n" +
+          "url: Direct link to the CIViC record for this evidence item.\n" +
+          "When returning information to users you MUST cite URLs used for specific information.";
+
+        const payload = {
+          instructions,
+          "API Results": evidenceItems,
+        };
+
         return {
           content: [
             {
               type: "text" as const,
-              text: JSON.stringify(evidenceItems, null, 2),
+              text: JSON.stringify(payload, null, 2),
             },
           ],
           _meta: {
@@ -342,7 +235,7 @@ export const tools = {
   getVariantAssertions: {
     name: "get_variant_assertions",
     description:
-      "Return CIViC assertions for a molecular profile; optionally filter by disease. Cite URLs used for specific information.",
+      "Retrieves CIViC assertions for a molecular profile; optionally filter by disease. Cite URLs used for specific information.",
     inputSchema: {
       molecularProfileName: z.string(),
       diseaseName:          z.string().optional(),
@@ -419,11 +312,24 @@ export const tools = {
             })
           : rawItems;
 
+        const instructions =
+          "assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\n" +
+          "assertionDirection: Indicates whether the evidence supports or refutes the association.\n" +
+          "significance: The clinical relevance of the evidence.\n" +
+          "summary: Detailed summary of the evidence from CIViC curators.\n" +
+          "url: Direct link to the CIViC record for this evidence item.\n" +
+          "When returning information to users you MUST cite URLs used for specific information.";
+
+        const payload = {
+          instructions,
+          "API Results": assertions,
+        };
+
         return {
           content: [
             {
               type: "text" as const,
-              text: JSON.stringify(assertions, null, 2),
+              text: JSON.stringify(payload, null, 2),
             },
           ],
           _meta: {
@@ -447,20 +353,7 @@ class CivicMCP extends McpAgent {
     
     {
     instructions: `
-Use the tools to answer oncology variant questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.
-
-**Definition of each evidence type**
-• Diagnostic – Evidence pertains to a variant’s impact on patient diagnosis (cancer subtype).  
-• Predictive – Evidence pertains to a variant’s effect on therapeutic response.  
-• Prognostic – Evidence pertains to a variant’s impact on disease progression, severity, or patient survival.  
-• Predisposing – Evidence pertains to a germline molecular profile’s role in conferring susceptibility to disease (including pathogenicity evaluations).  
-• Oncogenic – Evidence pertains to a somatic variant’s involvement in tumor pathogenesis as described by the Hallmarks of Cancer.  
-• Functional – Evidence pertains to a variant that alters biological function from the reference state.
-
-Always call **get_variant_evidence** and **get_variant_assertions** to determine clinical significance.
-Gene names are normalized to how they appear in CIViC. If the gene name in CIViC descriptions/summaries does not match the input name assume it is an alias. 
-IMPORTANT: When using information from a specific evidence item or assertion, cite it with the associated url.
-    `,
+      Use the tools to answer oncology variant questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
   });
 
   async init() {
@@ -492,10 +385,51 @@ interface ExecutionContext {
 }
 
 
+// export default {
+//   async fetch(
+//     request: Request,
+//     env: Env,               // keep the typed Env like before
+//     ctx: ExecutionContext
+//   ): Promise<Response> {
+//     const url = new URL(request.url);
+
+//     console.log(Object.keys(env));
+
+//     /* ────────────────────────────────────────────────
+//        SSE transport (Claude Desktop, Cursor, etc.)
+//     ─────────────────────────────────────────────────*/
+//     if (url.pathname === "/sse" || url.pathname.startsWith("/sse/")) {
+//       // MCP 2025-06-18: client may send its protocol version
+//       const protocolVersion = request.headers.get("MCP-Protocol-Version");
+
+//       // @ts-ignore – serveSSE helper is mixed-in by CivicMCP
+//       const response = await CivicMCP.serveSSE("/sse").fetch(request, env, ctx);
+
+//       // Mirror the header back so the client sees what the server supports
+//       if (protocolVersion && response instanceof Response) {
+//         const headers = new Headers(response.headers);
+//         headers.set("MCP-Protocol-Version", protocolVersion);
+//         return new Response(response.body, {
+//           status: response.status,
+//           statusText: response.statusText,
+//           headers
+//         });
+//       }
+
+//       return response; // unchanged fallback
+//     }
+
+//     return new Response(
+//       `${API_CONFIG.name} – MCP Server ${API_CONFIG.version}. Use /sse for MCP transport.`,
+//       { status: 200, headers: { "Content-Type": "text/plain" } }
+//     );
+//   }
+// };
+
 export default {
   async fetch(
     request: Request,
-    env: Env,               // keep the typed Env like before
+    env: Env,
     ctx: ExecutionContext
   ): Promise<Response> {
     const url = new URL(request.url);
@@ -503,16 +437,14 @@ export default {
     console.log(Object.keys(env));
 
     /* ────────────────────────────────────────────────
-       SSE transport (Claude Desktop, Cursor, etc.)
+       NEW: Streamable HTTP transport (/mcp)
     ─────────────────────────────────────────────────*/
-    if (url.pathname === "/sse" || url.pathname.startsWith("/sse/")) {
-      // MCP 2025-06-18: client may send its protocol version
+    if (url.pathname === "/mcp" || url.pathname.startsWith("/mcp/")) {
       const protocolVersion = request.headers.get("MCP-Protocol-Version");
 
-      // @ts-ignore – serveSSE helper is mixed-in by CivicMCP
-      const response = await CivicMCP.serveSSE("/sse").fetch(request, env, ctx);
+      // @ts-ignore – serve helper is mixed-in by CivicMCP (Streamable HTTP)
+      const response = await CivicMCP.serve("/mcp").fetch(request, env, ctx);
 
-      // Mirror the header back so the client sees what the server supports
       if (protocolVersion && response instanceof Response) {
         const headers = new Headers(response.headers);
         headers.set("MCP-Protocol-Version", protocolVersion);
@@ -522,12 +454,32 @@ export default {
           headers
         });
       }
+      return response;
+    }
 
-      return response; // unchanged fallback
+    /* ────────────────────────────────────────────────
+       Legacy SSE transport (kept for now)
+    ─────────────────────────────────────────────────*/
+    if (url.pathname === "/sse" || url.pathname.startsWith("/sse/")) {
+      const protocolVersion = request.headers.get("MCP-Protocol-Version");
+
+      // @ts-ignore – serveSSE helper is mixed-in by CivicMCP (SSE)
+      const response = await CivicMCP.serveSSE("/sse").fetch(request, env, ctx);
+
+      if (protocolVersion && response instanceof Response) {
+        const headers = new Headers(response.headers);
+        headers.set("MCP-Protocol-Version", protocolVersion);
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers
+        });
+      }
+      return response;
     }
 
     return new Response(
-      `${API_CONFIG.name} – MCP Server ${API_CONFIG.version}. Use /sse for MCP transport.`,
+      `${API_CONFIG.name} – MCP Server ${API_CONFIG.version}. Use /mcp (Streamable HTTP) or /sse (legacy).`,
       { status: 200, headers: { "Content-Type": "text/plain" } }
     );
   }

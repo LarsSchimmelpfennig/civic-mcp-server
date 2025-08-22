@@ -179,7 +179,22 @@ def get_variant_evidence(molecularProfileName, diseaseName=None, therapyName=Non
         item['url'] = f'https://identifiers.org/civic.eid:{eid}'
         del item['id']
 
-    return evidence_items
+    return_object = {}
+
+    return_object['Field Descriptions'] = (
+        "evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\n"
+        "evidenceDirection: Indicates whether the evidence supports or refutes the association.\n"
+        "significance: The clinical relevance of the evidence.\n"
+        "description: Detailed summary of the evidence from CIViC curators.\n"
+        "evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\n"
+        "evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\n"
+        "url: Direct link to the CIViC record for this evidence item.\n"
+        "When returning information to users you MUST cite URLs used for specific information."
+    )
+
+    return_object['API Results'] = evidence_items
+
+    return return_object
 
 
 @mcp.tool(title="CIViC assertions for a gene variant + disease (optional) + therapy (optional). Contains clinical significance information across multiple publications.")
@@ -249,8 +264,20 @@ def get_variant_assertions(molecularProfileName, diseaseName=None, therapyName=N
         item['url'] = f'https://identifiers.org/civic.aid:{aid}'
         del item['id']
 
+    return_object = {}
 
-    return assertions
+    return_object['Field Descriptions'] = (
+        "assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\n"
+        "assertionDirection: Indicates whether the evidence supports or refutes the association.\n"
+        "significance: The clinical relevance of the evidence.\n"
+        "summary: Detailed summary of the evidence from CIViC curators.\n"
+        "url: Direct link to the CIViC record for this evidence item.\n"
+        "When returning information to users you MUST cite URLs used for specific information."
+    )
+
+    return_object['API Results'] = assertions
+
+    return return_object
 
 
 
