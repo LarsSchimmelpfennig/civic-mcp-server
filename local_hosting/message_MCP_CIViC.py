@@ -75,10 +75,10 @@ async def main(msg):
             "IMPORTANT: When using information from a specific evidence item or assertion, cite it with the associated url."
         ),
         model=OpenAIChatCompletionsModel(
-            model="gpt-4o-mini",
+            model="gpt-5",
             openai_client=AsyncOpenAI()
         ),
-        model_settings=ModelSettings(temperature=0.2),
+        model_settings=ModelSettings(temperature=1),
         mcp_servers=[srv],
     )
 
