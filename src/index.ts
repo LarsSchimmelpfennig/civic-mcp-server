@@ -107,7 +107,6 @@ export const API_CONFIG = {
  *  Tool definitions
  *  ---------------------------------------------------------------- */
 type EvidenceInput   = { molecularProfileName: string; diseaseName?: string; therapyName?: string };
-type AssertionsInput = { molecularProfileName: string; diseaseName?: string };
 
 export const tools = {
   /** ───────────────────────── get_variant_evidence ─────────────────────── */
@@ -239,6 +238,7 @@ export const tools = {
     inputSchema: {
       molecularProfileName: z.string(),
       diseaseName:          z.string().optional(),
+      therapyName:          z.string().optional(),
     },
     annotations: {
       destructive: false,
@@ -248,16 +248,12 @@ export const tools = {
       side_effects: ["external_api_calls"],
       resource_usage: "network_io_heavy",
     },
-    async handler({ molecularProfileName, diseaseName }: AssertionsInput) {
-
-      // const variables = compact({
-      //   molecularProfileName: resolveMolecularProfile(molecularProfileName),
-      //   diseaseName:          resolveDisease(diseaseName),
-      // });
+    async handler({ molecularProfileName, diseaseName, therapyName }: EvidenceInput) {
 
       const variables = compact({
         molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
-        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7)
+        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
+        therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
       });
 
       const query = /* GraphQL */ `
