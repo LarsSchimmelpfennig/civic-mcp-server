@@ -349,7 +349,7 @@ class CivicMCP extends McpAgent {
     
     {
     instructions: `
-      Use the tools to answer oncology variant questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
+      Use the tools to answer precision oncology variant questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
   });
 
   async init() {
