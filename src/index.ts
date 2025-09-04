@@ -85,7 +85,7 @@ function compact<T extends Record<string, unknown>>(obj: T): Partial<T> {
 // ========================================
 
 export const API_CONFIG = {
-  name:        "CivicExplorer",
+  name:        "CIViC_MCP",
   version:     "0.1.0",
   description: "Fixed‑schema MCP tools for the CIViC GraphQL API",
   mcpSpecVersion: "2025-06-18",
@@ -349,7 +349,7 @@ class CivicMCP extends McpAgent {
     
     {
     instructions: `
-      Use the tools to answer precision oncology variant questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
+      Use the tools to answer precision oncology questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
   });
 
   async init() {
