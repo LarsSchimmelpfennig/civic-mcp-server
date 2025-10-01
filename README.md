@@ -53,7 +53,7 @@ Add this configuration to your `claude_desktop_config.json` file:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://civic-mcp-server.larscivic.workers.dev/sse"
+        "https://civic-mcp-server.larscivic.workers.dev/mcp"
       ]
     }
   }
