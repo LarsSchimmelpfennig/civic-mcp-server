@@ -27,6 +27,8 @@ python local_hosting/message_MCP_CIViC.py --msg "What is the clinical significan
 
 ### Using With Claude Desktop
 
+https://github.com/user-attachments/assets/5890f79a-e2fc-49f6-b5f4-ef191d07872d
+
 Install Node.js (https://nodejs.org/)
 
 Click "LTS" (Recommended for Most Users) — this gives you Node.js and npx
