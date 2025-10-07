@@ -8,7 +8,7 @@ The CIViC database is a crowd-sourced repository of clinical interpretations of 
 pip install "mcp[cli]"
 ```
 
-### Directly Querying the MCP Server
+## Directly Querying the MCP Server
 
 The MCP Server can be called directly from the command line with the optional arguments disease and therapy to get CIViC evidence items:
 
@@ -16,7 +16,7 @@ The MCP Server can be called directly from the command line with the optional ar
 python MCP_query_evidence.py --mp "EGFR" --disease "Lung Non-small Cell Carcinoma" --therapy "Erlotinib"
 ```
 
-### Locally Hosting The CIViC MCP Server
+## Locally Hosting The CIViC MCP Server
 
 We provide an example of doing this with GPT4o-mini. A personal API key is required, update the variable OPENAI_API_KEY in local_hosting/message_MCP_CIViC.py
 
@@ -25,7 +25,7 @@ python local_hosting/message_MCP_CIViC.py --msg "What is the clinical significan
 ```
 
 
-### Using With Claude Desktop
+## Using With Claude Desktop
 
 https://github.com/user-attachments/assets/5890f79a-e2fc-49f6-b5f4-ef191d07872d
 
@@ -61,6 +61,8 @@ Add this configuration to your `claude_desktop_config.json` file:
   }
 }
 ```
+
+#### Alternativly, the MCP server can be added as a connector (currently limited to paid Claude users). For more details visit https://support.claude.com/en/articles/11176164-pre-built-web-connectors-using-remote-mcp 
 
 
 ## Usage
