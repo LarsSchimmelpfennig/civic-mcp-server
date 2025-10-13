@@ -209,7 +209,7 @@ export const tools = {
           "evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\n" +
           "evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\n" +
           "url: Direct link to the CIViC record for this evidence item.\n" +
-          "When returning information to users you MUST cite URLs used for specific information.";
+          "When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links";
 
         const payload = {
           instructions,
@@ -314,7 +314,7 @@ export const tools = {
           "significance: The clinical relevance of the evidence.\n" +
           "summary: Detailed summary of the evidence from CIViC curators.\n" +
           "url: Direct link to the CIViC record for this evidence item.\n" +
-          "When returning information to users you MUST cite URLs used for specific information.";
+          "When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links";
 
         const payload = {
           instructions,

@@ -1,0 +1,4 @@
+pandas
+numpy
+openai>=1.0.0
+mcp[cli]

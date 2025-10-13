@@ -61,8 +61,8 @@ def sanitize_filename(name: str, replacement: str = "_", max_length: int = 255, 
 
 # -------------------- CONFIG --------------------
 CSV_PATH = "data/CIViC_evidence_extracts_clinical_trials_curators.csv"
-#TXT_DIR  = "data/QA_eval_civic_mcp_significance"
-TXT_DIR  = "data/QA_eval_civic_no_mcp_significance"
+TXT_DIR  = "data/QA_eval_civic_mcp_significance"
+#TXT_DIR  = "data/QA_eval_civic_no_mcp_significance"
 
 
 # -------------------- LOAD & FILTER CSV --------------------
