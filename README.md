@@ -4,8 +4,9 @@ This is a Cloudflare Workers-based Model Context Protocol (MCP) server that prov
 
 The CIViC database is a crowd-sourced repository of clinical interpretations of cancer variants. This MCP server enables structured queries and data analysis of cancer genomics information through natural language interactions with AI assistants.
 
+Python 3.11.7
 ```bash
-pip install "mcp[cli]"
+pip install -r requirements.txt
 ```
 
 ## Directly Querying the MCP Server
@@ -71,6 +72,19 @@ Once configured, restart Claude Desktop. The server provides two main tools:
 
 1. **`get_variant_evidence`**: Return up to 10 evidence items for a CIViC molecular profile
 2. **`get_variant_assertions`**: Return CIViC assertions for a molecular profile
+
+
+## Evaluation Scripts
+
+All output files are located in `QA_results.zip`. `experiment_QA_agent_MCP.py` and `experiment_QA_no_mcp.py` are first called to ask GPT-5 for the Evidence Type of each CIViC triplet. This generates files like `{Molecular_Profile}_{Disease}_{Therapy}_{Evidence Type}.txt` in the dirs `QA_eval_civic_mcp_evidence_type` and `QA_eval_civic_no_mcp_evidence_type`. Next, `experiment_QA_agent_MCP_significance.py` and `experiment_QA_agent_no_MCP_significance.py` are called to ask GPT-5 about each CIViC Significance that corresponds to the previously identified Evidence Types. This generates files like `{Molecular_Profile}_{Disease}_{Therapy}__{Evidence Type}_{Significance}.txt` in the dirs `QA_eval_civic_mcp_significance` and `QA_eval_civic_no_mcp_significance`.
+
+`eval_QA_significance.py` is then used to measure the performance using each of these significance txt files based on CIViC Evidence Items in `data/CIViC_evidence_extracts_clinical_trials_curators.csv`. Make sure to update the variable TXT_DIR.
+
+```bash
+python experiment_QA_agent_MCP.py
+python experiment_QA_agent_MCP_significance.py
+python eval_QA_significance.py
+```
 
 ## License
 
