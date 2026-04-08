@@ -78,6 +78,10 @@ Once configured, restart Claude Desktop. The server provides two main tools:
 2. **`get_variant_assertions`**: Return CIViC assertions for a molecular profile
 
 
+## Evaluation Scripts
+
+All evaluation files are located in eval_QA_experiment/
+
 
 ## License
 
