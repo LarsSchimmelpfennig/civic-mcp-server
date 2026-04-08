@@ -1,0 +1,216 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "RET M918T",
+  "diseaseName": "Cancer",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"RET M918T\",
+        \"variants\": [
+          {
+            \"name\": \"M918T\",
+            \"feature\": {
+              \"name\": \"RET\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Recurrent somatic mutations within or near the RET kinase domain (T930K/M/P and D898_E901del) were identified in a large study of 37,056 East Asian cancer patients. After excluding RET mutations with co-existing driver mutations and predicted benign variants, M918T was the most frequent mutation, observed in 3 lung cancers, 3 thyroid cancers and 1 neuroendocrine tumor.  In vitro functional tests were run with RET M918T as a positive control and RET WT as a negative control.  Ba/F3 cells expressing full length RET harboring  M918T, T930P, T930K and D898_E901del, but not T930M, vector control, or RET WT grew in the absence of IL-3 supporting oncogenicity of these 4 variants.  When expressed in NIH3T3 cells, both RET M918T and D898_E901del induced ERK phosphorylation, whereas other RET mutants did not, suggesting these 2 mutations have more potent gain-of-function properties.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32284345\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11723\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"RET M918T\",
+        \"variants\": [
+          {
+            \"name\": \"M918T\",
+            \"feature\": {
+              \"name\": \"RET\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Pralsetinib\"
+        },
+        {
+          \"name\": \"Selpercatinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Ba/F3 transformed cells harboring RET D898_E901del, T930K, T930P, or M918T mutations were shown to be sensitive to the highly selective RET inhibitors selpercatinib (LOXO-292) and pralsetinib (BLU-667) in a 2-day proliferation assay.  Selpercatinib/pralsetinib IC50s were 12.9/11.4 nM for RET D898_E901del, 1.7/2.2 nM for T930K, 9.1/10.7 nM T930P, and 11.4/12.2 for M918T.  These RET inhibitors also reduced the ERK phosphorylation induced by RET D898_E901del or RET M918T when expressed in NIH 3T3 cells.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32284345\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11867\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"RET M918T\",
+        \"variants\": [
+          {
+            \"name\": \"M918T\",
+            \"feature\": {
+              \"name\": \"RET\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"Two novel somatic interstitial in-frame deletions in RET, with unknown transformation potential, were identified in medullary thyroid carcinoma (MTC) tumor samples. One of these (RET E632_L633del) was compared to already established variants (as positive controls) including RET M918T, which authors describe as typical of MEN2B phenotype familial MTC and as a frequent somatic mutation in sporadic MTC. In-vitro transforming activity was tested using focus formation assays on NIH3T3 cells. Vectors for control, M918T, and E632_L633del with neomycin resistance were made and expressed in NIH3T3, and selection with G418 performed. 1.4 x 10^4 M918T and 9.6 x 10^3 control colonies (colonies/ug DNA used in transfection) survived G418 selection. 1.8 x 10^2 transformed loci formed for M918T cells, but <1 x 10^–2 formed for wildtype control. This ratio was 0.013 transformed loci per M918T colony.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9191060\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12709\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"RET M918T\",
+        \"variants\": [
+          {
+            \"name\": \"M918T\",
+            \"feature\": {
+              \"name\": \"RET\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Selpercatinib\"
+        }
+      ],
+      \"variantOrigin\": \"UNKNOWN\",
+      \"description\": \"Preclinical data demonstrated Ba/F3 cells transformed with RET p.M918T were sensitive to selpercatinib with an IC50 of 5nM. M918T was included as a positive control for other variants that were being tested for sensitivity to selpercatinib.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/37376747\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11876\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "RET M918T",
+  "diseaseName": "Cancer",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: A
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+32.73027

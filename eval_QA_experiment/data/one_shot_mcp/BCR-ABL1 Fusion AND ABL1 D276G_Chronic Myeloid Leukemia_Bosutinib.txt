@@ -1,0 +1,879 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 D276G",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Bosutinib"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 D276G",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Bosutinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"536 patients with CML, 487 of which were Philadelphia chromosome-positive were enlisted to a multicentre, open-label phase 3 trial assessing the efficacy and safety of bosutinib. The patients were randomized 1:1 to receive (starting dose) bosutinib or imatinib 400 mg once daily. The primary endpoint was the major molecular response (MMR) of a BCR::ABL1 ≤ 0.1% on the international scale at 12 months. The median duration of treatment was 55 months for both groups. MMR rate by 5 years was greater with bosutinib (73.9%) versus imatinib (64.6%; OR, 1.57 [95% CI: 1.08 – 2.28]). Any grade treatment-emergent adverse effects occurred in 98.9% (grade 3/4: 73.5%) of bosutinib-treated patients versus 98.9% (grade 3/4: 57.0%) of imatinib-treated patients.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29091516\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11224\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 TKD Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"TKD Mutation\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this phase 1/2, open-label, 2-part study, 288 patients with imatinib-resistant (n = 200) or imatinib-intolerant (n = 88) CML were enrolled. Part 1 was a dose-escalation study of standard 3 + 3 design with successive cohorts of 3-6 patients with CP imatinib-resistant CML. Each cohort was evaluated for safety over the course of 28 days before enrollment of the next cohort to establish the maximum tolerated dose. Part 2 evaluated the efficacy and safety of bosutinib with the primary endpoint being major cellular response rate at 24 weeks. 31% of patients achieved major cytogenetic response by 24 weeks. After a median follow-up of 24.2 months, 86% of patients achieved complete hematologic remission, 53% had a major cytogenetic response, 41% had a complete cytogenetic response, and 64% of those achieving complete cytogenetic response had a major molecular response. At 2 years, progression-free survival was 79% and overall survival at 2 years was 92%. Lastly, responses were seen across Bcr-Abl mutants, except for the T315I mutation.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11289\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M351T\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M351T\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a retrospective study of 288 imatinib-resistant or -intolerant, Philadelphia chromosome BCR-ABL1 fusion positive, chronic myeloid leukemia (chronic phase) patients, patients with mutations in the ABL1 portion of the BCR-ABL gene fusion were associated with an complete hematologic response (MaHR) or complete major cytogenic response (MCyR) to bosutinib monotherapy (MaHR=97% (33/34) vs. MaHR=100% (27/27), MCyR=69% (41/59) vs. MCyR=54% (19/35), comparable to patients without mutation in the ABL1 portion. In a retrospective study of 288 imatinib-resistant or -intolerant, Philadelphia chromosome BCR-ABL1 fusion positive, chronic myeloid leukemia (chronic phase) patients, 3/3 and 6/6 of evaluated patients with the M351T mutation in the ABL1 portion of the BCR-ABL gene fusion achieved a complete hematologic response or major cytogenetic response to bosutinib monotherapy respectively.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4393\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This was a retrospective study of dasatinib and/or nilotinib-resistant or -intolerant patients pretreated with imatinib aimed at evaluating the efficacy of bosutanib monotherapy. All patients had chronic phase CML and BCR-ABL fusions. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. Of patients with Y253H evaluated, 5/6 had CHR and 4/6 had MCyR. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occuring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4332\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F317L\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F317L\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with F317L evaluated, 3/3 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4381\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with F359V evaluated, 6/6 had complete hematologic responses and 4/7 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:3815\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M244V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M244V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with M244V evaluated, 2/2 had complete hematologic responses and 2/3 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4307\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M244V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M244V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This was a retrospective study of dasatinib and/or nilotinib-resistant or -intolerant patients pretreated with imatinib aimed at evaluating the efficacy of bosutanib monotherapy. All patients had chronic phase CML and BCR-ABL fusions. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. Of patients with M244V evaluated, 3/3 had CHR and 2/3 had MCyR. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occuring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4308\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 L248V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"L248V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with L248V evaluated, 3/3 had complete hematologic responses and 2/3 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4310\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 G250E\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"G250E\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with G250E evaluated, 1/1 had a complete hematologic response and 2/2 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4313\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"REDUCED_SENSITIVITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 G250E\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"G250E\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This was a retrospective study of dasatinib and/or nilotinib-resistant or -intolerant patients pretreated with imatinib aimed at evaluating the efficacy of bosutanib monotherapy. All patients had chronic phase CML and BCR-ABL fusions. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. Of patients with G250E, 3/6 had a CHR and 0/5 had a MCyR. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occuring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4314\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with Y253H evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4331\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This was a retrospective study of dasatinib and/or nilotinib-resistant or -intolerant patients pretreated with imatinib aimed at evaluating the efficacy of bosutanib monotherapy. All patients had chronic phase CML and BCR-ABL fusions. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. Of patients with T315I, 2/7 had a CHR and 0/6 had a MCyR. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occuring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4362\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with T315I evaluated, 1/2 had a complete hematologic response and 0/3 had major cytogenetic responses.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4364\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with E255V evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4443\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F311I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F311I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with F311I evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4478\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E453Q\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E453Q\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with E453Q evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4486\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with F359I evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4530\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This was a retrospective study of dasatinib and/or nilotinib-resistant or -intolerant patients pretreated with imatinib aimed at evaluating the efficacy of bosutanib monotherapy. All patients had chronic phase CML and BCR-ABL fusions. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. Of patients with F359I evaluated, 2/2 had CHR and 2/2 had MCyR. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4531\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F311L\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F311L\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bosutinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this retrospective study, imatinib-resistant or -intolerant patients, with chronic phase CML and BCR-ABL fusions, were treated with bosutanib monotherapy. Complete hematologic response (CHR) and major cytogenetic response (MCyR) were comparable for patients with Abl1 mutation versus without. The authors conclude that bosutanib is effective across all BCR-ABL mutations observed except T315I. Of patients with F311L evaluated, 1/1 had a complete hematologic response and 1/1 had a major cytogenetic response.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21865346\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4546\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+30.24308

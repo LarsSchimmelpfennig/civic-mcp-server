@@ -1,0 +1,109 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_evidence completed.
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BRCA2 D2723H"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BRCA2 D2723H"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"LOSS_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 D2723H\",
+        \"variants\": [
+          {
+            \"name\": \"D2723H\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"UNKNOWN\",
+      \"description\": \"A homology directed DNA break repair (HDR) assay was used to infer the clinical relevance of missense mutations in the DNA-binding domain (DBD) of BRCA2. Mutant BRCA2 was expressed in a V-C8 hamster lung fibroblast cell line along with a reporter plasmid and GFP fluorescence was quantified as an estimate of HDR activity. The pathogenic BRCA2 variant D2723H resulted in low GFP levels in line with other known pathogenic BRCA2 variants. In addition, a statistical classifier built based on known pathogenic and non-pathogenic BRCA2 variants reported a probability 1.0 that D2723H is deleterious and 1.39×10-7 that it is neutral.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/23108138\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:9941\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: A
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+33.22577

@@ -1,0 +1,159 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "EGFR L718V",
+  "diseaseName": "Lung Adenocarcinoma",
+  "therapyName": "Osimertinib"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "EGFR L718V",
+  "diseaseName": "Lung Adenocarcinoma",
+  "therapyName": "Osimertinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EGFR L718Q AND EGFR L718V\",
+        \"variants\": [
+          {
+            \"name\": \"L718Q\",
+            \"feature\": {
+              \"name\": \"EGFR\"
+            }
+          },
+          {
+            \"name\": \"L718V\",
+            \"feature\": {
+              \"name\": \"EGFR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Adenocarcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Osimertinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A 62 year old patient with 4 pack-year smoking history with back and flank pain was found to have metastatic lung adenocarcinoma by CT and MRI. Targeted NGS sequencing discovered an EGFR L858R mutation and the patient started 80mg osimertinib treatment with excellent response of all disease sites, including brain metastases. The patient had continued response until 8.5 months after treatment initiation when a new liver lesion was found. NGS sequencing of a repeat biopsy detected the original EGFR L858R mutation as well as L718V and L718Q mutations. Afatinib treatment led to a partial response for 4.5 months, at which time disease progression occurred. Biopsy of a progressing liver lesion showed acquired EGFR T790M mutation as well as increase and decrease of L718V and L718Q mutation frequencies, respectively.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32193290\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8052\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EGFR L718V\",
+        \"variants\": [
+          {
+            \"name\": \"L718V\",
+            \"feature\": {
+              \"name\": \"EGFR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Adenocarcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Osimertinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A genetically engineered mouse model of lung adenocarcinoma (LUAD) was created expressing human EGFR L858R transgene. Mice were treated with either daily 5mg/kg, followed by 25mg/kg after tumour recurrence, or 25mg/kg only osimertinib 5 days/week and monitored by MRI for treatment-resistant tumours. Osimertinib-resistant tumours emerged after an average of 5.3 months and 7.8 months, respectively. In the two mouse cohorts EGFR L797S was found in 5/17 and 14/54 tumours, EGFR L718Q was in 0/17 and 7/54 tumours, EGFR L718V was found in 5/17 and 3/54 tumours, while the remaining 7 and 30 tumours had no secondary EGFR resistance mutations. Osimertinib treatment of 293T cells transiently transfected with L718V in combination with EGFR L858R showed an intermediate suppression of pEGFR relative to EGFR L858R and compound mutants with L797S or L718Q, suggesting less effective resistance to osimertinib. Consistent with this, L718V arose more often in the low dose treatment group. CRISPR/Cas9 was used to model subclonal population dynamics of L718V or L718Q mutations in three human LUAD cell lines, PC9 (EGFR Del19), PC9-VanR (EGFR Del19+T790M; vandetinib-resistant), and II-18 (EGFR L858R) in the presence or absence of osimertinib. Cell lines with L718V or L718Q showed increased proliferation in the presence of osimertinib relative to controls, and amplicon sequencing showed these mutations to be enriched in all cell lines.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32193290\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8059\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: A
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+36.98191

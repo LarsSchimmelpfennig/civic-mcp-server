@@ -1,0 +1,119 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_evidence completed.
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "VEGFA VEGF165b Overexpression",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Bevacizumab"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "VEGFA VEGF165b Overexpression",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Bevacizumab"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"REDUCED_SENSITIVITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VEGFA VEGF165b Overexpression\",
+        \"variants\": [
+          {
+            \"name\": \"VEGF165b Overexpression\",
+            \"feature\": {
+              \"name\": \"VEGFA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Colorectal Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Bevacizumab\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Nude mice were injected with VEGF165b-transfected LS174t colon cancer cells or control LS174t cells and treated with bevacizumab. VEGF165b expressing tumors grew faster than those not expressing VEGF165b when treated with bevacizumab indicating VEGF165b expression may predict reduced sensitivity to bevacizumab.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/18349829\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:9289\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: A
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+25.72956

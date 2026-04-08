@@ -1,0 +1,119 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "FGFR1 Amplification",
+  "diseaseName": "Ewing Sarcoma Of Bone",
+  "therapyName": "Ponatinib"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "FGFR1 Amplification",
+  "diseaseName": "Ewing Sarcoma Of Bone",
+  "therapyName": "Ponatinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR1 Amplification\",
+        \"variants\": [
+          {
+            \"name\": \"Amplification\",
+            \"feature\": {
+              \"name\": \"FGFR1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ewing Sarcoma Of Bone\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Ponatinib\"
+        }
+      ],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"116 Ewing's sarcoma tumor samples were analyzed in this study. 2 patient's samples underwent whole genome sequencing, tumor samples from 51 patients underwent exome sequencing and expression analysis, 63 samples underwent FGFR1 copy number analysis, mRNA analysis and IHC. A FGFR1 N546K mutation was detected in one patient. Gain of the FGFR1 locus (qPCR) was observed in 13 of 41 patients (31.7%) and Ewing sarcoma cell lines (A673, CADO, SK-NMC, SK-ES, and VH-64). FGFR1 was also highly expressed in Ewing sarcoma (mRNA and IHC) and correlated with copy number. Retroviral transduction of FGFR1 wild-type or the FGFR1 N546K mutant into NIH3T3 cells led to enhanced proliferation especially for cells harboring the FGFR1 mutation. ShRNA mediated knockdown of FGFR1 inhibited growth of Ewing sarcoma and other cancer cells (A549 lung carcinoma cell line or leukemia cell lines HL60 and Kasumi) with almost complete growth suppression only in the Ewing sarcoma cell lines and knockdown of FGFR1 abrogated growth of cell lines in xenograft. Ponatinib treatment inhibited growth of Ewing sarcoma cell lines.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26179511\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1247\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: A
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+23.11472

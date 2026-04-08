@@ -1,0 +1,108 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "MLH1 M490T",
+  "diseaseName": "Endometrial Cancer"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "MLH1 M490T",
+  "diseaseName": "Endometrial Cancer"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"MLH1 M490T\",
+        \"variants\": [
+          {
+            \"name\": \"M490T\",
+            \"feature\": {
+              \"name\": \"MLH1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Endometrial Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This variant (M490T), identified in a case of microsatellite-unstable endometrial cancer was confirmed to be somatic in a 69 year-old female patient with suspected Lynch Syndrome (LS). The patient was therefore negative for LS, which by definition is a germline condition. The patient also harbored PMS2 R315*, MSH2 p.E483G and MSH6 p.V352I mutations.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/25111426\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1833\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+diagnostic — positive: C
+diagnostic — negative: C
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+oncogenic — oncogenicity: A
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+49.28623

@@ -1,0 +1,119 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "TPM3::NTRK1 Fusion",
+  "diseaseName": "Lung Carcinoma",
+  "therapyName": "Larotrectinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"TPM3::NTRK1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"TPM3::NTRK1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"The goal of this study was to assess the efficacy and safety of larotrectinib in patients with TRK fusion–positive lung cancers. This was achieved by reviewing data from two global, multicenter clinical trials of patients treated with larotrectinib: a phase II adult and young adult basket trial (NCT02576431) and a phase I adult trial (NCT02122913). The total of 20 patients with TRK fusion–positive lung cancer were treated on these trials (tumor histology was adenocarcinoma in 19 and neuroendocrine carcinoma in one patient), of which 15 were evaluable. The objective response rate (ORR) among those 15 patients was 73%: one patient had a complete response, 10 had a partial response, 3 had stable disease, and 1 had progressive disease as best response. The median duration of response, progression-free survival, and overall survival were 33.9 months, 35.4 months, and 40.7 months, respectively. Of the total of 20 NTRK-fusions positive lung cancer cases, 6 had TPM3::NTRK1 fusion, but detailed response  information was only provided for one TPM3::NTRK1 positive case. This patient was a 46-year-old man diagnosed with stage IV non–small-cell lung cancer which previously progressed on platinum-based chemotherapy after 9 months and on the PD-1 inhibitor dostarlimab after 2 months. A TPM3::NTRK1 fusion was identified on molecular profiling, and larotrectinib was initiated on a trial. A brisk  and sustained partial response was achieved. The patient discontinued treatment because of progressive disease after a durable 39 months of disease control. The authors concluded that larotrectinib was highly active with rapid and durable responses, extended survival benefit, and a favorable long-term safety profile in patients with advanced lung cancer harboring NTRK gene fusions, including the TPM3::NTRK1 fusion.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/35085007\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11692\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "TPM3::NTRK1 Fusion",
+  "diseaseName": "Lung Carcinoma",
+  "therapyName": "Larotrectinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: A
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+37.87049

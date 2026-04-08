@@ -1,0 +1,94 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "FLT3 ITD",
+  "diseaseName": "Acute Myeloid Leukemia",
+  "therapyName": "SU5614"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FLT3 ITD\",
+        \"variants\": [
+          {
+            \"name\": \"ITD\",
+            \"feature\": {
+              \"name\": \"FLT3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"SU5614\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Ba/F3 cells with both FLT3-ITD and TKD mutations on the same allele have more resistance to the protein tyrosine kinase (PTK) inhibitor SU5614 than cells with FLT3-ITD alone or FLT3 ITD and TKD mutations on opposing alleles.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/15626738\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:131\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: A
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+42.7443

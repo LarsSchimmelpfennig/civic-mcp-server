@@ -1,0 +1,119 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "NRAS Wildtype",
+  "diseaseName": "Ovarian Cancer",
+  "therapyName": "Cetuximab"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "NRAS Wildtype",
+  "diseaseName": "Ovarian Cancer",
+  "therapyName": "Cetuximab"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"NRAS Wildtype\",
+        \"variants\": [
+          {
+            \"name\": \"Wildtype\",
+            \"feature\": {
+              \"name\": \"NRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Cetuximab\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a clinical study of 49 patients, 29 patients with Ovarian Cancer and wild-type NRAS gene were treated with Cetuximab. After 16 weeks, no clinical activity was observed. A PFS of 8 weeks (95% CI, 6.0-12.0) and OS of 21.6 weeks (95% CI, 12.3-41.7) were noted. At least one grade 3 adverse event was reported in three patients, and four patients had at least one serious adverse event likely associated with cetuximab.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/33090333\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11662\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: B
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+30.82922

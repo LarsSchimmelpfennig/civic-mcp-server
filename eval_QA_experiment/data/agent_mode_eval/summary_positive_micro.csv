@@ -1,0 +1,2 @@
+eval_name,source,entities_scored,evaluated_pairs_positive_window,overall_accuracy_positive_window,overall_micro_precision_pos_classes,overall_micro_recall_pos_classes,overall_micro_f1_pos_classes,runs_with_time,avg_time_seconds,avg_time_seconds_ci95_low,avg_time_seconds_ci95_high
+agent_mode,data\CIViC MCP Agent Mode Experiment - agent_mode_prompts_clean.csv,100,131,0.8320610687022901,0.9478260869565217,0.872,0.9083333333333333,100,424.96,378.61925,476.4024999999999

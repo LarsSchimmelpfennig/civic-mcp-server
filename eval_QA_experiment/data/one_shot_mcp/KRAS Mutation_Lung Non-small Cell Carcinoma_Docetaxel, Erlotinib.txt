@@ -1,0 +1,245 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "KRAS Mutation",
+  "diseaseName": "Lung Non-small Cell Carcinoma",
+  "therapyName": "Docetaxel, Erlotinib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"KRAS Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"KRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Docetaxel\"
+        },
+        {
+          \"name\": \"Selumetinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A phase 3 study of selumetinib and docetaxel in KRAS mutant, previously treated NSCLC. 866 were enrolled and 510 randomized. Median progression-free survival was 3.9 months with selumetinib + docetaxel and 2.8 months with placebo + docetaxel. Median overall survival was 8.7 months with selumetinib + docetaxel and 7.9 months with placebo + docetaxel. Objective response rate was 20.1% with selumetinib + docetaxel and 13.7% with placebo + docetaxel.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 5,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28492898\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2998\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"KRAS Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"KRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Docetaxel\"
+        },
+        {
+          \"name\": \"Selumetinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"87 patients with KRAS mutant stage IIB-IV NSCLC after first line therapy were randomly assigned (1:1) to oral selumetunib and docetaxel or docetaxel and Placebo. Median OS was 9·4 months (6·8-13·6) in selumetinib group and 5·2 months (95% CI 3·8-non-calculable) in placebo group (hazard ratio [HR] for death 0·80, 80% CI 0·56-1·14; one-sided p=0·21). Median PFS was 5·3 months (4·6-6·4) in selumetinib group and 2·1 months (95% CI 1·4-3·7) in placebo group (HR for progression 0·58, 80% CI 0·42-0·79; one-sided p=0·014). An objective response was observed in 16 (37%) patients in the selumetinib group and none in the placebo group(p<0·0001).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/23200175\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:999\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"KRAS Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"KRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Docetaxel\"
+        },
+        {
+          \"name\": \"Erlotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"222 EGFR-wt patients with advanced NSCLC were randomized to receive docetaxel or erlotinib In this study (4 patients not eligible, leaving 109 in each arm). KRAS was mutated in 25 and 26 out of 109 patients in the erlotinib and docetaxel arm, respectively. KRAS was neither prognostic nor predictive of benefit for either docetaxel or erlotinib.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26209642\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4996\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"KRAS Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"KRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Docetaxel\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Of the 275 patients assessable for KRAS mutation status, 49 (18%) were positive for KRAS mutation. There were no differences between treatments in OS, PFS, or response rates according to KRAS mutation status, and no evidence that KRAS mutation is a predictive factor for a differential survival effect between gefitinib and docetaxel.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20038723\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4997\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"KRAS Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"KRAS\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Trametinib\"
+        },
+        {
+          \"name\": \"Docetaxel\"
+        },
+        {
+          \"name\": \"Pemetrexed\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This phase I/Ib two-part study evaluated trametinib in combination with anticancer agents docetaxel or pemetrexed in NSCLC with and without KRAS mutations. Confirmed partial response (PR) was observed in 21% (10/47) patients receiving trametinib/docetaxel. The ORR was 18% (4 PR in 22 patients) in KRAS wild-type versus 24% (six PR in 25 patients) in KRAS-mutant NSCLC. Of the 42 patients treated with trametinib/pemetrexed, 14% (6/42) had a PR; the ORR was 17% (4/23) in KRAS-mutated NSCLC versus 11% (2/19) in KRAS wild-type NSCLC.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/27876675\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4862\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: B
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+61.2423

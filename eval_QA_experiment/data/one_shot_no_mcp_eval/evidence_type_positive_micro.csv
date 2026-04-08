@@ -1,0 +1,7 @@
+Evaluation,Evidence Type,Samples,Precision,Recall,F1,Evaluated
+no_mcp,Predictive,48,0.7058823529411765,0.25,0.36923076923076925,53
+no_mcp,Predisposing,29,0.9,0.3103448275862069,0.46153846153846156,30
+no_mcp,Functional,16,0.6666666666666666,0.5,0.5714285714285714,20
+no_mcp,Oncogenic,12,0.25,0.16666666666666666,0.2,18
+no_mcp,Prognostic,10,0.75,0.6,0.6666666666666666,12
+no_mcp,Diagnostic,10,1.0,0.6,0.75,10

@@ -1,0 +1,498 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BRCA2 Mutation",
+  "diseaseName": "Ovarian Cancer"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Olaparib\"
+        }
+      ],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"In the phase 3 SOLO1 trial 390 patients with newly diagnosed advanced ovarian cancer with a mutation in BRCA1 or BRCA2 who had complete or partial response after platinum-based chemotherapy were randomized 2:1 to receive olaparib or placebo. The olaparib arm had 191 patients with BRCA1 mutation, 66 BRCA2, and 3 patients with both BRCA1 and BRCA2, while the placebo arm had 91 BRCA1 and 40 BRCA2 mutant patients. Analysis of PFS by blinded independent review found freedom from disease progression or death at 3 years was 69% in the olaparib arm compared with 35% in the placebo arm (hazard ratio for disease progression or death, 0.28; 95% CI, 0.20 to 0.39; P<0.001).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 5,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/30345884\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7276\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Rucaparib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Combined meta-analysis of Study 10 (NCT01482715, phase I/II) and ARIEL2 (NCT01891344, phase II), both multi-centre, open-label, single-arm trials evaluating rucaparib in ovarian cancer with BRCA1 or BRCA2 deleterious germline or somatic mutations. Mutation status was determined by local testing or by central Foundation Medicine sequencing. Of 106 patients, OR was 53.8% (95% CI, 43.8-63.5); 8.5% and 45.3% of patients achieved complete and partial responses, respectively. Median duration of response was 9.2 months (95% CI, 6.6-11.6). Response rates by gene/mutation: BRCA1/2 germline (n=88, OR 53.4); BRCA1/2 somatic (n=18, OR 55.6); BRCA1 (n=67, OR 53.7); BRCA2 (n=39, OR 53.8).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 5,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28882436\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11137\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Rucaparib\"
+        }
+      ],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Combined meta-analysis of Study 10 (NCT01482715, phase I/II) and ARIEL2 (NCT01891344, phase II), both multi-centre, open-label, single-arm trials evaluating rucaparib in ovarian cancer with BRCA1 or BRCA2 deleterious germline or somatic mutations. Mutation status was determined by local testing or by central Foundation Medicine sequencing. Of 106 patients, OR was 53.8% (95% CI, 43.8-63.5); 8.5% and 45.3% of patients achieved complete and partial responses, respectively. Median duration of response was 9.2 months (95% CI, 6.6-11.6). Response rates by gene/mutation: BRCA1/2 germline (n=88, OR 53.4); BRCA1/2 somatic (n=18, OR 55.6); BRCA1 (n=67, OR 53.7); BRCA2 (n=39, OR 53.8).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 5,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28882436\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11139\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA1 Mutation OR BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA1\"
+            }
+          },
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Epithelial Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Niraparib\"
+        }
+      ],
+      \"variantOrigin\": \"COMBINED\",
+      \"description\": \"In a randomized, double-blind, phase 3 trial, 553 patients with ovarian cancer, fallopian tube cancer, or primary peritoneal cancer with predominantly high-grade serous histologic features were enrolled. Of the 553 enrolled, 203 had germline BRCA1/2 mutations and 350 had non-germline BRCA1/2 mutations (including both somatic mutant and wildtype BRCA1/2); BRCA1/2 mutation status was determined via BRACAnalysis testing (Myriad Genetics). The patients were randomized in a 2:1 ratio to receive niraparib 300 mg or placebo once daily. Patients in the niraparib group had a significantly longer median duration of progression-free survival than the placebo group: 21.0 vs. 5.5 months in the gBRCA cohort (hazard ratio, 0.27; 95% CI: 0.17 - 0.41; p < 0.001) and 9.3 months vs. 3.9 months in the overall non-gBRCA cohort (hazard ratio, 0.45; 95% CI: 0.34 - 0.61; p < 0.001).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/27717299\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11243\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA1 Mutation OR BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA1\"
+            }
+          },
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Fallopian Tube, Ovarian Cancer, And Peritoneal Serous Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Rucaparib\"
+        }
+      ],
+      \"variantOrigin\": \"COMBINED\",
+      \"description\": \"In an integrated analysis of Study 10 (NCT01482715) and ARIEL2 (NCT01891344) trials, 106 patients with either germline or somatic BRCA1 or BRCA2 who received a starting dose of oral rucaparib 600mg twice daily were studied, with the primary endpoint being objective response rate (ORR), and secondary endpoints including duration of response (DOR) and progression-free survival (PFS). The ORR was 53.8% (95% CI: 43.8 - 63.5), with 8.5% and 45.3% of patients achieving complete and partial responses, respectively. The median DOR was 9.2 months (95% CI: 6.6 - 11.6). Lastly, PFS in the 10.0 months (range, 0.0–22.1 months; 95% CI: 7.3 – 12.5 months). 47.2% of patients had not progressed at the time of the visit cut-off, and the PFS rate at 6 and 12 months was 79.0% and 41.0% respectively.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28882436\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11246\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Epithelial Ovarian Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"In patients with invasive epithelial ovarian cancer, those with mutations in BRCA2 had better five-year overall survival.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22274685\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:465\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"664 patients with non-bulky FIGO Stage II-IV ovarian cancer were evaluated for PFS when treated with Pazopanib versus placebo.  Of the 664 patients, 10% (n=68) were BRCA1+, 4% were BRCA 2+ (n=29) and 85% (n=567) were BCRA1/2 negative.  Longer progression free survival was observed in BRCA1/2 positive carriers versus BRCA1/2 negative carriers in both the Pazopanib arm and the placebo arm, however, due to small sample size, the PFS increase in the Pazopanib arm was not statistically significant.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26740259\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1676\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Olaparib\"
+        },
+        {
+          \"name\": \"Cediranib\"
+        }
+      ],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"46 women with platinum-sensitive, high-grade, BRCA1/2+ ovarian cancer received either olaparib monotherapy or olaparib/cediranib combination therapy.  Median PFS was increased in combination therapy (17.7 months versus 9.0 months; HR=0.42; 95%CI 0.23-0.76; p=0.005); overall response rate was increased in the combination therapy (79.6% versus 47.8%; p=0.002); and total deaths were reduced in combination therapy (6 patients versus 10 patients).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/25218906\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1678\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Olaparib\"
+        }
+      ],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"In a study of 63 patients with ovarian cancer, 17 patients had BRCA1 or BRCA2 mutations and 46 patients had no BRCA mutations.  Of the BRCA-positive patients, 7/17(41%; 95%CI 22-64) showed objective response to olaparib whereas only 11/46 BRCA-negative patients (24%; 95%CI 14-38) showed objective response to olaparib.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21862407\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1773\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Rucaparib\"
+        }
+      ],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"A phase 2 trial on patients with relapsed, platinum-sensitive high grade ovarian, fallopian tube or primary peritoneal carcinoma (ARIEL2 Part1, NCT01891344) was held to assess PARP inhibitor rucaparib on 3 genetically defined subsets of patients. Out of 40 BRCA (BRCA1 or BRCA2) mutant patients, 6 had germline homozygous BRCA2 mutation. Confirmed objective response was seen in 83% (5/6) of the germline BRCA2 mutant subgroup. Authors note that response rate was similar regardless of whether the BRCA mutation was somatic or germline, in BRCA 1 or BRCA 2. In a BRCA wild-type subgroup, with low levels of loss of heterozygosity (LOH), confirmed objective response was observed in 10% (7/70) of the patients. Patients with BRCA mutant tumors experienced significantly longer median progression free survival than patients with BRCA wildtype, LOH low tumors (12.8 vs 5.2 mo, HR: 0.27, P<0.0001).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/27908594\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6343\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Olaparib\"
+        }
+      ],
+      \"variantOrigin\": \"COMMON_GERMLINE\",
+      \"description\": \"The article detailed a phase III trial (SOLO3) of olaparib tablets versus nonplatinum chemotherapy in patients with germline BRCA-mutated platinum-sensitive relapsed ovarian cancer who had received at least 2 prior lines of platinum-based chemotherapy. Ultimately, the cohort receiving Olaparib resulted in statistically significant and clinically relevant improvements in ORR and PFS compared with the nonplatinum chemotherapy in patients with germline BRCA-mutated platinum-sensitive relapsed ovarian cancer who had received at least 2 prior lines of platinum-based chemotherapy.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32073956\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11426\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRCA2 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"BRCA2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Rucaparib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A phase 2 trial on patients with relapsed, platinum-sensitive high grade ovarian, fallopian tube or primary peritoneal carcinoma (ARIEL2 Part1, NCT01891344) was held to assess PARP inhibitor rucaparib on 3 genetically defined subsets of patients. Out of 40 BRCA (BRCA1 or BRCA2) mutant patients, 5 had somatic BRCA2 mutation, 4 of which were homozygous mutations and one had unknown zygosity. Confirmed objective response was seen in 80% (4/5) of the somatic BRCA2 mutant subgroup. Authors note that response rate was similar regardless of whether the BRCA mutation was somatic or germline, in BRCA 1 or BRCA 2. In a BRCA wild-type subgroup, with low levels of loss of heterozygosity (LOH), confirmed objective response was observed in 10% (7/70) of the patients. Patients with BRCA mutant tumors experienced significantly longer median progression free survival than patients with BRCA wildtype, LOH low tumors (12.8 vs 5.2 mo, HR: 0.27, P<0.0001).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/27908594\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2868\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BRCA2 Mutation",
+  "diseaseName": "Ovarian Cancer"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: A
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+95.62432

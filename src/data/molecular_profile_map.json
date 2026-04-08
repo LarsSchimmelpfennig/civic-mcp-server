@@ -8,6 +8,9 @@
         "braf1",
         "b-raf"
     ],
+    "men1 mutation":[
+        "men1 mutation"
+    ],
     "braf v600e": [
         "ns7 v640e",
         "braf val640glu",
@@ -284,6 +287,7 @@
         "her1 rs121434569"
     ],
     "bcr::abl1": [
+        "bcr::abl1 fusion",
         "bcr::abl1",
         "t(9;22)(q34;q11)",
         "bcr-abl",
@@ -303,6 +307,7 @@
         "cd274 expression"
     ],
     "etv6::ntrk3": [
+        "etv6::ntrk3 fusion",
         "etv6-ntrk3",
         "etv6::ntrk3"
     ],
@@ -436,6 +441,7 @@
         "kit exon 11 mutation"
     ],
     "pml::rara": [
+        "pml::rara fusion",
         "pml::rara",
         "pml-rara"
     ],
@@ -679,6 +685,7 @@
         "egfr overexpression"
     ],
     "ss18::ssx1": [
+        "ss18::ssx1 fusion",
         "ss18-ssx1",
         "ss18-ssx",
         "t(x;18)(p11.23;q11)",
@@ -835,6 +842,7 @@
         "pvhl phe76del"
     ],
     "runx1::runx1t1": [
+        "runx1::runx1t1 fusion",
         "runx1-runx1t1",
         "runx1::runx1t1"
     ],
@@ -875,6 +883,7 @@
         "dnmt3a mutation"
     ],
     "lmna::ntrk1": [
+        "lmna::ntrk1 fusion",
         "lmna::ntrk1",
         "lmna-ntrk1"
     ],
@@ -911,6 +920,7 @@
         "vhl1 c.500g>a"
     ],
     "kiaa1549::braf": [
+        "kiaa1549::braf fusion",
         "kiaa1549::braf",
         "kiaa1549-braf"
     ],
@@ -1071,6 +1081,7 @@
         "fgfr1 fusion"
     ],
     "zfta::rela": [
+        "zfta::rela fusion",
         "zfta-rela",
         "zfta::rela",
         "c11orf95::rela",
@@ -1245,15 +1256,18 @@
         "idh1 mutation"
     ],
     "ewsr1::fli1": [
+        "ewsr1::fli1 fusion",
         "ewsr1-fli1 e7-e6",
         "ewsr1::fli1",
         "ewsr1-fli1 type 1"
     ],
     "etv6::runx1": [
+        "etv6::runx1 fusion",
         "etv6::runx1",
         "etv6-runx1"
     ],
     "tcf3::pbx1": [
+        "tcf3::pbx1 fusion",
         "tcf3::pbx1",
         "tcf3-pbx1"
     ],
@@ -1282,6 +1296,7 @@
         "vhl mutation"
     ],
     "ss18::ssx2": [
+        "ss18::ssx2 fusion",
         "ss18::ssx2",
         "ss18-ssx2",
         "t(x;18)(p11.21;q11)"
@@ -1378,6 +1393,7 @@
         "chdskm e274k"
     ],
     "col1a1::pdgfb": [
+        "col1a1::pdgfb fusion",
         "col1a1-pdgfb",
         "col1a1::pdgfb"
     ],
@@ -1418,6 +1434,7 @@
         "met amplification"
     ],
     "rcsd1::abl1": [
+        "rcsd1::abl1 fusion",
         "rcsd1-abl1",
         "rcsd1::abl1"
     ],
@@ -1495,6 +1512,7 @@
         "erbb2 overexpression"
     ],
     "tpm3::ntrk1": [
+        "tpm3::ntrk1 fusion",
         "tpm3-ntrk1",
         "tpm3::ntrk1"
     ],
@@ -1526,6 +1544,7 @@
         "pi3k glu542lys"
     ],
     "dnajb1::prkaca": [
+        "dnajb1::prkaca fusion",
         "dnajb1-prkaca",
         "dnajb1::prkaca"
     ],
@@ -1579,10 +1598,12 @@
         "fgfr3 mutation"
     ],
     "hey1::ncoa2": [
+        "hey1::ncoa2 fusion",
         "hey1::ncoa2",
         "hey1-ncoa2"
     ],
     "eml4::ntrk3": [
+        "eml4::ntrk3 fusion",
         "eml4-ntrk3",
         "eml4::ntrk3"
     ],
@@ -1614,6 +1635,7 @@
         "rca1 rs5030809"
     ],
     "igh::epor": [
+        "igh::epor fusion",
         "igh::epor",
         "igh-epor"
     ],
@@ -1731,6 +1753,7 @@
         "met overexpression"
     ],
     "fip1l1::pdgfra": [
+        "fip1l1::pdgfra fusion",
         "fip1l1::pdgfra",
         "fip1l1-pdgfra"
     ],
@@ -1839,6 +1862,7 @@
         "abl1 tkd mutation"
     ],
     "cbfa2t3::glis2": [
+        "cbfa2t3::glis2 fusion",
         "cbfa2t3-glis2",
         "cbfa2t3::glis2"
     ],
@@ -1846,6 +1870,7 @@
         "nup98::v"
     ],
     "aspscr1::tfe3": [
+        "aspscr1::tfe3 fusion",
         "aspscr1::tfe3",
         "aspscr1-tfe3",
         "aspl-tfe3"
@@ -1861,6 +1886,7 @@
         "areg expression"
     ],
     "pcm1::jak2": [
+        "pcm1::jak2 fusion",
         "pcm1::jak2",
         "t(8;9)(p22;p24)",
         "pcm1-jak2",
@@ -1917,6 +1943,7 @@
         "armadillo rs121913412"
     ],
     "pax7::foxo1": [
+        "pax7::foxo1 fusion",
         "pax7-foxo1",
         "pax7::foxo1"
     ],
@@ -2198,6 +2225,7 @@
         "errp gly719ala"
     ],
     "eml4::alk": [
+        "eml4::alk fusion",
         "eml4::alk",
         "eml4-alk"
     ],
@@ -2310,6 +2338,7 @@
         "flk-2 asp835"
     ],
     "brd4::nutm1": [
+        "brd4::nutm1 fusion",
         "brd4-nutm1",
         "brd4::nutm1"
     ],
@@ -2397,6 +2426,7 @@
         "bmfs5 rs1042522"
     ],
     "sqstm1::ntrk1": [
+        "sqstm1::ntrk1 fusion",
         "sqstm1::ntrk1",
         "sqstm1-ntrk1"
     ],
@@ -2419,6 +2449,7 @@
         "pvhl leu118pro"
     ],
     "egfr::rad51": [
+        "egfr::rad51 fusion",
         "egfr::rad51",
         "egfr-rad51 e24-e4"
     ],
@@ -2660,6 +2691,7 @@
         "tyms overexpression"
     ],
     "kmt2a::mllt3": [
+        "kmt2a::mllt3 fusion",
         "kmt2a::mllt3",
         "mll-mllt3",
         "mll::mllt3",
@@ -2693,6 +2725,7 @@
         "stk11 mutation"
     ],
     "wwtr1::camta1": [
+        "wwtr1::camta1 fusion",
         "wwtr1::camta1",
         "t(1;3)(p36.3;q25)",
         "wwtr1-camta1"
@@ -2772,6 +2805,7 @@
         "cdk12 mutation"
     ],
     "myb::qki": [
+        "myb::qki fusion",
         "myb::qki",
         "myb-qki"
     ],
@@ -2783,10 +2817,12 @@
         "foxr2 rearrangement"
     ],
     "yap1::tfe3": [
+        "yap1::tfe3 fusion",
         "yap1-tfe3",
         "yap1::tfe3"
     ],
     "fus::erg": [
+        "fus::erg fusion",
         "fus::erg",
         "fus-erg"
     ],
@@ -2840,10 +2876,12 @@
         "aurka overexpression"
     ],
     "fgfr2::bicc1": [
+        "fgfr2::bicc1 fusion",
         "fgfr2-bicc1",
         "fgfr2::bicc1"
     ],
     "pax3::foxo1": [
+        "pax3::foxo1 fusion",
         "pax3-foxo1",
         "pax3::foxo1"
     ],
@@ -2884,6 +2922,7 @@
         "dicer1 d1709n"
     ],
     "cic::dux4": [
+        "cic::dux4 fusion",
         "cic-dux4",
         "cic::dux4"
     ],
@@ -3005,6 +3044,7 @@
         "kit expression"
     ],
     "cbfb::myh11": [
+        "cbfb::myh11 fusion",
         "cbfb::myh11",
         "t(16;16)(p13.1;q22)",
         "cbfb-myh11",
@@ -3177,6 +3217,7 @@
         "actri rs387906589"
     ],
     "bcr::jak2": [
+        "bcr::jak2 fusion",
         "bcr::jak2",
         "bcr-jak2"
     ],
@@ -3184,10 +3225,12 @@
         "ezh2 activating mutation"
     ],
     "fus::creb3l2": [
+        "fus::creb3l2 fusion",
         "fus::creb3l2",
         "fus-creb3l2"
     ],
     "kat6a::crebbp": [
+        "kat6a::crebbp fusion",
         "kat6a-crebbp",
         "kat6a::crebbp"
     ],
@@ -3302,6 +3345,7 @@
         "ns3 gly12arg"
     ],
     "ebf1::pdgfrb": [
+        "ebf1::pdgfrb fusion",
         "ebf1::pdgfrb",
         "ebf1-pdgfrb"
     ],
@@ -3376,18 +3420,22 @@
         "vhl ser80arg"
     ],
     "etv6::abl1": [
+        "etv6::abl1 fusion",
         "etv6::abl1",
         "etv6-abl1"
     ],
     "zmiz1::abl1": [
+        "zmiz1::abl1 fusion",
         "zmiz1-abl1",
         "zmiz1::abl1"
     ],
     "sfpq::abl1": [
+        "sfpq::abl1 fusion",
         "sfpq-abl1",
         "sfpq::abl1"
     ],
     "ewsr1::erg": [
+        "ewsr1::erg fusion",
         "ewsr1::erg",
         "ewsr1-erg"
     ],
@@ -3453,6 +3501,7 @@
         "p150 gln252his"
     ],
     "snx2::abl1": [
+        "snx2::abl1 fusion",
         "snx2::abl1",
         "snx2-abl1"
     ],
@@ -3659,6 +3708,7 @@
         "ntrk2 fusion"
     ],
     "pax5::jak2": [
+        "pax5::jak2 fusion",
         "pax5::jak2",
         "pax5-jak2"
     ],
@@ -3676,6 +3726,7 @@
         "mecom overexpression"
     ],
     "kank1::ntrk2": [
+        "kank1::ntrk2 fusion",
         "kank1-ntrk2",
         "kank1::ntrk2"
     ],
@@ -3716,6 +3767,7 @@
         "rad54l mutation"
     ],
     "mnx1::etv6": [
+        "mnx1::etv6 fusion",
         "mnx1::etv6",
         "mnx1-etv6"
     ],
@@ -3729,6 +3781,7 @@
         "scfr rs121913514"
     ],
     "fus::ddit3": [
+        "fus::ddit3 fusion",
         "fus-ddit3",
         "fus::ddit3"
     ],
@@ -3900,6 +3953,7 @@
         "ccne1 amplification"
     ],
     "npm1::alk": [
+        "npm1::alk fusion",
         "npm-alk",
         "t(2;5)(p23;q35)",
         "npm1-alk",
@@ -3909,6 +3963,7 @@
         "kras amplification"
     ],
     "nup214::abl1": [
+        "nup214::abl1 fusion",
         "nup214-abl1",
         "nup214::abl1"
     ],
@@ -4230,6 +4285,7 @@
         "abl1 glu459lys"
     ],
     "ssbp2::jak2": [
+        "ssbp2::jak2 fusion",
         "t(5;9)(q14.1;p24)",
         "ssbp2::jak2"
     ],
@@ -4237,6 +4293,7 @@
         "erbb2 exon 20 insertion"
     ],
     "etv6::jak2": [
+        "etv6::jak2 fusion",
         "etv6-jak2",
         "etv6::jak2"
     ],
@@ -4414,6 +4471,7 @@
         "gas6 expression"
     ],
     "fgfr2::ahcyl1": [
+        "fgfr2::ahcyl1 fusion",
         "fgfr2::ahcyl1",
         "fgfr2-ahcyl1"
     ],
@@ -4430,6 +4488,7 @@
         "mtor mutation"
     ],
     "fgfr3::tacc3": [
+        "fgfr3::tacc3 fusion",
         "fgfr3::tacc3",
         "fgfr3-tacc3"
     ],
@@ -4609,10 +4668,12 @@
         "dicer glu1813gln"
     ],
     "ewsr1::creb3l1": [
+        "ewsr1::creb3l1 fusion",
         "ewsr1-creb3l1",
         "ewsr1::creb3l1"
     ],
     "igh::myc": [
+        "igh::myc fusion",
         "igh::myc",
         "igh-myc"
     ],
@@ -4830,6 +4891,7 @@
         "bcl2"
     ],
     "bcl2 reg_e@[igh]::bcl2": [
+        "bcl2 reg_e@[igh]::bcl2 fusion",
         "bcl2 reg_e@[igh]::bcl2",
         "bcl-2 reciprocal t(14;18)(q32;q21)",
         "bcl2 reciprocal t(14;18)(q32;q21)",
@@ -4851,6 +4913,7 @@
         "rel amplification"
     ],
     "akap9::braf": [
+        "akap9::braf fusion",
         "akap9::braf",
         "akap9-braf"
     ],
@@ -5347,6 +5410,7 @@
         "h3-3a g34w"
     ],
     "nup98::nsd1": [
+        "nup98::nsd1 fusion",
         "nup98::nsd1",
         "nup98-nsd1"
     ],
@@ -5363,6 +5427,7 @@
         "fgfr1 internal duplication"
     ],
     "igh::crlf2": [
+        "igh::crlf2 fusion",
         "igh-crlf2",
         "igh::crlf2"
     ],
@@ -5400,6 +5465,7 @@
         "prps1 prps1 mutation"
     ],
     "ewsr1::wt1": [
+        "ewsr1::wt1 fusion",
         "ewsr1::wt1",
         "ewsr1-wt1"
     ],
@@ -5407,10 +5473,12 @@
         "flt3 y842c"
     ],
     "mn1::cxxc5": [
+        "mn1::cxxc5 fusion",
         "mn1::cxxc5",
         "mn1-cxxc5"
     ],
     "rbm15::mrtfa": [
+        "rbm15::mrtfa fusion",
         "rbm15-mkl1",
         "rbm15-mrtfa",
         "ott-mal",
@@ -5780,6 +5848,7 @@
         "ptenbeta rs121909219"
     ],
     "cltc::alk": [
+        "cltc::alk fusion",
         "t(2;17)(p23;q23)",
         "cltc::alk",
         "cltc-alk"
@@ -6233,6 +6302,7 @@
         "vhl 440_441insc"
     ],
     "tpr::ntrk1": [
+        "tpr::ntrk1 fusion",
         "tpr-ntrk1",
         "tpr::ntrk1"
     ],
@@ -6450,6 +6520,7 @@
         "bap1 expression"
     ],
     "tmprss2::erg": [
+        "tmprss2::erg fusion",
         "tmprss2-erg",
         "tmprss2::erg"
     ],
@@ -6477,6 +6548,7 @@
         "ncoa3 overexpression"
     ],
     "pax8::pparg": [
+        "pax8::pparg fusion",
         "t(2;3)(q13;p25)",
         "pax8-pparg",
         "pax8::pparg"
@@ -7094,6 +7166,7 @@
         "tyms rs34743033"
     ],
     "actb::gli1": [
+        "actb::gli1 fusion",
         "actb-gli1",
         "actb::gli1",
         "t(7;12)(p21-22;q13-15)"
@@ -7538,9 +7611,11 @@
         "vhl t152fs (c.455insa)"
     ],
     "slc3a2::nrg1": [
+        "slc3a2::nrg1 fusion",
         "slc3a2::nrg1"
     ],
     "atp1b1::nrg1": [
+        "atp1b1::nrg1 fusion",
         "atp1b1::nrg1"
     ],
     "bcl2 mutation": [
@@ -7572,10 +7647,12 @@
         "braf g469"
     ],
     "atf7ip::jak2": [
+        "atf7ip::jak2 fusion",
         "atf7ip-jak2",
         "atf7ip::jak2"
     ],
     "ppfibp1::jak2": [
+        "ppfibp1::jak2 fusion",
         "ppfibp1::jak2",
         "ppfibp1-jak2"
     ],
@@ -7828,6 +7905,7 @@
         "hmh lys111asn"
     ],
     "etv6::ntrk2": [
+        "etv6::ntrk2 fusion",
         "etv6::ntrk2",
         "etv6-ntrk2"
     ],
@@ -7940,6 +8018,7 @@
         "rictor amplification"
     ],
     "ccdc6::ret": [
+        "ccdc6::ret fusion",
         "ccdc6-ret",
         "ccdc6::ret"
     ],
@@ -8205,6 +8284,7 @@
         "hrca1 c.341-2a>c"
     ],
     "pde4dip::ntrk1": [
+        "pde4dip::ntrk1 fusion",
         "pde4dip::ntrk1",
         "pde4dip-ntrk1"
     ],
@@ -8217,6 +8297,7 @@
         "vhl c77_n78insl (c.230_231instct)"
     ],
     "qki::ntrk2": [
+        "qki::ntrk2 fusion",
         "qki-ntrk2",
         "qki::ntrk2"
     ],
@@ -8464,6 +8545,7 @@
         "hsph1 nuclear expression"
     ],
     "mef2d::csf1r": [
+        "mef2d::csf1r fusion",
         "mef2d::csf1r",
         "mef2d-csf1r"
     ],
@@ -8547,6 +8629,7 @@
         "nras gln61arg"
     ],
     "kif5b::ret": [
+        "kif5b::ret fusion",
         "kif5b-ret",
         "kif5b::ret"
     ],
@@ -8832,6 +8915,7 @@
         "mmrcs4 rs587782704"
     ],
     "ranbp2::alk": [
+        "ranbp2::alk fusion",
         "ranbp2::alk",
         "ranbp2-alk"
     ],
@@ -9687,6 +9771,7 @@
         "kit wildtype"
     ],
     "foxp1::abl1": [
+        "foxp1::abl1 fusion",
         "foxp1-abl1",
         "foxp1::abl1"
     ],
@@ -9707,6 +9792,7 @@
         "bcr-abl glu98gly"
     ],
     "ofd1::jak2": [
+        "ofd1::jak2 fusion",
         "ofd1-jak2",
         "ofd1::jak2"
     ],
@@ -9745,14 +9831,17 @@
         "pik3ca rare mutation"
     ],
     "bcor::ccnb3": [
+        "bcor::ccnb3 fusion",
         "bcor-ccnb3",
         "bcor::ccnb3"
     ],
     "ranbp2::abl1": [
+        "ranbp2::abl1 fusion",
         "ranbp2-abl1",
         "ranbp2::abl1"
     ],
     "lsm14a::abl1": [
+        "lsm14a::abl1 fusion",
         "lsm14a-abl1",
         "lsm14a::abl1"
     ],
@@ -9772,6 +9861,7 @@
         "pik3ca k966e"
     ],
     "scp2::ntrk1": [
+        "scp2::ntrk1 fusion",
         "scp2-ntrk1",
         "scp2::ntrk1"
     ],
@@ -9807,6 +9897,7 @@
         "ntrk3 g623r"
     ],
     "fus::tfcp2": [
+        "fus::tfcp2 fusion",
         "fus::tfcp2",
         "fus-tfcp2"
     ],
@@ -10254,6 +10345,7 @@
         "bcl2 phe104ile"
     ],
     "fgfr2::tacc3": [
+        "fgfr2::tacc3 fusion",
         "fgfr2::tacc3",
         "fgfr2-tacc3"
     ],
@@ -10414,6 +10506,7 @@
         "pml leu218pro"
     ],
     "tfg::ros1": [
+        "tfg::ros1 fusion",
         "tfg::ros1",
         "tfg-ros1"
     ],
@@ -10447,6 +10540,7 @@
         "b2m s14fs"
     ],
     "zkscan1::braf": [
+        "zkscan1::braf fusion",
         "zkscan1::braf",
         "zkscan1-braf"
     ],
@@ -10506,6 +10600,7 @@
         "crbn mutation"
     ],
     "ewsr1::ddit3": [
+        "ewsr1::ddit3 fusion",
         "t(12;22)(q13;q12)",
         "ewsr1::ddit3",
         "ewsr1-ddit3",
@@ -10580,6 +10675,7 @@
         "rca1 377_378insg"
     ],
     "tnks2::pdgfra": [
+        "tnks2::pdgfra fusion",
         "tnks2::pdgfra",
         "tnks2-pdgfra"
     ],
@@ -12149,6 +12245,7 @@
         "vhl1 trp88ter"
     ],
     "sdc4::nrg1": [
+        "sdc4::nrg1 fusion",
         "sdc4::nrg1"
     ],
     "dicer1 d1709e": [
@@ -12158,6 +12255,7 @@
         "egfr m766_a767insasv"
     ],
     "strn::alk": [
+        "strn::alk fusion",
         "strn::alk",
         "strn-alk e3-e20"
     ],
@@ -12168,6 +12266,7 @@
         "acvr1 g328e"
     ],
     "strn::ntrk2": [
+        "strn::ntrk2 fusion",
         "strn-ntrk2 e3-e16",
         "strn::ntrk2"
     ],
@@ -12215,8 +12314,8 @@
         "hrca1 c.311g>t",
         "vhl c.311g>t"
     ],
-    "vhl c.\u2212213\u2212 ?_463 ?del": [
-        "vhl c.\u2212213\u2212 ?_463 ?del"
+    "vhl c.−213− ?_463 ?del": [
+        "vhl c.−213− ?_463 ?del"
     ],
     "vhl v87fs (c.259_260insa)": [
         "hrca1 c.259_260insa",
@@ -12307,9 +12406,11 @@
         "braf exon 15 mutation"
     ],
     "cad::alk": [
+        "cad::alk fusion",
         "cad::alk"
     ],
     "app::nrg1": [
+        "app::nrg1 fusion",
         "app-nrg1",
         "app::nrg1"
     ],
@@ -12340,30 +12441,37 @@
         "braf1 ala598val"
     ],
     "ebf1::jak2": [
+        "ebf1::jak2 fusion",
         "ebf1-jak2",
         "ebf1::jak2"
     ],
     "strn3::jak2": [
+        "strn3::jak2 fusion",
         "strn3::jak2",
         "strn3-jak2"
     ],
     "tpr::jak2": [
+        "tpr::jak2 fusion",
         "tpr::jak2",
         "tpr-jak2"
     ],
     "terf2::jak2": [
+        "terf2::jak2 fusion",
         "terf2::jak2",
         "terf2-jak2"
     ],
     "usp25::jak2": [
+        "usp25::jak2 fusion",
         "usp25::jak2",
         "usp25-jak2"
     ],
     "znf274::jak2": [
+        "znf274::jak2 fusion",
         "znf274::jak2",
         "znf274-jak2"
     ],
     "rfx3::jak2": [
+        "rfx3::jak2 fusion",
         "rfx3-jak2",
         "rfx3::jak2"
     ],
@@ -12371,6 +12479,7 @@
         "brca2 k3326*"
     ],
     "nrf1::braf": [
+        "nrf1::braf fusion",
         "nrf1::braf",
         "nrf1-braf"
     ],
@@ -12378,6 +12487,7 @@
         "cdkn2a c.151-1g>c"
     ],
     "met::atxn7l1": [
+        "met::atxn7l1 fusion",
         "met-atxn7l1",
         "met::atxn7l1"
     ],
@@ -12404,6 +12514,7 @@
         "chek2 r474c c.1420c>t"
     ],
     "bcr::pdgfra": [
+        "bcr::pdgfra fusion",
         "bcr-pdgfra",
         "bcr::pdgfra"
     ],
@@ -12423,18 +12534,22 @@
         "pdgfrb overexpression"
     ],
     "smu1::jak2": [
+        "smu1::jak2 fusion",
         "smu1-jak2",
         "smu1::jak2"
     ],
     "snx29::jak2": [
+        "snx29::jak2 fusion",
         "snx29::jak2",
         "snx29-jak2"
     ],
     "znf430::jak2": [
+        "znf430::jak2 fusion",
         "znf430-jak2",
         "znf430::jak2"
     ],
     "golga5::jak2": [
+        "golga5::jak2 fusion",
         "golga5::jak2",
         "golga5-jak2"
     ],
@@ -12479,6 +12594,7 @@
         "pdgfra mutation"
     ],
     "tbl1xr1::csf1r": [
+        "tbl1xr1::csf1r fusion",
         "tbl1xr1::csf1r",
         "tbl1xr1-csf1r"
     ],
@@ -12486,14 +12602,17 @@
         "pik3ca l938*"
     ],
     "qki::raf1": [
+        "qki::raf1 fusion",
         "qki::raf1",
         "qki-raf1"
     ],
     "kank4::alk": [
+        "kank4::alk fusion",
         "kank4::alk",
         "kank4-alk"
     ],
     "kif5b::egfr": [
+        "kif5b::egfr fusion",
         "kif5b::egfr",
         "kif5b-egfr"
     ],
@@ -12521,6 +12640,7 @@
         "apc mutation"
     ],
     "agk::braf": [
+        "agk::braf fusion",
         "agk-braf",
         "agk::braf"
     ],
@@ -12669,11 +12789,13 @@
         "igf2 overexpression"
     ],
     "papss1::braf": [
+        "papss1::braf fusion",
         "papss1-braf",
         "t(4;7)(q24;q34)",
         "papss1::braf"
     ],
     "trim24::braf": [
+        "trim24::braf fusion",
         "trim24::braf",
         "trim24-braf"
     ],
@@ -13119,6 +13241,7 @@
         "cd340 arg896cys"
     ],
     "fgfr2::oga": [
+        "fgfr2::oga fusion",
         "fgfr2-mgea5",
         "fgfr2::oga"
     ],
@@ -13191,6 +13314,7 @@
         "zeb1 expression"
     ],
     "ss18::ssx4": [
+        "ss18::ssx4 fusion",
         "ss18::ssx4",
         "ss18-ssx4"
     ],
@@ -13299,10 +13423,12 @@
         "sf3b1 k700e"
     ],
     "ctla4::cd28": [
+        "ctla4::cd28 fusion",
         "ctla4::cd28",
         "ctla4-cd28"
     ],
     "ppfibp2::braf": [
+        "ppfibp2::braf fusion",
         "ppfibp2-braf",
         "ppfibp2::braf"
     ],
@@ -13362,6 +13488,7 @@
         "dfnb97 asp1228asn"
     ],
     "braf::cul1": [
+        "braf::cul1 fusion",
         "braf::cul1",
         "braf-cul1"
     ],
@@ -14706,10 +14833,12 @@
         "braf1 pro731thr"
     ],
     "macf1::braf": [
+        "macf1::braf fusion",
         "macf1::braf",
         "macf1-braf"
     ],
     "cux1::braf": [
+        "cux1::braf fusion",
         "cux1::braf",
         "cux1-braf"
     ],
@@ -14881,10 +15010,12 @@
         "vhl f148* (c.443_455delinsa)"
     ],
     "cenpc::abl1": [
+        "cenpc::abl1 fusion",
         "cenpc-abl1",
         "cenpc::abl1"
     ],
     "nup153::abl1": [
+        "nup153::abl1 fusion",
         "nup153-abl1",
         "nup153::abl1"
     ],
@@ -14901,12 +15032,14 @@
         "acvr1 g356d"
     ],
     "egfr::septin14": [
+        "egfr::septin14 fusion",
         "egfr::septin14",
         "egfr::septin-14",
         "egfr-sept14",
         "egfr-septin14"
     ],
     "hip1::alk": [
+        "hip1::alk fusion",
         "hip1-alk",
         "hip1::alk"
     ],
@@ -14953,14 +15086,17 @@
         "erbb2 s310f"
     ],
     "zfta::ncoa1": [
+        "zfta::ncoa1 fusion",
         "zfta::ncoa1",
         "zfta-ncoa1"
     ],
     "zfta::ncoa2": [
+        "zfta::ncoa2 fusion",
         "zfta::ncoa2",
         "zfta-ncoa2"
     ],
     "zfta::maml2": [
+        "zfta::maml2 fusion",
         "zfta-maml2",
         "zfta::maml2"
     ],
@@ -15503,6 +15639,7 @@
         "ccnd3 loss"
     ],
     "fgfr3::baiap2l1": [
+        "fgfr3::baiap2l1 fusion",
         "fgfr3::baiap2l1",
         "fgfr3-baiap2l1"
     ],
@@ -16609,6 +16746,7 @@
         "parp1 overexpression"
     ],
     "gopc::ros1": [
+        "gopc::ros1 fusion",
         "gopc::ros1"
     ],
     "tp53 s241f": [
@@ -16681,14 +16819,17 @@
         "pim1 s97n"
     ],
     "etv6::ntrk1": [
+        "etv6::ntrk1 fusion",
         "etv6::ntrk1",
         "etv6-ntrk1"
     ],
     "vcl::ntrk2": [
+        "vcl::ntrk2 fusion",
         "vcl::ntrk2",
         "vcl-ntrk2"
     ],
     "afap1::ntrk2": [
+        "afap1::ntrk2 fusion",
         "afap1-ntrk2",
         "afap1::ntrk2"
     ],
@@ -18002,6 +18143,7 @@
         "dennd8b his429fs"
     ],
     "ntrk3::scaper": [
+        "ntrk3::scaper fusion",
         "ntrk3::scaper",
         "ntrk3-scaper"
     ],
@@ -18016,19 +18158,23 @@
         "braf rs121913378"
     ],
     "chd7::bend2": [
+        "chd7::bend2 fusion",
         "chd7::bend2",
         "chd7-bend2",
         "translocation (t(8;x)(q12.2;p22.13))"
     ],
     "mn1::zfta": [
+        "mn1::zfta fusion",
         "mn1-zfta",
         "mn1::zfta"
     ],
     "bcr::ntrk2": [
+        "bcr::ntrk2 fusion",
         "bcr::ntrk2",
         "bcr-ntrk2"
     ],
     "egfr::usp42": [
+        "egfr::usp42 fusion",
         "egfr-usp42",
         "egfr::usp42"
     ],
@@ -18824,6 +18970,7 @@
         "cek2 gly382arg"
     ],
     "fgfr1op2::fgfr1": [
+        "fgfr1op2::fgfr1 fusion",
         "fgfr1op2::fgfr1",
         "fgfr1op2-fgfr1"
     ],
@@ -19279,14 +19426,17 @@
         "rhoa mutation"
     ],
     "trim63::ntrk1": [
+        "trim63::ntrk1 fusion",
         "ntrk1-trim63",
         "trim63::ntrk1"
     ],
     "ddr2::ntrk1": [
+        "ddr2::ntrk1 fusion",
         "ntrk1-ddr2",
         "ddr2::ntrk1"
     ],
     "gon4l::ntrk1": [
+        "gon4l::ntrk1 fusion",
         "ntrk1-gon4l",
         "gon4l::ntrk1"
     ],
@@ -26094,6 +26244,7 @@
         "dll3 expression"
     ],
     "kmt2e::asns": [
+        "kmt2e::asns fusion",
         "kmt2e::asns",
         "kmt2e-asns e1-e3"
     ],
@@ -26684,6 +26835,7 @@
         "il7r exon 6 mutations"
     ],
     "p2ry8::crlf2": [
+        "p2ry8::crlf2 fusion",
         "p2ry8-crlf2",
         "p2ry8::crlf2",
         "par deletion"
@@ -26752,6 +26904,7 @@
         "pbld underexpression"
     ],
     "ewsr1::nr4a3": [
+        "ewsr1::nr4a3 fusion",
         "ewsr1::nr4a3",
         "ewsr1-nr4a3"
     ],
@@ -27476,8 +27629,8 @@
     "vhl e189_d190del (c.565_570delgaagac)": [
         "vhl e189_d190del (c.565_570delgaagac)"
     ],
-    "vhl c.(?_\uff0d213)_(*3705_?)del (exon1, 2, 3 deletion)": [
-        "vhl c.(?_\uff0d213)_(*3705_?)del (exon1, 2, 3 deletion)"
+    "vhl c.(?_－213)_(*3705_?)del (exon1, 2, 3 deletion)": [
+        "vhl c.(?_－213)_(*3705_?)del (exon1, 2, 3 deletion)"
     ],
     "vhl r82g (c.244c>g)": [
         "rca1 arg 82 gly",
@@ -27756,6 +27909,7 @@
         "ctnnb1 g34v"
     ],
     "aggf1::pdgfrb": [
+        "aggf1::pdgfrb fusion",
         "aggf1-pdgfrb",
         "aggf1::pdgfrb"
     ],
@@ -28055,6 +28209,7 @@
         "tp53 v135a"
     ],
     "atf7ip::pdgfrb": [
+        "atf7ip::pdgfrb fusion",
         "atf7ip::pdgfrb",
         "atf7ip-pdgfrb"
     ],
@@ -28102,6 +28257,7 @@
         "kras activating mutation"
     ],
     "fam131b::braf": [
+        "fam131b::braf fusion",
         "fam131b::braf",
         "fam131b-braf"
     ],
@@ -28112,6 +28268,7 @@
         "erbb2 a775_g776insyvma"
     ],
     "myb::gata1": [
+        "myb::gata1 fusion",
         "myb::gata1",
         "myb-gata1"
     ],
@@ -28201,18 +28358,22 @@
         "wee1 overexpression"
     ],
     "ptk2b::kdm6a": [
+        "ptk2b::kdm6a fusion",
         "ptk2b-kdm6a",
         "ptk2b::kdm6a"
     ],
     "ptk2b::stag2": [
+        "ptk2b::stag2 fusion",
         "ptk2b::stag2",
         "ptk2b-stag2"
     ],
     "dgkh::zfand3": [
+        "dgkh::zfand3 fusion",
         "dgkh-zfand3",
         "dgkh::zfand3"
     ],
     "il2rb::myh9": [
+        "il2rb::myh9 fusion",
         "il2rb::myh9",
         "il2rb-myh9"
     ],
@@ -28241,10 +28402,12 @@
         "pbrm1 loss-of-function"
     ],
     "dek::aff2": [
+        "dek::aff2 fusion",
         "dek-aff2",
         "dek::aff2"
     ],
     "kif5b::met": [
+        "kif5b::met fusion",
         "kif5b::met"
     ],
     "pik3ca e545x": [
@@ -28373,6 +28536,7 @@
         "ccnd3 amplification"
     ],
     "eml6::alk": [
+        "eml6::alk fusion",
         "eml6::alk"
     ],
     "tp53 v274s": [
@@ -28443,6 +28607,7 @@
         "braf g596"
     ],
     "cd74::nrg1": [
+        "cd74::nrg1 fusion",
         "cd74-nrg1",
         "cd74::nrg1"
     ],
@@ -28463,6 +28628,7 @@
         "met exon 14 mutation"
     ],
     "nab2::stat6": [
+        "nab2::stat6 fusion",
         "nab2::stat6",
         "nab2-stat6"
     ],
@@ -28648,6 +28814,7 @@
         "jak2 r683g"
     ],
     "tmprss2::etv1": [
+        "tmprss2::etv1 fusion",
         "tmprss2::etv1",
         "tmprss2-etv1"
     ],
@@ -28930,10 +29097,12 @@
         "mgmt expression"
     ],
     "lpp::hmga2": [
+        "lpp::hmga2 fusion",
         "lpp-hmga2",
         "lpp::hmga2"
     ],
     "hmga2::lpp": [
+        "hmga2::lpp fusion",
         "hmga2::lpp",
         "hmga2-lpp"
     ],
@@ -29017,6 +29186,7 @@
         "stat5b y665f"
     ],
     "miga1::braf": [
+        "miga1::braf fusion",
         "fam73a::braf",
         "miga1::braf",
         "fam73a-braf",
@@ -29256,6 +29426,7 @@
         "flt3 n676k"
     ],
     "ewsr1::atf1": [
+        "ewsr1::atf1 fusion",
         "ewsr1::atf1",
         "ewsr1-atf1"
     ],
@@ -29383,8 +29554,8 @@
     "vhl exon deletion": [
         "vhl exon deletion"
     ],
-    "vhl c.\u201365_\u201355dup11": [
-        "vhl c.\u201365_\u201355dup11"
+    "vhl c.–65_–55dup11": [
+        "vhl c.–65_–55dup11"
     ],
     "vhl 3' utr alteration (c.*1149a>g)": [
         "vhl 3' utr alteration (c.*1149a>g)"
@@ -29405,6 +29576,7 @@
         "vhl single allele deletion"
     ],
     "nup98::kdm5a": [
+        "nup98::kdm5a fusion",
         "nup98-kdm5a",
         "nup98::kdm5a"
     ],
@@ -29444,6 +29616,7 @@
         "wt1 mutations"
     ],
     "tlx3::bcl11b": [
+        "tlx3::bcl11b fusion",
         "tlx3-bcl11b",
         "tlx3::bcl11b"
     ],
@@ -29531,8 +29704,8 @@
     "vhl i75yfs*57 (c.224dupt)": [
         "vhl i75yfs*57 (c.224dupt)"
     ],
-    "vhl k196* (c.586a\uff1et)": [
-        "vhl k196* (c.586a\uff1et)"
+    "vhl k196* (c.586a＞t)": [
+        "vhl k196* (c.586a＞t)"
     ],
     "vhl d126efs* (c.377_378insg)": [
         "vhl d126efs* (c.377_378insg)"
@@ -29682,6 +29855,7 @@
         "egfr g12v"
     ],
     "rbpms::met": [
+        "rbpms::met fusion",
         "rbpms-met",
         "rbpms::met"
     ],
@@ -29995,6 +30169,7 @@
         "hdac9 p.l33r"
     ],
     "bag4::fgfr1": [
+        "bag4::fgfr1 fusion",
         "bag4-fgfr1",
         "bag4::fgfr1"
     ],
@@ -30032,17 +30207,17 @@
     "vegfa overexpression of vegf121 and vegf110": [
         "vegfa overexpression of vegf121 and vegf110"
     ],
-    "flt3 q575\u03b4": [
-        "flt3 q575\u03b4"
+    "flt3 q575δ": [
+        "flt3 q575δ"
     ],
-    "flt3 y572\u03b4": [
-        "flt3 y572\u03b4"
+    "flt3 y572δ": [
+        "flt3 y572δ"
     ],
-    "flt3 e573\u03b4": [
-        "flt3 e573\u03b4"
+    "flt3 e573δ": [
+        "flt3 e573δ"
     ],
-    "flt3 s574\u03b4": [
-        "flt3 s574\u03b4"
+    "flt3 s574δ": [
+        "flt3 s574δ"
     ],
     "tcf19": [
         "tcf-19",
@@ -30694,6 +30869,7 @@
         "jtk4 phe386leu"
     ],
     "taf15::znf384": [
+        "taf15::znf384 fusion",
         "taf15-znf384",
         "taf15::znf384"
     ],
@@ -30716,10 +30892,12 @@
         "mecom t(3;21)(q26.2;q22)"
     ],
     "pag1::abl2": [
+        "pag1::abl2 fusion",
         "pag1-abl2",
         "pag1::abl2"
     ],
     "rcsd1::abl2": [
+        "rcsd1::abl2 fusion",
         "rcsd1::abl2",
         "rcsd1-abl2"
     ],
@@ -30790,6 +30968,7 @@
         "pten g127e"
     ],
     "kmt2a::afdn": [
+        "kmt2a::afdn fusion",
         "kmt2a::afdn",
         "kmt2a-afdn",
         "mll::af6",
@@ -30797,6 +30976,7 @@
         "mll-af6"
     ],
     "kmt2a::mllt10": [
+        "kmt2a::mllt10 fusion",
         "kmt2a-af10",
         "kmt2a::mllt10",
         "kmt2a-mllt10",
@@ -30805,6 +30985,7 @@
         "mll-af10"
     ],
     "kmt2a::abi1": [
+        "kmt2a::abi1 fusion",
         "mll-abi1",
         "mll::abi1",
         "kmt2a::abi1"
@@ -30849,6 +31030,7 @@
         "pten a126s"
     ],
     "ssbp2::csf1r": [
+        "ssbp2::csf1r fusion",
         "ssbp2-csf1r",
         "ssbp2::csf1r"
     ],
@@ -30883,6 +31065,7 @@
         "erbb2 q709l"
     ],
     "zc3hav1::abl2": [
+        "zc3hav1::abl2 fusion",
         "zc3hav1::abl2",
         "zc3hav1-abl2"
     ],
@@ -31416,6 +31599,7 @@
         "vhl v87fs (c.255_256insc)"
     ],
     "g3bp2::kit": [
+        "g3bp2::kit fusion",
         "g3bp2-kit",
         "g3bp2::kit"
     ],
@@ -32613,6 +32797,7 @@
         "ar t878a"
     ],
     "ocln::rasgrf1": [
+        "ocln::rasgrf1 fusion",
         "ocln::rasgrf1",
         "ocln-rasgrf1"
     ],
@@ -32701,10 +32886,12 @@
         "vhl v155l (c.463g>t)"
     ],
     "sh3pxd2a::htra1": [
+        "sh3pxd2a::htra1 fusion",
         "sh3pxd2a::htra1",
         "sh3pxd2a-htra1"
     ],
     "cic::leutx": [
+        "cic::leutx fusion",
         "cic::leutx",
         "cic-leutx"
     ],
@@ -33606,6 +33793,7 @@
         "eml6"
     ],
     "eml6 eml6::ntrk3": [
+        "eml6 eml6::ntrk3 fusion",
         "eml6 eml6::ntrk3"
     ],
     "vhl s43_e47del (c.123_137del)": [
@@ -33669,6 +33857,7 @@
         "vhl p76del (c.227_229del)"
     ],
     "ctrc::ntrk1": [
+        "ctrc::ntrk1 fusion",
         "ctrc-ntrk1",
         "ctrc::ntrk1"
     ],
@@ -33922,8 +34111,8 @@
     "vhl r200w (c.598c>t) and v130l (c.388g>c)": [
         "vhl r200w (c.598c>t) and v130l (c.388g>c)"
     ],
-    "vhl c.\u201365_\u201355dup11 and  3' utr alteration (c.*1149a>g)": [
-        "vhl c.\u201365_\u201355dup11 and  3' utr alteration (c.*1149a>g)"
+    "vhl c.–65_–55dup11 and  3' utr alteration (c.*1149a>g)": [
+        "vhl c.–65_–55dup11 and  3' utr alteration (c.*1149a>g)"
     ],
     "vhl deletion and i151s(c.452t>g)": [
         "vhl deletion and i151s(c.452t>g)"
@@ -34102,6 +34291,7 @@
         "tyr grch37/hg19 11q14.3(chr11:88960991-88961138)x160"
     ],
     "vopp1::egfr": [
+        "vopp1::egfr fusion",
         "vopp1-egfr",
         "vopp1::egfr"
     ],
@@ -34137,6 +34327,7 @@
         "vhl exon 3 deletion (c.464-11 t>a)"
     ],
     "sec61g::egfr": [
+        "sec61g::egfr fusion",
         "sec61g-egfr",
         "sec61g::egfr"
     ],
@@ -34159,6 +34350,7 @@
         "vhl splice site (c.340+866c>a)"
     ],
     "etv6::ret": [
+        "etv6::ret fusion",
         "etv6-ret",
         "etv6::ret"
     ],
@@ -34171,8 +34363,8 @@
     "vhl p192l (c.575c>t)": [
         "vhl p192l (c.575c>t)"
     ],
-    "vhl null (c.341+1_341\u20131)": [
-        "vhl null (c.341+1_341\u20131)"
+    "vhl null (c.341+1_341–1)": [
+        "vhl null (c.341+1_341–1)"
     ],
     "vhl p119l (c.355t>c)": [
         "vhl p119l (c.355t>c)"
@@ -34223,10 +34415,12 @@
         "vhl v74fs (c.220del)"
     ],
     "egfr::purb": [
+        "egfr::purb fusion",
         "egfr::purb",
         "egfr-purb"
     ],
     "egfr::ppargc1a": [
+        "egfr::ppargc1a fusion",
         "egfr-ppargc1a",
         "egfr::ppargc1a"
     ],
@@ -34234,10 +34428,12 @@
         "vhl t(1;3)(p36.3;p25)"
     ],
     "egfr::znf713": [
+        "egfr::znf713 fusion",
         "egfr::znf713",
         "egfr-znf713"
     ],
     "rrbp1::alk": [
+        "rrbp1::alk fusion",
         "rrbp1-alk",
         "rrbp1::alk"
     ],
@@ -34263,6 +34459,7 @@
         "kras r164g"
     ],
     "egfr::braf": [
+        "egfr::braf fusion",
         "egfr-braf",
         "egfr::braf"
     ],
@@ -34285,10 +34482,12 @@
         "cic r201w"
     ],
     "erc1::alk": [
+        "erc1::alk fusion",
         "erc1::alk",
         "erc1-alk"
     ],
     "igha1::fgfr3": [
+        "igha1::fgfr3 fusion",
         "igha1-fgfr3",
         "igha1::fgfr3"
     ],
@@ -34374,14 +34573,17 @@
         "flt3 d593del"
     ],
     "hmga2::egfr": [
+        "hmga2::egfr fusion",
         "hmga2-egfr",
         "hmga2::egfr"
     ],
     "egfr::vstm2a": [
+        "egfr::vstm2a fusion",
         "egfr::vstm2a",
         "egfr-vstm2a"
     ],
     "egfr::wif1": [
+        "egfr::wif1 fusion",
         "egfr-wif1",
         "egfr::wif1"
     ],
@@ -34637,10 +34839,12 @@
         "egfr fgfr1"
     ],
     "fbxo11::alk": [
+        "fbxo11::alk fusion",
         "fbxo11-alk",
         "fbxo11::alk"
     ],
     "egfr::yap1": [
+        "egfr::yap1 fusion",
         "egfr::yap1",
         "egfr-yap1"
     ],
@@ -34682,6 +34886,7 @@
         "smarcb1 single nucleotide variant"
     ],
     "khdrbs1::ntrk3": [
+        "khdrbs1::ntrk3 fusion",
         "khdrbs1::ntrk3",
         "khdrbs1-ntrk3"
     ],
@@ -34747,6 +34952,7 @@
         "neat1 overexpression"
     ],
     "egfr::znf880": [
+        "egfr::znf880 fusion",
         "egfr::znf880",
         "egfr-znf880"
     ],
@@ -34811,10 +35017,12 @@
         "tert c.-124c.t"
     ],
     "fn1::alk": [
+        "fn1::alk fusion",
         "fn1-alk",
         "fn1::alk"
     ],
     "tpm4::alk": [
+        "tpm4::alk fusion",
         "tpm4-alk",
         "tpm4::alk"
     ],
@@ -34891,24 +35099,29 @@
         "erbb2 g776s"
     ],
     "dctn1::alk": [
+        "dctn1::alk fusion",
         "dctn1-alk",
         "dctn1::alk"
     ],
     "zmym2::fgfr1": [
+        "zmym2::fgfr1 fusion",
         "zmym2-fgfr1",
         "zmym2::fgfr1"
     ],
     "bcr::fgfr1": [
+        "bcr::fgfr1 fusion",
         "bcr::fgfr1",
         "bcr-fgfr1"
     ],
     "cep43::fgfr1": [
+        "cep43::fgfr1 fusion",
         "fgfr1op-fgfr1",
         "fgfr1op::fgfr1",
         "cep43-fgfr1",
         "cep43::fgfr1"
     ],
     "trim24::fgfr1": [
+        "trim24::fgfr1 fusion",
         "trim24-fgfr1",
         "trim24::fgfr1"
     ],
@@ -34942,6 +35155,7 @@
         "gnas mutation"
     ],
     "gab1::abl1": [
+        "gab1::abl1 fusion",
         "gab1::abl1",
         "gab1-abl1"
     ],
@@ -35038,6 +35252,7 @@
         "ercc2 t484m"
     ],
     "esr1::ccdc170": [
+        "esr1::ccdc170 fusion",
         "esr1-ccdc170",
         "esr1::ccdc170"
     ],
@@ -35061,8 +35276,8 @@
     "setd2 loss": [
         "setd2 loss"
     ],
-    "epcam c.556\u2010490_*8438del": [
-        "epcam c.556\u2010490_*8438del"
+    "epcam c.556‐490_*8438del": [
+        "epcam c.556‐490_*8438del"
     ],
     "fgfr3 p449s": [
         "jtk4 p451s",
@@ -35110,6 +35325,7 @@
         "fgfr3 k517r"
     ],
     "jmjd1c::foxr2": [
+        "jmjd1c::foxr2 fusion",
         "jmjd1c-foxr2",
         "jmjd1c::foxr2"
     ],
@@ -35172,10 +35388,12 @@
         "gk rs12069019 gg"
     ],
     "crtc1::maml2": [
+        "crtc1::maml2 fusion",
         "crtc1-maml2",
         "crtc1::maml2"
     ],
     "crtc3::maml2": [
+        "crtc3::maml2 fusion",
         "crtc3-maml2",
         "crtc3::maml2"
     ],
@@ -35242,14 +35460,17 @@
         "erbb2 r34q"
     ],
     "fus::fev": [
+        "fus::fev fusion",
         "fus-fev",
         "fus::fev"
     ],
     "ewsr1::nfatc2": [
+        "ewsr1::nfatc2 fusion",
         "ewsr1-nfatc2",
         "ewsr1::nfatc2"
     ],
     "fus::nfatc2": [
+        "fus::nfatc2 fusion",
         "fus::nfatc2",
         "fus-nfatc2"
     ],
@@ -35379,22 +35600,27 @@
         "c-abl1 his396arg"
     ],
     "fgfr2::kiaa1217": [
+        "fgfr2::kiaa1217 fusion",
         "fgfr2::kiaa1217",
         "fgfr2-kiaa1217"
     ],
     "tnip1::pdgfrb": [
+        "tnip1::pdgfrb fusion",
         "tnip1::pdgfrb",
         "tnip1-pdgfrb"
     ],
     "fgfr2::poc1b": [
+        "fgfr2::poc1b fusion",
         "fgfr2::poc1b",
         "fgfr2-poc1b"
     ],
     "fgfr2::dbp": [
+        "fgfr2::dbp fusion",
         "fgfr2::dbp",
         "fgfr2-dbp"
     ],
     "fgfr2::filip1": [
+        "fgfr2::filip1 fusion",
         "fgfr2::filip1",
         "fgfr2-filip1"
     ],
@@ -35402,6 +35628,7 @@
         "fgfr2 c383r"
     ],
     "fgfr1::tacc1": [
+        "fgfr1::tacc1 fusion",
         "fgfr1-tacc1",
         "fgfr1::tacc1"
     ],
@@ -35409,30 +35636,37 @@
         "fgfr1 m563t"
     ],
     "fgfr1::plag1": [
+        "fgfr1::plag1 fusion",
         "fgfr1-plag1",
         "fgfr1::plag1"
     ],
     "fgfr2::nrap": [
+        "fgfr2::nrap fusion",
         "fgfr2::nrap",
         "fgfr2-nrap"
     ],
     "fgfr2::wac": [
+        "fgfr2::wac fusion",
         "fgfr2-wac",
         "fgfr2::wac"
     ],
     "fgfr2::tns1": [
+        "fgfr2::tns1 fusion",
         "fgfr2::tns1",
         "fgfr2-tns1"
     ],
     "fgfr2::ttc28": [
+        "fgfr2::ttc28 fusion",
         "fgfr2-ttc28",
         "fgfr2::ttc28"
     ],
     "fgfr2::ccdc6": [
+        "fgfr2::ccdc6 fusion",
         "fgfr2-ccdc6",
         "fgfr2::ccdc6"
     ],
     "slc4a4::ros1": [
+        "slc4a4::ros1 fusion",
         "slc4a4::ros1",
         "slc4a4-ros1"
     ],
@@ -35619,9 +35853,11 @@
         "tfeb amplification"
     ],
     "ufd1::ntrk2": [
+        "ufd1::ntrk2 fusion",
         "ufd1::ntrk2"
     ],
     "ralgps2::ntrk3": [
+        "ralgps2::ntrk3 fusion",
         "ralgps2-ntrk3",
         "ralgps2::ntrk3"
     ],
@@ -35765,6 +36001,7 @@
         "fgfr1 fus"
     ],
     "kif5b::fgfr1": [
+        "kif5b::fgfr1 fusion",
         "kif5b-fgfr1",
         "kif5b::fgfr1"
     ],
@@ -35809,6 +36046,7 @@
         "nras g12a"
     ],
     "emilin2::pdgfd": [
+        "emilin2::pdgfd fusion",
         "emilin2-pdgfd",
         "emilin2::pdgfd"
     ],
@@ -35840,6 +36078,7 @@
         "ntrk3 specc1l"
     ],
     "specc1l::ntrk3": [
+        "specc1l::ntrk3 fusion",
         "specc1l-ntrk3",
         "specc1l::ntrk3"
     ],
@@ -35916,6 +36155,7 @@
         "ret c611r"
     ],
     "serpine1::fosb": [
+        "serpine1::fosb fusion",
         "serpine1::fosb",
         "serpine1-fosb"
     ],
@@ -35941,6 +36181,7 @@
         "plcg1 s345f"
     ],
     "gatad2a::lyn": [
+        "gatad2a::lyn fusion",
         "gatad2a::lyn",
         "gatad2a-lyn"
     ],
@@ -36177,10 +36418,12 @@
         "hnrnph1 non-coding mutations"
     ],
     "eef1g::ros1": [
+        "eef1g::ros1 fusion",
         "eef1g-ros1",
         "eef1g::ros1"
     ],
     "eml1::ntrk2": [
+        "eml1::ntrk2 fusion",
         "eml1::ntrk2",
         "eml1-ntrk2"
     ],
@@ -36237,10 +36480,12 @@
         "fgfr2 alteration"
     ],
     "yap1::mamld1": [
+        "yap1::mamld1 fusion",
         "yap1-mamld1",
         "yap1::mamld1"
     ],
     "yap1::fam118b": [
+        "yap1::fam118b fusion",
         "yap1::fam118b",
         "yap1-fam118b"
     ],
@@ -36972,6 +37217,7 @@
         "s100b expression"
     ],
     "vps18::ntrk3": [
+        "vps18::ntrk3 fusion",
         "vps18-ntrk3 e4-e18",
         "vps18::ntrk3"
     ],
@@ -37054,6 +37300,7 @@
         "erbb2 t790m"
     ],
     "cd74::ros1": [
+        "cd74::ros1 fusion",
         "cd74-ros1",
         "cd74::ros1"
     ],
@@ -37065,6 +37312,7 @@
         "csmf"
     ],
     "nr4a3 reg_e@[scpp]::nr4a3": [
+        "nr4a3 reg_e@[scpp]::nr4a3 fusion",
         "nr4a3 reg_e@[scpp]::nr4a3"
     ],
     "ret a640g": [
@@ -37348,10 +37596,12 @@
         "met splice site (c.2888-1g>c)"
     ],
     "malat1::gli1": [
+        "malat1::gli1 fusion",
         "malat1-gli1",
         "malat1::gli1"
     ],
     "mn1::bend2": [
+        "mn1::bend2 fusion",
         "mn1-bend2",
         "mn1::bend2"
     ],
@@ -37384,8 +37634,8 @@
     "met splice site (c.3028+1_3028+3delinstt)": [
         "met splice site (c.3028+1_3028+3delinstt)"
     ],
-    "met splice site (c.2888\u201347_2888-24del)": [
-        "met splice site (c.2888\u201347_2888-24del)"
+    "met splice site (c.2888–47_2888-24del)": [
+        "met splice site (c.2888–47_2888-24del)"
     ],
     "hla-a *02:01p": [
         "hla-a *02:01p"
@@ -37412,18 +37662,22 @@
         "magea4 expression"
     ],
     "dek::nup214": [
+        "dek::nup214 fusion",
         "dek-nup214",
         "dek::nup214"
     ],
     "npm1::mlf1": [
+        "npm1::mlf1 fusion",
         "npm1-mlf1",
         "npm1::mlf1"
     ],
     "cd72::ros1": [
+        "cd72::ros1 fusion",
         "cd72-ros1",
         "cd72::ros1"
     ],
     "sdc4::ros1": [
+        "sdc4::ros1 fusion",
         "sdc4::ros1",
         "sdc4-ros1"
     ],
@@ -37455,10 +37709,12 @@
         "ifngr1 knockdown"
     ],
     "nfasc::ntrk1": [
+        "nfasc::ntrk1 fusion",
         "nfasc-ntrk1",
         "nfasc::ntrk1"
     ],
     "etv6::fgfr3": [
+        "etv6::fgfr3 fusion",
         "etv6-fgfr3",
         "etv6::fgfr3"
     ],
@@ -37479,11 +37735,13 @@
         "ibgc4 cys843gly"
     ],
     "egfr::fgfr1": [
+        "egfr::fgfr1 fusion",
         "egfr-fgfr1",
         "egfr-fgfr1 fusion",
         "egfr::fgfr1"
     ],
     "clip2::egfr": [
+        "clip2::egfr fusion",
         "clip2::egfr",
         "clip2-egfr fusion"
     ],
@@ -37492,10 +37750,12 @@
         "dux4 fusion"
     ],
     "golga4::raf1": [
+        "golga4::raf1 fusion",
         "golga4::raf1",
         "golga4-raf1"
     ],
     "ano10::raf1": [
+        "ano10::raf1 fusion",
         "ano10-raf1",
         "ano10::raf1"
     ],
@@ -37503,14 +37763,17 @@
         "tp53 rearrangement"
     ],
     "slc4a4::rasgrf1": [
+        "slc4a4::rasgrf1 fusion",
         "slc4a4-rasgrf1",
         "slc4a4::rasgrf1"
     ],
     "iqgap1::rasgrf1": [
+        "iqgap1::rasgrf1 fusion",
         "iqgap1-rasgrf1",
         "iqgap1::rasgrf1"
     ],
     "bcor::maml3": [
+        "bcor::maml3 fusion",
         "bcor-maml3",
         "bcor::maml3"
     ],
@@ -37548,18 +37811,22 @@
         "vhl s139c (c.416c>g)"
     ],
     "vcp::tfe3": [
+        "vcp::tfe3 fusion",
         "vcp::tfe3",
         "vcp-tfe3"
     ],
     "ywhae::nutm2a": [
+        "ywhae::nutm2a fusion",
         "ywhae-nutm2a",
         "ywhae::nutm2a"
     ],
     "ywhae::nutm2b": [
+        "ywhae::nutm2b fusion",
         "ywhae-nutm2b",
         "ywhae::nutm2b"
     ],
     "ywhae::nutm2e": [
+        "ywhae::nutm2e fusion",
         "ywhae-nutm2e",
         "ywhae::nutm2e"
     ],
@@ -37580,6 +37847,7 @@
         "zeb1 increased expression"
     ],
     "myb::nfib": [
+        "myb::nfib fusion",
         "myb-nfib",
         "myb::nfib"
     ],
@@ -37600,10 +37868,12 @@
         "ubtf ubtf-td"
     ],
     "linc01969::ufsp1": [
+        "linc01969::ufsp1 fusion",
         "linc01969-ufsp1",
         "linc01969::ufsp1"
     ],
     "mef2d::bcl9": [
+        "mef2d::bcl9 fusion",
         "mef2d::bcl9",
         "mef2d-bcl9"
     ],
@@ -37679,6 +37949,7 @@
         "esr1 l536p"
     ],
     "dux4l1::igh": [
+        "dux4l1::igh fusion",
         "dux4l1::igh",
         "dux4l1-igh"
     ],
@@ -37710,10 +37981,12 @@
         "map2k1 g128d"
     ],
     "tcf3::hlf": [
+        "tcf3::hlf fusion",
         "tcf3::hlf",
         "tcf3-hlf"
     ],
     "igh::il3": [
+        "igh::il3 fusion",
         "igh-il3",
         "igh::il3"
     ],
@@ -37781,6 +38054,7 @@
         "crebbp r1446c"
     ],
     "igh::dux4": [
+        "igh::dux4 fusion",
         "igh::dux4",
         "igh-dux4"
     ],
@@ -37815,6 +38089,7 @@
         "tfcp2"
     ],
     "tfcp2 ewsr1::tfcp2": [
+        "tfcp2 ewsr1::tfcp2 fusion",
         "tfcp2 ewsr1::tfcp2"
     ],
     "keap1": [
@@ -37892,25 +38167,31 @@
         "nf1 g629r"
     ],
     "egfr::rad1": [
+        "egfr::rad1 fusion",
         "egfr::rad1"
     ],
     "egfr::shc1": [
+        "egfr::shc1 fusion",
         "egfr::shc1",
         "egfr-shc1"
     ],
     "egfr::macf1": [
+        "egfr::macf1 fusion",
         "egfr::macf1",
         "egfr-macf1"
     ],
     "egfr::gnat3": [
+        "egfr::gnat3 fusion",
         "egfr-gnat3",
         "egfr::gnat3"
     ],
     "egfr::erbb4": [
+        "egfr::erbb4 fusion",
         "egfr-erbb4 e26-e18",
         "egfr::erbb4"
     ],
     "egfr::sumf2": [
+        "egfr::sumf2 fusion",
         "egfr::sumf2",
         "egfr-sumf2"
     ],
@@ -37922,9 +38203,11 @@
         "c19mc amplification"
     ],
     "c19mc ttyh1::c19mc fusion": [
+        "c19mc ttyh1::c19mc fusion fusion",
         "c19mc ttyh1::c19mc fusion"
     ],
     "c19mc v::c19mc fusion": [
+        "c19mc v::c19mc fusion fusion",
         "c19mc v::c19mc fusion"
     ],
     "vhl 394": [
@@ -37937,9 +38220,11 @@
         "c19mc alterations"
     ],
     "ndrg1::plag1": [
+        "ndrg1::plag1 fusion",
         "ndrg1::plag1"
     ],
     "trps1::plag1": [
+        "trps1::plag1 fusion",
         "trps1::plag1"
     ],
     "ptpn11 t507k": [
@@ -37952,6 +38237,7 @@
         "mlh1 e558*"
     ],
     "picalm::mllt10": [
+        "picalm::mllt10 fusion",
         "picalm::mllt10"
     ],
     "tet1 mutation": [
@@ -37996,6 +38282,7 @@
         "cd44 cd44v10"
     ],
     "lancl2::egfr": [
+        "lancl2::egfr fusion",
         "lancl2::egfr"
     ],
     "bax mutation": [

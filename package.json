@@ -19,7 +19,7 @@
     "wrangler": "^4.2.0"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
     "@types/difflib": "^0.2.7",
     "agents": "^0.0.65",
     "difflib": "^0.2.4",

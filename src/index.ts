@@ -24,6 +24,86 @@ export const dMPMap:    Record<string, string[]>  = rawMPMap     as Record<strin
 
 import { findBestMatch } from 'string-similarity'
 
+type CompositeKind = "molecularProfile" | "therapy";
+
+const MP_SPLIT_RE = /\b(?:AND|OR)\b/i;
+
+// NOTE: therapy splitting is intentionally broader
+const THERAPY_SPLIT_RE = /\b(?:AND|OR)\b|[,;|/]|\bplus\b|[+&]/i;
+
+function splitComposite(name: string, kind: CompositeKind): string[] {
+  const raw =
+    kind === "molecularProfile"
+      ? name.split(MP_SPLIT_RE)
+      : name.split(THERAPY_SPLIT_RE);
+
+  return raw.map(s => s.trim()).filter(Boolean);
+}
+
+function optionalFilter(s?: string | null): string | undefined {
+  if (s == null) return undefined;
+  const t = s.trim();
+  if (!t) return undefined;
+
+  // Sentinels that should mean "no filter"
+  if (/^(none|null|na|n\/a|not applicable)$/i.test(t)) return undefined;
+
+  return t;
+}
+
+function stripMutationQualifier(name: string): string {
+  return name.replace(/\s+mutat\w*/gi, "").trim();
+}
+
+/**
+ * If composite, pick ONE part to send to the API.
+ * Strategy: choose the part with the highest similarity score to the index candidates.
+ * - exact match -> immediate winner
+ * - else fuzzy score; keep best; ties resolved by earliest in the string
+ * - if nothing clears threshold, fall back to the first part (still better than sending the whole composite)
+ */
+export function pickOneForApi(
+  name: string | undefined | null,
+  index: AliasIndex,
+  threshold: number,
+  kind: CompositeKind
+): { picked: string | undefined; parts: string[]; pickedReason: string } {
+  if (!name) return { picked: undefined, parts: [], pickedReason: "missing" };
+
+  const parts = splitComposite(name, kind);
+  if (parts.length <= 1) {
+    // single input: normal behavior
+    const single = normalizeEntityFast(name, index, threshold, { fallbackToOriginal: true });
+    return { picked: single, parts, pickedReason: "single" };
+  }
+
+  let bestPicked = parts[0];
+  let bestScore = -1;
+  let bestReason = "fallback_first";
+
+  for (const part of parts) {
+    const qNorm = normalizeStr(part);
+
+    // exact alias/primary match
+    const exact = index.aliasToPrimary[qNorm];
+    if (exact) {
+      return { picked: exact, parts, pickedReason: "exact" };
+    }
+
+    // fuzzy score
+    const { bestMatch } = findBestMatch(qNorm, index.candidates);
+    const score = bestMatch.rating;
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestPicked = score >= threshold ? index.aliasToPrimary[bestMatch.target] : part;
+      bestReason = score >= threshold ? `fuzzy_${score.toFixed(3)}` : `below_threshold_${score.toFixed(3)}`;
+    }
+  }
+
+  return { picked: bestPicked, parts, pickedReason: bestReason };
+}
+
 function normalizeStr(s: string): string {
   return s
     .normalize('NFKD')                   // decompose accents
@@ -34,41 +114,159 @@ function normalizeStr(s: string): string {
     .trim()
 }
 
-/**
- * Map a free‑form name to its primary alias via fuzzy matching.
- *
- * @param name      Input string (may be undefined or null)
- * @param lookup    Record<primary, aliases[]>
- * @param threshold Minimum similarity (0–1) to accept a match
- * @returns         The matched primary string, or undefined if below threshold or name missing
- */
-export function normalizeEntity(
-  name: string | undefined | null,
-  lookup: Record<string, string[]>,
-  threshold: number = 0.7
-): string | undefined {
-  if (!name) {
-    return undefined
+type AliasIndex = {
+  aliasToPrimary: Record<string, string>;
+  candidates: string[];
+  primaryKeys: Set<string>;
+  collisions?: Array<{ key: string; kept: string; dropped: string }>;
+};
+
+function buildAliasIndex(lookup: Record<string, string[]>): AliasIndex {
+  const aliasToPrimary: Record<string, string> = {};
+  const primaryKeys = new Set<string>();
+  const collisions: AliasIndex["collisions"] = [];
+
+  // Pass 1: primaries (authoritative)
+  for (const primary of Object.keys(lookup)) {
+    const k = normalizeStr(primary);
+    aliasToPrimary[k] = primary;
+    primaryKeys.add(k);
   }
 
-  const qNorm = normalizeStr(name)
-
-  // Build a map from normalized‑alias → primary
-  const aliasToPrimary: Record<string, string> = {}
+  // Pass 2: aliases (cannot override primary keys; first-wins for collisions)
   for (const [primary, aliases] of Object.entries(lookup)) {
-    aliasToPrimary[normalizeStr(primary)] = primary
     for (const alias of aliases) {
-      aliasToPrimary[normalizeStr(alias)] = primary
+      const k = normalizeStr(alias);
+
+      // Never override an exact primary name mapping (e.g., "sorafenib")
+      if (primaryKeys.has(k)) continue;
+
+      const existing = aliasToPrimary[k];
+      if (!existing) {
+        aliasToPrimary[k] = primary;
+      } else if (existing !== primary) {
+        // Keep existing mapping; record collision for cleanup/debugging
+        collisions?.push({ key: k, kept: existing, dropped: primary });
+      }
     }
   }
 
-  const candidates = Object.keys(aliasToPrimary)
-  const { bestMatch } = findBestMatch(qNorm, candidates)
-
-  return bestMatch.rating >= threshold
-    ? aliasToPrimary[bestMatch.target]
-    : undefined
+  return { aliasToPrimary, candidates: Object.keys(aliasToPrimary), primaryKeys, collisions };
 }
+
+let MP_INDEX: AliasIndex | undefined;
+let DISEASE_INDEX: AliasIndex | undefined;
+let THERAPY_INDEX: AliasIndex | undefined;
+
+function getMPIndex() {
+  return (MP_INDEX ??= buildAliasIndex(dMPMap));
+}
+
+function getDiseaseIndex() {
+  return (DISEASE_INDEX ??= buildAliasIndex(dDiseaseMap));
+}
+
+function getTherapyIndex() {
+  return (THERAPY_INDEX ??= buildAliasIndex(dTherapyMap));
+}
+
+const BOOLEAN_OP_RE = /\b(?:AND|OR)\b/i;
+
+// Therapy strings are often multi-drug regimens written as:
+// "A, B"  |  "A + B"  |  "A/B"  |  "A and B"  |  "A & B"  |  "A; B"
+const THERAPY_COMPOSITE_RE =
+  /\b(?:AND|OR)\b|[,;/|]|\bplus\b|[+&]/i;
+
+function looksComposite(name: string, kind: CompositeKind): boolean {
+  if (kind === "molecularProfile") {
+    // Avoid false-positives for MPs (e.g., HGVS intronic "+1") — only bypass on AND/OR
+    return BOOLEAN_OP_RE.test(name);
+  }
+  // Therapy: bypass on AND/OR OR any common multi-drug separators
+  return THERAPY_COMPOSITE_RE.test(name);
+}
+
+export function normalizeEntityFast(
+  name: string | undefined | null,
+  index: AliasIndex,
+  threshold = 0.7,
+  opts?: {
+    // Old behavior (kept for compatibility)
+    bypassBooleanOps?: boolean;
+
+    // New: skip normalization when input looks like multiple entities
+    bypassComposite?: boolean;
+    compositeKind?: CompositeKind;
+
+    fallbackToOriginal?: boolean; // return original if no good match
+  }
+): string | undefined {
+  if (!name) return undefined;
+
+  // Back-compat: old boolean-only bypass
+  if (opts?.bypassBooleanOps && BOOLEAN_OP_RE.test(name)) {
+    return name;
+  }
+
+  // New composite bypass
+  if (opts?.bypassComposite) {
+    const kind = opts.compositeKind ?? "molecularProfile";
+    if (looksComposite(name, kind)) {
+      return name; // ✅ don't normalize composites (AND/OR, lists, combos)
+    }
+  }
+
+  const qNorm = normalizeStr(name);
+
+  // ✅ exact match first
+  const exact = index.aliasToPrimary[qNorm];
+  if (exact) return exact;
+
+  // fuzzy match second
+  const { bestMatch } = findBestMatch(qNorm, index.candidates);
+
+  if (bestMatch.rating >= threshold) {
+    return index.aliasToPrimary[bestMatch.target];
+  }
+
+  return opts?.fallbackToOriginal ? name : undefined;
+}
+
+// /**
+//  * Map a free‑form name to its primary alias via fuzzy matching.
+//  *
+//  * @param name      Input string (may be undefined or null)
+//  * @param lookup    Record<primary, aliases[]>
+//  * @param threshold Minimum similarity (0–1) to accept a match
+//  * @returns         The matched primary string, or undefined if below threshold or name missing
+//  */
+// export function normalizeEntity(
+//   name: string | undefined | null,
+//   lookup: Record<string, string[]>,
+//   threshold: number = 0.7
+// ): string | undefined {
+//   if (!name) {
+//     return undefined
+//   }
+
+//   const qNorm = normalizeStr(name)
+
+//   // Build a map from normalized‑alias → primary
+//   const aliasToPrimary: Record<string, string> = {}
+//   for (const [primary, aliases] of Object.entries(lookup)) {
+//     aliasToPrimary[normalizeStr(primary)] = primary
+//     for (const alias of aliases) {
+//       aliasToPrimary[normalizeStr(alias)] = primary
+//     }
+//   }
+
+//   const candidates = Object.keys(aliasToPrimary)
+//   const { bestMatch } = findBestMatch(qNorm, candidates)
+
+//   return bestMatch.rating >= threshold
+//     ? aliasToPrimary[bestMatch.target]
+//     : undefined
+// }
 
 
 /** -----------------------------------------------------------
@@ -121,13 +319,9 @@ export const tools = {
       therapyName:          z.string().optional(),
     },
     annotations: {
-      destructive: false,
-      idempotent:  true,
-      cacheable:   false,
-      world_interaction: "open",
-      side_effects: ["external_api_calls"],
-      resource_usage: "network_io_heavy",
-    },
+          readOnlyHint: true,
+          openWorldHint: true,
+        },
     async handler({ molecularProfileName, diseaseName, therapyName }: EvidenceInput) {
 
       // const variables = compact({
@@ -136,21 +330,43 @@ export const tools = {
       //   therapyName:          resolveTherapy(therapyName),
       // });
 
+      // const variables = compact({
+      //   molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
+      //   diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
+      //   therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
+      // });
+
+      const mpClean      = optionalFilter(molecularProfileName); // (mp is required anyway)
+      const diseaseClean = optionalFilter(diseaseName);
+      const therapyClean = optionalFilter(therapyName);         
+
+      const mpForApi = mpClean && /mutat/i.test(mpClean)
+        ? stripMutationQualifier(mpClean)
+        : mpClean;
+
+      const mpPick = pickOneForApi(mpForApi, getMPIndex(), 0.7, "molecularProfile");
+
+      const txPick = therapyClean
+        ? pickOneForApi(therapyClean, getTherapyIndex(), 0.7, "therapy")
+        : { picked: undefined, parts: [], pickedReason: "missing_or_none" as const };
+
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
-        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
-        therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
+        molecularProfileName: mpPick.picked, // required
+        diseaseName:          diseaseClean ? normalizeEntityFast(diseaseClean, getDiseaseIndex(), 0.7) : undefined,
+        therapyName:          txPick.picked, // ✅ will be undefined if input was "None"
       });
 
       const query = /* GraphQL */ `
         query evidenceItems($molecularProfileName: String!, $diseaseName: String, $therapyName: String) {
-        evidenceItems( molecularProfileName: $molecularProfileName, diseaseName: $diseaseName, therapyName: $therapyName, first: 10) {
+        evidenceItems( molecularProfileName: $molecularProfileName, diseaseName: $diseaseName, therapyName: $therapyName, first: 20) {
             nodes { 
                 status 
                 evidenceType
                 evidenceDirection 
                 significance
+                therapyInteractionType
                 molecularProfile{
+                    name
                     variants{
                         name
                         feature{
@@ -185,6 +401,33 @@ export const tools = {
           errors?: unknown[];
         };
 
+        const nodes = res.data?.evidenceItems?.nodes ?? [];
+
+      // ✅ Debug print ONLY when no evidence is returned
+      const noEvidence = Array.isArray(nodes) && nodes.length === 0;
+
+      // Build debug ONLY when empty
+      const debug = noEvidence
+        ? {
+            passed_to_api: variables,
+            picked_for_api: {
+              molecularProfileName: { picked: mpPick.picked, parts: mpPick.parts, reason: mpPick.pickedReason },
+              therapyName:          { picked: txPick.picked, parts: txPick.parts, reason: txPick.pickedReason },
+            },
+            normalized: {
+              // keep this if you still want a "what would normalization do" view for the originals:
+              molecularProfileName: normalizeEntityFast(molecularProfileName, getMPIndex(), 0.7, { fallbackToOriginal: true }),
+              diseaseName:          normalizeEntityFast(diseaseName,          getDiseaseIndex(), 0.7),
+              therapyName:          normalizeEntityFast(therapyName,          getTherapyIndex(), 0.7, { fallbackToOriginal: true }),
+            },
+            original: { molecularProfileName, diseaseName, therapyName },
+            mutation_qualifier_stripped: mpClean !== mpForApi
+              ? { original: mpClean, stripped: mpForApi }
+              : undefined,
+            graphql_errors: res.errors ?? null,
+          }
+        : undefined;
+
         // Default fallback if query failed
         const rawItems = res.data?.evidenceItems?.nodes ?? res;
 
@@ -214,6 +457,7 @@ export const tools = {
         const payload = {
           instructions,
           "API Results": evidenceItems,
+          _debug: debug, // ✅ returned to the caller when empty
         };
 
         return {
@@ -241,19 +485,35 @@ export const tools = {
       therapyName:          z.string().optional(),
     },
     annotations: {
-      destructive: false,
-      idempotent:  true,
-      cacheable:   false,
-      world_interaction: "open",
-      side_effects: ["external_api_calls"],
-      resource_usage: "network_io_heavy",
-    },
+        readOnlyHint: true,
+        openWorldHint: true,
+      },
     async handler({ molecularProfileName, diseaseName, therapyName }: EvidenceInput) {
 
+      // const variables = compact({
+      //   molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
+      //   diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
+      //   therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
+      // });
+
+      const mpClean      = optionalFilter(molecularProfileName); // (mp is required anyway)
+      const diseaseClean = optionalFilter(diseaseName);
+      const therapyClean = optionalFilter(therapyName);         
+
+      const mpForApi = mpClean && /mutat/i.test(mpClean)
+        ? stripMutationQualifier(mpClean)
+        : mpClean;
+ 
+      // Only pick a therapy if we still have a real value
+      const mpPick = pickOneForApi(mpForApi, getMPIndex(), 0.7, "molecularProfile");
+      const txPick = therapyClean
+        ? pickOneForApi(therapyClean, getTherapyIndex(), 0.7, "therapy")
+        : { picked: undefined, parts: [], pickedReason: "missing_or_none" as const };
+
       const variables = compact({
-        molecularProfileName: normalizeEntity(molecularProfileName, dMPMap,   0.7),
-        diseaseName:          normalizeEntity(diseaseName,      dDiseaseMap, 0.7),
-        therapyName:          normalizeEntity(therapyName,      dTherapyMap, 0.7),
+        molecularProfileName: mpPick.picked, // required
+        diseaseName:          diseaseClean ? normalizeEntityFast(diseaseClean, getDiseaseIndex(), 0.7) : undefined,
+        therapyName:          txPick.picked, // ✅ will be undefined if input was "None"
       });
 
       const query = /* GraphQL */ `
@@ -264,7 +524,9 @@ export const tools = {
                 assertionType
                 assertionDirection 
                 significance
+                therapyInteractionType
                 molecularProfile{
+                name
                 variants{
                         name
                         feature{
@@ -342,32 +604,46 @@ export const tools = {
 // MCP SERVER (only the two fixed tools)
 // -------------------------------------------------------------
 class CivicMCP extends McpAgent {
-  server = new McpServer({
-    name:        API_CONFIG.name,
-    version:     API_CONFIG.version,
-    description: API_CONFIG.description,},
-    
-    {
-    instructions: `
-      Use the tools to answer precision oncology questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.`,
-  });
+  server = new McpServer(
+    { name: API_CONFIG.name, version: API_CONFIG.version, description: API_CONFIG.description },
+    { instructions: `Use the tools to answer precision oncology questions for the Clinical Interpretations of Variants in Cancer (CIViC) knowledgebase.` }
+  );
 
-  async init() {
-    /* register fixed-schema tools */
+    async init() {
     const { getVariantEvidence, getVariantAssertions } = tools;
 
-    this.server.tool(
+    // Evidence
+    this.server.registerTool(
       getVariantEvidence.name,
-      getVariantEvidence.description,
-      getVariantEvidence.inputSchema,
-      getVariantEvidence.handler,
+      {
+        title: "Get CIViC variant evidence",
+        description: getVariantEvidence.description,
+        inputSchema: getVariantEvidence.inputSchema,
+        annotations: {
+          readOnlyHint: true,
+          openWorldHint: true,
+          destructiveHint: false,
+          idempotentHint: true,
+        },
+      } as any,
+      getVariantEvidence.handler as any
     );
 
-    this.server.tool(
+    // Assertions
+    this.server.registerTool(
       getVariantAssertions.name,
-      getVariantAssertions.description,
-      getVariantAssertions.inputSchema,
-      getVariantAssertions.handler,
+      {
+        title: "Get CIViC variant assertions",
+        description: getVariantAssertions.description,
+        inputSchema: getVariantAssertions.inputSchema,
+        annotations: {
+          readOnlyHint: true,
+          openWorldHint: true,
+          destructiveHint: false,
+          idempotentHint: true,
+        },
+      } as any,
+      getVariantAssertions.handler as any
     );
   }
 }

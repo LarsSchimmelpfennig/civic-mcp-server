@@ -1,0 +1,900 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 F359I",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Imatinib Mesylate"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 V299L\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"V299L\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, V299L was seen in two imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6982\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase II study of 60 imatinib-resistant patients with BCR-ABL mutations, 6 had Y253H mutations\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17264298\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7040\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 G250E\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"G250E\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase II study of 60 imatinib-resistant patients with BCR-ABL mutations, 9 had G250E mutations\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17264298\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7041\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150 nM. In patients with Y253H mutations prior to nilotinib treatment, complete hematologic response was achieved in 0 of 6 patients, major cytogenetic response in 1 of 8 patients, complete cytogenetic response in 0 of 8 patients, and major molecular response in 0 of 7 patients. After median follow-up of 15.5 months, 3 of 8 patients with this mutation progressed or died. The Y253H mutation was present in two patients at baseline and newly emerged in two patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6200\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255K\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255K\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 greater than 150 nM. In patients with E255K and/or E255V mutations prior to nilotinib treatment, complete hematological responses were achieved in 5 of 7 patients, major cytogenetic responses in 3 of 7 patients, complete cytogenetic responses in 0 of 7 patients, and a major molecular response in 1 of 7 patients. After a median follow-up of 15.5 months, 6 of 7 patients with this mutation progressed or died. The E255K mutation was present in 6 patients at baseline and newly emerged in 4 patients at progression. The E255V mutation was present in 0 patients at baseline and newly emerged in 3 patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6232\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359C\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359C\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150nM. In patients with F359C and/or F359V mutations prior to nilotinib treatment, complete hematological responses were achieved in 3 of 10 patients, a major cytogenetic response in 1 of 11 patients, a complete cytogenetic response in 0 of 11 patients, and major molecular response in 0 of 10 patients. After a median follow-up of 15.5 months, 9 of 11 patients with this mutation progressed or died. The F359C mutation was present in 1 patient at baseline and newly emerged in 1 patient at progression. The F359V mutation was present in 4 patients at baseline and newly emerged in 1 patient at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6233\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib-resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150nM. In patients with F359C and/or F359V mutations prior to nilotinib treatment, complete hematological responses were achieved in 3 of 10 patients, a major cytogenetic response in 1 of 11 patients, a complete cytogenetic response in 0 of 11 patients, and major molecular response in 0 of 10 patients. After a median follow-up of 15.5 months, 9 of 11 patients with this mutation progressed or died. The F359C mutation was present in 1 patient at baseline and newly emerged in 1 patient at progression. The F359V mutation was present in 4 patients at baseline and newly emerged in 1 patient at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6970\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 greater than 150 nM. In patients with E255K and/or E255V mutations prior to nilotinib treatment, complete hematological responses were achieved in 5 of 7 patients, major cytogenetic responses in 3 of 7 patients, complete cytogenetic responses in 0 of 7 patients, and a major molecular response in 1 of 7 patients. After a median follow-up of 15.5 months, 6 of 7 patients with this mutation progressed or died. The E255K mutation was present in 6 patients at baseline and newly emerged in 4 patients at progression. The E255V mutation was present in 0 patients at baseline and newly emerged in 3 patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6971\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F317L\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F317L\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, F317L was seen in 8 imatinib resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occuring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6978\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, T315I was seen in 7 imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6990\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, Y253H was seen in 6 imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6992\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 V379I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"V379I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase II study of 60 imatinib-resistant patients with BCR-ABL mutations, 4 had V379I mutations\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17264298\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7033\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M244V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M244V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, M244V was seen in 3 imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6994\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase II study of 60 imatinib-resistant patients with BCR-ABL mutations, 2 had E255V mutations.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17264298\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7245\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 N336S\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"N336S\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, N336S was seen in a single imatinib-resistant patient that was also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6979\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E453A\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E453A\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, E453A was seen in a single imatinib-resistant patient that was also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6980\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 L387F\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"L387F\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, L387F was seen in a single imatinib-resistant patient that was also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6981\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Q300R\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Q300R\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, Q300R was seen in a single imatinib-resistant patient that was also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6983\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, F359I was seen in two imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6984\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359C\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359C\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a study of 39 chronic phase CML patients with BCR-ABL variants, F359C was seen in two imatinib-resistant patients that were also resistant or intolerant to dasatinib and/or nilotinib treatment. Nine patients in this study had multiple kinase domain mutations, but it was not indicated when mutations were co-occurring.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22371878\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6985\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 F359I",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Imatinib Mesylate"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: A
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+56.73117

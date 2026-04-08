@@ -1,0 +1,149 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "IDH1 Mutation",
+  "diseaseName": "Brain Glioma",
+  "therapyName": "None"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "IDH1 Mutation",
+  "diseaseName": "Brain Glioma",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"IDH1 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"IDH1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Brain Glioma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Genomewide analysis of 250 low-grade adult gliomas revealed that patients with a wildtype IDH1/2 had significantly shorter overall survival than those with a mutated IDH gene (HR 7.4; 95%CI: 4.0-13.8). The median survival for patients with low grade gliomas was 1.7 years for patients with wild-type IDH (N=55); 6.3 years for patients with mutated IDH and no 1p/19q co-deletion (N=139); and 8.0 years for patients with IDH mutation and a 1p/19q co-deletion (N=84).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26061751\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1639\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"IDH1 Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"IDH1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Brain Glioma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Olaparib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Mutations in isocitrate dehydrogenase 1 and 2, which result in overproduction of 2-hydroxyglutarate (2HG). 2HG is considered to be an oncometabolite, or a metabolite that promotes carcinogenesis, and inhibitors of mutant isocitrate dehydrogenase are in development to target this process. The authors discovered that 2HG overproduction impairs homologous recombination used in DNA repair and sensitizes cancer cells to treatment with PARP inhibitors, another class of cancer drugs that are already in clinical use.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28148839\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2933\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: A
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+50.13773

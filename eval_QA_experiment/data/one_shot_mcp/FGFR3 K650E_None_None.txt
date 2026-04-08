@@ -1,0 +1,453 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "FGFR3 K650E",
+  "diseaseName": "None",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Skin Melanoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Vemurafenib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, an A375 cell line expressing BRAF V600E (a known sensitizing mutation to vemurafenib) and FGFR3 K650E co-mutations, demonstrated resistance to vemurafenib treatment (IC50: 1480 nmol/L) compared to parental A375 cells expressing BRAF V600E and wild-type FGFR3 (IC50 not reported). Resistance was determined by assessing cell viability and phosphorylation of MAPK3 and MAPK1.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": null,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/21107323\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4055\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Multiple Myeloma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"R3Mab\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In culture, monoclonal antibody R3Mab treatment inhibited the growth of multiple myeloma cell line UTMC-2 which has wild type FGFR3 but did not affect proliferation of multiple myeloma cell line KMS11 with FGFR3 Y373C.  Since UTMC-2 cells do not form tumors in mice, OPM2 and KMS11 were xenografted into nude mice. R3Mab abolished xenograft tumor growth in both cell lines. Another experiment was conducted to test R3Mab's mechanism of action where R3Mab's Fc region, which binds to immune effector cells, was modified with D265A/N297A (DANA). The DANA mutation did not affect R3Mab's ability to bind to FGFR3 nor did it affect R3Mab's antitumor activity against bladder cancer cell line xenografts (UMUC-14 and RT112). However, the tumors of xenografted cell lines OPM2 and KMS11 were resistant to DANA R3Mab. Further testing also showed that multiple myeloma cells expressed 5 to 6 fold more cell surface FGFR3 than bladder cancer cell lines. All this information led the authors to conclude that in addition to ligand blocking and preventing dimerization, R3Mab can induce antibody-depedent cell-mediated cytotoxicity (ADCC) in cells expressing high FGFR3 cell surface levels. This conclusion applied to both wild type and mutant FGFR3.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19381019\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10365\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Hematologic Cancer\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"Authors of this paper aimed to investigate the role of the FGFR3 K650E variant in transforming cells in vivo and in vitro. After 3-4 weeks of transducing mice’s bone marrow (BM) with the mutant receptor, leukemic blood profile with leukocytosis, thrombocytopenia, and reticulocytes with polychromasia were developed. Fragile bones, splenomegaly, enlarged lymphs and nodes were also observed in postmortem mice. Passage of FGFR3 mutant mice was done serially up to four generations, in which, within 6-8 weeks, moribund mice showed hematopoietic tumors infiltrating major organs. Furthermore, cultured cells with mutant FGFR3 showed increased B-cells colonies with predominant B220+ cells. When attempting to test the progenitor target cells in vivo, transplanted mice developed pre-B cells within 2 weeks. Finally, initial cell expansions were polyclonal whereas tumors in later passages exhibited either clonal B- or T-cell receptor gene rearrangements, predominantly JH configuration. The authors state that their results support that mutant FGFR3 is capable of transforming cells to much greater extent than the wild type, and that mutant FGFR3, subsequent to translocation into the IgH locus in multiple myeloma, would appear to have devastating consequences.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11290605\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10370\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"25 FGFR3 mutant proteins were isolated and their auto-phosphorylation and kinase activity was measured and compared to wild-type. 6 mutations (N540K, N540S, K650E, K650N, R669G, R669Q) demonstrated increased autophosphorylation beyond the 7-fold cutoff.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26992226\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10086\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"R3Mab\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Ba/F3 cells transfected with wildtype FGFR3 resulted in IL-3 independence with FGF1 dependence for growth, whereas cells transfected with common bladder carcinoma variant FGFR3 K652E resulted in IL-3 independence, weak ligand-independent proliferation and a strong growth response to FGF1. Monoclonal antibody R3Mab treatment with FGF1 suppressed proliferation of Ba/F3 FGFR3 K652E cells. Wildtype FGFR3 overexpression in Ba/F3 cells as well as bladder cancer cell lines RT112 and RT4 (who both have normal levels of endogenously expressed wildtype FGFR3), were similarly sensitive to R3Mab treatment, therefore mutation K652E did not change that responsiveness.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19381019\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10355\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"COMMON_GERMLINE\",
+      \"description\": \"NIH 3T3 cells were transfected with wild-type and mutant K650E FGFR3. Immunoprecipitation measuring kinase activity showed FGFR3 K650E had 100-fold greater autophosphorylation than wildtype. The authors concluded that the position and charge of K650E lead to its constitutive activation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/8754806\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10393\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Multiple Myeloma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Midostaurin\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"PKC412 inhibited the growth of FGFR3 K650E-transformed Ba/F3 cells. Researchers introduced an N540D mutation to FGFR3-transformed Ba/F3 cells, which reduces inhibition of the FGFR3 K650E-transformed cells, confirming that FGFR3 mutants are the critical targets for PKC412-mediated cytotoxicity. t(4;14) positive multiple myeloma cell line OPM-1 expressing FGFR3 K650E were inhibited by PKC412, with relative viability dropping to 0.9/1.0 at 100 nM, 0.8/1.0 at 200 nM, 0.58/1.0 at 400 nM, 0.25/1.0 at 1000 nM with a sudden spike upwards at 0.9/1.0 at 2000 and 5000 nM. Mice were transplanted with bone marrow cells expressing FGFR3 K650E and split into a placebo and treatment group. Mine in the placebo group were all killed by day 25, while the PKC412-treated group continued treatment for an extra week, with 7/8 mice surviving to the endpoint of the study at 32 days. PKC412's efficacy was also confirmed through histopathologic examination that showed a reduction of lymphoid disease in bone marrow, spleen, and liver in the drug-treated mice. These findings were confirmed by flow cytometry of bone marrow cells, as immature B-cells only made up 1% of the population when treated with PKC412, as compared to the placebo which left 73% of the population as immature B-cells. This confirmed PKC412's efficacy in treating immature B-cell lymphoid disease.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/16091734\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10407\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"A construct of PDGF and FGFR3 was created as a chimeric receptor to study the effect of the K650E variant on downstream signaling pathways. Transfecting PC12 cells showed continuous ligand-independent activity of the chimeric mutant receptor with the presence of an inducer alone (zinc) but not the ligand; PDFG. Upon addition of PDGF, further activation was also observed. Conversely, control cells showed activity only with the addition of both ligand and zinc. Gene expression profiling showed P21 gene was expressed at a higher level (1.7 folds) in mutant receptor cells, providing evidence of ERK1/2 and STAT1/3 activation. The mutant receptor produced a highly sustained ERK1/2 activation even after 1 hour of PDGF treatment, whereas wild-type expressing cells showed a decrease in ERK1/2 activity. Lastly, cells only expressing the variant K650E receptor were able to phosphorylate tyrosine in STAT1, and tyrosine, along with serine, in a ligand-independent manner in STAT3. Authors confirm that mutant FGFR3 activates ERK1/2 and STAT1/3 in a ligand-independent manner and maintains this activation over longer periods of time when treated with ligand than does the wild-type receptor.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/15843401\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10493\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Rare germline and somatic cancer variant FGFR3 K650E crystal structure was compared to phosphorylated and unphosphorylated FGF1 and FGF2 via superimposition. This comparison showed that K650E (located in the A-loop of FGFR3) was in the active state in the absence of a ligand. A-loop tyrosine phosphorylation of FGFR3 leads to activation of the receptor and the location is generally a hotspot for pathogenic gain-of-function mutations. The authors also showed that the K650E mutation circumvents the requirement of A-loop tyrosine phosphorylation for FGFR3 activation by comparing the kinase activity of K650E versus wildtype FGFR3 and K650E with other A-loop mutations at locations (Y647,Y648) considered to be essential for A-loop activation/phosphorylation. The K650E mutation had far greater activity than the wildtype, but nearly the same activation levels compared to K650E with other \\\"essential\\\" A-loop mutations. This confers that K650E is a ligand-independent constitutively active mutation which is activated independently of A-loop phosphorylation via mimicry.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/23972473\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10653\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"UNALTERED_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Protein co-chaperone Cdc37 is required in FGFR3 remodeling for recognition by chaperone protein Hsp90. Cdc37 must partially deactivate the kinase and present it in a particular orientation to Hsp90. A SEC experiment showed that hotspot mutation FGFR3 K650E occupied a similar amount of space as wildtype FGFR3 in the ternary complex. Melting point analysis and antibody testing showed that K650E had similar thermal stability and antibody recognition as the wildtype. ITC experimentation showed K650E bound very weakly to Cdc37 similar to the wildtype. The authors concluded that due to K650E's instability, it bound weakly to Cdc37 and had lower incorporation with Hsp90 like wildtype FGFR3.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29478821\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10391\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"The Lys650Glu variant was investigated in terms of its ability to activate the receptor kinase FGFR3. Upon NIH3T3 cells transfection, the kinase assay showed a significant increase in the ligand-independent kinase activity of the Lys650Glu mutant receptor compared with the wild-type receptor (~100-fold).\
+This variant is known to cause thanatophoric dysplasia type 2 (TD2), and occurs within the receptor tyrosine kinase domain activation loop. Another variant that was discussed thoroughly in the study also occurs at the same position and was found in the examined patients; however, the patients were presented with markedly different phenotypes than those observed in TD2 patients. The authors highlight the striking and unexplained difference between the recruited patients and those with TD2 in regards to occurrence of severe craniosynostosis in TD2 and propose a possibility of threshold effect and that craniosynostosis does not occur if there is too much or too little constitutive activation of the FGFR3 kinase.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/10053006\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10376\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"The FGFR3 variant K650E is known to be responsible for thanatophoric dysplasia type 2 (TDII), a severe form of skeletal dysplasia. The mutant receptor was tested for comparison between other variants discussed in this paper. FGFR3 cDNA construct with the K650E variant was synthesized and transfected into NIH3T3 cells. The K650E variant receptor had a 9.6-fold greater kinase activity compared to the wild type receptor.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11055896\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10381\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FGFR3 K650E\",
+        \"variants\": [
+          {
+            \"name\": \"K650E\",
+            \"feature\": {
+              \"name\": \"FGFR3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Multiple Myeloma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Xenografts of multiple myeloma cell line OPM2 (FGFR3 K650E) into nude mice resulted in tumor growth.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19381019\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10383\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: A
+functional — loss_of_function: C
+functional — unaltered_function: A
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+47.02045

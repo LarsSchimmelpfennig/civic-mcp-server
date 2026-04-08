@@ -1,0 +1,482 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "CEBPA Mutation",
+  "diseaseName": "Acute Myeloid Leukemia",
+  "therapyName": "None"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "CEBPA Mutation",
+  "diseaseName": "Acute Myeloid Leukemia",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In young patients (age 16-60) with previously untreated, cytogenetically normal acute myeloid leukemia, CEBPA mutation was significantly associated with complete remission in multivariate analysis (odds ratio, 1.33; 95% confidence interval [CI], 1.01 to 1.74). Multivariate analysis was performed on all patients  that were evaluated for a mutation in at least 1 gene (CEBPA, FLT3-ITD or NPM1) totaling 693/872 patients in the study. Only 509 patients in the study were evaluated for CEBPA, 67 of which had a mutation.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/18450602\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:167\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In children with acute myeloid leukemia, those with mutations in CEBPA had better overall and event-free survival and decreased cummulative incidence of relapse.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19304957\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:467\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a set of 315 pediatric patients with acute myeloid leukemia, 47 had mutations in CEBPA. Those with mutations had better overall survival than wild-type patients.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/25014773\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:468\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With Mutated CEBPA\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this 2022 study, the authors highlighted the diagnostic significance of different types of CEBPA mutations in 4,708 adult AML patients, recruited into the Study Alliance Leukemia trials and spanning a broad age range from under 30 to over 70 years. The study differentiated patients with CEBPA mutant AML based on mutation type: among 240 CEBPA mutant AML cases (5.1% of all cases), 60 had a single mutation in the N-terminal transactivation domains (CEBPAsmTAD), 49 had a single mutation in the C-terminal DNA-binding basic leucine zipper region (CEBPAsmbZIP), and 131 had both N-terminal TAD and C-terminal bZIP mutations (biallelic CEBPA, or CEBPA bi). Patients with CEBPAbi or CEBPAsmbZIP mutations showed distinct clinical characteristics compared to CEBPAsmTAD and CEBPA wild-type cases, including younger age and higher white blood cell counts at diagnosis. The study underscores the value of detailed CEBPA mutation analysis in AML diagnosis, by showing that CEBPAsmbZIP and CEBPA-bi define molecular subtype of disease with unique biologic and clinical characteristics, while CEBPAsmTAD represent non-specific changes.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/34320176\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12173\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With Mutated CEBPA\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this 2022 study, the authors investigated the diagnostic significance of CEBPA mutations in AML, focusing on data from a large cohort of 1,028 patients aged 70 years or younger from the Japanese Multi-center Collaborative Sequencing Program. The study underscores that the location of CEBPA mutations is crucial in identifying specific AML subtypes. Among the 1,028 patients, 59 had a CEBPA single mutation (CEBPAsm) and 103 had a CEBPA double mutation (CEBPAdm). Of the CEBPAdm cases, 91.3% (94 of 103) had one mutation in the basic leucine zipper (bZIP) domain, while 32.2% (19 of 59) of the CEBPAsm cases had a bZIP mutation.\
+\
+The study reinforces the role of CEBPA mutational analysis as an essential diagnostic tool in AML, particularly in differentiating between single and double mutations and their locations within the gene. The presence of bZIP mutations, whether single or double, provides unique diagnostic markers and refines risk stratification, aiding in developing more personalized treatment strategies for AML patients based on their specific CEBPA mutation profile.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/34448807\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12174\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With Mutated CEBPA\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this 2021 study, the authors examined the prognostic implications of CEBPA mutations in pediatric and young adult acute myeloid leukemia (AML) by analyzing 2958 patients enrolled in Children’s Oncology Group trials. CEBPA mutations were found in 160/2958 cases (5.4%), with 132 (82.5%) cases having biallelic mutations (CEBPA-dm) and 28 (17.5%) cases having a single mutation in the basic leucine zipper (bZip) region (CEBPA-bZip). Both CEBPA-bZip and CEBPA-dm mutations were associated with favorable outcomes, including event-free survival (EFS) of 64% and overall survival (OS) rates of 81% and 89%, respectively. These rates were significantly higher than those in patients with CEBPA wild-type AML (EFS of 46% and OS of 61%).\
+\
+The study highlighted that the prognosis for both CEBPA-bZip and CEBPA-dm cases was similarly favorable, emphasizing that the presence of a CEBPA-bZip mutation alone is sufficient to predict a positive outcome. This finding challenged previous assumptions and provided new insight into the prognostic significance of CEBPA mutations in AML. \
+\
+In conclusion, this study establishes the favorable prognostic significance of CEBPA-bZip mutations in AML and underscores the importance of these mutations in the prognosis of pediatric AML.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/33951732\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12231\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"DOES_NOT_SUPPORT\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tretinoin\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a randomized trial of previously untreated younger (<60) patients with acute myeloid leukemia (excluding acute promyelocytic leukemia) and high-risk myelodysplastic syndrome CEBPA mutation status had no significant impact on patient response to ATRA (N=20) compared to randomized control (N=15).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19965647\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:122\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a group of young (<60 years old) acute myeloid leukemia (exclude acute promyelocytic leukemia) and high-risk MDS patients, those with CEBPA mutations (35/423) showed marginally improved overall survival (36% vs 31%; P = .04) than those with wildtype CEBPA.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19965647\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:166\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Overall survival and remission duration were significantly longer (p=0.01 and p=0.05, respectively) in younger (16-60), cytogenetically normal acute myeloid leukemia patients with CEBPA mutations (21/236 patients).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/14726504\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:168\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With Mutated CEBPA\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this 2021 study, the authors investigated the role of CEBPA mutations in the diagnosis and prognosis of pediatric and young adult acute myeloid leukemia (AML) in  2958 patients enrolled in Children’s Oncology Group trials. Patients were aged 0-29 years old.  CEBPA mutations were identified in 160/2958 cases (5.4%). 132 (82.5%) cases had two CEBPA mutations, one in the transactivation domain (TAD) and the other in the basic leucine zipper (bZip) domain (CEBPA-double-mutated [CEBPA-dm]).  28 cases (17.5%) had a single CEBPA mutation in the bZip region (CEBPA-bZip). CEBPA bZIP and CEBPA-dm AML cases were typically characterized by higher white blood cell counts and normal karyotypes, had a characteristic pattern of secondary mutations frequently involving CSF3R and GATA2, had a unique expression profile, and were associated with a favorable outcome.   It was confirmed that both CEBPA-bZip and  CEBPA-dm cases have shared clinical and molecular features and were both associated with a favorable prognosis, which had not been established for pediatric AML before this study. The key finding is thus that CEBPA-bZip mutation is sufficient to drive this leukemia and should be considered as the defining molecular lesion for CEBPA mutant AML.  Isolated CEBPA-TAD mutations were rare. Overall, this study highlights the importance of CEBPA  abnormalities (specifically CEBPA-bZip mutations) in defining a type of pediatric AML associated with a favorable outcome.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/33951732\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12172\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"NEGATIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"In this 2019 study, the authors investigated how the order of CEBPA mutations influences AML progression in mice that phenocopies the human disease transcriptionally and morphologically. The study reveals that CEBPA mutations when occurring before CSF3R mutations, drive leukemogenesis by blocking differentiation, resulting in AML. Through enhancer and transcription factor motif analysis, the researchers demonstrate that wild-type CEBPA activates differentiation-related enhancers, while mutant CEBPA disrupts this process. RNA-seq data analysis shows that CSF3R mutations alone promote differentiation, while early CEBPA mutations lead to a stem/progenitor-like phenotype and increased cell cycle activity.\
+\
+In mouse models, cells with early CEBPA mutations develop aggressive, immature leukemia, while those with initial CSF3R mutations show slower disease progression and partial differentiation. These findings highlight the diagnostic significance of CEBPA mutations in AML, emphasizing that their early presence impairs myeloid differentiation and contributes to leukemogenesis. The study stresses the importance of understanding mutation order in diagnosing AML and predicting disease progression.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31784538\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12175\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With Mutated CEBPA\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this 2019 study, the authors investigated the diagnostic significance of CEBPA mutations in AML by analyzing how the order of these mutations influences disease development in a mouse model that replicates human AML transcriptionally and morphologically. The study reveals that when CEBPA mutations occur before CSF3R mutations, they drive leukemogenesis by blocking myeloid differentiation, resulting in AML. Enhancer and transcription factor motif analysis demonstrated that wild-type CEBPA activates differentiation-related enhancers, while mutant CEBPA disrupts this pathway. Additionally, RNA-seq data show that CSF3R mutations alone promote differentiation, whereas early CEBPA mutations lead to a stem/progenitor-like phenotype with heightened cell cycle activity. In mouse models, cells with early CEBPA mutations progress to aggressive, immature leukemia, contrasting with the slower, partially differentiated progression seen with initial CSF3R mutations. These findings underscore the role of CEBPA mutations as primary oncogenic events in AML pathogenesis.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31784538\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12200\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"DIAGNOSTIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"CEBPA Mutation\",
+        \"variants\": [
+          {
+            \"name\": \"Mutation\",
+            \"feature\": {
+              \"name\": \"CEBPA\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukemia With CEBPA Mutation\"
+      },
+      \"therapies\": [],
+      \"summary\": \"CEBPA mutations, including biallelic (CEBPA-dm) and isolated bZip mutations, are diagnostic criteria for a subtype of acute myeloid leukemia (AML) designated as AML with CEBPA mutation.\",
+      \"url\": \"https://identifiers.org/civic.aid:146\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: A
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: A
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+46.88838

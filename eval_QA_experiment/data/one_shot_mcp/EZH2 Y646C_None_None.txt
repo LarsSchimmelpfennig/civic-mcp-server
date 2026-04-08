@@ -1,0 +1,392 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "EZH2 Y646C"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S AND EZH2 Y646F AND EZH2 Y646H AND EZH2 Y646C AND EZH2 Y646N AND EZH2 A692V AND EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase 1, open-label, and multicentre trial, patients with relapsed or refractory B-cell non-Hodgkin lymphoma or an advanced solid tumour (21 with B-cell non-Hodgkin lymphoma, and 43 with advanced solid tumours) and were older than 18 years, Tazemetostat was administered orally from 100 mg twice daily to 1600 mg twice daily in 28-day cycles. The primary endpoint of the study was to determine the maximum tolerated dose or recommended phase 2 dose, which was determined to be 800 mg twice daily. Eight of 21 patients (95% CI: 18.1–61.6) with B-cell non-Hodgkin lymphoma had had an objective response, and the median time to first respond in those patients was 3.5 months (IQR: 2.6–6.5). The median duration of response until progressive disease or death due to any cause was 12.4 months (IQR: 3.5 to >18.3).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29650362\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11220\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S OR EZH2 Y646F OR EZH2 Y646H OR EZH2 Y646C OR EZH2 Y646N OR EZH2 A692V OR EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This phase II study involved 17 Japanese adult patients with relapsed/refractory follicular lymphoma (FL), previously treated with chemotherapy without an available standard therapy. The patients   harbored EZH2 activating mutations and were recruited to test the efficacy and safety of the EZH2 inhibitor- Tazemetostat. Tazemetostat was given at 800 mg dose twice a day for 28-days cycle. The objective response rate in this cohort was 76.5%, including six patients who had a complete response and seven who had partial response. The remaining three patients had stable disease status. Finally, the median progression‐free survival was not reached at the median follow‐up of 12.9 months. The authors highlight the efficacy and manageable safety profile of Tazemetostat in refractory/relapsed FL.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/34159682\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11109\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"NEGATIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S OR EZH2 Y646F OR EZH2 Y646H OR EZH2 Y646C OR EZH2 Y646N OR EZH2 A692V OR EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this large cohort study, 366 patients with follicular lymphoma (FL) were recruited to investigate the incidence and distribution of EZH2 mutations. NGS and Sanger detected EZH2 positive mutations in 101 patients (27.5%). In total, 106 mutations were detected in 101 patients, which included 87 patients with mutations at codon Y646 (Y646N=36, Y646F=27, Y646S=12, Y646H=9, Y646C=3) , 9 in codon A682G, and 7 in codon A692V mutations (mean VAF=21.6%). There was no difference in the mutation frequency at diagnosis (29%; n = 70/237) and relapse (24%; n = 31/129). Moreover, EZH2 VAFs were compared other mutation targets to test clonality, Out of the 43 FL tested cases, 81% ( 35/43) represented true clonal events, while 19%\
+(8/43) were subclonal. Lastly, despite no significant association between the mutation status and overall survival of FL patients, authors stress the need to evaluate EZH2 targeted therapy considering the high incidence of EZH2 mutations and their stability during disease progression and/or transformation (tFL).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/24052547\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11111\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S OR EZH2 Y646F OR EZH2 Y646H OR EZH2 Y646C OR EZH2 Y646N OR EZH2 A692V OR EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Diffuse Large B-cell Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This phase II study involved three Japanese adult patients diagnosed with DLBCL (of which two diagnosed with transformed follicular lymphoma (FL)), that were previously treated with chemotherapy without an available standard therapy. The patients had EZH2 activating mutations and were recruited to test the efficacy and safety of the EZH2 inhibitor Tazemetostat, which was given at 800 mg dose twice a day for 28-days cycle. The three patients reached the objective response as they all had partial favorable response (PR), although one patient discontinued the trial due to adverse events. Overall, the authors highlight the efficacy and manageable safety profile of Tazemetostat in patients with DLBCL (as well patients with relapsed/refractory FL; as the study included 17 FL patients with favorable outcome).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/34159682\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11110\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"GAIN_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646C\",
+        \"variants\": [
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Authors of this study identified and detailed the role of USP47, a novel deubiquitinase (DUB), that stabilizes mutated EZH2 in cancers and prevents the protein’s degradation by ubiquitination. Degradation of mutated EZH2 protein by targeting USP47 was performed using two DUB inhibitors in AML EZH2-Y641C-positive SKM-1 cell line. The two inhibitors, P22077 and 1247825-37-1, were able to degrade mutant EZH2 protein by increasing mutated EZH2 ubiquitination, inhibit cell growth and selectively kill mutant EZH2-expressing transformed cells over wt EZH2.\
+These results propose the effective and beneficial use of DUB inhibitors for hematological malignancies, independently of highly activated EZH2 mutations, EZH2 methylation activity or potential acquired EZH2 resistant mutations.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/35034955\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11052\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"LOSS_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646C\",
+        \"variants\": [
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"UNKNOWN\",
+      \"description\": \"EZH2 mutations were identified in a screen of 614 patients with myeloid malignancies. Several mutations in the highly conserved CXC-SET domains were expressed in Sf9 insect cells along with polycomb repressive complex 2 components EED and SUZ12. Complexes were immunoprecipitated and assayed in vitro for H3K27M methyltransferase activity. EZH2 Y646C resulted in reduced methyltransferase activity, similar to the negative control (SET domain deletion). In addition, the SKM-1 cell line expressing EZH2 Y646C showed reduced H3K27M methyltransferase activity compared to EZH2-unmutated SKK-1 and MOLM-13 cell lines.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20601953\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:9868\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: A
+functional — loss_of_function: A
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+66.20004

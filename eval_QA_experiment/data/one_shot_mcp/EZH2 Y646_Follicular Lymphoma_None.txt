@@ -1,0 +1,485 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "EZH2 Y646",
+  "diseaseName": "Follicular Lymphoma"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S AND EZH2 Y646F AND EZH2 Y646H AND EZH2 Y646C AND EZH2 Y646N AND EZH2 A692V AND EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase 1, open-label, and multicentre trial, patients with relapsed or refractory B-cell non-Hodgkin lymphoma or an advanced solid tumour (21 with B-cell non-Hodgkin lymphoma, and 43 with advanced solid tumours) and were older than 18 years, Tazemetostat was administered orally from 100 mg twice daily to 1600 mg twice daily in 28-day cycles. The primary endpoint of the study was to determine the maximum tolerated dose or recommended phase 2 dose, which was determined to be 800 mg twice daily. Eight of 21 patients (95% CI: 18.1–61.6) with B-cell non-Hodgkin lymphoma had had an objective response, and the median time to first respond in those patients was 3.5 months (IQR: 2.6–6.5). The median duration of response until progressive disease or death due to any cause was 12.4 months (IQR: 3.5 to >18.3).\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29650362\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11220\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646\",
+        \"variants\": [
+          {
+            \"name\": \"Y646\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Heterozygous mutations in EZH2 at Y641 were the second most frequent genetic event (after BCL2 t(14;18)) associated with a diagnosis of Follicular non-Hodgkin Lymphoma in 18 / 251 patient samples. In contrast, mutations in EZH2 Y641 are not observed in centroblast samples from healthy controls.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20081860\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:433\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S OR EZH2 Y646F OR EZH2 Y646H OR EZH2 Y646C OR EZH2 Y646N OR EZH2 A692V OR EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This phase II study involved 17 Japanese adult patients with relapsed/refractory follicular lymphoma (FL), previously treated with chemotherapy without an available standard therapy. The patients   harbored EZH2 activating mutations and were recruited to test the efficacy and safety of the EZH2 inhibitor- Tazemetostat. Tazemetostat was given at 800 mg dose twice a day for 28-days cycle. The objective response rate in this cohort was 76.5%, including six patients who had a complete response and seven who had partial response. The remaining three patients had stable disease status. Finally, the median progression‐free survival was not reached at the median follow‐up of 12.9 months. The authors highlight the efficacy and manageable safety profile of Tazemetostat in refractory/relapsed FL.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/34159682\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11109\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"NEGATIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S OR EZH2 Y646F OR EZH2 Y646H OR EZH2 Y646C OR EZH2 Y646N OR EZH2 A692V OR EZH2 A682G\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A692V\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          },
+          {
+            \"name\": \"A682G\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this large cohort study, 366 patients with follicular lymphoma (FL) were recruited to investigate the incidence and distribution of EZH2 mutations. NGS and Sanger detected EZH2 positive mutations in 101 patients (27.5%). In total, 106 mutations were detected in 101 patients, which included 87 patients with mutations at codon Y646 (Y646N=36, Y646F=27, Y646S=12, Y646H=9, Y646C=3) , 9 in codon A682G, and 7 in codon A692V mutations (mean VAF=21.6%). There was no difference in the mutation frequency at diagnosis (29%; n = 70/237) and relapse (24%; n = 31/129). Moreover, EZH2 VAFs were compared other mutation targets to test clonality, Out of the 43 FL tested cases, 81% ( 35/43) represented true clonal events, while 19%\
+(8/43) were subclonal. Lastly, despite no significant association between the mutation status and overall survival of FL patients, authors stress the need to evaluate EZH2 targeted therapy considering the high incidence of EZH2 mutations and their stability during disease progression and/or transformation (tFL).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/24052547\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11111\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "EZH2 Y646",
+  "diseaseName": "Follicular Lymphoma"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646N\",
+        \"variants\": [
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"summary\": \"EZH2 Y646N is sensitive to tazemetostat in follicular lymphoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:81\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646H\",
+        \"variants\": [
+          {
+            \"name\": \"Y646H\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"summary\": \"EZH2 Y646H predicts sensitivity to tazemetostat in follicular lymphoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:82\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646S\",
+        \"variants\": [
+          {
+            \"name\": \"Y646S\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"summary\": \"EZH2 Y646S predicts sensitivity to tazemetostat in follicular lymphoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:83\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646C\",
+        \"variants\": [
+          {
+            \"name\": \"Y646C\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"summary\": \"EZH2 Y646C predicts sensitivity to tazemetostat in follicular lymphoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:84\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"ONCOGENIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"LIKELY_ONCOGENIC\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646N\",
+        \"variants\": [
+          {
+            \"name\": \"Y646N\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [],
+      \"summary\": \"EZH2 Y646N is likely oncogenic in follicular lymphoma\",
+      \"url\": \"https://identifiers.org/civic.aid:215\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"EZH2 Y646F\",
+        \"variants\": [
+          {
+            \"name\": \"Y646F\",
+            \"feature\": {
+              \"name\": \"EZH2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Follicular Lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Tazemetostat\"
+        }
+      ],
+      \"summary\": \"EZH2 Y646F predicts sensitivity to tazemetostat in follicular lymphoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:50\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: A
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+165.54311

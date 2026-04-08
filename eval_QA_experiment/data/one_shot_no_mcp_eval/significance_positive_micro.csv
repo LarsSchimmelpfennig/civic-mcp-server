@@ -1,0 +1,24 @@
+Evaluation,Label,Evidence Type,Significance,Samples,Precision,Recall,F1,Evaluated
+no_mcp,predictive_sensitivity_response,Predictive,sensitivity_response,28,0.8571428571428571,0.21428571428571427,0.34285714285714286,29
+no_mcp,predictive_resistance,Predictive,resistance,17,0.7142857142857143,0.29411764705882354,0.4166666666666667,19
+no_mcp,predisposing_predisposition,Predisposing,predisposition,13,0.9,0.6923076923076923,0.782608695652174,14
+no_mcp,oncogenic_oncogenicity,Oncogenic,oncogenicity,12,0.25,0.16666666666666666,0.2,18
+no_mcp,predisposing_N/A,Predisposing,N/A,9,0.0,0.0,0.0,9
+no_mcp,diagnostic_positive,Diagnostic,positive,8,1.0,0.75,0.8571428571428571,8
+no_mcp,predisposing_uncertain_significance,Predisposing,uncertain_significance,7,0.0,0.0,0.0,7
+no_mcp,functional_loss_of_function,Functional,loss_of_function,6,0.6,0.5,0.5454545454545454,8
+no_mcp,functional_gain_of_function,Functional,gain_of_function,5,0.75,0.6,0.6666666666666666,6
+no_mcp,prognostic_better_outcome,Prognostic,better_outcome,5,1.0,0.6,0.75,5
+no_mcp,prognostic_poor_outcome,Prognostic,poor_outcome,5,0.6,0.6,0.6,7
+no_mcp,functional_dominant_negative,Functional,dominant_negative,4,1.0,0.5,0.6666666666666666,4
+no_mcp,predictive_reduced_sensitivity,Predictive,reduced_sensitivity,3,0.3333333333333333,0.3333333333333333,0.3333333333333333,5
+no_mcp,diagnostic_negative,Diagnostic,negative,2,0.0,0.0,0.0,2
+no_mcp,functional_unaltered_function,Functional,unaltered_function,1,0.0,0.0,0.0,1
+no_mcp,functional_neomorphic,Functional,neomorphic,0,0.0,0.0,0.0,1
+no_mcp,predisposing_protectiveness,Predisposing,protectiveness,0,,,,0
+no_mcp,oncogenic_N/A,Oncogenic,N/A,0,,,,0
+no_mcp,oncogenic_protectiveness,Oncogenic,protectiveness,0,,,,0
+no_mcp,prognostic_N/A,Prognostic,N/A,0,,,,0
+no_mcp,predictive_N/A,Predictive,N/A,0,,,,0
+no_mcp,predictive_adverse_response,Predictive,adverse_response,0,,,,0
+no_mcp,functional_unknown,Functional,unknown,0,,,,0

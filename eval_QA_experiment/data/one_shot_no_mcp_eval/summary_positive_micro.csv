@@ -1,0 +1,2 @@
+eval_name,source,entities_scored,evaluated_pairs_positive_window,overall_accuracy_positive_window,overall_micro_precision_pos_classes,overall_micro_recall_pos_classes,overall_micro_f1_pos_classes,runs_with_time,avg_time_seconds,avg_time_seconds_ci95_low,avg_time_seconds_ci95_high
+no_mcp,data\one_shot_no_mcp,100,143,0.3006993006993007,0.7049180327868853,0.344,0.46236559139784944,100,42.87583909999999,40.015500440000004,45.79354659

@@ -1,0 +1,119 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "ERBB2 S310F",
+  "diseaseName": "Lung Non-small Cell Carcinoma",
+  "therapyName": "Trastuzumab Deruxtecan"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "ERBB2 S310F",
+  "diseaseName": "Lung Non-small Cell Carcinoma",
+  "therapyName": "Trastuzumab Deruxtecan"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ERBB2 S310F\",
+        \"variants\": [
+          {
+            \"name\": \"S310F\",
+            \"feature\": {
+              \"name\": \"ERBB2\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Lung Non-small Cell Carcinoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Trastuzumab Deruxtecan\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a phase 2 trial, 152 metastatic NSCLC patients harboring mutations in ERBB2 (HER2) treated with 2 different doses of the HER2 ADC trastuzumab deruxtecan (5.4 mg/kg and 6.4 mg/kg) resulted in clinical benefit for both groups with overall response rates (ORR) of 49% and 56% respectively and durable responses in both groups.  The breakdown of complete responses (CR), partial responses (PR), stable disease (SD), and progressive disease (PD) was provided for each patient and each ERBB2 mutation.  Of 3 NSCLC patients harboring an ERBB2 S310F mutation, 2 had PR and 1 had SD.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/37694347\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11751\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: A
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+20.93782

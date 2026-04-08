@@ -1,0 +1,113 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_evidence completed.
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "VHL S111N",
+  "diseaseName": "Von Hippel-Lindau Disease"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "VHL S111N",
+  "diseaseName": "Von Hippel-Lindau Disease"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL S111N (c.332G>A) \",
+        \"variants\": [
+          {
+            \"name\": \"S111N (c.332G>A) \",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"93 families examined at the Clinical Center of the National Institutes of Health (Bethesda, MD) underwent genetic testing for germline mutations of the VHL gene. Whole blood was extracted and  genomic DNA was amplified by PCR and products were sequences using a cycle sequencing kit with dye-labeled terminators and automatically sequenced. This missense mutation was found in a VHL type 1 family (lineage 18). The variant was reported as c.545G>A (AF010238.1) and was mapped to S111N (c.332G>A) (NM_000551.3). Stated as being previously reported in PMID 7728151 and/or 8956040. Both these reports include a family presenting with this variant and it is unclear if one or both coincide with the current family.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9829911\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10648\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: A
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+38.49389

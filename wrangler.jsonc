@@ -55,51 +55,43 @@
   /* --------------------------------------------------
      Cloudflare observability (optional)
   -------------------------------------------------- */
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+
+ /* --------------------------------------------------
+     v2 (NEW worker)
+  -------------------------------------------------- */
+  "env": {
+    "v2": {
+      "name": "civic-mcp-server-v2",
+      "main": "src/index.v2.ts",
+
+      "compatibility_date": "2025-03-10",
+      "compatibility_flags": ["nodejs_compat"],
+
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "MCP_OBJECT",
+            "class_name": "CivicMCP"
+          }
+        ]
+      },
+
+      // Separate initial migration for v2
+      "migrations": [
+        { "tag": "v2", "new_sqlite_classes": ["CivicMCP"] }
+      ],
+
+      "vars": {
+        "CIVIC_URL": "https://civicdb.org/api/graphql"
+      },
+
+      "observability": { "enabled": true }
+    }
+  }
 }
 
 
-
-
-
-
-
-
-
-
-// /**
-//  * For more details on how to configure Wrangler, refer to:
-//  * https://developers.cloudflare.com/workers/wrangler/configuration/
-//  */
-// {
-// 	"$schema": "node_modules/wrangler/config-schema.json",
-// 	"name": "civic-mcp-server",
-// 	"main": "src/index.ts",
-// 	"compatibility_date": "2025-03-10",
-// 	"compatibility_flags": ["nodejs_compat"],
-// 	"migrations": [
-// 		{
-// 			"new_sqlite_classes": ["MyMCP"],
-// 			"tag": "v1"
-// 		},
-// 		{
-// 			"tag": "v2-json-to-sql-do",
-// 			"new_sqlite_classes": ["JsonToSqlDO"]
-// 		}
-// 	],
-// 	"durable_objects": {
-// 		"bindings": [
-// 			{
-// 				"class_name": "MyMCP",
-// 				"name": "MCP_OBJECT"
-// 			},
-// 			{
-// 				"name": "JSON_TO_SQL_DO",
-// 				"class_name": "JsonToSqlDO"
-// 			}
-// 		]
-// 	},
-// 	"observability": {
-// 		"enabled": true
-// 	}
-// }
+// DEPLOY COMMANDS
+// npx wrangler deploy          # redeploys v1 (no URL change)
+// npx wrangler deploy --env v2 # deploys v2 as a second worker

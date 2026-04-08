@@ -1,0 +1,316 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "ETV6::NTRK3 Fusion",
+  "diseaseName": "B-lymphoblastic Leukemia/lymphoma",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        },
+        {
+          \"name\": \"Etoposide\"
+        },
+        {
+          \"name\": \"Methotrexate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"All lines of conventional therapy (including allogeneic HSCT, blinatumomab, and CAR T cells) were inefficient for a 6-year-old boy with B-cell ALL and CNS infiltration (National Cancer Institute high risk). Conventional cytogenetics, FISH, and an Abbott break-apart probe of a peripheral blood sample collected at diagnosis revealed an unbalance translocation of the ETV6 locus. The patient relapsed twice and RNA sequencing of the initial diagnosis sample revealed a cytogenetically cryptic ETV6-NTRK3 fusion. Treatment with larotrectinib was initiated in combination with etoposide and methotrexate resulted in molecular remission in 66 days in bone marrow and CNS. A third relapse occurred 45 days after Larotrectinib was paused for CAR-T infusions. Larotrectinib was resumed with a dosage increase and again achieved sustained undetectable minimal residual disease after 66 days, and displayed molecular remission through 39 days. The authors suggest larotrectinib as a potential effective treatment for B-cell ALL patients harboring ETV6-NTRK3, including those with CNS infiltration.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31725893\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8917\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Case report of a 61-year-old man with B-ALL. An initial analysis detected the ETV6-NTRK3 fusion and a NRASGly12Asp mutation. Initial therapies included chemotherapy and CAR-T infusion. Relapse 6 weeks after initial complete response to these therapies found a large increase in fusion transcripts and NTRK3 rearrangements were detectable by FISH in 50/50 blast nuclei whereas NRAS mutations were no longer detectable. The patient was treated with oral monotherapy larotrectinib (100mg twice per day). After 4 days on treatment peripheral blood blasts became undetectable; after 6 days on treatment lymphadenopathy and leukemia cutis resolved and a biopsy revealed an ablated bone marrow with only a few scattered blasts. The patient experienced clinical benefit with no apparent side effects during 42 days of larotrectinib treatment, however, patient eventually succumbed to multifocal angioinvasive aspergillosis because of insufficient recovery of normal hematopoiesis. Later sequencing of the NTRK3 kinase domain did not detect any larotrectinib resistance mutations (p.G623R, p.G696A).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31905241\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7993\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma, BCR-ABL1–like\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"UNKNOWN\",
+      \"description\": \"Philadelphia chromosome-like (Ph-like) acute lymphoblastic leukemia (ALL) is a high-risk subtype characterised by genomic alterations that activate cytokine receptor and kinase signaling. The author examined the frequency and spectrum of targetable genetic lesions in a retrospective cohort of 1389 consecutively diagnosed patients with childhood B-lineage ALL with high-risk clinical features and/or elevated minimal residual disease at the end of remission induction therapy. The Ph-like gene expression profile was identified in 341 of 1389 patients, 57 of whom were excluded from additional analyses because of the presence of BCR-ABL1 (n = 46) or ETV6-RUNX1 (n = 11). Among the remaining 284 patients (20.4%), overexpression and rearrangement of CRLF2 (IGH-CRLF2 or P2RY8-CRLF2) were identified in 124 (43.7%), with concomitant genomic alterations activating the JAK-STAT pathway (JAK1, JAK2, IL7R) identified in 63 patients (50.8% of those with CRLF2 rearrangement). The author then conducted transcriptome sequencing on the remaining patients, and found 1 patient with ETV6::NTRK3 fusion. Although the occurrence of ETV6::NTRK3 is 0.3% in the studied patients with Ph-like B-ALL, the finding this fusion was associated with the disease.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 1,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/28408464\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12295\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Both in vivo and in vitro models demonstrated Larotrectinib was an effective treatment against cells harboring ETV6-NTRK3. In YFP-luciferase PDX mice from a 16-year-old with Ph-like B-ALL, flow cytometry indicated the absence of leukemic cells in the bone marrow (p<.0001), peripheral blood (p=.0018), and spleen (p=.0001) after 6 weeks of Larotrectinib (n=10) compared to vehicle treated mice (n=10). Treated mice also had lower splenic weight (p<.001) and the absence of leukemia burden in the bone marrow and central nervous system as determined by histopathology. In 2 mice, leukemic burden increased while Larotrectinib was paused from weeks 6-25. Upon the reintroduction of treatment for 4 weeks, leukemic burden was lowered. Conditional knock-in Etv6-NTRK CD19-Cre cells isolated from bone marrow and cultured ex vivo were highly sensitive to serial dilutions of Larotrectinib. After 48 hours of Larotrectinib exposure, Ba/F3 cells stably expressing ETV6-NTRK3 demonstrated a response with an IC50 of 17.0nM (viability measured by CellTiter blue). Finally, Larotrectinib was 1000x more potent against 3 human cancer cell lines with an NTRK fusion versus the 76 with other alterations. The most sensitive was an AML cell line (M0-91) with an ETV6-NTRK3 fusion.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29880614\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6930\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"The tyrosine kinase domain of NTRK3 was inserted into exon 6 of Etv6 to create conditional knock-in Etv6-NTRK3 mice . Expression was induced in pre-b cells during lymphoid development by CD19-Cre. Fusion expression in the bone marrow was confirmed by RT-PCR. Etv6-NTRK3/+ CD19-Cre mice developed aggressive lymphoid leukemia. Compared to controls (Etv6-NTRK3/+; n=28), Etv6-NTRK3/+ CD19-Cre mice (n=27) displayed worse overall survival (p<.0001), decreased body weight (p<.0001), increased spleen weights (p<.05), and increased circulating CD19+/B220+ cells (p=.0008). Over 60% of Etv6-NTRK3 CD19-Cre mice demonstrated extramedullary tumors and over 50% presented with central nervous system infiltration. RNA-sequencing indicated upregulation of the AP1 complex in the Etv6-NTRK3 CD19-Cre mice. The authors conclude this ETV6-NTRK3 Cre-19 mouse model mimics human B-ALL.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29880614\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8931\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Conventional cytogenetics, FISH, and an Abbott break-apart probe of a peripheral blood sample collected at diagnosis of a 6-year-old boy with B-cell ALL and CNS infiltration (National Cancer Institute high risk) revealed an unbalance translocation of the ETV6 locus. RNA sequencing of detected a cytogenetically cryptic ETV6-NTRK3 fusion. Larotrectinib therapy achieved remission of the patient’s two separate relapses. Patient derived xenografts injected into mice and treated with Larotrectinib demonstrated significant reductions in spleen volume, blasts in spleen, and blast in bone marrow (p < .0001) compared to controls 25 days after injection. Larotrectinib treatment was effective regardless of the day of initiation post xenograft injection (1 day or 8 days after).\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31725893\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8930\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "ETV6::NTRK3 Fusion",
+  "diseaseName": "B-lymphoblastic Leukemia/lymphoma",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"PREDICTIVE\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"B-lymphoblastic Leukemia/lymphoma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"summary\": \"ETV6-NTRK3–positive B-cell lymphoblastic leukemia patients can be sensitive to larotrectinib\",
+      \"url\": \"https://identifiers.org/civic.aid:39\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: A
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+69.46384

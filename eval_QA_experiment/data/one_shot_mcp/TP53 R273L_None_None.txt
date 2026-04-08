@@ -1,0 +1,146 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "TP53 R273L"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"TP53 R273L\",
+        \"variants\": [
+          {
+            \"name\": \"R273L\",
+            \"feature\": {
+              \"name\": \"TP53\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Ovarian Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Carboplatin\"
+        },
+        {
+          \"name\": \"Cisplatin\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Ovarian cancer patients with TP53 missense mutations were refractory to platinum-based chemotherapy (66% vs. 34% in wildtype, P=0.008) and had a shorter time to disease progression (n=54, P=0.037). A study of ovarian carcinoma patients (n=178) reported a reduced overall survival (HR:1.59, 95% CI:1.09-2.33, P=0.014) for patients with mutations in TP53.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": null,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11595686\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2286\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"DOMINANT_NEGATIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"TP53 R273L\",
+        \"variants\": [
+          {
+            \"name\": \"R273L\",
+            \"feature\": {
+              \"name\": \"TP53\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Yeast strain yIG397 was cultured to express both wild-type (WT) and mutant R273L originally identified in an oral lesion. Should the mutant be dominant-negative (DN), TP53 will not bind and transactivate the ADE2 protein, resulting in red/pink colonies. If the mutant is recessive, then WT function is not blocked and ADE2 protein is expressed through TP53 transactivation, resulting in white colonies. Western blot analysis showed that yeast lysates showed expression of both WT and mutant alleles. Yeast expressing p53 variant and WT p53 produced red/pink colonies, demonstrating that R273L displays transdominance. Authors reported that all of the DN mutants affected the amino acids essential to the upkeep of DNA binding surfaces according to crystallographic structure.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/10519380\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10538\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "TP53 R273L"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: A
+functional — unknown: C
+### TIME (Seconds) ###
+44.24909

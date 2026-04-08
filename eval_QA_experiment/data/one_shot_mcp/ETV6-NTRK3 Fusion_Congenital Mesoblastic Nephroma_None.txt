@@ -1,0 +1,218 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "ETV6::NTRK3 Fusion",
+  "diseaseName": "Congenital Mesoblastic Nephroma",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Congenital Mesoblastic Nephroma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A frequent genetic alteration in congenital mesoblastic nephroma is the translocation t(12;15) resulting in a fusion of the ETV6 gene on 12p13 and the NTRK3 gene on 15p15 that occurs almost exclusively in cellular mesoblastic nephroma subtype.\
+\
+In a group of 111 mesoblastic nephroma (MN) samples, 79 were were evaluable by FISH, which consisted of 38 classical MN, 29 cellular MN, and 12 mixed MN samples. 16 of 29 cellular type MN had ETV6::NTRK3 via break apart FISH, while 0/38 classical and 0/12 mixed types were positive.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29286563\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10841\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"BETTER_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Congenital Mesoblastic Nephroma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In a group of 111 mesoblastic nephroma (MN) samples, 79 were were evaluable by FISH, which consisted of 38 classical MN, 29 cellular MN, and 12 mixed MN samples. 5 year relapse free survival (RFS) was reported for the groups of patients. Classic MN had 98% +/- 2% RFS, mixed MN had 80% +/- 10% RFS. ETV6::NTRK3 negative cellular MN patients had 73% +/- 13% RFS, while ETV6::NTRK3 positive cellular MN patients had 100% RFS. The authors suggest the fusion positive MN is a genetically distinct subgroup for cellular MN, and has a tendency for better outcome in comparison to other cellular MN cases.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29286563\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10842\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Congenital Mesoblastic Nephroma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an analysis of 19 cases of mesoblastic nephroma, the ETV6::NTRK3 fusion was detected in 0 of 5 of the classic mesoblastic nephroma, 8 of 8 (100%) of the cellular mesoblastic nephroma and 5 of 6 (83%) of the mixed mesoblastic nephroma cohorts.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/27020209\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11279\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Congenital Mesoblastic Nephroma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an analysis of 22 cases of mesoblastic nephroma, 4 of 5 (80%) cellular mesoblastic nephromas harbored ETV6::NTRK3, 1 of 5 cellular mesoblastic nephromas harbored a KLHL7::BRAF fusion, 12 of 12 (100%) classic mesoblastic nephromas harbored EGFR ITD, 4 of 5 of mixed histology had EGFR ITD, and 1 of 5 of mixed histology had the  ETV6::NTRK3 fusion.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/32590884\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11280\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"ETV6::NTRK3 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"ETV6::NTRK3\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Congenital Mesoblastic Nephroma\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Larotrectinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A 23 month old (at the time of report) male was diagnosed prenatally with Stage II cellular mesoblastic nephroma (MN) on the right kidney, which was surgically removed on the sixth day of life. ETV6::NTRK was found by FISH. At 12 months a lesion on the distal tibia developed. The patient entered the larotrectinib pediatric study NCT02637687 and received eight cycles of therapy without any grade 2 or greater toxicities so far. \
+\
+After this the patient had a full range of motion in the lower extremity and the there was a complete disappearance of the soft-tissue component and a near-complete reconstitution of the cortex of the distal right tibial metastatic focus.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29893456\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10840\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: A
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: A
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+42.66125

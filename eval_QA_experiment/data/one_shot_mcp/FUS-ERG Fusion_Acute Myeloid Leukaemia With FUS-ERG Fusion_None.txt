@@ -1,0 +1,200 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "FUS::ERG Fusion",
+  "diseaseName": "Acute Myeloid Leukaemia With FUS::ERG Fusion",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FUS::ERG Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"FUS::ERG\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukaemia With FUS::ERG Fusion\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This study investigates the diagnostic importance of the translocation t(16;21)(p11;q22), resulting in the TLS/FUS::ERG fusion gene, in acute myeloid leukemia (AML). The authors utilized RT-PCR to detect the TLS/FUS::ERG chimeric transcripts in 19 AML cases with the t(16;21)(p11;q22) identified through karyotype analysis. The median age at diagnosis was 22 years (range 2 to 61 years ). The fusion transcript was consistently detected, even during remission, suggesting its role in identifying persistent leukemic cells and potential chemoresistance. The reliable detection of the TLS/FUS::ERG chimeric transcripts at diagnosis demonstrates their utility as a highly sensitive molecular marker for initial AML diagnosis and ongoing disease monitoring. The study also identified a novel transcript variant (Type D), characterized by an additional 138 nucleotides from TLS/FUS exon 8 and ERG exons 7 and 8, which highlights increased molecular heterogeneity in this genetic alteration. This research emphasizes the diagnostic relevance of the t(16;21) translocation across various French-American-British (FAB) subtypes of AML, providing valuable insight for improved diagnostic accuracy in AML patients.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9242552\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12321\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FUS::ERG Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"FUS::ERG\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukaemia With FUS::ERG Fusion\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This international retrospective study investigates the diagnostic features of acute myeloid leukemia (AML) with the t(16;21) translocation resulting in the FUS::ERG fusion gene in pediatric patients. Data were gathered from 14 cohorts within the Berlin-Frankfurt-Münster (I-BFM) Study Group, encompassing 31 cases exhibiting the FUS::ERG with a median age of 9 years (range 2 to 18 years). AML with t(16;21) did not show a predominance in any specific FAB classification and was frequently associated with complex karyotypes, including trisomy 8 and trisomy 10. Notably, FUS::ERG AML often presented with eosinophilia, micromegakaryocytes, and hemophagocytosis. Standard karyotyping may fail to detect the translocation, necessitating the use of more sensitive diagnostic methods such as FISH, RT-PCR, or RNA sequencing. Although 87% of patients achieved remission, 74% experienced relapse, most within the first year, and minimal residual disease (MRD) negativity did not predict relapse-free survival, indicating the presence of chemoresistant leukemic stem cells. Gene expression profiling revealed a distinct molecular signature, with altered retinoic acid signaling, which may offer potential therapeutic targets. The study highlights the unique diagnostic characteristics of AML with t(16;21), reinforcing the need for specialized molecular testing and offering insight into its distinct biological and clinical features.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/30150206\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12322\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FUS::ERG Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"FUS::ERG\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukaemia With FUS::ERG Fusion\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This study focuses on the diagnostic characteristics of pediatric patients with the t(16;21)(p11;q22)/FUS::ERG translocation using advanced molecular methods. The authors studied four cases of pediatric AML with a median age of 3 years (range 2 to 5 years) in which karyotype analysis revealed the t(16;21)(p11;q22) resultig in the FUS::ERG fusion. They identified multiple FUS::ERG transcript variants, including a novel fusion where FUS exon 7 fuses with ERG exon 9, complicating minimal residual disease (MRD) detection. To improve diagnostic accuracy, next-generation sequencing and long-range PCR were used to precisely map breakpoints at the DNA level. Cytogenetic analysis revealed the t(16;21) translocation either as an isolated abnormality or in combination with trisomy 8 and del(9), accompanied by distinct immunophenotypic features such as high CD56 expression. Additionally, mutations in DNMT3A, ASXL1, BCOR, and RUNX1 were detected, suggesting clonal evolution prior to FUS::ERG transformation. These molecular findings highlight the complexity of diagnosing this specific AML subtype, underscoring the importance of utilizing sensitive techniques such as next-generation sequencing and long-range PCR for accurate detection of FUS::ERG and related genetic alterations.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29427188\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12323\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "FUS::ERG Fusion",
+  "diseaseName": "Acute Myeloid Leukaemia With FUS::ERG Fusion",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"DIAGNOSTIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"FUS::ERG Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"FUS::ERG\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Acute Myeloid Leukaemia With FUS::ERG Fusion\"
+      },
+      \"therapies\": [],
+      \"summary\": \"The presence of the t(16;21)(p11;q22) translocation resulting in the FUS::ERG fusion gene is a diagnostic criterion for a subtype of acute myeloid leukemia (AML), particularly in pediatric patients.\",
+      \"url\": \"https://identifiers.org/civic.aid:158\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: A
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+54.85727

@@ -1,0 +1,342 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "SS18::SSX1 Fusion",
+  "diseaseName": "Synovial Sarcoma"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A t(X;18) translocation resulting in the fusion SYT-SSX (SS18-SSX1 or SS18-SSX2) is detected cytogenetically in over 90% of synovial sarcomas, regardless of histologic subtype. The prevalence of this fusion in synovial sarcoma approaches 100% when there is adequate tumor RNA for RT-PCR. Its specificity for synovial sarcoma, has been confirmed by molecular screening of other morphologically similar sarcomas.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11607825\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1063\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this review, the author summarize the role of this fusion in diagnosis of synovial sarcomas. Cytogenetic studies have repeatedly demonstrated the t(X;18)(p11;q11) translocation in approximately 90% of both monophasic and biphasic synovial sarcomas. The fusion has clear diagnostic value, though the authors caution that it is not perfectly specific to synovial sarcomas, and suggest that demonstration of t(X;18) in a spindle cell neoplasm should be integrated with the morphology, immunoprofile, and clinical setting of the tumour.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11122430\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1069\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this study, 141 spindle cell sarcomas were evaluated for the presence of t(X;18) by RT-PCR. 85% of the synovial sarcomas were positive for this event. The study did not indicate the specific fusion detected but from related studies we know that the majority of these fusions are SYT-SSX1 (aka SS18-SSX1).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11144931\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1070\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POOR_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This study collected data on SYT-SSX fusion type, pathology, and clinical course in a retrospective multi-institutional study of 243 patients (age range, 6-82) with synovial sarcoma. SYT-SSX1 and SYT-SSX2 fusions were detected in 147 tumors (61%) and 91 tumors (37%), respectively. Histologically, 61 (25%) were classified as biphasic type and 180 (74%) as monophasic type based on the presence or absence of areas of glandular epithelial differentiation, respectively. Median and 5-year overall survivals for the SYT-SSX1 and SYT-SSX2 groups were 6.1 years and 53%, and 13.7 years and 73%, respectively.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/11782370\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1072\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"This study used RT-PCR assays to screen tumor blocks for SS18::SSX1 fusion transcripts in 134 synovial sarcomas cases. 194 normal tissue and samples from unrelated tumor types were used as negative controls. Of the 134 synovial cases, cDNA was obtained from 131 and SS18-SSX fusions were found in 96% of these.  The most common fusion was SS18-SSX1 (n=74 cases). Figure 1 of this publication depicts the most common structure of SS18::SSX1 fusion observed.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17334349\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:12122\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A characteristic SYT-SSX fusion gene resulting from the chromosomal translocation t(X;18)(p11;q11) is detectable in almost all synovial sarcomas. SYT (aka SS18) pairs with various 3' partners know as SSX (especially SSX1, and SSX2). In this study, 45 synovial sarcomas were assayed for SYT-SSX by RT-PCR using tumor cDNA as template. 29 (64%) had a SYT–SSX1 (SS18-SSX1) fusion transcript.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9428816\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1065\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PROGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POOR_OUTCOME\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this study, SYT-SSX fusion transcripts (SS18-SSX1 and SS18-SSX2) were detected in 29 (64%) and 16 (36%) of the tumors, respectively. There was a significant relationship (P=0.003) between histologic subtype (monophasic vs. biphasic) and SSX1 or SSX2 involvement in the fusion transcript: all 12 biphasic synovial sarcomas had a SYT-SSX1 fusion transcript, and all 16 tumors that were positive for SYT-SSX2 were monophasic. Kaplan-Meier analysis of 39 patients with localized tumors showed that the 15 patients with SYT-SSX2 had significantly better metastasis-free survival than the 24 patients with SYT-SSX1 (P=0.03 by multivariate analysis; relative risk, 3.0).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9428816\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1068\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "SS18::SSX1 Fusion",
+  "diseaseName": "Synovial Sarcoma"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"assertionType\": \"DIAGNOSTIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"summary\": \"SS18::SSX fusions are diagnostic for synovial sarcoma with SS18::SSX1 and SS18::SSX2 most common.\",
+      \"url\": \"https://identifiers.org/civic.aid:75\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"DIAGNOSTIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"SS18::SSX1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"SS18::SSX1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Synovial Sarcoma\"
+      },
+      \"therapies\": [],
+      \"summary\": \"SS18::SSX1 fusion is a diagnostic criterion for synovial sarcoma.\",
+      \"url\": \"https://identifiers.org/civic.aid:194\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: A
+prognostic — N/A: C
+
+diagnostic — positive: A
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+44.5525

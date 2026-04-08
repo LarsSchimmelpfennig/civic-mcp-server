@@ -1,0 +1,111 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "TP53 K132"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"FUNCTIONAL\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"LOSS_OF_FUNCTION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"TP53 K132\",
+        \"variants\": [
+          {
+            \"name\": \"K132\",
+            \"feature\": {
+              \"name\": \"TP53\"
+            }
+          }
+        ]
+      },
+      \"disease\": null,
+      \"therapies\": [],
+      \"variantOrigin\": \"UNKNOWN\",
+      \"description\": \"A library of P53 mutant vectors and wt control was packaged to lentivirus and infected into p53-null H1299 cells at a concentration yielding 1 integration per cell. Relative abundance of each transcript was sampled using next generation sequencing three times over 14 days to obtain growth curves and to calculate relative fitness score (RFS) for each variant, where negative RFS indicates a relative decrease, and positive RFS a relative enrichment of transcript abundance, indicating decreased vs. increased proliferation, respectively. For amino acid (AA) substitutions, median RFS at a specific AA position correlated with AA evolutionary conservation. AA substitution mutations clustered into three types, (1) positions highly susceptible to mutation, (2) positions resilient to mutations, and (3) intermediate. \
+K132 was type (1), with 14 out of 16 assayed\
+substitutions showing positive RFS, suggesting nearly any AA substitution at K132 abolishes anti-proliferative p53 functionality.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29979965\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7341\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "TP53 K132"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: A
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+44.69616

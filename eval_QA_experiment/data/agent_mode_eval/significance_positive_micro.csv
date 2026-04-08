@@ -1,0 +1,24 @@
+Evaluation,Label,Evidence Type,Significance,Samples,Precision,Recall,F1,Evaluated
+agent_mode,predictive_sensitivity_response,Predictive,sensitivity_response,28,1.0,0.7857142857142857,0.88,28
+agent_mode,predictive_resistance,Predictive,resistance,17,1.0,0.8823529411764706,0.9375,17
+agent_mode,predisposing_predisposition,Predisposing,predisposition,13,0.9285714285714286,1.0,0.9629629629629629,14
+agent_mode,oncogenic_oncogenicity,Oncogenic,oncogenicity,12,0.9230769230769231,1.0,0.96,13
+agent_mode,predisposing_N/A,Predisposing,N/A,9,1.0,0.7777777777777778,0.875,9
+agent_mode,diagnostic_positive,Diagnostic,positive,8,0.8888888888888888,1.0,0.9411764705882353,9
+agent_mode,predisposing_uncertain_significance,Predisposing,uncertain_significance,7,1.0,0.8571428571428571,0.9230769230769231,7
+agent_mode,functional_loss_of_function,Functional,loss_of_function,6,0.8571428571428571,1.0,0.9230769230769231,7
+agent_mode,functional_gain_of_function,Functional,gain_of_function,5,0.75,0.6,0.6666666666666666,6
+agent_mode,prognostic_better_outcome,Prognostic,better_outcome,5,1.0,1.0,1.0,5
+agent_mode,prognostic_poor_outcome,Prognostic,poor_outcome,5,1.0,0.8,0.8888888888888888,5
+agent_mode,functional_dominant_negative,Functional,dominant_negative,4,1.0,1.0,1.0,4
+agent_mode,predictive_reduced_sensitivity,Predictive,reduced_sensitivity,3,1.0,1.0,1.0,3
+agent_mode,diagnostic_negative,Diagnostic,negative,2,0.0,0.0,0.0,2
+agent_mode,functional_unaltered_function,Functional,unaltered_function,1,1.0,1.0,1.0,1
+agent_mode,functional_neomorphic,Functional,neomorphic,0,,,,0
+agent_mode,predisposing_protectiveness,Predisposing,protectiveness,0,,,,0
+agent_mode,oncogenic_N/A,Oncogenic,N/A,0,,,,0
+agent_mode,oncogenic_protectiveness,Oncogenic,protectiveness,0,,,,0
+agent_mode,prognostic_N/A,Prognostic,N/A,0,,,,0
+agent_mode,predictive_N/A,Predictive,N/A,0,0.0,0.0,0.0,1
+agent_mode,predictive_adverse_response,Predictive,adverse_response,0,,,,0
+agent_mode,functional_unknown,Functional,unknown,0,,,,0

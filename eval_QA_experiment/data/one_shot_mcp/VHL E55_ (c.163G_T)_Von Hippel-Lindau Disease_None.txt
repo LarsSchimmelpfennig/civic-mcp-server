@@ -1,0 +1,714 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_evidence completed.
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "VHL E55*",
+  "diseaseName": "Von Hippel-Lindau Disease",
+  "therapyName": "None"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "VHL E55*",
+  "diseaseName": "Von Hippel-Lindau Disease",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 1-3 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 1-3 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Mutation detected in 4 separate cases. Two cases show CNS hemangioblastoma, pancreatic/hepatic/renal cysts, and renal cell carcinoma. One case shows CNS hemangioblastoma, pancreatic cysts, and Grawitz One shows CNS HB, pancreatic/renal cysts and retinal angioma. ACMG evidence codes: 'PVS1' based on deletion of all exons, 'PP1' based on segregation results, 'PP4' because the patients phenotypes are highly specific for a disease with single genetic etiology.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20151405\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1942\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E46* (c.136G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E46* (c.136G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"A study of 103 patients with VHL retinal manifestations and 108 patients without VHL retinal manifestations extracted from the French VHL database revealed that the number of hemangioblastomas appeared higher in patients who had a substitution when compared with patients with a truncated protein. Detected by PCR and SSCP, this stop mutation (E46*) was found in a single patient with VHL retinal manifestation, which coincides with mutations confirmed to be associated with VHL type 1 in this study. No family information was provided. Only moderate evidence of pathogenicity since the protein length changes as a result of in-frame deletions/insertions in a nonrepeat region or stop-loss variants (AMCG code: PM4).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/12202531\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4895\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E52K (c.154G>A)\",
+        \"variants\": [
+          {
+            \"name\": \"E52K (c.154G>A)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"A study of 103 patients with VHL retinal manifestations and 108 patients without VHL retinal manifestations revealed that the number of hemangioblastomas appeared higher in patients who had a substitution when compared with patients with a truncated protein. Detected by PCR and SSCP, the missense mutation (E52K (c.154G>A)) was found in a single patient with no VHL retinal manifestation.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/12202531\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4896\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E134* (c.400G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E134* (c.400G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Genotype-phenotype correlations of 573 VHL patients were analyzed and confirmed that higher risk of pheochromocytoma is associated with missense mutations that result in substitution of a surface amino acid or that disrupt the structural integrity of the VHL gene product (pVHL). Age-related risks of retinal hemangioblastomas and renal cell carcinoma were higher in patients with nonsense or frameshift mutations. This nonsense mutation was detected in a VHL patient with cerebellar hemangioblastomas. Only moderate evidence of pathogenicity since the protein length changes as a result of a stop-loss variant (ACMG code: PM4).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17024664\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5136\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 2 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 2 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"This study reports 1,548 germline and somatic mutations from 945 VHL families. This mutation was found in 2 VHL patients. One had many pancreatic and renal cysts, renal cell carcinoma, and hemangioblastomas of the central nervous system (case no. 379). No phenotype described for the other patient (case no. 193).\
+HPO terms: hemangioblastoma, renal cell carcinoma, multiple pancreatic cysts, multiple renal cysts.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20151405\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5754\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E70* (c.208G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E70* (c.208G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"In a study of 114 unrelated VHL families, 85 germline mutations were found. VHL mutations were detected in affected family members, but not in unaffected family members or 96 normal individuals. The E70* (c.208G>T) mutation was detected in the patient, referred to in the paper by c.421G>T due to a difference in transcript sequence. This nonsense variant was found in a VHL type 1 patient with CNS hemangioblastoma (family ID 4479).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/7728151\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6059\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"UNCERTAIN_SIGNIFICANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 1 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 1 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Molecular analysis of VHL gene in 146 probands, 103 with and 43 without a positive family history, resulted in the detection of 43 germline VHL mutations. Majority of mutations were found in patients with classic or multi-organ manifestations of VHL disease, but mutations were also found in patients with limited or single-organ manifestations of VHL disease. Follow-up of families with germline mutations and limited VHL manifestations was recommended. This deleted exon was found in a VHL family with 8 affected individuals, 7 with hemangioblastomas of the central nervous system, 8 with central nervous system hemagioblastomas, 7 with renal cell carcinoma, 1 with pancreatic cysts and 1 with hepatic carcinoma (family no. 37).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17661816\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6420\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"NA\",
+      \"significance\": \"NA\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E94* (c.280G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E94* (c.280G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"23 patients from 12 families diagnosed with hereditary VHL disease at the Peking University First Hospital Department of Urology were described as part of a broader study examining telomere length and anticipation. Family 3 involved two members with a c.280G>T change leading to a p.Glu94Stop protein change. The first member, a male, presented with hemangioblastoma at age 54 and renal cell carcinoma and pheochromocytoma at age 53. The second member, also male, presented with papillary cystadenoma of the epididymis at 23, renal cell carcinoma at 29, and pancreatic cysts at 29. No other family members were described. ACMG Evidence Code: 'PP4' because the patients' phenotypes and family histories are highly specific for VHL disease.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/24986515\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:8286\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"UNCERTAIN_SIGNIFICANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E55RfsTer11 (c.163delG)\",
+        \"variants\": [
+          {
+            \"name\": \"E55RfsTer11 (c.163delG)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"This is a frameshift mutation that results in a stop at codon 66.  \
+Family 3682 in this publication, variant segregates with disease. \
+VHL Type 1 disease is reported: CNS tumors, retinal angioma, renal cell carcinoma but no pheochromocytoma\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/8956040\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1830\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 1 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 1 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"This study reports 1,548 germline and somatic mutations from 945 VHL families, including 30 previously unpublished kindreds from The Netherlands (six novel mutations). This exon 1 deletion was detected in one case (no. 330), by by direct sequencing and MLPA. The case shows CNS hemangioblastoma. ACMG evidence codes: 'PVS1' for a single exon deletion, 'PP1' based on segregation results, 'PP4' because patients phenotypes are highly specific for a disease with single genetic etiology.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20151405\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1943\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 1-2 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 1-2 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"This study reports 1,548 germline and somatic mutations from 945 VHL families, including 30 previously unpublished kindreds from The Netherlands (six novel mutations). This exon 1-2 deletion was detected in one case (no. 215), by by direct sequencing and MLPA. The case shows renal cell carcinoma. ACMG evidence codes: 'PVS1' based on deletion of exon 1+2, 'PP4' since the patients phenotypes are highly specific for a disease with single genetic etiology.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20151405\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1944\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E55* (c.163G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E55* (c.163G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Genetic analysis of 7 Hungarian individuals from 5 unrelated families affected with type von Hippel-Lindau disease revealed 5 different mutations, 3 of which were novel. The mutations could not be found within 100 healthy controls. One germline truncation mutation was found in a 15-year-old male patient with bilateral renal cell carcinoma and retinal hemangioblastoma with serious retinal detachment. Neither of his parents displayed any mutations in the VHL gene indicating a de novo mutation. ACMG evidence codes: 'PS2' because they observe a de novo mutation (maternity and paternity confirmed), 'PP4' because the patient's phenotypes or family history are highly specific for a disease with single genetic etiology, 'PVS1' because they observe a nonsense variant in a gene where loss of function is a known mechanism of disease. Relevant HPO terms: Renal cell carcinoma, Retinal hemangioblastoma\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/23298237\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4898\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E186* (c.556G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E186* (c.556G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"In a study of 114 unrelated VHL families, 85 germline mutations were found. VHL mutations were detected in affected family members, but not in unaffected family members or 96 normal individuals. This nonsense mutation was found in a VHL type 1 family of 6 individuals (Family ID 3770), using PCR and SSCP sequencing. The mutation of c.556G>T was referred to in the paper by c.769G>T due to a difference in transcript sequence. All 6 individuals were identified with CNS hemangioblastomas, 4 with retinal hemangioblastomas, and 5 with renal cell carcinoma. Supporting evidence of pathogenicity because of the introduction of an early stop codon in a gene where loss of function is an established mechanism of disease (ACMG code: PVS1).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/7728151\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4944\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"UNCERTAIN_SIGNIFICANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E94* (c.280G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E94* (c.280G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"An investigation of 94 VHL patients without large deletions for intragenic mutations revealed 40 different mutations in 55 unrelated individuals. In all patients with multiple affected family members the missense mutation segregated with the disease. Large deletions or intragenic mutations predicted to cause a truncated protein were found in 36 of 53 families without pheochromocytoma (VHL type 1) and 2 of 12 families with pheochromocytoma (VHL type 2). This nonsense mutation was found in a VHL type 1 patient (kindred no. 51). Only moderate support for pathogenicity because protein length changes as a result of stop-loss variant (ACMG code: PM4).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/7987306\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:4966\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"UNCERTAIN_SIGNIFICANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E186del (c.558_560delAGA)\",
+        \"variants\": [
+          {
+            \"name\": \"E186del (c.558_560delAGA)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"In a study of 138 unrelated VHL families, 109 germline mutations were found. Missense mutations were more frequently found in families with pheochromocytoma (PC). Deletions. Nonsense, and frameshift mutations were more frequently found in families without PC. Large deletions and mutations predicted to cause truncated protein were associated with lower risk of PC. This deletion mutation was found in a VHL family without PC (family ID 113). Only moderate evidence for pathogenicity because protein length changes as a result of in-frame deletion in a nonrepeat region or stop-loss variant (ACMG code: PM4).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/8730290\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5016\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E70* (c.208G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E70* (c.208G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Germline mutations were found in all 93 families that fulfilled clinical criteria of VHL disease. Mutations predicted to inactivate the VHL protein were associated with renal cell carcinoma and hemangioblastomas of the central nervous system (VHL type 1); mutations predicted to produce full length VHL proteins were associated with pheochromocytoma (VHL type 2). This nonsense mutation was found in a VHL type 1 family (lineage 179). This provides strong evidence of pathogenicity as it is a null variant in a gene where loss of function is a known mechanism of disease (ACMG code: PVS1).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9829911\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5035\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E186* (c.556G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E186* (c.556G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Germline mutations were found in all 93 families that fulfilled clinical criteria of VHL disease. Mutations predicted to inactivate the VHL protein were associated with renal cell carcinoma and hemangioblastomas of the central nervous system (VHL type 1); mutations predicted to produce full length VHL proteins were associated with pheochromocytoma (VHL type 2).\
+This nonsense mutation was found in a VHL type 1 family (lineage 78). Only moderate evidence for pathogenicity because protein length changes as a result of stop-loss variant (ACMG code: PM4).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/9829911\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5057\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E189fs (c.565del)\",
+        \"variants\": [
+          {
+            \"name\": \"E189fs (c.565del)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Molecular analysis of VHL gene in 146 probands, 103 with and 43 without a positive family history, resulted in the detection of 43 germline VHL mutations. Majority of mutations were found in patients with classic or multi-organ manifestations of VHL disease, but mutations were also found in patients with limited or single-organ manifestations of VHL disease. Follow-up of families with germline mutations and limited VHL manifestations was recommended. This mutation causes an early stop codon at amino acid 201 and was found in a VHL type 1 patient with cerebellar hemangioblastomas and renal cysts (family no. 27).\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17661816\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5098\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E94* (c.280G>T)\",
+        \"variants\": [
+          {
+            \"name\": \"E94* (c.280G>T)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"Genotype-phenotype correlations of 573 VHL patients from 200 kindreds were analyzed. Age-related risks of retinal hemangioblastomas and renal cell carcinoma were higher in patients with nonsense or frameshift mutations. This nonsense mutation was found in 2 VHL families with 6 patients altogether. All six had retinal hemangioblastomas and 2 had cerebellar hemangioblastomas. This study contains very strong evidence for pathogenicity in the form of a nonsense mutation in a gene where loss-of-function is a known mechanism of disease (ACMG code: PVS1). Relevant HPO terms: Cerebellar hemangioblastoma, Retinal hemangioblastoma.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/17024664\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5137\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDISPOSING\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"PREDISPOSITION\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL Exon 2-3 Deletion\",
+        \"variants\": [
+          {
+            \"name\": \"Exon 2-3 Deletion\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"RARE_GERMLINE\",
+      \"description\": \"43 Italian patients were molecularly analyzed for Von Hippel-Lindau disease based on clinical suspicion. 1 of the 43 patients was found to have the above mutation. Clinical manifestations associated with this mutation include: CNS hemangioblastoma, renal cysts, and pancreatic cysts. ACMG evidence codes: 'PVS1' because they observe a deletion variant in a gene where loss of function is a known mechanism of disease. Relevant HPO terms: Hemangioblastoma, Multiple renal cysts, Multiple pancreatic cysts.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19464396\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:5306\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"PREDISPOSING\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"LIKELY_PATHOGENIC\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"VHL E70K (c.208G>A)\",
+        \"variants\": [
+          {
+            \"name\": \"E70K (c.208G>A)\",
+            \"feature\": {
+              \"name\": \"VHL\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Von Hippel-Lindau Disease\"
+      },
+      \"therapies\": [],
+      \"summary\": \"VHL E70K (c.208G>A) is Likely Pathogenic\",
+      \"url\": \"https://identifiers.org/civic.aid:14\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: A
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+48.0839

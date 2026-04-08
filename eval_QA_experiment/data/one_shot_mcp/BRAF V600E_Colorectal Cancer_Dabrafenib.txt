@@ -1,0 +1,159 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BRAF V600E",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Dabrafenib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"BRAF V600E\",
+        \"variants\": [
+          {
+            \"name\": \"V600E\",
+            \"feature\": {
+              \"name\": \"BRAF\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Colorectal Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Dabrafenib\"
+        },
+        {
+          \"name\": \"Panitumumab\"
+        },
+        {
+          \"name\": \"Trametinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this trial, 142 patients with metastatic, BRAF V600E mutant colorectal cancer were randomized to receive either BRAF inhibitor dabrafenib (D) + EGFR inhibitor panitumumab (P); or a triple therapy of D + P and MEK inhibition with trametinib (T) or T + P. Confirmed response rates for D+P (n=20), D+T+P (n=91), and T+P (n=31) were 10%, 21%, and 0%, respectively.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29431699\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6123\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"REDUCED_SENSITIVITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BRAF V600E\",
+        \"variants\": [
+          {
+            \"name\": \"V600E\",
+            \"feature\": {
+              \"name\": \"BRAF\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Colorectal Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Dabrafenib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In trial NCT00880321, dabrafenib was tested in various solid tumor types harboring mutant BRAF after establishing dosage of 150 mg twice daily. In nine colorectal cancer patients with established V600E mutation, 1 confirmed response, 7 instances of stable disease, and 1 case of progressive disease was seen, which contrasted strongly with a 56% confirmed response rate seen in metastatic V600E melanoma patients similarly treated in the same study.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/22608338\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1406\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BRAF V600E",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Dabrafenib"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: A
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+59.05196

@@ -1,0 +1,120 @@
+Invoking MCP tool get_variant_evidence
+MCP tool get_variant_evidence completed.
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "AREG Expression",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Panitumumab"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"AREG Expression\",
+        \"variants\": [
+          {
+            \"name\": \"Expression\",
+            \"feature\": {
+              \"name\": \"AREG\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Colorectal Cancer\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Panitumumab\"
+        }
+      ],
+      \"variantOrigin\": \"NA\",
+      \"description\": \"Prospectively planned retrospective biomarker study in archived tumor tissue from 323 patients from the PICCOLO trial (panitumumab plus irinotecan in CRC patients with KRAS wt). Tumors were classified as \\\"high expressor\\\" (either EREG or AREG mRNA level) or \\\"low expressor\\\" (neither EREG nor AREG in top tertile). \
+For RAS wild-type patients with high ligand expression, median PFS was 8.3 [4.0-11.0] months (irinotecan with panitumumab) vs 4.4 [2.8-6.7] months (irinotecan alone); HR, 0.38 [95% CI, 0.24-0.61]; P < .001. In RAS wild-type patients with low ligand expression, median PFS was 3.2 [2.7-8.1] months (irinotecan with panitumumab) vs 4.0 [2.7-7.5] months (irinotecan); HR, 0.93 [95% CI, 0.64-1.37]; P = .73; interaction test results were significant [P = .01]). Results were less clear for response rate (interaction P = .17) and OS (interaction P = .11).\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26867820\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:1020\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "AREG Expression",
+  "diseaseName": "Colorectal Cancer",
+  "therapyName": "Panitumumab"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: A
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+30.50756

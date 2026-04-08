@@ -32,6 +32,12 @@
         "malignant acral lentiginous melanomas",
         "acral lentiginous melanoma, malignant"
     ],
+    "cancer": [
+        "cancer",
+        "malignant neoplasm",
+        "malignant tumor",
+        "primary cancer"
+    ],
     "acute basophilic leukemia": [
         "basophilic leukaemia",
         "acute basophilic leukaemias",

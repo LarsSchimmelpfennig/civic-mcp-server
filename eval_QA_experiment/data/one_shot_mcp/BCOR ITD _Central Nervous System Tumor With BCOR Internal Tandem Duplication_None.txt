@@ -1,0 +1,230 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_evidence completed.
+MCP tool get_variant_assertions completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BCOR ITD",
+  "diseaseName": "Central Nervous System Tumor With BCOR Internal Tandem Duplication",
+  "therapyName": "None"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BCOR ITD",
+  "diseaseName": "Central Nervous System Tumor With BCOR Internal Tandem Duplication",
+  "therapyName": "None"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCOR ITD \",
+        \"variants\": [
+          {
+            \"name\": \"ITD \",
+            \"feature\": {
+              \"name\": \"BCOR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Central Nervous System Tumor With BCOR Internal Tandem Duplication\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"The authors generated genome-wide DNA methylation profiles of 323 tumors with an institutional diagnosis of ‘primitive neuroectodermal tumors of the central nervous system (CNS-PNETs)’,  which  are highly aggressive, poorly differentiated embryonal tumors occurring predominantly in young children but also affecting adolescents and adults. Four novel methylation profiles were identified. One of those profiles was exhibited by 10/323 (3 %) cases,  and all these tumors were found to have a duplicated region in exon 15 of BCOR [BCOR internal tandem duplication (ITD)] by DNA/RNA sequencing, identical to that of the BCOR ITD in other tumor types including clear cell sarcomas of the kidney, undifferentiated round cell sarcomas in infants, and primitive myxoid mesenchymal tumour of infancy. The authors compared DNA methylation pattern of the BCOR-ITD positive cases with an in-house collection of > 10,000 methylation profiles from a broad variety of pediatric and adult CNS tumors. Additional tumors with variety of histologies showed the same methylation profile as BCOR-ITD positive cases, and were also found to have BCOR-ITD. The authors proposed that BCOR-ITD defines a specific molecular subtype of  CNS tumors.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26919435\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10800\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"ONCOGENIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"ONCOGENICITY\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCOR ITD \",
+        \"variants\": [
+          {
+            \"name\": \"ITD \",
+            \"feature\": {
+              \"name\": \"BCOR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Central Nervous System Tumor With BCOR Internal Tandem Duplication\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"10/323 studied high-grade primitive neuroectodermal tumors of the central nervous system (CNS-HGPNETs)  clustered together based on their unique methylation profile. 10/10 of those tumors exhibited in-frame internal tandem duplications in the BCOR gene. The duplicated region was identical with that of the BCOR ITDs described in clear cell sarcoma of the kidney. 1 additional tumor harbored a BCOR intragenic in-frame deletion, and two additional tumors had BCOR frameshift mutations. Gene expression of BCOR was higher in CNS HG PNET BCOR-ITD positive tumors than in other CNS tumor types, suggesting different mechanism from BCOR loss-of-function mutations reported in other malignancies,. The results are consistent with BCOR-ITDs acting as primary oncogenic drivers in a unique type of CNS HG PNETs.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26919435\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10804\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCOR ITD \",
+        \"variants\": [
+          {
+            \"name\": \"ITD \",
+            \"feature\": {
+              \"name\": \"BCOR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Central Nervous System Tumor With BCOR Internal Tandem Duplication\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"10 cases of high-grade neuroepithelial tumor  (HGNET) with BCOR exon 15 ITD were studied. In addition, 25 previously reported and published patients were included in survival analyses. These tumors are newly proposed to belong to a separate entity with a distinct methylation profile and a characteristic genetic alteration. The authors further describe  their clinical, pathologic, radiographic, and genetic features. Shared histologic characteristics included predominantly solid growth, glioma‐like fibrillarity, perivascular pseudorosettes, and palisading necrosis, but absence of microvascular proliferation. Immunohistochemistry testing showed absent GFAP expression, no synaptophysin expression, variable OLIG2 and NeuN positivity, and diffuse strong BCOR nuclear positivity. In 6 of 10 cases, BCOR ex15 ITD was the only pathogenic alteration seen, while other cases showed additional genetic abnormalities including CDKN2A/B homozygous deletion, TERT amplification or promoter hotspot mutation, and damaging mutations in TP53, BCORL1, EP300, SMARCA2 and STAG2. The authors conclude that their findings further support inclusion of HG NET with BCOR ex15 ITD as a distinct CNS tumor entity.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/31104347\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:10887\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"DIAGNOSTIC\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCOR ITD \",
+        \"variants\": [
+          {
+            \"name\": \"ITD \",
+            \"feature\": {
+              \"name\": \"BCOR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Central Nervous System Tumor With BCOR Internal Tandem Duplication\"
+      },
+      \"therapies\": [],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Six cases of CNS high-grade neuroepithelial tumor (HGNET) with BCOR exon 15 internal tandem duplication (ITD) were studied. The authors analyzed their clinical, pathologic and molecular characteristic and compared them with Clear Cell Sarcoma of Kidney (CCSK) and soft tissue sarcoma with the same genetic abnormality (BCOR ex15 ITD). Cases of CNS HGNET with BCOR ex15 ITD were histologically characterized by glial cell morphology, ependymoma-like perivascular pseudorosettes and palisading necrosis. Immunohistochemically, they showed diffuse staining of Olig2, and focal staining of GFAP, S-100 protein and synaptophysin. Clinically, histologically and immunohistochemically CNS  HG NETs with BCOR ex15 ITD were distinct from CCSK and soft tissue sarcomas with BCOR ex15 ITD, supporting that these should be considered a unique type of CNS tumor.\",
+      \"evidenceLevel\": \"B\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/29226988\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:11581\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"assertionType\": \"DIAGNOSTIC\",
+      \"assertionDirection\": \"SUPPORTS\",
+      \"significance\": \"POSITIVE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCOR ITD \",
+        \"variants\": [
+          {
+            \"name\": \"ITD \",
+            \"feature\": {
+              \"name\": \"BCOR\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Central Nervous System Tumor With BCOR Internal Tandem Duplication\"
+      },
+      \"therapies\": [],
+      \"summary\": \"BCOR internal tandem duplication is an essential diagnostic criterion for CNS tumor with BCOR ITD (WHO classification of tumours series, 5th ed.; vol. 6).\",
+      \"url\": \"https://identifiers.org/civic.aid:95\"
+    }
+  ]
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: C
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: A
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: A
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+32.1981

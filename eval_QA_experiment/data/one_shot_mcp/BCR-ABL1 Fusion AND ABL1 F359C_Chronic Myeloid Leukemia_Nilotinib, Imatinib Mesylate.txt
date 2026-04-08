@@ -1,0 +1,921 @@
+Invoking MCP tool get_variant_evidence
+Invoking MCP tool get_variant_assertions
+MCP tool get_variant_assertions completed.
+MCP tool get_variant_evidence completed.
+### TOOL TRACE (args + outputs) ###
+
+--- TOOL CALL: get_variant_evidence ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 F359C",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Nilotinib, Imatinib Mesylate"
+}
+
+--- TOOL CALL: get_variant_assertions ---
+{
+  "molecularProfileName": "BCR::ABL1 Fusion AND ABL1 F359C",
+  "diseaseName": "Chronic Myeloid Leukemia",
+  "therapyName": "Nilotinib, Imatinib Mesylate"
+}
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"evidenceType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+evidenceDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+description: Detailed summary of the evidence from CIViC curators.\
+evidenceLevel: Describes the robustness of the study type. A - Validated association, B - Clinical evidence, C - Case study, D - Preclinical evidence, and E - Inferential association\
+evidenceRating: Quality score assigned to the evidence by curators (scored 1-5).\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the EIDs and PubMed IDs as links\",
+  \"API Results\": [
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"The use of nilotinib and dasatinib, second-generation BCR-ABL targeted therapies, has been effective in patients resistant to imatinib, leading to their FDA-approval.\",
+      \"evidenceLevel\": \"A\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/20537386\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:261\"
+    },
+    {
+      \"status\": \"SUBMITTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M244V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M244V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"A chronic myelogenous leukemia patient with a M244V mutation in the ABL1 portion of the BCR-ABL1 fusion was associated with response to nilotinib monotherapy. Prior to detection of the M244V mutation, the patient was found to harbor a BCR-ABL1 fusion and was treated with imatinib monotherapy, with response reported as 12 months; however, at 52 months of imatinib therapy the patient relapsed and the M244V mutation was identified. Subsequently, treatment with nilotinib resulted in the extinguishment of the BCR-ABL1 fusion and the M244V mutation.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/26622510\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2639\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150 nM. In patients with Y253H mutations prior to nilotinib treatment, complete hematologic response was achieved in 0 of 6 patients, major cytogenetic response in 1 of 8 patients, complete cytogenetic response in 0 of 8 patients, and major molecular response in 0 of 7 patients. After median follow-up of 15.5 months, 3 of 8 patients with this mutation progressed or died. The Y253H mutation was present in two patients at baseline and newly emerged in two patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6200\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255K\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255K\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 greater than 150 nM. In patients with E255K and/or E255V mutations prior to nilotinib treatment, complete hematological responses were achieved in 5 of 7 patients, major cytogenetic responses in 3 of 7 patients, complete cytogenetic responses in 0 of 7 patients, and a major molecular response in 1 of 7 patients. After a median follow-up of 15.5 months, 6 of 7 patients with this mutation progressed or died. The E255K mutation was present in 6 patients at baseline and newly emerged in 4 patients at progression. The E255V mutation was present in 0 patients at baseline and newly emerged in 3 patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6232\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359C\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359C\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150nM. In patients with F359C and/or F359V mutations prior to nilotinib treatment, complete hematological responses were achieved in 3 of 10 patients, a major cytogenetic response in 1 of 11 patients, a complete cytogenetic response in 0 of 11 patients, and major molecular response in 0 of 10 patients. After a median follow-up of 15.5 months, 9 of 11 patients with this mutation progressed or died. The F359C mutation was present in 1 patient at baseline and newly emerged in 1 patient at progression. The F359V mutation was present in 4 patients at baseline and newly emerged in 1 patient at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6233\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib-resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 of >150nM. In patients with F359C and/or F359V mutations prior to nilotinib treatment, complete hematological responses were achieved in 3 of 10 patients, a major cytogenetic response in 1 of 11 patients, a complete cytogenetic response in 0 of 11 patients, and major molecular response in 0 of 10 patients. After a median follow-up of 15.5 months, 9 of 11 patients with this mutation progressed or died. The F359C mutation was present in 1 patient at baseline and newly emerged in 1 patient at progression. The F359V mutation was present in 4 patients at baseline and newly emerged in 1 patient at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6970\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In this open-label, phase II registration trial, patients that were imatinib resistant or intolerant underwent nilotinib monotherapy. Within 12 months of nilotinib therapy, there was no significant difference in response to nilotinib treatment between patients with mutations in the Abl1 kinase domain versus without. However, the authors identify Y253H, E255K/V, and F359C/V variants as resistant as they had an IC50 greater than 150 nM. In patients with E255K and/or E255V mutations prior to nilotinib treatment, complete hematological responses were achieved in 5 of 7 patients, major cytogenetic responses in 3 of 7 patients, complete cytogenetic responses in 0 of 7 patients, and a major molecular response in 1 of 7 patients. After a median follow-up of 15.5 months, 6 of 7 patients with this mutation progressed or died. The E255K mutation was present in 6 patients at baseline and newly emerged in 4 patients at progression. The E255V mutation was present in 0 patients at baseline and newly emerged in 3 patients at progression.\",
+      \"evidenceLevel\": \"C\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19652056\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6971\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3  cell line stably expressing the T315I mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with resistance to nilotinib treatment (IC50: 39.41-fold), as compared to Ba/F3 cells expressing BCR-ABL1 fusion protein (reported to be sensitizing to nilotinib). Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 4,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2670\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F359V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F359V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3  cell line stably expressing the F359V mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with resistance to nilotinib treatment (IC50: 5.16-fold), as compared to Ba/F3 cells expressing BCR-ABL1 fusion protein (reported to be sensitizing to nilotinib). Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2170\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 Y253H\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"Y253H\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3-p210BCR-ABL1 cell line was ENU-mutated and exposed to graded concentrations of imatinib, nilotinib or dasatinib to identify resistance mutations. The Y253H mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with resistance to 50nM nilotinib (14 clones recovered, ~30% of viable clones in this treatment), 500nM nilotinib (50 clones, ~63%), and 16 nM imatinib (16 clones; ~48%). Resistant clones were also found at 2, 4, and 8 μM imatinib. In a review of 20 publications, this mutation was described in imatinib resistant patients.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/16772610\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2654\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 M351T\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"M351T\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, Ba/F3 cell line stably expressing the M351T mutation in the ABL1 portion of the BCR-ABL1 gene fusion was associated with sensitivity to nilotinib treatment (IC50: 0.44-fold), comparable to Ba/F3 cells expressing BCR-ABL1 fusion protein (reported to be sensitizing to nilotinib). Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2685\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 F486S\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"F486S\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3 cell line stably expressing the F486S mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with sensitivity to nilotinib treatment (IC50: 1.85-fold), comparable to Ba/F3 cells expressing BCR-ABL fusion protein. Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2829\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 E255V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"E255V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3  cell line stably expressing the E255V mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with resistance to nilotinib treatment (IC50: 10.31-fold), as compared to Ba/F3 cells expressing BCR-ABL1 fusion protein. Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2850\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 V299L\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"V299L\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3 cell line stably expressing the V299L mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with sensitivity to nilotinib treatment (IC50: 1.34-fold), comparable to Ba/F3 cells expressing BCR-ABL1 fusion protein. Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2862\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": null,
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 G398R\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"G398R\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3 cell line stably expressing the G398R mutation in the ABL1 portion of the BCR-ABL1 gene fusion was associated with sensitivity to nilotinib treatment (IC50: 0.49-fold), comparable to Ba/F3 cells expressing BCR-ABL1 fusion protein (reported to be sensitizing to nilotinib). Sensitivity was determined by assessing cell proliferation.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/19075254\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2864\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"COMBINATION\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, stochastic mutations were introduced into the ABL1 region of a stably expressed p210 BCR-ABL fusion in Ba/F3 cells using N-ethyl-N-nitrosourea mutagenesis. Resulting clones were grown in a range of tyrosine kinase inhibitor concentrations to identify resistance mutations. The T315I mutation was associated with resistance in 50 nM nilotinib + 10 nM dasatinib (7 clones, 100% of viable clones in this treatment), 1 μM nilotinib + 50 nM dasatinib (9 clones, 100%), and 2 μM nilotinib + 100 nM dasatinib (2 clones, 100%) combination treatments.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/16772610\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6235\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Imatinib Mesylate\"
+        },
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, stochastic mutations were introduced into the ABL1 region of a stably expressed p210 BCR-ABL fusion in Ba/F3 cells using N-ethyl-N-nitrosourea mutagenesis. Resulting clones were grown in a range of tyrosine kinase inhibitor concentrations to identify resistance mutations. The T315I mutation was associated with resistance in 16 μM imatinib ( 15 clones, 45% of viable clones in this treatment), 5000 nM nilotinib (10 clones, 100%), and 25 nM dasatinib (32 clones, 100%) which were the highest concentrations used. T315I resistant clones were also found at all lower concentrations tested.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/16772610\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:6285\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 T315I\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"T315I\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Imatinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"Bone marrow mononuclear cells (BM MNCs) were isolated from a chronic myeloid leukemia patients with the BCR-ABL1 T315I variant who was pretreated with imatinib, dasatinib, and chemotherapy. The patient's cells were sensitive to Ponatinib and Axitinib and insensitive to Nilotinib, Imatinib, and Dasatinib compared to BM MNCs from healthy controls using drug sensitivity scoring of proliferation assays. Additionally, in a rezasurin proliferation assay, Ba/F3 cells carrying the BCR-ABL1 variant were resistant to imatinib in fusions with the T315I variant of ABL1 compared to wildtype ABL1 (IC50 of >4,000 nM vs. 257 nM).\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/25686603\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7780\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"SENSITIVITYRESPONSE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        },
+        {
+          \"name\": \"Bafetinib\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, six CML cell lines expressing the BCR-ABL1 fusion protein showed sensitivity to nilotinib (IC50: 24.3-84.5 nM), dasatinib (IC50: 1.5-10.9 nM), and bafetinib (IC50: 11.8-87.7 nM). When comparing potency of these treatments against the 6 CML cell lines, dasatinib, nilotinib and bafetinib were on average 98.6, 9.85 and 16.4 times more potent than imatinib. Sensitivity was determined by assessing cell proliferation using the MTT assay.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 3,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/18191450\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:7838\"
+    },
+    {
+      \"status\": \"ACCEPTED\",
+      \"evidenceType\": \"PREDICTIVE\",
+      \"evidenceDirection\": \"SUPPORTS\",
+      \"significance\": \"RESISTANCE\",
+      \"therapyInteractionType\": \"SUBSTITUTES\",
+      \"molecularProfile\": {
+        \"name\": \"BCR::ABL1 Fusion AND ABL1 L248V\",
+        \"variants\": [
+          {
+            \"name\": \"Fusion\",
+            \"feature\": {
+              \"name\": \"BCR::ABL1\"
+            }
+          },
+          {
+            \"name\": \"L248V\",
+            \"feature\": {
+              \"name\": \"ABL1\"
+            }
+          }
+        ]
+      },
+      \"disease\": {
+        \"displayName\": \"Chronic Myeloid Leukemia\"
+      },
+      \"therapies\": [
+        {
+          \"name\": \"Nilotinib\"
+        },
+        {
+          \"name\": \"Dasatinib\"
+        },
+        {
+          \"name\": \"Imatinib Mesylate\"
+        }
+      ],
+      \"variantOrigin\": \"SOMATIC\",
+      \"description\": \"In an in vitro study, a Ba/F3-p210BCR-ABL1 cell line was ENU-mutated and exposed to graded concentrations of imatinib, nilotinib or dasatinib to identify resistance mutations. The L248V mutation in the ABL1 portion of the BCR-ABL1 fusion protein was associated with resistance to 2 μM imatinib (3 clones recovered, ~2% of viable clones in this treatment), 50nM nilotinib (1 clone, ~2%), and 5nM dasatinib (3 clones, ~9%). In a review of 20 publications, this mutation was described in imatinib resistant patients.\",
+      \"evidenceLevel\": \"D\",
+      \"evidenceRating\": 2,
+      \"source\": {
+        \"sourceUrl\": \"http://www.ncbi.nlm.nih.gov/pubmed/16772610\"
+      },
+      \"url\": \"https://identifiers.org/civic.eid:2644\"
+    }
+  ]
+}"
+  }
+]
+
+--- TOOL OUTPUT ---
+[
+  {
+    "type": "input_text",
+    "text": "{
+  \"instructions\": \"assertionType: Category describing the type of clinical or biological evidence (e.g., predictive, diagnostic).\
+assertionDirection: Indicates whether the evidence supports or refutes the association.\
+significance: The clinical relevance of the evidence.\
+summary: Detailed summary of the evidence from CIViC curators.\
+url: Direct link to the CIViC record for this evidence item.\
+When returning information to users you MUST cite URLs used for specific information. Always cite both the AIDs and PubMed IDs as links\",
+  \"API Results\": []
+}"
+  }
+]
+### LLM OUTPUT ###
+predictive — sensitivity_response: C
+predictive — resistance: A
+predictive — adverse_response: C
+predictive — reduced_sensitivity: C
+predictive — N/A: C
+
+prognostic — better_outcome: C
+prognostic — poor_outcome: C
+prognostic — N/A: C
+
+diagnostic — positive: C
+diagnostic — negative: C
+
+predisposing — predisposition: C
+predisposing — protectiveness: C
+predisposing — uncertain_significance: C
+predisposing — N/A: C
+
+oncogenic — oncogenicity: C
+oncogenic — protectiveness: C
+oncogenic — N/A: C
+
+functional — gain_of_function: C
+functional — loss_of_function: C
+functional — unaltered_function: C
+functional — neomorphic: C
+functional — dominant_negative: C
+functional — unknown: C
+### TIME (Seconds) ###
+48.67925
