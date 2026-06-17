@@ -1,0 +1,489 @@
+import re
+import hashlib
+from pathlib import Path
+from functools import lru_cache
+
+import numpy as np
+import pandas as pd
+
+
+# -------------------------
+# CONFIG
+# -------------------------
+CIVIC_CSV = Path("data") / "CIViC_clinvar_evidence_extract_2_27_26.csv"
+AGENT_MODE_CSV = Path("data") / "CIViC MCP Agent Mode Experiment - agent_mode_prompts_clean.csv"
+QA_TRIPLET_CSV = Path("data") / "QA_triplet_dataset.csv"
+
+
+# -------------------------
+# NORMALIZATION HELPERS
+# -------------------------
+def norm_alnum_upper(x: str) -> str:
+    return re.sub(r"[^A-Z0-9]+", "", str(x).strip().upper())
+
+
+def sanitize_filename(
+    name: str,
+    replacement: str = "_",
+    max_length: int = 255,
+    ensure_unique: bool = False
+) -> str:
+    name = str(name).replace("::", "-")
+    invalid_chars = r'[<>:"/\\|?*\n\r\t]'
+    name = re.sub(invalid_chars, replacement, name)
+    name = re.sub(re.escape(replacement) + r"{2,}", replacement, name)
+    name = name.strip(replacement)
+
+    if len(name) > max_length:
+        if ensure_unique:
+            hash_suffix = hashlib.sha1(name.encode()).hexdigest()[:8]
+            trunc_length = max_length - len(hash_suffix) - 1
+            name = name[:trunc_length].rstrip(replacement)
+            name = f"{name}{replacement}{hash_suffix}"
+        else:
+            name = name[:max_length].rstrip(replacement)
+    return name
+
+
+# -------------------------
+# THERAPY MATCHING (set-based; SUBSTITUTES = overlap with single-drug queries only)
+# -------------------------
+_THER_SPLIT_RE = re.compile(r"\s*(?:,|;|\||\+|/|\bAND\b|\bOR\b)\s*", flags=re.I)
+
+@lru_cache(maxsize=200000)
+def therapy_set(x: str) -> frozenset[str]:
+    """
+    Parse a therapy string into a normalized set of therapy tokens.
+    """
+    s = str(x).strip()
+    if not s or s.lower() in ("none", "nan"):
+        return frozenset()
+
+    # strip common list-like wrappers
+    s = s.strip().strip("[](){}")
+    s = s.replace("'", "").replace('"', "")
+
+    parts = [p.strip() for p in _THER_SPLIT_RE.split(s) if p.strip()]
+    toks = []
+    for p in parts:
+        n = norm_alnum_upper(p)
+        if n and n not in ("NONE", "NA", "NAN"):
+            toks.append(n)
+    return frozenset(toks)
+
+
+def therapy_match_mask(rows: pd.DataFrame, qset: frozenset[str]) -> pd.Series:
+    """
+    Row-level therapy matching given precomputed:
+      - rows["_therapy_set"] : frozenset tokens
+      - rows["_tit_norm"]    : normalized interaction type
+
+    Rules:
+      - Non-SUBSTITUTES: exact set equality
+      - SUBSTITUTES:
+          * if query has 1 therapy -> any overlap
+          * if query has >=2 therapies -> exact set equality (combo must match)
+    """
+    tit = rows["_tit_norm"]
+    ther = rows["_therapy_set"]
+
+    exact_mask = (tit != "SUBSTITUTES") & (ther == qset)
+
+    subs_mask = pd.Series(False, index=rows.index)
+    subs_rows = rows[tit == "SUBSTITUTES"]
+    if len(subs_rows) > 0:
+        if len(qset) <= 1:
+            subs_mask.loc[subs_rows.index] = subs_rows["_therapy_set"].apply(lambda s: len(s & qset) > 0)
+        else:
+            subs_mask.loc[subs_rows.index] = (subs_rows["_therapy_set"] == qset)
+
+    return exact_mask | subs_mask
+
+
+# -------------------------
+# MP SATISFACTION (AND/OR) + CODON UMBRELLA MATCHING
+# -------------------------
+_AND_RE = re.compile(r"\bAND\b", flags=re.I)
+_OR_RE  = re.compile(r"\bOR\b",  flags=re.I)
+_DIGIT_SUFFIX_RE = re.compile(r"\d+$")
+
+def norm_mp_term(x: str) -> str:
+    return re.sub(r"[^A-Z0-9]+", "", str(x).strip().upper())
+
+def parse_mp(name: str):
+    s = re.sub(r"\s+", " ", str(name).strip())
+    if not s:
+        return "SINGLE", []
+    if _AND_RE.search(s):
+        terms = re.split(r"\s+\bAND\b\s+", s, flags=re.I)
+        return "AND", [t.strip() for t in terms if t.strip()]
+    if _OR_RE.search(s):
+        terms = re.split(r"\s+\bOR\b\s+", s, flags=re.I)
+        return "OR", [t.strip() for t in terms if t.strip()]
+    return "SINGLE", [s]
+
+def term_match(q_term: str, e_term: str, allow_positional_query_umbrella: bool = True) -> bool:
+    """
+    True if query term matches evidence term, allowing:
+      - exact normalized match
+      - OPTIONAL directional codon umbrella match:
+          query positional (EZH2Y646) can match evidence specific (EZH2Y646S),
+          but query specific (EZH2Y646S) does NOT match evidence positional (EZH2Y646).
+    """
+    qn = norm_mp_term(q_term)
+    en = norm_mp_term(e_term)
+    if not qn or not en:
+        return False
+
+    if qn == en:
+        return True
+
+    if allow_positional_query_umbrella:
+        if _DIGIT_SUFFIX_RE.search(qn) and en.startswith(qn):
+            suffix = en[len(qn):]
+            if re.fullmatch(r"[A-Z]+", suffix):
+                return True
+
+    return False
+
+@lru_cache(maxsize=200000)
+def mp_satisfied(query_mp_name: str, evidence_mp_name: str) -> bool:
+    """
+    Query-driven MP satisfaction:
+
+    - If QUERY is AND:
+        require EVIDENCE is AND and the AND profiles match as a whole (mutual coverage).
+    - If QUERY is OR:
+        allow evidence SINGLE/OR if any overlap; do NOT allow evidence AND.
+    - If QUERY is SINGLE:
+        allow evidence SINGLE/OR if any term matches; do NOT allow evidence AND.
+    """
+    q_op, q_terms = parse_mp(query_mp_name)
+    e_op, e_terms = parse_mp(evidence_mp_name)
+
+    if not q_terms or not e_terms:
+        return False
+
+    if q_op == "AND":
+        if e_op != "AND":
+            return False
+        q_covered = all(any(term_match(qt, et) for et in e_terms) for qt in q_terms)
+        e_covered = all(any(term_match(qt, et) for qt in q_terms) for et in e_terms)
+        return q_covered and e_covered
+
+    if q_op == "OR":
+        if e_op == "AND":
+            return False
+        return any(term_match(qt, et) for qt in q_terms for et in e_terms)
+
+    if e_op == "AND":
+        return False
+    q0 = q_terms[0]
+    return any(term_match(q0, et) for et in e_terms)
+
+
+# -------------------------
+# LABEL SPACE (Task 2 only; 23 lines)
+# -------------------------
+ITEMS = [
+    ("predictive",   "sensitivity_response"),
+    ("predictive",   "resistance"),
+    ("predictive",   "adverse_response"),
+    ("predictive",   "reduced_sensitivity"),
+    ("predictive",   "N/A"),
+
+    ("prognostic",   "better_outcome"),
+    ("prognostic",   "poor_outcome"),
+    ("prognostic",   "N/A"),
+
+    ("diagnostic",   "positive"),
+    ("diagnostic",   "negative"),
+
+    ("predisposing", "predisposition"),
+    ("predisposing", "protectiveness"),
+    ("predisposing", "uncertain_significance"),
+    ("predisposing", "N/A"),
+
+    ("oncogenic",    "oncogenicity"),
+    ("oncogenic",    "protectiveness"),
+    ("oncogenic",    "N/A"),
+
+    ("functional",   "gain_of_function"),
+    ("functional",   "loss_of_function"),
+    ("functional",   "unaltered_function"),
+    ("functional",   "neomorphic"),
+    ("functional",   "dominant_negative"),
+    ("functional",   "unknown"),
+]
+ALL_LABEL_KEYS = [f"{t}_{s}" for t, s in ITEMS]
+
+types_to_csv = {
+    # Predictive
+    "predictive_sensitivity_response": ("PREDICTIVE", "SENSITIVITYRESPONSE"),
+    "predictive_resistance":           ("PREDICTIVE", "RESISTANCE"),
+    "predictive_adverse_response":     ("PREDICTIVE", "ADVERSE_RESPONSE"),
+    "predictive_reduced_sensitivity":  ("PREDICTIVE", "REDUCED_SENSITIVITY"),
+    "predictive_N/A":                  ("PREDICTIVE", "N/A"),
+
+    # Prognostic
+    "prognostic_better_outcome":       ("PROGNOSTIC", "BETTER_OUTCOME"),
+    "prognostic_poor_outcome":         ("PROGNOSTIC", "POOR_OUTCOME"),
+    "prognostic_N/A":                  ("PROGNOSTIC", "N/A"),
+
+    # Diagnostic
+    "diagnostic_positive":             ("DIAGNOSTIC", "POSITIVE"),
+    "diagnostic_negative":             ("DIAGNOSTIC", "NEGATIVE"),
+
+    # Predisposing
+    "predisposing_predisposition":         ("PREDISPOSING", "PREDISPOSITION"),
+    "predisposing_protectiveness":         ("PREDISPOSING", "PROTECTIVENESS"),
+    "predisposing_uncertain_significance": ("PREDISPOSING", "UNCERTAIN_SIGNIFICANCE"),
+    "predisposing_N/A":                    ("PREDISPOSING", "N/A"),
+
+    # Oncogenic
+    "oncogenic_oncogenicity":          ("ONCOGENIC", "ONCOGENICITY"),
+    "oncogenic_protectiveness":        ("ONCOGENIC", "PROTECTIVENESS"),
+    "oncogenic_N/A":                   ("ONCOGENIC", "N/A"),
+
+    # Functional
+    "functional_gain_of_function":     ("FUNCTIONAL", "GAIN_OF_FUNCTION"),
+    "functional_loss_of_function":     ("FUNCTIONAL", "LOSS_OF_FUNCTION"),
+    "functional_unaltered_function":   ("FUNCTIONAL", "UNALTERED_FUNCTION"),
+    "functional_neomorphic":           ("FUNCTIONAL", "NEOMORPHIC"),
+    "functional_dominant_negative":    ("FUNCTIONAL", "DOMINANT_NEGATIVE"),
+    "functional_unknown":              ("FUNCTIONAL", "UNKNOWN"),
+}
+
+csv_to_types_norm = {
+    (norm_alnum_upper(et), norm_alnum_upper(sig)): key
+    for key, (et, sig) in types_to_csv.items()
+}
+
+
+def _clean_none(x: str) -> str:
+    x = str(x).strip()
+    return "None" if x == "" or x.lower() in ("none", "nan") else x
+
+
+def build_filter_rows_for_entity(df_all: pd.DataFrame, entity_meta: pd.DataFrame):
+    def filter_rows_for_entity(ent: str) -> pd.DataFrame:
+        """
+        Context filters + MP satisfaction (truth construction):
+
+        - If disease is specified (not 'None'): require disease match.
+        - If disease is 'None': require disease_name == 'None'.
+        - If therapy is specified: require therapy match (set-based; SUBSTITUTES special-case).
+        - If therapy is 'None': require therapies == 'None'.
+        - Require molecular profile satisfaction using AND/OR + codon umbrella matching.
+        """
+        if ent not in entity_meta.index:
+            return df_all.iloc[0:0]
+
+        q_mp = entity_meta.at[ent, "molecularProfile_name"]
+        q_dz = _clean_none(entity_meta.at[ent, "disease_name"])
+        q_tx = _clean_none(entity_meta.at[ent, "therapies"])
+
+        rows = df_all
+
+        # Disease filter
+        if isinstance(q_dz, str) and q_dz != "None":
+            rows = rows[rows["disease_name"] == q_dz]
+        else:
+            rows = rows[rows["disease_name"] == "None"]
+
+        # Therapy filter
+        if isinstance(q_tx, str) and q_tx != "None":
+            qset = therapy_set(q_tx)
+            rows = rows[therapy_match_mask(rows, qset)]
+        else:
+            rows = rows[rows["therapies"] == "None"]
+
+        # Molecular profile satisfaction
+        rows = rows[rows["molecularProfile_name"].apply(lambda mp: mp_satisfied(q_mp, mp))]
+
+        return rows
+
+    return filter_rows_for_entity
+
+
+def build_ground_truth_matrix(entities, filter_rows_for_entity) -> pd.DataFrame:
+    """
+    Builds the Task 2 ground-truth matrix (bitmask encoding) for a list of entities.
+
+    For each entity / significance-key cell:
+      0       = no matching CIViC evidence rows (-> "C" / No Evidence)
+      bit 1   = some matching evidence row SUPPORTS   (-> contributes "A")
+      bit 2   = some matching evidence row DOES NOT SUPPORT (-> contributes "B")
+      3 (1|2) = both bits set, OR a row with unknown/NA direction (-> ambiguous "A,B")
+    """
+    y_true = pd.DataFrame(0, index=entities, columns=ALL_LABEL_KEYS, dtype=int)
+
+    for ent in entities:
+        rows = filter_rows_for_entity(ent)
+
+        for _, row in rows.iterrows():
+            et = norm_alnum_upper(row.get("evidenceType", ""))
+            sig = norm_alnum_upper(row.get("significance", ""))
+            key = csv_to_types_norm.get((et, sig))
+            if not key:
+                continue
+
+            cur = int(y_true.at[ent, key])
+
+            d_raw = row.get("evidenceDirection", "")
+            d = norm_alnum_upper("" if pd.isna(d_raw) else d_raw)
+
+            # Direction unknown/NA -> ambiguous => A,B
+            if d in ("NA", "NAN", ""):
+                cur |= 3
+            elif d == "SUPPORTS":
+                cur |= 1
+            elif d == "DOESNOTSUPPORT":
+                cur |= 2
+
+            y_true.at[ent, key] = cur
+
+    return y_true
+
+
+def load_used_entities(csv_path: Path) -> pd.DataFrame:
+    """
+    Loads the agent-mode prompts CSV and reconstructs sanitized_entities exactly the
+    way eval_one_shot.py's load_eval_records (kind="csv_file") does, so the resulting
+    entity IDs line up 1:1 with df_all["sanitized_entities"].
+
+    Returns a DataFrame with columns: MP, disease, therapy, sanitized_entities
+    (one row per row of the input CSV; duplicates are NOT collapsed here).
+    """
+    df = pd.read_csv(csv_path)
+
+    required = {"MP", "disease", "therapy"}
+    missing = required - set(df.columns)
+    if missing:
+        raise ValueError(f"{csv_path} is missing required columns: {sorted(missing)}")
+
+    df = df.copy()
+    df["MP"] = df["MP"].astype(str)
+    df["disease"] = df["disease"].fillna("None").astype(str)
+    df["therapy"] = df["therapy"].fillna("None").astype(str)
+
+    df["entities"] = df["MP"] + "_" + df["disease"] + "_" + df["therapy"]
+    df["sanitized_entities"] = df["entities"].apply(lambda x: sanitize_filename(x, replacement="_"))
+
+    return df[["MP", "disease", "therapy", "sanitized_entities"]]
+
+
+def build_qa_triplet_dataset(df_all: pd.DataFrame, out_path: Path, restrict_to_entities=None) -> pd.DataFrame:
+    """
+    Builds the ground-truth QA dataset: one row per unique (MP, Disease, Therapy)
+    triplet found in the CIViC extract, along with the comma-separated list of
+    evidenceType_significance labels for which CIViC evidence:
+      - Evidence_Supports      (A)      -> evidence supports, no opposing evidence
+      - Evidence_Opposes       (B)      -> evidence opposes, no supporting evidence
+      - Contradicting_Evidence (A & B)  -> evidence both supports AND opposes (or direction unknown/N/A)
+      - No_Evidence            (C)      -> no matching CIViC evidence at all
+
+    Each label falls into exactly one of these four mutually-exclusive categories.
+
+    If restrict_to_entities is given (an iterable of sanitized_entities values), the
+    output is limited to just those triplets instead of every triplet in df_all.
+    """
+    entity_meta = (
+        df_all.groupby("sanitized_entities")[["molecularProfile_name", "disease_name", "therapies"]]
+              .first()
+    )
+
+    if restrict_to_entities is not None:
+        entity_meta = entity_meta.loc[entity_meta.index.intersection(restrict_to_entities)]
+
+    all_entities = list(entity_meta.index)
+
+    filter_rows_for_entity = build_filter_rows_for_entity(df_all, entity_meta)
+    y_true = build_ground_truth_matrix(all_entities, filter_rows_for_entity)
+
+    def _to_display(x: str) -> str:
+        x = str(x).strip()
+        return "" if x == "" or x.lower() in ("none", "nan") else x
+
+    rows = []
+    for ent in all_entities:
+        cur_row = y_true.loc[ent]
+
+        evidence_supports = [k for k in ALL_LABEL_KEYS if int(cur_row[k]) == 1]
+        evidence_opposes = [k for k in ALL_LABEL_KEYS if int(cur_row[k]) == 2]
+        contradicting_evidence = [k for k in ALL_LABEL_KEYS if int(cur_row[k]) == 3]
+        no_evidence = [k for k in ALL_LABEL_KEYS if int(cur_row[k]) == 0]
+
+        rows.append({
+            "MP": entity_meta.at[ent, "molecularProfile_name"],
+            "Disease": _to_display(entity_meta.at[ent, "disease_name"]),
+            "Therapy": _to_display(entity_meta.at[ent, "therapies"]),
+            "Evidence_Supports": ",".join(evidence_supports),
+            "Evidence_Opposes": ",".join(evidence_opposes),
+            "Contradicting_Evidence": ",".join(contradicting_evidence),
+            "No_Evidence": ",".join(no_evidence),
+            "entity_id": ent,
+        })
+
+    qa_df = pd.DataFrame(rows, columns=[
+        "MP", "Disease", "Therapy",
+        "Evidence_Supports", "Evidence_Opposes", "Contradicting_Evidence", "No_Evidence",
+        "entity_id",
+    ])
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    qa_df.to_csv(out_path, index=False)
+
+    print(f"Saved QA triplet dataset: {out_path}")
+    print(f"  Unique MP/Disease/Therapy triplets: {len(qa_df)}")
+
+    return qa_df
+
+
+# -------------------------
+# LOAD DATA + BUILD/SAVE QA TRIPLET DATASET
+# -------------------------
+if __name__ == "__main__":
+    df_all = pd.read_csv(CIVIC_CSV)
+
+    # Normalize missing/empty significance to N/A
+    df_all["significance"] = df_all["significance"].replace("", np.nan).fillna("N/A")
+
+    df_all["therapies"] = df_all["therapies"].replace("", np.nan).fillna("None")
+    df_all["disease_name"] = df_all["disease_name"].replace("", np.nan).fillna("None")
+
+    # normalize therapy interaction type
+    df_all["_tit_norm"] = df_all["therapy_interaction_type"].fillna("").astype(str).apply(norm_alnum_upper)
+
+    # precompute therapy sets for matching
+    df_all["_therapy_set"] = df_all["therapies"].astype(str).apply(therapy_set)
+
+    df_all["entities"] = (
+        df_all["molecularProfile_name"].astype(str) + "_" +
+        df_all["disease_name"].astype(str) + "_" +
+        df_all["therapies"].astype(str)
+    )
+    df_all["sanitized_entities"] = df_all["entities"].apply(lambda x: sanitize_filename(x, replacement="_"))
+
+    # -------------------------
+    # RESTRICT TO ONLY THE TRIPLETS ACTUALLY USED IN THE EVAL
+    # -------------------------
+    used = load_used_entities(AGENT_MODE_CSV)
+    used_entities = set(used["sanitized_entities"])
+
+    csv_entities = set(df_all["sanitized_entities"])
+    matched_entities = used_entities & csv_entities
+    unmatched_entities = used_entities - csv_entities
+
+    print(f"Rows in agent-mode prompts CSV: {len(used)}")
+    print(f"Unique triplets referenced:     {len(used_entities)}")
+    print(f"Matched against CIViC extract:  {len(matched_entities)}")
+
+    if unmatched_entities:
+        print("\nWARNING: the following triplets from the agent-mode CSV have no")
+        print("matching entity in the CIViC extract and will be EXCLUDED:")
+        missing_rows = used[used["sanitized_entities"].isin(unmatched_entities)]
+        for _, r in missing_rows.drop_duplicates(subset=["sanitized_entities"]).iterrows():
+            print(f"    MP={r['MP']!r}  disease={r['disease']!r}  therapy={r['therapy']!r}")
+
+    build_qa_triplet_dataset(df_all, QA_TRIPLET_CSV, restrict_to_entities=matched_entities)

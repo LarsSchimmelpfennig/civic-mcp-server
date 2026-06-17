@@ -13,9 +13,7 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 # CONFIG
 # -------------------------
 CIVIC_CSV = Path("data") / "CIViC_clinvar_evidence_extract_2_27_26.csv"
-AGENT_MODE_CSV = Path("data") / "CIViC MCP Agent Mode Experiment - agent_mode_prompts_clean.csv"
-# If you're running this exactly against the uploaded file in this chat/session instead:
-# AGENT_MODE_CSV = Path("/mnt/data") / "CIViC MCP Agent Mode Experiment - agent_mode_prompts.csv"
+AGENT_MODE_CSV = Path("data") / "agent_mode_run_results.csv"
 
 EVAL_CONFIGS = [
     {
