@@ -5,14 +5,39 @@ from functools import lru_cache
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+from sklearn.metrics import confusion_matrix
 
 
 # -------------------------
 # CONFIG
 # -------------------------
 CIVIC_CSV = Path("data") / "CIViC_clinvar_evidence_extract_2_27_26.csv"
-AGENT_MODE_CSV = Path("data") / "CIViC MCP Agent Mode Experiment - agent_mode_prompts_clean.csv"
+AGENT_MODE_CSV = Path("data") / "agent_mode_run_results.csv"
 QA_TRIPLET_CSV = Path("data") / "QA_triplet_dataset.csv"
+CONFUSION_MATRIX_FIGURE = Path("data") / "confusion_matrices.png"
+
+EVAL_CONFIGS = [
+    {
+        "name": "no_mcp",
+        "display_name": "GPT",
+        "kind": "txt_dir",
+        "output_dir": Path("data") / "one_shot_no_mcp",
+    },
+    {
+        "name": "mcp",
+        "display_name": "GPT + MCP",
+        "kind": "txt_dir",
+        "output_dir": Path("data") / "one_shot_mcp",
+    },
+    {
+        "name": "agent_mode",
+        "display_name": "GPT Agent Mode",
+        "kind": "csv_file",
+        "csv_path": AGENT_MODE_CSV,
+    },
+]
 
 
 # -------------------------
@@ -346,6 +371,241 @@ def build_ground_truth_matrix(entities, filter_rows_for_entity) -> pd.DataFrame:
     return y_true
 
 
+_TIME_RE = re.compile(
+    r"###\s*TIME\s*\(Seconds\)\s*###\s*([0-9]+(?:\.[0-9]+)?)",
+    flags=re.IGNORECASE
+)
+
+def _norm_sig_label_from_model(sig_raw: str) -> str:
+    s = str(sig_raw).strip()
+    if s.upper().replace(" ", "") in ("N/A", "NA"):
+        return "N/A"
+    s = s.lower().strip()
+    s = re.sub(r"[\s\-]+", "_", s)
+    s = re.sub(r"_+", "_", s)
+    return s
+
+def parse_task2_outputs(text: str):
+    """
+    Returns: (task2_dict, time_seconds_or_None)
+
+    Robust to extra logging; if '### LLM OUTPUT ###' exists, parses after it.
+    Ignores anything after '### TIME' marker for output parsing.
+    """
+    m_time = _TIME_RE.search(text)
+    time_s = float(m_time.group(1)) if m_time else None
+
+    if "### LLM OUTPUT ###" in text:
+        text = text.split("### LLM OUTPUT ###", 1)[1]
+
+    if "### TIME" in text:
+        text = text.split("### TIME", 1)[0]
+
+    task2 = {k: None for k in ALL_LABEL_KEYS}
+
+    r2 = re.compile(
+        r"^(predictive|diagnostic|prognostic|predisposing|oncogenic|functional)\s*[—–-]\s*([^:]+?)\s*:\s*([ABC](?:\s*,\s*[ABC])?)\s*$",
+        re.MULTILINE
+    )
+    for m in r2.finditer(text):
+        etype = m.group(1).strip().lower()
+        sig = _norm_sig_label_from_model(m.group(2))
+        val = m.group(3).replace(" ", "").upper()
+        if val in ("B,A", "A,B"):
+            val = "A,B"
+
+        key = f"{etype}_{sig}"
+        if key in task2:
+            task2[key] = val
+
+    return task2, time_s
+
+
+def task2_label_to_int(val: str) -> int:
+    # 0=C (No Evidence), 1=A, 2=B, 3=A,B, 4=INVALID/PARSE ERROR
+    if val is None:
+        return 4
+    v = str(val).strip().upper().replace(" ", "")
+    if v == "C":
+        return 0
+    if v == "A":
+        return 1
+    if v == "B":
+        return 2
+    if v in ("A,B", "B,A"):
+        return 3
+    return 4
+
+
+def load_eval_records(cfg: dict) -> pd.DataFrame:
+    """
+    Returns a standardized DataFrame with: source_id, sanitized_entities, raw_output.
+    """
+    kind = cfg["kind"]
+
+    if kind == "txt_dir":
+        output_dir = cfg["output_dir"]
+        output_files = sorted(output_dir.glob("*.txt"))
+        rows = []
+
+        for p in output_files:
+            raw = p.read_text(encoding="utf-8", errors="ignore")
+            rows.append({
+                "source_id": p.name,
+                "sanitized_entities": sanitize_filename(p.stem, replacement="_"),
+                "raw_output": raw,
+            })
+
+        return pd.DataFrame(rows)
+
+    if kind == "csv_file":
+        csv_path = cfg["csv_path"]
+        df = pd.read_csv(csv_path)
+
+        required = {"MP", "disease", "therapy", "output"}
+        missing = required - set(df.columns)
+        if missing:
+            raise ValueError(f"{csv_path} is missing required columns: {sorted(missing)}")
+
+        df = df.copy()
+        df["MP"] = df["MP"].astype(str)
+        df["disease"] = df["disease"].fillna("None").astype(str)
+        df["therapy"] = df["therapy"].fillna("None").astype(str)
+        df["raw_output"] = df["output"].fillna("").astype(str)
+
+        df["entities"] = df["MP"] + "_" + df["disease"] + "_" + df["therapy"]
+        df["sanitized_entities"] = df["entities"].apply(lambda x: sanitize_filename(x, replacement="_"))
+
+        return (
+            df[["sanitized_entities", "raw_output"]]
+            .reset_index()
+            .rename(columns={"index": "source_id"})
+        )
+
+    raise ValueError(f"Unknown eval kind: {kind}")
+
+
+# -------------------------
+# CONFUSION MATRIX FIGURE
+# -------------------------
+# Row/column order, top-to-bottom and left-to-right: A, B, A&B, C.
+CM_LABEL_CODES = [1, 2, 3, 0]
+CM_LABEL_TEXT = [
+    "Supports",
+    "Does not\nSupport",
+    "Contradicting",
+    "No\nEvidence",
+]
+
+
+def score_config_confusion_matrix(cfg: dict, df_all: pd.DataFrame) -> np.ndarray:
+    """
+    Loads a config's raw model outputs, builds the matching ground-truth + prediction
+    matrices (same entity-matching logic as the eval pipeline), and returns the
+    5x5 confusion matrix (rows=true, cols=predicted) over EVERY entity/significance
+    pair -- no positive-only filtering, so the "no evidence" class is included.
+    """
+    records = load_eval_records(cfg)
+    if records.empty:
+        return np.zeros((len(CM_LABEL_CODES), len(CM_LABEL_CODES)), dtype=int)
+
+    output_entities = set(records["sanitized_entities"])
+    df_q = df_all[df_all["sanitized_entities"].isin(output_entities)].copy()
+    scored_entities = sorted(set(df_q["sanitized_entities"]).intersection(output_entities))
+    if not scored_entities:
+        return np.zeros((len(CM_LABEL_CODES), len(CM_LABEL_CODES)), dtype=int)
+
+    entity_meta = (
+        df_q.groupby("sanitized_entities")[["molecularProfile_name", "disease_name", "therapies"]]
+            .first()
+    )
+    filter_rows_for_entity = build_filter_rows_for_entity(df_all, entity_meta)
+    y_true = build_ground_truth_matrix(scored_entities, filter_rows_for_entity)
+
+    y_pred = pd.DataFrame(4, index=scored_entities, columns=ALL_LABEL_KEYS, dtype=int)
+    records_by_ent = (
+        records.drop_duplicates(subset=["sanitized_entities"], keep="first")
+               .set_index("sanitized_entities")
+    )
+
+    for ent in scored_entities:
+        if ent not in records_by_ent.index:
+            continue
+        t2, _ = parse_task2_outputs(records_by_ent.at[ent, "raw_output"])
+        for k in ALL_LABEL_KEYS:
+            y_pred.at[ent, k] = task2_label_to_int(t2.get(k))
+
+    yt_flat = y_true.to_numpy().ravel()
+    yp_flat = y_pred.to_numpy().ravel()
+
+    return confusion_matrix(yt_flat, yp_flat, labels=CM_LABEL_CODES)
+
+
+def build_confusion_matrix_figure(eval_configs: list, df_all: pd.DataFrame, out_path: Path) -> None:
+    """
+    Builds one figure with a confusion matrix per eval config (left-to-right in the
+    order given), all sharing one red<->green color scale (red = incorrect, green =
+    correct; more samples = more saturated), with a single horizontal colorbar
+    spanning the bottom of the figure.
+    """
+    n = len(CM_LABEL_CODES)
+
+    cms = [score_config_confusion_matrix(cfg, df_all) for cfg in eval_configs]
+    titles = [cfg["display_name"] for cfg in eval_configs]
+
+    # Signed matrices: +count on the diagonal (correct), -count off-diagonal (incorrect)
+    signed_list = []
+    for cm in cms:
+        signed = cm.astype(float).copy()
+        off_diag = ~np.eye(n, dtype=bool)
+        signed[off_diag] *= -1
+        signed_list.append(signed)
+
+    max_count = max(1, max(int(cm.max()) for cm in cms))
+
+    # Symmetric log scale so the (typically huge) "No Evidence" diagonal cell doesn't
+    # wash out every other cell, while 0 samples stays exactly white at the center.
+    norm = mcolors.SymLogNorm(linthresh=1, vmin=-max_count, vmax=max_count)
+    cmap = mcolors.LinearSegmentedColormap.from_list(
+        "red_white_green", ["#8B0000", "#FFFFFF", "#1B5E20"]
+    )
+
+    fig = plt.figure(figsize=(6 * len(eval_configs), 7))
+    gs = fig.add_gridspec(1, len(eval_configs), hspace=0.45, wspace=0.35)
+    axes = [fig.add_subplot(gs[0, i]) for i in range(len(eval_configs))]
+
+    im = None
+    for idx, (ax, cm, signed, title) in enumerate(zip(axes, cms, signed_list, titles)):
+        im = ax.imshow(signed, cmap=cmap, norm=norm, aspect="equal")
+        ax.set_title(title, fontsize=14, fontweight="bold")
+
+        ax.set_xticks(range(n))
+        ax.set_yticks(range(n))
+        ax.set_xticklabels(CM_LABEL_TEXT, rotation=0, ha="center", fontsize=9)
+        ax.set_yticklabels(CM_LABEL_TEXT, fontsize=9)
+        ax.set_xlabel("Predicted", fontsize=10)
+        if idx == 0:
+            ax.set_ylabel("True (CIViC ground truth)", fontsize=10)
+
+        ax.set_xticks(np.arange(-0.5, n, 1), minor=True)
+        ax.set_yticks(np.arange(-0.5, n, 1), minor=True)
+        ax.grid(which="minor", color="#999999", linewidth=0.6)
+        ax.tick_params(which="minor", length=0)
+
+        for i in range(n):
+            for j in range(n):
+                count = int(cm[i, j])
+                norm_val = norm(signed[i, j])
+                text_color = "white" if abs(norm_val - 0.5) > 0.32 else "black"
+                ax.text(j, i, str(count), ha="center", va="center", color=text_color, fontsize=9)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(out_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+    print(f"Saved confusion matrix figure: {out_path}")
+
+
 def load_used_entities(csv_path: Path) -> pd.DataFrame:
     """
     Loads the agent-mode prompts CSV and reconstructs sanitized_entities exactly the
@@ -487,3 +747,8 @@ if __name__ == "__main__":
             print(f"    MP={r['MP']!r}  disease={r['disease']!r}  therapy={r['therapy']!r}")
 
     build_qa_triplet_dataset(df_all, QA_TRIPLET_CSV, restrict_to_entities=matched_entities)
+
+    # -------------------------
+    # BUILD + SAVE CONFUSION MATRIX FIGURE (GPT / GPT + MCP / GPT Agent Mode)
+    # -------------------------
+    build_confusion_matrix_figure(EVAL_CONFIGS, df_all, CONFUSION_MATRIX_FIGURE)
