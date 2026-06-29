@@ -29,50 +29,13 @@ We provide an example of doing this with GPT4o-mini. A personal API key is requi
 python local_hosting/message_MCP_CIViC.py --msg "What is the clinical significance of EGFR variants in CIViC?" 
 ```
 
+## Adding as a Claude Connector
 
-## Using With Claude Desktop
-
-https://github.com/user-attachments/assets/5890f79a-e2fc-49f6-b5f4-ef191d07872d
-
-Install Node.js (https://nodejs.org/)
-
-Click "LTS" (Recommended for Most Users) — this gives you Node.js and npx
-Download and install it like any normal app
-
-Once installed:
-On Windows: Open “Command Prompt” or “PowerShell”
-On macOS: Open “Terminal”
-
-Then run:
-```bash
-node -v
-npx -v
-```
-
-Confirm that both give versions.
-
-Add this configuration to your `claude_desktop_config.json` file:
-
-```json
-{
-  "mcpServers": {
-    "civic-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://civic-mcp-server.larscivic.workers.dev/mcp"
-      ]
-    }
-  }
-}
-```
-
-#### Alternativly, the MCP server can be added as a connector (currently limited to paid Claude users). For more details visit https://support.claude.com/en/articles/11176164-pre-built-web-connectors-using-remote-mcp 
-
+<img width="3217" height="1094" alt="Claude connector setup" src="https://github.com/user-attachments/assets/b939db57-4a59-4cdf-a38e-620d9516cee4" />
 
 ## Usage
 
-Once configured, restart Claude Desktop. The server provides two main tools:
+The server provides two main tools:
 
 1. **`get_variant_evidence`**: Return up to 50 evidence items for a CIViC molecular profile
 2. **`get_variant_assertions`**: Return CIViC assertions for a molecular profile
