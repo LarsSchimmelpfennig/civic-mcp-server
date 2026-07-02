@@ -43,7 +43,7 @@ The server provides two main tools:
 
 ## Evaluation Scripts
 
-All evaluation files are located in eval_QA_experiment/
+All evaluation files are located in eval_QA_experiment. The file agent_mode_run_results.csv contains the agent mode prompts and responses; the associated chat URLs were created but may no longer be available. QA_triplet_dataset.csv contains the 100 unique (Molecular Profile, Disease, Therapy) triplets along with their expected answers.
 
 
 ## License
