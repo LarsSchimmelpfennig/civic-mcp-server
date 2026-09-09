@@ -2,7 +2,7 @@
 
 MCP-supported Chatbot for CIViC users: https://civicdb.org/mcp-chat
 
-Preprint: https://www.biorxiv.org/content/10.1101/2025.10.13.682185v1
+If you use the CIViC MCP Server in published work, please cite: [CIViC MCP: integrating large language models with the Clinical Interpretations of Variants in Cancer](https://academic.oup.com/bioinformaticsadvances/article/6/1/vbag209/8746878)
 
 This is a Cloudflare Workers-based Model Context Protocol (MCP) server that provides tools for querying the CIViC (Clinical Interpretation of Variants in Cancer) API. 
 
