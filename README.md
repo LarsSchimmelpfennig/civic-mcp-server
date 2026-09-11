@@ -33,6 +33,8 @@ python local_hosting/message_MCP_CIViC.py --msg "What is the clinical significan
 
 <img width="3217" height="1094" alt="Claude connector setup" src="https://github.com/user-attachments/assets/b939db57-4a59-4cdf-a38e-620d9516cee4" />
 
+V2 URL: https://civic-mcp-server-v2.larscivic.workers.dev/mcp
+
 ## Usage
 
 The server provides two main tools:
